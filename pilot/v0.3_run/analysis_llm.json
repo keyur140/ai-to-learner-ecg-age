@@ -1,0 +1,228 @@
+{
+  "experiment": "llm",
+  "n_learners_total": 120,
+  "models": {
+    "Qwen/Qwen2.5-3B-Instruct": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "run": "main",
+      "gate_accuracy": 0.9,
+      "gate_items": 40,
+      "gate_pass": true,
+      "gate_rule": "Heart rate > 72 bpm",
+      "probe_p_higher_in_older": {
+        "HR_Ventr_Global": 3.0590223332183086e-07,
+        "PR_Int_Global": 0.9999417066574097,
+        "QRS_Dur_Global": 0.9999833106994629,
+        "QT_Int_Global": 0.9999938011169434,
+        "QT_IntBazett_Global": 0.9999977350234985,
+        "P_AxisFront_Global": 0.999995231628418,
+        "R_AxisFrontal_Global": 0.999995231628418,
+        "T_AxisFront_Global": 0.999995231628418,
+        "P_Amp_II": 0.9999997615814209,
+        "P_Dur_II": 1.0,
+        "R_Amp_aVL": 0.9999898672103882,
+        "R_Amp_V5": 0.9999998807907104,
+        "S_Amp_V1": 1.0,
+        "T_Amp_II": 0.9999998807907104,
+        "T_Amp_V1": 0.9999998807907104,
+        "T_Amp_V5": 1.0,
+        "ST_Amp_V5": 0.9999997615814209,
+        "Q_Amp_III": 0.9999998807907104
+      },
+      "post_collapse_fraction": 0.6916666666666667,
+      "collapsed_model": true,
+      "informative": false
+    }
+  },
+  "models_counted": [],
+  "models_uninformative": [
+    "Qwen/Qwen2.5-3B-Instruct"
+  ],
+  "H1_primary": {
+    "skipped": "no language model passed the known-answer gate and collapse rule"
+  },
+  "secondary": {},
+  "descriptives": [
+    {
+      "condition": "cue_training",
+      "test": "pre",
+      "n": 30,
+      "mean_acc": 0.5041666666666667,
+      "sd": 0.009476225544736299,
+      "ci_low": 0.5007756429059723,
+      "ci_high": 0.507557690427361
+    },
+    {
+      "condition": "cue_training",
+      "test": "post",
+      "n": 30,
+      "mean_acc": 0.525,
+      "sd": 0.05127680123435534,
+      "ci_low": 0.5066508323343267,
+      "ci_high": 0.5433491676656733
+    },
+    {
+      "condition": "cue_training",
+      "test": "delayed",
+      "n": 30,
+      "mean_acc": 0.5516666666666666,
+      "sd": 0.06329097191888255,
+      "ci_low": 0.5290182832358199,
+      "ci_high": 0.5743150500975134
+    },
+    {
+      "condition": "cue_training",
+      "test": "transfer",
+      "n": 30,
+      "mean_acc": 0.5241666666666667,
+      "sd": 0.032485629006593394,
+      "ci_low": 0.5125418336229185,
+      "ci_high": 0.5357914997104148
+    },
+    {
+      "condition": "cue_training",
+      "test": "gain",
+      "n": 30,
+      "mean_acc": 0.02083333333333333,
+      "sd": 0.05131181441783728,
+      "ci_low": 0.0024716363608633767,
+      "ci_high": 0.03919503030580328
+    },
+    {
+      "condition": "feedback_only",
+      "test": "pre",
+      "n": 30,
+      "mean_acc": 0.5025,
+      "sd": 0.007628214415734124,
+      "ci_low": 0.4997702785287973,
+      "ci_high": 0.5052297214712026
+    },
+    {
+      "condition": "feedback_only",
+      "test": "post",
+      "n": 30,
+      "mean_acc": 0.5391666666666667,
+      "sd": 0.0604164189451917,
+      "ci_low": 0.5175469288066902,
+      "ci_high": 0.5607864045266432
+    },
+    {
+      "condition": "feedback_only",
+      "test": "delayed",
+      "n": 30,
+      "mean_acc": 0.5941666666666666,
+      "sd": 0.10415574655404225,
+      "ci_low": 0.5568950114374592,
+      "ci_high": 0.631438321895874
+    },
+    {
+      "condition": "feedback_only",
+      "test": "transfer",
+      "n": 30,
+      "mean_acc": 0.5166666666666667,
+      "sd": 0.040114777854287714,
+      "ci_low": 0.5023117777695334,
+      "ci_high": 0.5310215555638
+    },
+    {
+      "condition": "feedback_only",
+      "test": "gain",
+      "n": 30,
+      "mean_acc": 0.03666666666666667,
+      "sd": 0.06007657948234778,
+      "ci_low": 0.015168538796647178,
+      "ci_high": 0.05816479453668616
+    },
+    {
+      "condition": "no_training",
+      "test": "pre",
+      "n": 30,
+      "mean_acc": 0.5008333333333334,
+      "sd": 0.004564354645876388,
+      "ci_low": 0.49920000000000003,
+      "ci_high": 0.5024666666666667
+    },
+    {
+      "condition": "no_training",
+      "test": "post",
+      "n": 30,
+      "mean_acc": 0.4858333333333333,
+      "sd": 0.030571660680794057,
+      "ci_low": 0.47489340505882705,
+      "ci_high": 0.4967732616078395
+    },
+    {
+      "condition": "no_training",
+      "test": "delayed",
+      "n": 30,
+      "mean_acc": 0.5,
+      "sd": 0.0,
+      "ci_low": 0.5,
+      "ci_high": 0.5
+    },
+    {
+      "condition": "no_training",
+      "test": "transfer",
+      "n": 30,
+      "mean_acc": 0.48416666666666663,
+      "sd": 0.04476150080172679,
+      "ci_low": 0.46814896931803096,
+      "ci_high": 0.5001843640153023
+    },
+    {
+      "condition": "no_training",
+      "test": "gain",
+      "n": 30,
+      "mean_acc": -0.015000000000000003,
+      "sd": 0.03051285766293647,
+      "ci_low": -0.025918885884810654,
+      "ci_high": -0.004081114115189351
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "pre",
+      "n": 30,
+      "mean_acc": 0.5041666666666667,
+      "sd": 0.009476225544736299,
+      "ci_low": 0.5007756429059723,
+      "ci_high": 0.507557690427361
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "post",
+      "n": 30,
+      "mean_acc": 0.5241666666666666,
+      "sd": 0.05666117282361111,
+      "ci_low": 0.5038907263730754,
+      "ci_high": 0.5444426069602577
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "delayed",
+      "n": 30,
+      "mean_acc": 0.5233333333333332,
+      "sd": 0.05978890067293562,
+      "ci_low": 0.5019381500031581,
+      "ci_high": 0.5447285166635083
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "transfer",
+      "n": 30,
+      "mean_acc": 0.5075000000000001,
+      "sd": 0.03292494076134277,
+      "ci_low": 0.4957179612637877,
+      "ci_high": 0.5192820387362125
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "gain",
+      "n": 30,
+      "mean_acc": 0.019999999999999993,
+      "sd": 0.0534983080621924,
+      "ci_low": 0.0008558763255047917,
+      "ci_high": 0.0391441236744952
+    }
+  ],
+  "robustness": {}
+}

@@ -1,0 +1,155 @@
+{
+  "best_epoch": 10,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.35537968282056104,
+      "val_auroc": 0.9455844155844155
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.22997309839849242,
+      "val_auroc": 0.9558116883116883
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.18739798866135027,
+      "val_auroc": 0.9668344155844156
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.16885849127101238,
+      "val_auroc": 0.9742207792207793
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.16077324954283692,
+      "val_auroc": 0.9699675324675325
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.15534734808449926,
+      "val_auroc": 0.974448051948052
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.14496161360100274,
+      "val_auroc": 0.9743344155844156
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.12192176957856413,
+      "val_auroc": 0.9738798701298701
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.12191019570744986,
+      "val_auroc": 0.975827922077922
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.11900473424720104,
+      "val_auroc": 0.9787337662337663
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.11290970831387595,
+      "val_auroc": 0.9698214285714286
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.11868630852356914,
+      "val_auroc": 0.972711038961039
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.08879055863948841,
+      "val_auroc": 0.9740178571428572
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.09419663656812328,
+      "val_auroc": 0.9734415584415586
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.08742670812821306,
+      "val_auroc": 0.9754788961038962
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.08454999549372386,
+      "val_auroc": 0.975909090909091
+    }
+  ],
+  "device": "cpu",
+  "weights_sha256": "c512582aaf85fc8e6a4dd5d83ba6b554a3b7e1b7d9bd46fa469637f8438f6940",
+  "seed": 20261026,
+  "ensemble_for_cues": [
+    {
+      "k": 1,
+      "seed": 20262026,
+      "best_epoch": 21,
+      "weights_sha256": "d1b45891f379e41f888dfffff5a758a8fbac6e45b290520b287e61a4660ec5f8",
+      "test_auroc": 0.983189945208113
+    },
+    {
+      "k": 2,
+      "seed": 20263026,
+      "best_epoch": 10,
+      "weights_sha256": "eae18520bfd5bebcb635efc7029c27a7fe89094f80becf1d6b6aa3d664f0b729",
+      "test_auroc": 0.978780159569355
+    },
+    {
+      "k": 3,
+      "seed": 20264026,
+      "best_epoch": 11,
+      "weights_sha256": "d62a2895b00b29b9d7054737b7b3edb30ab0fcac66db60f9ad0538b7772c750e",
+      "test_auroc": 0.9831538979140633
+    },
+    {
+      "k": 4,
+      "seed": 20265026,
+      "best_epoch": 12,
+      "weights_sha256": "cf7760f6c646a4c8c49233fc3d82323892b9a04b25e0585b197d96ce5bf65403",
+      "test_auroc": 0.989233874843795
+    }
+  ],
+  "lead_norm_sha256": "c6eb7717b4412b6512c52432f7ce3d4b09f9e7eb80bba934bccafee0b4536df9",
+  "roles_used_for_training": [
+    "teacher_train"
+  ],
+  "roles_used_for_early_stopping": [
+    "teacher_val"
+  ],
+  "n_train": 4624,
+  "n_val": 527,
+  "teacher_val": {
+    "n": 527,
+    "teacher_auroc": 0.9787337662337663,
+    "teacher_accuracy": 0.9222011385199241,
+    "features_baseline_auroc": 0.901185064935065,
+    "features_baseline_accuracy": 0.8595825426944972
+  },
+  "cue": {
+    "n": 740,
+    "teacher_auroc": 0.9777557480260183,
+    "teacher_accuracy": 0.9243243243243243,
+    "features_baseline_auroc": 0.9127447911231694,
+    "features_baseline_accuracy": 0.8729729729729729
+  },
+  "test": {
+    "n": 610,
+    "teacher_auroc": 0.9850644044987023,
+    "teacher_accuracy": 0.9262295081967213,
+    "features_baseline_auroc": 0.9468062097471882,
+    "features_baseline_accuracy": 0.8836065573770492
+  },
+  "transfer": {
+    "n": 2119,
+    "teacher_auroc": 0.9557285504708722,
+    "teacher_accuracy": 0.8574799433695139,
+    "features_baseline_auroc": 0.8804047765526164,
+    "features_baseline_accuracy": 0.8914582350165172
+  }
+}

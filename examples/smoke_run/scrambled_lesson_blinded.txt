@@ -1,0 +1,8 @@
+LESSON: How an expert AI tells younger (under 40) from older (65+) adults on an ECG.
+The AI relies on these measurements, most important first:
+1. Measure 18: in older adults it tends to be lower (cut-point about 0.299; higher points to younger).
+2. Measure 4: in older adults it tends to be higher (cut-point about 387; lower points to younger).
+3. Measure 2: in older adults it tends to be higher (cut-point about 153; lower points to younger).
+4. Measure 17: in older adults it tends to be lower (cut-point about 0.286; higher points to younger).
+5. Measure 3: in older adults it tends to be lower (cut-point about 93.6; higher points to younger).
+No single cue is decisive. Count how many cues point to 'older', giving more weight to the cues near the top of the list, and decide by the balance.

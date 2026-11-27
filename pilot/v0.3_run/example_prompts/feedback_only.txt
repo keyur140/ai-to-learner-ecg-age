@@ -1,0 +1,708 @@
+You are a student learning a new skill. You will see measurements taken from adults' resting 12-lead ECGs. Each ECG belongs either to a younger adult (under 40 years old) or to an older adult (65 years or older). Exactly half of all cases are younger and half are older.
+
+LESSON: What the ECG measurements mean.
+- Heart rate is the number of ventricular beats per minute.
+- The PR interval is the time from the start of the P wave to the start of the QRS complex.
+- QRS duration is how long the ventricles take to depolarise.
+- The QT interval runs from the start of the QRS complex to the end of the T wave.
+- QTc is the QT interval corrected for heart rate with Bazett's formula.
+- The P-wave axis is the main direction of atrial depolarisation in the frontal plane.
+- The QRS axis is the main direction of ventricular depolarisation in the frontal plane.
+- The T-wave axis is the main direction of ventricular repolarisation in the frontal plane.
+- P-wave height in lead II is the peak voltage of the atrial wave.
+- P-wave duration in lead II is how long the atrial wave lasts.
+- R-wave height in aVL is the peak upward QRS voltage in that lead.
+- R-wave height in V5 is the peak upward QRS voltage in that chest lead.
+
+PRACTICE CASES WITH FEEDBACK:
+
+Case 1:
+Heart rate: 73 bpm
+PR interval: 122 ms
+QRS duration: 88 ms
+QT interval: 378 ms
+QTc (Bazett): 416 ms
+P-wave axis: 12 deg
+QRS axis: 60 deg
+T-wave axis: 38 deg
+P-wave height, lead II: 0.08 mV
+P-wave duration, lead II: 84 ms
+R-wave height, lead aVL: 0.17 mV
+R-wave height, lead V5: 0.77 mV
+S-wave depth, lead V1: -0.63 mV
+T-wave height, lead II: 0.16 mV
+T-wave height, lead V1: 0.04 mV
+T-wave height, lead V5: 0.16 mV
+ST level, lead V5: 0.00 mV
+Q-wave depth, lead III: -0.03 mV
+Correct answer: B) younger adult (under 40)
+
+Case 2:
+Heart rate: 77 bpm
+PR interval: 182 ms
+QRS duration: 102 ms
+QT interval: 370 ms
+QTc (Bazett): 418 ms
+P-wave axis: 68 deg
+QRS axis: 68 deg
+T-wave axis: 53 deg
+P-wave height, lead II: 0.11 mV
+P-wave duration, lead II: 126 ms
+R-wave height, lead aVL: 0.25 mV
+R-wave height, lead V5: 2.26 mV
+S-wave depth, lead V1: -1.41 mV
+T-wave height, lead II: 0.26 mV
+T-wave height, lead V1: 0.08 mV
+T-wave height, lead V5: 0.26 mV
+ST level, lead V5: -0.05 mV
+Q-wave depth, lead III: -0.15 mV
+Correct answer: B) younger adult (under 40)
+
+Case 3:
+Heart rate: 76 bpm
+PR interval: 164 ms
+QRS duration: 138 ms
+QT interval: 414 ms
+QTc (Bazett): 465 ms
+P-wave axis: 45 deg
+QRS axis: -86 deg
+T-wave axis: 89 deg
+P-wave height, lead II: 0.07 mV
+P-wave duration, lead II: 126 ms
+R-wave height, lead aVL: 0.92 mV
+R-wave height, lead V5: 0.21 mV
+S-wave depth, lead V1: -0.00 mV
+T-wave height, lead II: 0.30 mV
+T-wave height, lead V1: -0.17 mV
+T-wave height, lead V5: 0.10 mV
+ST level, lead V5: 0.04 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 4:
+Heart rate: 69 bpm
+PR interval: 164 ms
+QRS duration: 94 ms
+QT interval: 382 ms
+QTc (Bazett): 409 ms
+P-wave axis: 67 deg
+QRS axis: -26 deg
+T-wave axis: 31 deg
+P-wave height, lead II: 0.13 mV
+P-wave duration, lead II: 124 ms
+R-wave height, lead aVL: 0.77 mV
+R-wave height, lead V5: 2.32 mV
+S-wave depth, lead V1: -0.88 mV
+T-wave height, lead II: 0.24 mV
+T-wave height, lead V1: 0.00 mV
+T-wave height, lead V5: 0.58 mV
+ST level, lead V5: 0.06 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 5:
+Heart rate: 63 bpm
+PR interval: 164 ms
+QRS duration: 94 ms
+QT interval: 428 ms
+QTc (Bazett): 437 ms
+P-wave axis: 51 deg
+QRS axis: 7 deg
+T-wave axis: 41 deg
+P-wave height, lead II: 0.07 mV
+P-wave duration, lead II: 112 ms
+R-wave height, lead aVL: 0.64 mV
+R-wave height, lead V5: 0.88 mV
+S-wave depth, lead V1: -0.63 mV
+T-wave height, lead II: 0.21 mV
+T-wave height, lead V1: -0.06 mV
+T-wave height, lead V5: 0.16 mV
+ST level, lead V5: -0.02 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 6:
+Heart rate: 70 bpm
+PR interval: 140 ms
+QRS duration: 80 ms
+QT interval: 380 ms
+QTc (Bazett): 410 ms
+P-wave axis: 74 deg
+QRS axis: 66 deg
+T-wave axis: 72 deg
+P-wave height, lead II: 0.07 mV
+P-wave duration, lead II: 100 ms
+R-wave height, lead aVL: 0.09 mV
+R-wave height, lead V5: 0.98 mV
+S-wave depth, lead V1: -0.82 mV
+T-wave height, lead II: 0.37 mV
+T-wave height, lead V1: -0.04 mV
+T-wave height, lead V5: 0.38 mV
+ST level, lead V5: 0.01 mV
+Q-wave depth, lead III: -0.03 mV
+Correct answer: B) younger adult (under 40)
+
+Case 7:
+Heart rate: 91 bpm
+PR interval: 162 ms
+QRS duration: 128 ms
+QT interval: 352 ms
+QTc (Bazett): 432 ms
+P-wave axis: 51 deg
+QRS axis: -58 deg
+T-wave axis: 127 deg
+P-wave height, lead II: 0.00 mV
+P-wave duration, lead II: 0 ms
+R-wave height, lead aVL: 0.70 mV
+R-wave height, lead V5: 0.17 mV
+S-wave depth, lead V1: -0.00 mV
+T-wave height, lead II: 0.15 mV
+T-wave height, lead V1: 0.31 mV
+T-wave height, lead V5: -0.11 mV
+ST level, lead V5: -0.08 mV
+Q-wave depth, lead III: -0.99 mV
+Correct answer: A) older adult (65 or over)
+
+Case 8:
+Heart rate: 76 bpm
+PR interval: 146 ms
+QRS duration: 88 ms
+QT interval: 392 ms
+QTc (Bazett): 441 ms
+P-wave axis: 54 deg
+QRS axis: 60 deg
+T-wave axis: 48 deg
+P-wave height, lead II: 0.15 mV
+P-wave duration, lead II: 112 ms
+R-wave height, lead aVL: 0.17 mV
+R-wave height, lead V5: 1.35 mV
+S-wave depth, lead V1: -1.09 mV
+T-wave height, lead II: 0.37 mV
+T-wave height, lead V1: -0.16 mV
+T-wave height, lead V5: 0.29 mV
+ST level, lead V5: 0.00 mV
+Q-wave depth, lead III: -0.04 mV
+Correct answer: B) younger adult (under 40)
+
+Case 9:
+Heart rate: 91 bpm
+PR interval: 140 ms
+QRS duration: 90 ms
+QT interval: 348 ms
+QTc (Bazett): 428 ms
+P-wave axis: 73 deg
+QRS axis: 83 deg
+T-wave axis: 81 deg
+P-wave height, lead II: 0.14 mV
+P-wave duration, lead II: 108 ms
+R-wave height, lead aVL: 0.00 mV
+R-wave height, lead V5: 1.17 mV
+S-wave depth, lead V1: -0.00 mV
+T-wave height, lead II: 0.18 mV
+T-wave height, lead V1: 0.10 mV
+T-wave height, lead V5: 0.16 mV
+ST level, lead V5: -0.03 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 10:
+Heart rate: 70 bpm
+PR interval: 166 ms
+QRS duration: 104 ms
+QT interval: 444 ms
+QTc (Bazett): 479 ms
+P-wave axis: 36 deg
+QRS axis: -8 deg
+T-wave axis: 74 deg
+P-wave height, lead II: 0.05 mV
+P-wave duration, lead II: 116 ms
+R-wave height, lead aVL: 0.87 mV
+R-wave height, lead V5: 1.21 mV
+S-wave depth, lead V1: -1.11 mV
+T-wave height, lead II: 0.09 mV
+T-wave height, lead V1: 0.12 mV
+T-wave height, lead V5: 0.09 mV
+ST level, lead V5: -0.04 mV
+Q-wave depth, lead III: -0.71 mV
+Correct answer: A) older adult (65 or over)
+
+Case 11:
+Heart rate: 52 bpm
+PR interval: 150 ms
+QRS duration: 108 ms
+QT interval: 394 ms
+QTc (Bazett): 366 ms
+P-wave axis: 20 deg
+QRS axis: 35 deg
+T-wave axis: 30 deg
+P-wave height, lead II: 0.07 mV
+P-wave duration, lead II: 122 ms
+R-wave height, lead aVL: 0.52 mV
+R-wave height, lead V5: 2.49 mV
+S-wave depth, lead V1: -1.18 mV
+T-wave height, lead II: 0.29 mV
+T-wave height, lead V1: -0.16 mV
+T-wave height, lead V5: 0.41 mV
+ST level, lead V5: -0.01 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: B) younger adult (under 40)
+
+Case 12:
+Heart rate: 69 bpm
+PR interval: 160 ms
+QRS duration: 90 ms
+QT interval: 424 ms
+QTc (Bazett): 454 ms
+P-wave axis: 62 deg
+QRS axis: 26 deg
+T-wave axis: 58 deg
+P-wave height, lead II: 0.14 mV
+P-wave duration, lead II: 118 ms
+R-wave height, lead aVL: 0.48 mV
+R-wave height, lead V5: 1.68 mV
+S-wave depth, lead V1: -0.40 mV
+T-wave height, lead II: 0.32 mV
+T-wave height, lead V1: -0.14 mV
+T-wave height, lead V5: 0.51 mV
+ST level, lead V5: -0.04 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 13:
+Heart rate: 84 bpm
+PR interval: 174 ms
+QRS duration: 92 ms
+QT interval: 382 ms
+QTc (Bazett): 451 ms
+P-wave axis: 50 deg
+QRS axis: 5 deg
+T-wave axis: 53 deg
+P-wave height, lead II: 0.14 mV
+P-wave duration, lead II: 116 ms
+R-wave height, lead aVL: 1.19 mV
+R-wave height, lead V5: 2.22 mV
+S-wave depth, lead V1: -1.35 mV
+T-wave height, lead II: 0.17 mV
+T-wave height, lead V1: 0.14 mV
+T-wave height, lead V5: 0.17 mV
+ST level, lead V5: 0.03 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 14:
+Heart rate: 63 bpm
+PR interval: 128 ms
+QRS duration: 82 ms
+QT interval: 374 ms
+QTc (Bazett): 382 ms
+P-wave axis: 28 deg
+QRS axis: 41 deg
+T-wave axis: 27 deg
+P-wave height, lead II: 0.07 mV
+P-wave duration, lead II: 76 ms
+R-wave height, lead aVL: 0.40 mV
+R-wave height, lead V5: 1.57 mV
+S-wave depth, lead V1: -1.06 mV
+T-wave height, lead II: 0.38 mV
+T-wave height, lead V1: -0.22 mV
+T-wave height, lead V5: 0.44 mV
+ST level, lead V5: 0.04 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: B) younger adult (under 40)
+
+Case 15:
+Heart rate: 47 bpm
+PR interval: 130 ms
+QRS duration: 98 ms
+QT interval: 434 ms
+QTc (Bazett): 384 ms
+P-wave axis: 64 deg
+QRS axis: 23 deg
+T-wave axis: 53 deg
+P-wave height, lead II: 0.11 mV
+P-wave duration, lead II: 92 ms
+R-wave height, lead aVL: 0.34 mV
+R-wave height, lead V5: 0.83 mV
+S-wave depth, lead V1: -0.62 mV
+T-wave height, lead II: 0.27 mV
+T-wave height, lead V1: 0.06 mV
+T-wave height, lead V5: 0.23 mV
+ST level, lead V5: -0.01 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: B) younger adult (under 40)
+
+Case 16:
+Heart rate: 68 bpm
+PR interval: 172 ms
+QRS duration: 100 ms
+QT interval: 390 ms
+QTc (Bazett): 414 ms
+P-wave axis: 23 deg
+QRS axis: 3 deg
+T-wave axis: -39 deg
+P-wave height, lead II: 0.05 mV
+P-wave duration, lead II: 132 ms
+R-wave height, lead aVL: 0.55 mV
+R-wave height, lead V5: 0.78 mV
+S-wave depth, lead V1: -1.79 mV
+T-wave height, lead II: -0.06 mV
+T-wave height, lead V1: 0.36 mV
+T-wave height, lead V5: 0.07 mV
+ST level, lead V5: -0.02 mV
+Q-wave depth, lead III: -0.37 mV
+Correct answer: A) older adult (65 or over)
+
+Case 17:
+Heart rate: 81 bpm
+PR interval: 320 ms
+QRS duration: 98 ms
+QT interval: 328 ms
+QTc (Bazett): 381 ms
+P-wave axis: 93 deg
+QRS axis: -30 deg
+T-wave axis: 117 deg
+P-wave height, lead II: 0.08 mV
+P-wave duration, lead II: 216 ms
+R-wave height, lead aVL: 0.75 mV
+R-wave height, lead V5: 1.68 mV
+S-wave depth, lead V1: -0.52 mV
+T-wave height, lead II: 0.10 mV
+T-wave height, lead V1: 0.00 mV
+T-wave height, lead V5: -0.14 mV
+ST level, lead V5: -0.06 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 18:
+Heart rate: 72 bpm
+PR interval: 150 ms
+QRS duration: 94 ms
+QT interval: 396 ms
+QTc (Bazett): 433 ms
+P-wave axis: 24 deg
+QRS axis: 77 deg
+T-wave axis: 54 deg
+P-wave height, lead II: 0.08 mV
+P-wave duration, lead II: 90 ms
+R-wave height, lead aVL: 0.06 mV
+R-wave height, lead V5: 1.37 mV
+S-wave depth, lead V1: -0.95 mV
+T-wave height, lead II: 0.44 mV
+T-wave height, lead V1: 0.03 mV
+T-wave height, lead V5: 0.56 mV
+ST level, lead V5: -0.02 mV
+Q-wave depth, lead III: -0.03 mV
+Correct answer: B) younger adult (under 40)
+
+Case 19:
+Heart rate: 76 bpm
+PR interval: 212 ms
+QRS duration: 76 ms
+QT interval: 416 ms
+QTc (Bazett): 468 ms
+P-wave axis: 37 deg
+QRS axis: -2 deg
+T-wave axis: 81 deg
+P-wave height, lead II: 0.12 mV
+P-wave duration, lead II: 98 ms
+R-wave height, lead aVL: 1.08 mV
+R-wave height, lead V5: 0.96 mV
+S-wave depth, lead V1: -1.19 mV
+T-wave height, lead II: 0.31 mV
+T-wave height, lead V1: 0.20 mV
+T-wave height, lead V5: 0.29 mV
+ST level, lead V5: 0.01 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 20:
+Heart rate: 59 bpm
+PR interval: 140 ms
+QRS duration: 84 ms
+QT interval: 390 ms
+QTc (Bazett): 386 ms
+P-wave axis: 50 deg
+QRS axis: 67 deg
+T-wave axis: 49 deg
+P-wave height, lead II: 0.10 mV
+P-wave duration, lead II: 112 ms
+R-wave height, lead aVL: 0.10 mV
+R-wave height, lead V5: 1.82 mV
+S-wave depth, lead V1: -0.82 mV
+T-wave height, lead II: 0.27 mV
+T-wave height, lead V1: -0.10 mV
+T-wave height, lead V5: 0.35 mV
+ST level, lead V5: -0.01 mV
+Q-wave depth, lead III: -0.09 mV
+Correct answer: B) younger adult (under 40)
+
+Case 21:
+Heart rate: 72 bpm
+PR interval: 162 ms
+QRS duration: 98 ms
+QT interval: 374 ms
+QTc (Bazett): 409 ms
+P-wave axis: 65 deg
+QRS axis: 68 deg
+T-wave axis: 66 deg
+P-wave height, lead II: 0.16 mV
+P-wave duration, lead II: 130 ms
+R-wave height, lead aVL: 0.04 mV
+R-wave height, lead V5: 0.90 mV
+S-wave depth, lead V1: -0.72 mV
+T-wave height, lead II: 0.31 mV
+T-wave height, lead V1: 0.10 mV
+T-wave height, lead V5: 0.27 mV
+ST level, lead V5: -0.03 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: B) younger adult (under 40)
+
+Case 22:
+Heart rate: 57 bpm
+PR interval: 198 ms
+QRS duration: 100 ms
+QT interval: 438 ms
+QTc (Bazett): 426 ms
+P-wave axis: 69 deg
+QRS axis: -24 deg
+T-wave axis: 27 deg
+P-wave height, lead II: 0.06 mV
+P-wave duration, lead II: 104 ms
+R-wave height, lead aVL: 0.62 mV
+R-wave height, lead V5: 1.18 mV
+S-wave depth, lead V1: -0.00 mV
+T-wave height, lead II: 0.26 mV
+T-wave height, lead V1: -0.16 mV
+T-wave height, lead V5: 0.46 mV
+ST level, lead V5: -0.04 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 23:
+Heart rate: 88 bpm
+PR interval: 136 ms
+QRS duration: 88 ms
+QT interval: 362 ms
+QTc (Bazett): 438 ms
+P-wave axis: 78 deg
+QRS axis: 74 deg
+T-wave axis: 57 deg
+P-wave height, lead II: 0.15 mV
+P-wave duration, lead II: 98 ms
+R-wave height, lead aVL: 0.15 mV
+R-wave height, lead V5: 1.49 mV
+S-wave depth, lead V1: -1.02 mV
+T-wave height, lead II: 0.32 mV
+T-wave height, lead V1: 0.03 mV
+T-wave height, lead V5: 0.35 mV
+ST level, lead V5: -0.03 mV
+Q-wave depth, lead III: -0.27 mV
+Correct answer: B) younger adult (under 40)
+
+Case 24:
+Heart rate: 73 bpm
+PR interval: 162 ms
+QRS duration: 98 ms
+QT interval: 410 ms
+QTc (Bazett): 451 ms
+P-wave axis: 58 deg
+QRS axis: -2 deg
+T-wave axis: 8 deg
+P-wave height, lead II: 0.16 mV
+P-wave duration, lead II: 126 ms
+R-wave height, lead aVL: 0.94 mV
+R-wave height, lead V5: 1.38 mV
+S-wave depth, lead V1: -0.48 mV
+T-wave height, lead II: 0.30 mV
+T-wave height, lead V1: 0.11 mV
+T-wave height, lead V5: 0.41 mV
+ST level, lead V5: -0.02 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: B) younger adult (under 40)
+
+Case 25:
+Heart rate: 71 bpm
+PR interval: 132 ms
+QRS duration: 92 ms
+QT interval: 380 ms
+QTc (Bazett): 412 ms
+P-wave axis: 33 deg
+QRS axis: 62 deg
+T-wave axis: 49 deg
+P-wave height, lead II: 0.03 mV
+P-wave duration, lead II: 88 ms
+R-wave height, lead aVL: 0.15 mV
+R-wave height, lead V5: 1.42 mV
+S-wave depth, lead V1: -0.68 mV
+T-wave height, lead II: 0.25 mV
+T-wave height, lead V1: -0.07 mV
+T-wave height, lead V5: 0.33 mV
+ST level, lead V5: -0.01 mV
+Q-wave depth, lead III: -0.08 mV
+Correct answer: B) younger adult (under 40)
+
+Case 26:
+Heart rate: 60 bpm
+PR interval: 180 ms
+QRS duration: 110 ms
+QT interval: 482 ms
+QTc (Bazett): 482 ms
+P-wave axis: 52 deg
+QRS axis: -10 deg
+T-wave axis: 47 deg
+P-wave height, lead II: 0.07 mV
+P-wave duration, lead II: 142 ms
+R-wave height, lead aVL: 0.58 mV
+R-wave height, lead V5: 0.73 mV
+S-wave depth, lead V1: -1.69 mV
+T-wave height, lead II: 0.00 mV
+T-wave height, lead V1: 0.10 mV
+T-wave height, lead V5: -0.13 mV
+ST level, lead V5: 0.01 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 27:
+Heart rate: 82 bpm
+PR interval: 142 ms
+QRS duration: 68 ms
+QT interval: 356 ms
+QTc (Bazett): 415 ms
+P-wave axis: 51 deg
+QRS axis: 28 deg
+T-wave axis: 34 deg
+P-wave height, lead II: 0.06 mV
+P-wave duration, lead II: 96 ms
+R-wave height, lead aVL: 0.63 mV
+R-wave height, lead V5: 1.36 mV
+S-wave depth, lead V1: -0.71 mV
+T-wave height, lead II: 0.24 mV
+T-wave height, lead V1: 0.07 mV
+T-wave height, lead V5: 0.29 mV
+ST level, lead V5: -0.01 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 28:
+Heart rate: 53 bpm
+PR interval: 156 ms
+QRS duration: 74 ms
+QT interval: 434 ms
+QTc (Bazett): 407 ms
+P-wave axis: 71 deg
+QRS axis: 37 deg
+T-wave axis: 56 deg
+P-wave height, lead II: 0.17 mV
+P-wave duration, lead II: 122 ms
+R-wave height, lead aVL: 0.43 mV
+R-wave height, lead V5: 1.99 mV
+S-wave depth, lead V1: -0.70 mV
+T-wave height, lead II: 0.30 mV
+T-wave height, lead V1: 0.00 mV
+T-wave height, lead V5: 0.45 mV
+ST level, lead V5: -0.04 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: A) older adult (65 or over)
+
+Case 29:
+Heart rate: 74 bpm
+PR interval: 176 ms
+QRS duration: 102 ms
+QT interval: 394 ms
+QTc (Bazett): 437 ms
+P-wave axis: 41 deg
+QRS axis: 95 deg
+T-wave axis: 30 deg
+P-wave height, lead II: 0.13 mV
+P-wave duration, lead II: 106 ms
+R-wave height, lead aVL: 0.19 mV
+R-wave height, lead V5: 2.31 mV
+S-wave depth, lead V1: -0.00 mV
+T-wave height, lead II: 0.37 mV
+T-wave height, lead V1: -0.18 mV
+T-wave height, lead V5: 0.45 mV
+ST level, lead V5: 0.02 mV
+Q-wave depth, lead III: -0.08 mV
+Correct answer: B) younger adult (under 40)
+
+Case 30:
+Heart rate: 76 bpm
+PR interval: 146 ms
+QRS duration: 112 ms
+QT interval: 370 ms
+QTc (Bazett): 416 ms
+P-wave axis: 73 deg
+QRS axis: 41 deg
+T-wave axis: 49 deg
+P-wave height, lead II: 0.18 mV
+P-wave duration, lead II: 118 ms
+R-wave height, lead aVL: 0.25 mV
+R-wave height, lead V5: 1.46 mV
+S-wave depth, lead V1: -0.97 mV
+T-wave height, lead II: 0.42 mV
+T-wave height, lead V1: 0.16 mV
+T-wave height, lead V5: 0.45 mV
+ST level, lead V5: -0.03 mV
+Q-wave depth, lead III: -0.00 mV
+Correct answer: B) younger adult (under 40)
+
+A DIFFERENT TASK: decide whether it rained at a weather station that day. Feedback is given.
+Day 1: humidity 76%, pressure 1012 hPa, cloud cover 4/8. Answer: no rain.
+Day 2: humidity 46%, pressure 1013 hPa, cloud cover 0/8. Answer: no rain.
+Day 3: humidity 25%, pressure 999 hPa, cloud cover 4/8. Answer: no rain.
+Day 4: humidity 98%, pressure 1030 hPa, cloud cover 4/8. Answer: no rain.
+Day 5: humidity 70%, pressure 1004 hPa, cloud cover 3/8. Answer: no rain.
+Day 6: humidity 68%, pressure 992 hPa, cloud cover 8/8. Answer: rain.
+Day 7: humidity 42%, pressure 1009 hPa, cloud cover 5/8. Answer: no rain.
+Day 8: humidity 70%, pressure 1030 hPa, cloud cover 3/8. Answer: no rain.
+Day 9: humidity 33%, pressure 1030 hPa, cloud cover 3/8. Answer: no rain.
+Day 10: humidity 21%, pressure 1029 hPa, cloud cover 6/8. Answer: no rain.
+Day 11: humidity 88%, pressure 1000 hPa, cloud cover 7/8. Answer: rain.
+Day 12: humidity 39%, pressure 1028 hPa, cloud cover 4/8. Answer: no rain.
+Day 13: humidity 22%, pressure 1032 hPa, cloud cover 6/8. Answer: no rain.
+Day 14: humidity 72%, pressure 1023 hPa, cloud cover 0/8. Answer: no rain.
+Day 15: humidity 26%, pressure 1022 hPa, cloud cover 7/8. Answer: rain.
+Day 16: humidity 49%, pressure 1036 hPa, cloud cover 7/8. Answer: rain.
+Day 17: humidity 48%, pressure 985 hPa, cloud cover 2/8. Answer: no rain.
+Day 18: humidity 96%, pressure 983 hPa, cloud cover 7/8. Answer: rain.
+Day 19: humidity 20%, pressure 1039 hPa, cloud cover 3/8. Answer: no rain.
+Day 20: humidity 68%, pressure 984 hPa, cloud cover 0/8. Answer: no rain.
+Day 21: humidity 49%, pressure 1034 hPa, cloud cover 6/8. Answer: no rain.
+Day 22: humidity 28%, pressure 1028 hPa, cloud cover 7/8. Answer: rain.
+Day 23: humidity 78%, pressure 986 hPa, cloud cover 4/8. Answer: rain.
+Day 24: humidity 32%, pressure 989 hPa, cloud cover 0/8. Answer: no rain.
+Day 25: humidity 76%, pressure 989 hPa, cloud cover 6/8. Answer: rain.
+Day 26: humidity 47%, pressure 985 hPa, cloud cover 3/8. Answer: no rain.
+Day 27: humidity 86%, pressure 1016 hPa, cloud cover 3/8. Answer: no rain.
+Day 28: humidity 82%, pressure 1006 hPa, cloud cover 4/8. Answer: rain.
+Day 29: humidity 80%, pressure 1023 hPa, cloud cover 2/8. Answer: no rain.
+Day 30: humidity 42%, pressure 1001 hPa, cloud cover 5/8. Answer: no rain.
+Day 31: humidity 38%, pressure 1015 hPa, cloud cover 4/8. Answer: no rain.
+Day 32: humidity 73%, pressure 992 hPa, cloud cover 5/8. Answer: rain.
+Day 33: humidity 97%, pressure 1025 hPa, cloud cover 3/8. Answer: no rain.
+End of the different task. Now return to the ECG task.
+
+TEST CASE:
+Heart rate: 90 bpm
+PR interval: 176 ms
+QRS duration: 90 ms
+QT interval: 366 ms
+QTc (Bazett): 447 ms
+P-wave axis: 46 deg
+QRS axis: -2 deg
+T-wave axis: 47 deg
+P-wave height, lead II: 0.09 mV
+P-wave duration, lead II: 122 ms
+R-wave height, lead aVL: 1.18 mV
+R-wave height, lead V5: 0.61 mV
+S-wave depth, lead V1: -0.00 mV
+T-wave height, lead II: 0.15 mV
+T-wave height, lead V1: -0.03 mV
+T-wave height, lead V5: 0.11 mV
+ST level, lead V5: -0.02 mV
+Q-wave depth, lead III: -0.99 mV
+
+Which adult does this ECG belong to?
+A) older adult (65 or over)
+B) younger adult (under 40)
+Answer with the single letter A or B.

@@ -1,0 +1,208 @@
+{
+  "experiment": "llm_blinded",
+  "n_learners_total": 120,
+  "models": {
+    "Qwen/Qwen2.5-3B-Instruct": {
+      "model": "Qwen/Qwen2.5-3B-Instruct",
+      "run": "blinded",
+      "gate_accuracy": 0.85,
+      "gate_items": 40,
+      "gate_pass": true,
+      "gate_rule": "Measure 1 > 72",
+      "post_collapse_fraction": 0.7833333333333333,
+      "collapsed_model": true,
+      "informative": false
+    }
+  },
+  "models_counted": [],
+  "models_uninformative": [
+    "Qwen/Qwen2.5-3B-Instruct"
+  ],
+  "H1_primary": {
+    "skipped": "no language model passed the known-answer gate and collapse rule"
+  },
+  "secondary": {},
+  "descriptives": [
+    {
+      "condition": "cue_training",
+      "test": "pre",
+      "n": 30,
+      "mean_acc": 0.47166666666666673,
+      "sd": 0.043910829183018515,
+      "ci_low": 0.4559533782473004,
+      "ci_high": 0.48737995508603305
+    },
+    {
+      "condition": "cue_training",
+      "test": "post",
+      "n": 30,
+      "mean_acc": 0.5208333333333333,
+      "sd": 0.037762491272775374,
+      "ci_low": 0.5073201993788418,
+      "ci_high": 0.5343464672878248
+    },
+    {
+      "condition": "cue_training",
+      "test": "delayed",
+      "n": 30,
+      "mean_acc": 0.5341666666666666,
+      "sd": 0.05105918359986826,
+      "ci_low": 0.5158953724713754,
+      "ci_high": 0.5524379608619577
+    },
+    {
+      "condition": "cue_training",
+      "test": "transfer",
+      "n": 30,
+      "mean_acc": 0.5108333333333334,
+      "sd": 0.019346359068191682,
+      "ci_low": 0.5039103276520678,
+      "ci_high": 0.5177563390145989
+    },
+    {
+      "condition": "cue_training",
+      "test": "gain",
+      "n": 30,
+      "mean_acc": 0.04916666666666667,
+      "sd": 0.05998682805608149,
+      "ci_low": 0.02770065593206026,
+      "ci_high": 0.07063267740127308
+    },
+    {
+      "condition": "feedback_only",
+      "test": "pre",
+      "n": 30,
+      "mean_acc": 0.47,
+      "sd": 0.043251469977012506,
+      "ci_low": 0.4545226602422441,
+      "ci_high": 0.48547733975775587
+    },
+    {
+      "condition": "feedback_only",
+      "test": "post",
+      "n": 30,
+      "mean_acc": 0.5433333333333333,
+      "sd": 0.07367605390858166,
+      "ci_low": 0.5169686960398514,
+      "ci_high": 0.5696979706268153
+    },
+    {
+      "condition": "feedback_only",
+      "test": "delayed",
+      "n": 30,
+      "mean_acc": 0.5591666666666667,
+      "sd": 0.08265094168198896,
+      "ci_low": 0.5295904070299308,
+      "ci_high": 0.5887429263034026
+    },
+    {
+      "condition": "feedback_only",
+      "test": "transfer",
+      "n": 30,
+      "mean_acc": 0.53,
+      "sd": 0.0577599073454219,
+      "ci_low": 0.5093308826073027,
+      "ci_high": 0.5506691173926973
+    },
+    {
+      "condition": "feedback_only",
+      "test": "gain",
+      "n": 30,
+      "mean_acc": 0.07333333333333333,
+      "sd": 0.07766343538243912,
+      "ci_low": 0.04554182990449292,
+      "ci_high": 0.10112483676217375
+    },
+    {
+      "condition": "no_training",
+      "test": "pre",
+      "n": 30,
+      "mean_acc": 0.4933333333333333,
+      "sd": 0.03767678635293962,
+      "ci_low": 0.4798508684905255,
+      "ci_high": 0.5068157981761411
+    },
+    {
+      "condition": "no_training",
+      "test": "post",
+      "n": 30,
+      "mean_acc": 0.48500000000000004,
+      "sd": 0.026749154031096206,
+      "ci_low": 0.4754279381627524,
+      "ci_high": 0.49457206183724767
+    },
+    {
+      "condition": "no_training",
+      "test": "delayed",
+      "n": 30,
+      "mean_acc": 0.4975,
+      "sd": 0.010064447498411221,
+      "ci_low": 0.4938984837165119,
+      "ci_high": 0.5011015162834881
+    },
+    {
+      "condition": "no_training",
+      "test": "transfer",
+      "n": 30,
+      "mean_acc": 0.4983333333333333,
+      "sd": 0.02450662589267806,
+      "ci_low": 0.48956374988429013,
+      "ci_high": 0.5071029167823765
+    },
+    {
+      "condition": "no_training",
+      "test": "gain",
+      "n": 30,
+      "mean_acc": -0.008333333333333337,
+      "sd": 0.0474947062990896,
+      "ci_low": -0.0253290957080348,
+      "ci_high": 0.008662429041368129
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "pre",
+      "n": 30,
+      "mean_acc": 0.4758333333333333,
+      "sd": 0.03855321743658554,
+      "ci_low": 0.4620372416551126,
+      "ci_high": 0.48962942501155393
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "post",
+      "n": 30,
+      "mean_acc": 0.5091666666666667,
+      "sd": 0.021257182694137854,
+      "ci_low": 0.5015598815325494,
+      "ci_high": 0.5167734518007839
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "delayed",
+      "n": 30,
+      "mean_acc": 0.5133333333333333,
+      "sd": 0.03519241036255455,
+      "ci_low": 0.5007398910210809,
+      "ci_high": 0.5259267756455858
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "transfer",
+      "n": 30,
+      "mean_acc": 0.5216666666666667,
+      "sd": 0.049884925048820486,
+      "ci_low": 0.5038155754972536,
+      "ci_high": 0.5395177578360798
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "gain",
+      "n": 30,
+      "mean_acc": 0.03333333333333333,
+      "sd": 0.04839373950201104,
+      "ci_low": 0.016015856058710223,
+      "ci_high": 0.05065081060795644
+    }
+  ],
+  "robustness": {}
+}

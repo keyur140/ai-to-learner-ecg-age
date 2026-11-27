@@ -1,0 +1,173 @@
+author:
+  name: KEYUR SHAILESHKUMAR PATEL
+  given_names: KEYUR SHAILESHKUMAR
+  family_names: PATEL
+  orcid: https://orcid.org/0009-0008-5261-043X
+  affiliations:
+  - MSc Artificial Intelligence student, Department of Computer Science, Brunel University
+    London, UK
+  - Independent researcher
+  note: Conducted independently; not an official Brunel University London project.
+study:
+  title: Can learners acquire a perceptual skill they never had from AI-derived cues?
+    (ECG age)
+  master_seed: 20261026
+  output_dir: runs
+data:
+  dir: data
+  sampling_rate: 100
+  young_max_age: 39
+  older_min_age: 65
+  feature_source: 12sl
+  max_missing_panel: 2
+  teacher_train_folds:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  teacher_val_fraction: 0.1
+  cue_fold: 8
+  test_fold: 9
+  transfer_device_rank: 2
+panel:
+- id: HR_Ventr_Global
+  label: Heart rate
+  unit: bpm
+- id: PR_Int_Global
+  label: PR interval
+  unit: ms
+- id: QRS_Dur_Global
+  label: QRS duration
+  unit: ms
+- id: QT_Int_Global
+  label: QT interval
+  unit: ms
+- id: QT_IntBazett_Global
+  label: QTc (Bazett)
+  unit: ms
+- id: P_AxisFront_Global
+  label: P-wave axis
+  unit: deg
+- id: R_AxisFrontal_Global
+  label: QRS axis
+  unit: deg
+- id: T_AxisFront_Global
+  label: T-wave axis
+  unit: deg
+- id: P_Amp_II
+  label: P-wave height, lead II
+  unit: mV
+- id: P_Dur_II
+  label: P-wave duration, lead II
+  unit: ms
+- id: R_Amp_aVL
+  label: R-wave height, lead aVL
+  unit: mV
+- id: R_Amp_V5
+  label: R-wave height, lead V5
+  unit: mV
+- id: S_Amp_V1
+  label: S-wave depth, lead V1
+  unit: mV
+- id: T_Amp_II
+  label: T-wave height, lead II
+  unit: mV
+- id: T_Amp_V1
+  label: T-wave height, lead V1
+  unit: mV
+- id: T_Amp_V5
+  label: T-wave height, lead V5
+  unit: mV
+- id: ST_Amp_V5
+  label: ST level, lead V5
+  unit: mV
+- id: Q_Amp_III
+  label: Q-wave depth, lead III
+  unit: mV
+teacher:
+  arch: resnet1d
+  channels: 64
+  blocks: 4
+  epochs: 40
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 6
+cues:
+  k_max: 8
+  k_min: 5
+  stability_bootstraps: 200
+  stability_threshold: 0.6
+  l1_C_grid:
+  - 0.005
+  - 0.01
+  - 0.02
+  - 0.05
+  - 0.1
+  - 0.2
+  - 0.5
+  - 1.0
+  n_prototypes_per_class: 3
+saliency:
+  n_ecgs: 400
+  ig_steps: 32
+conditions:
+- no_training
+- feedback_only
+- cue_training
+- scrambled_cues
+tests:
+  primary: post
+  sets:
+  - pre
+  - post
+  - delayed
+  - transfer
+experiment_llm:
+  enabled: true
+  n_per_condition: 30
+  backend: hf
+  models:
+  - Qwen/Qwen2.5-3B-Instruct
+  dtype: bfloat16
+  batch_size: 8
+  n_practice: 24
+  n_items_per_test: 40
+  distractor_tokens: 1500
+  openai_base_url: null
+  revisions: {}
+  blinded_run: true
+  blinded_n_per_condition: 30
+  gate:
+    n_items: 40
+    min_accuracy: 0.85
+    rule_feature: HR_Ventr_Global
+  collapse_share: 0.95
+  collapse_model_fraction: 0.5
+experiment_nets:
+  enabled: false
+  n_per_condition: 30
+  n_practice: 64
+  steps: 300
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  cue_loss_weight: 1.0
+  channels: 16
+  n_items_per_test: 200
+  distractor_task: sex
+  distractor_n: 256
+  distractor_steps: 300
+  device: auto
+analysis:
+  alpha: 0.05
+  primary_alternative: greater
+  bootstrap: 10000
+  item_level_robustness: true
+  min_meaningful_diff: 0.03
+  equivalence_margin: 0.03
+_protected:
+  sealed_fold: 10

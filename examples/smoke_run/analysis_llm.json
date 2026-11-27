@@ -1,0 +1,824 @@
+{
+  "experiment": "llm",
+  "n_learners_total": 24,
+  "primary_score": "bias_corrected",
+  "role": "primary",
+  "models": {
+    "mock-student-1": {
+      "model": "mock-student-1",
+      "run": "main",
+      "gate_accuracy": 1.0,
+      "gate_items": 20,
+      "gate_pass": true,
+      "gate_rule": "Heart rate > 71 bpm",
+      "probe_p_higher_in_older": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_p_higher_A_first": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_p_higher_B_first": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_known_direction": {
+        "HR_Ventr_Global": 0,
+        "PR_Int_Global": 0,
+        "QRS_Dur_Global": 0,
+        "QT_Int_Global": 0,
+        "QT_IntBazett_Global": 0,
+        "P_AxisFront_Global": 0,
+        "R_AxisFrontal_Global": 0,
+        "T_AxisFront_Global": 0,
+        "P_Amp_II": 0,
+        "P_Dur_II": 0,
+        "R_Amp_aVL": 0,
+        "R_Amp_V5": 0,
+        "S_Amp_V1": 0,
+        "T_Amp_II": 0,
+        "T_Amp_V1": 0,
+        "T_Amp_V5": 0,
+        "ST_Amp_V5": 0,
+        "Q_Amp_III": 0
+      },
+      "post_collapse_fraction": 0.0,
+      "collapsed_model": false,
+      "post_flat_fraction": 0.0,
+      "flat_model": false,
+      "primary_score": "bias_corrected",
+      "collapse_excludes_model": false,
+      "informative": true
+    },
+    "mock-student-2": {
+      "model": "mock-student-2",
+      "run": "main",
+      "gate_accuracy": 1.0,
+      "gate_items": 20,
+      "gate_pass": true,
+      "gate_rule": "Heart rate > 71 bpm",
+      "probe_p_higher_in_older": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_p_higher_A_first": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_p_higher_B_first": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_known_direction": {
+        "HR_Ventr_Global": 0,
+        "PR_Int_Global": 0,
+        "QRS_Dur_Global": 0,
+        "QT_Int_Global": 0,
+        "QT_IntBazett_Global": 0,
+        "P_AxisFront_Global": 0,
+        "R_AxisFrontal_Global": 0,
+        "T_AxisFront_Global": 0,
+        "P_Amp_II": 0,
+        "P_Dur_II": 0,
+        "R_Amp_aVL": 0,
+        "R_Amp_V5": 0,
+        "S_Amp_V1": 0,
+        "T_Amp_II": 0,
+        "T_Amp_V1": 0,
+        "T_Amp_V5": 0,
+        "ST_Amp_V5": 0,
+        "Q_Amp_III": 0
+      },
+      "post_collapse_fraction": 0.0,
+      "collapsed_model": false,
+      "post_flat_fraction": 0.0,
+      "flat_model": false,
+      "primary_score": "bias_corrected",
+      "collapse_excludes_model": false,
+      "informative": true
+    },
+    "mock-student-3": {
+      "model": "mock-student-3",
+      "run": "main",
+      "gate_accuracy": 1.0,
+      "gate_items": 20,
+      "gate_pass": true,
+      "gate_rule": "Heart rate > 71 bpm",
+      "probe_p_higher_in_older": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_p_higher_A_first": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_p_higher_B_first": {
+        "HR_Ventr_Global": 0.5,
+        "PR_Int_Global": 0.5,
+        "QRS_Dur_Global": 0.5,
+        "QT_Int_Global": 0.5,
+        "QT_IntBazett_Global": 0.5,
+        "P_AxisFront_Global": 0.5,
+        "R_AxisFrontal_Global": 0.5,
+        "T_AxisFront_Global": 0.5,
+        "P_Amp_II": 0.5,
+        "P_Dur_II": 0.5,
+        "R_Amp_aVL": 0.5,
+        "R_Amp_V5": 0.5,
+        "S_Amp_V1": 0.5,
+        "T_Amp_II": 0.5,
+        "T_Amp_V1": 0.5,
+        "T_Amp_V5": 0.5,
+        "ST_Amp_V5": 0.5,
+        "Q_Amp_III": 0.5
+      },
+      "probe_known_direction": {
+        "HR_Ventr_Global": 0,
+        "PR_Int_Global": 0,
+        "QRS_Dur_Global": 0,
+        "QT_Int_Global": 0,
+        "QT_IntBazett_Global": 0,
+        "P_AxisFront_Global": 0,
+        "R_AxisFrontal_Global": 0,
+        "T_AxisFront_Global": 0,
+        "P_Amp_II": 0,
+        "P_Dur_II": 0,
+        "R_Amp_aVL": 0,
+        "R_Amp_V5": 0,
+        "S_Amp_V1": 0,
+        "T_Amp_II": 0,
+        "T_Amp_V1": 0,
+        "T_Amp_V5": 0,
+        "ST_Amp_V5": 0,
+        "Q_Amp_III": 0
+      },
+      "post_collapse_fraction": 0.0,
+      "collapsed_model": false,
+      "post_flat_fraction": 0.0,
+      "flat_model": false,
+      "primary_score": "bias_corrected",
+      "collapse_excludes_model": false,
+      "informative": true
+    }
+  },
+  "models_counted": [
+    "mock-student-1",
+    "mock-student-2",
+    "mock-student-3"
+  ],
+  "models_uninformative": [],
+  "n_learners": 24,
+  "n_per_condition": {
+    "no_training": 6,
+    "feedback_only": 6,
+    "cue_training": 6,
+    "scrambled_cues": 6
+  },
+  "H1_primary": {
+    "t": 1.2741179785940644,
+    "p": 0.11859359152054007,
+    "mean_a": 0.8500000000000001,
+    "mean_b": 0.7666666666666667,
+    "diff": 0.08333333333333337,
+    "d": 0.7356123579206248,
+    "n_a": 6,
+    "n_b": 6,
+    "ci95_diff": [
+      -0.03333333333333327,
+      0.2
+    ],
+    "mde_80": 0.175024248320053,
+    "outcome": "post_acc",
+    "group_a": "cue_training",
+    "group_b": "feedback_only",
+    "min_meaningful_diff": 0.03,
+    "significant": false,
+    "meaningful": true,
+    "supported": false
+  },
+  "H1_equivalence_TOST": {
+    "p": 0.7811857469838199,
+    "margin": 0.03
+  },
+  "secondary": {
+    "H2": {
+      "t": 4.841648318657445,
+      "p": 0.0005812918899081885,
+      "mean_a": 0.8500000000000001,
+      "mean_b": 0.5333333333333333,
+      "diff": 0.31666666666666676,
+      "d": 2.795326960098375,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        0.20791666666666678,
+        0.4333333333333334
+      ],
+      "mde_80": 0.17502424832005295,
+      "outcome": "post_acc",
+      "group_a": "cue_training",
+      "group_b": "no_training",
+      "p_holm": 0.002906459449540943,
+      "supported": true
+    },
+    "H3": {
+      "t": 2.958039891549809,
+      "p": 0.007168053531180977,
+      "mean_a": 0.7666666666666667,
+      "mean_b": 0.5333333333333333,
+      "diff": 0.2333333333333334,
+      "d": 1.7078251276599337,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        0.11666666666666647,
+        0.3833333333333333
+      ],
+      "mde_80": 0.21108718577876623,
+      "outcome": "post_acc",
+      "group_a": "feedback_only",
+      "group_b": "no_training",
+      "p_holm": 0.02867221412472391,
+      "supported": true
+    },
+    "H4": {
+      "t": 1.5971914124998503,
+      "p": 0.07750083052988602,
+      "mean_a": 0.8666666666666667,
+      "mean_b": 0.7833333333333333,
+      "diff": 0.08333333333333337,
+      "d": 0.9221388919541471,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.01666666666666672,
+        0.17541666666666633
+      ],
+      "mde_80": 0.13962104963077643,
+      "outcome": "delayed_acc",
+      "group_a": "cue_training",
+      "group_b": "feedback_only",
+      "p_holm": 0.23250249158965805,
+      "supported": false
+    },
+    "H5": {
+      "t": 1.3837968120433306,
+      "p": 0.10416540616967071,
+      "mean_a": 0.8833333333333334,
+      "mean_b": 0.7833333333333332,
+      "diff": 0.1000000000000002,
+      "d": 0.7989354619369627,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.03333333333333327,
+        0.21666666666666679
+      ],
+      "mde_80": 0.19338232856184007,
+      "outcome": "transfer_acc",
+      "group_a": "cue_training",
+      "group_b": "feedback_only",
+      "p_holm": 0.23250249158965805,
+      "supported": false
+    },
+    "H6": {
+      "t": 0.5822225097395818,
+      "p": 0.2888625822403437,
+      "mean_a": 0.36666666666666664,
+      "mean_b": 0.3,
+      "diff": 0.06666666666666665,
+      "d": 0.33614632272640704,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.15000000000000005,
+        0.23333333333333334
+      ],
+      "mde_80": 0.3064141804812543,
+      "outcome": "gain_acc",
+      "group_a": "cue_training",
+      "group_b": "feedback_only",
+      "p_holm": 0.2888625822403437,
+      "supported": false
+    },
+    "H7": {
+      "t": 7.254762501100117,
+      "p": 1.4550368330154752e-05,
+      "mean_a": 0.8500000000000001,
+      "mean_b": 0.5166666666666667,
+      "diff": 0.33333333333333337,
+      "d": 4.1885390829169555,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        0.25,
+        0.4166666666666667
+      ],
+      "mde_80": 0.12295456477902636,
+      "outcome": "post_acc",
+      "group_a": "cue_training",
+      "group_b": "scrambled_cues",
+      "p_holm": 8.730220998092852e-05,
+      "supported": true
+    }
+  },
+  "pretest_vs_chance": {
+    "mean": 0.4875,
+    "t": -0.46076858867298315,
+    "p_two_sided": 0.6492918512901728
+  },
+  "transfer_fraction": {
+    "no_training": 0.0804040404040404,
+    "feedback_only": 0.6432323232323234,
+    "cue_training": 0.8442424242424246,
+    "scrambled_cues": 0.04020202020202033
+  },
+  "teacher_test_accuracy": 0.914572864321608,
+  "preconditions": {
+    "teacher_test_auroc": 0.9703681229773462,
+    "teacher_is_expert (AUROC >= 0.80)": true,
+    "pretest_mean": 0.4875,
+    "new_skill (pretest mean <= 0.65)": true
+  },
+  "rule_tally_accuracy_test": 0.864321608040201,
+  "collapse_share_of_learners": {
+    "pre": 0.0,
+    "post": 0.0,
+    "delayed": 0.0,
+    "transfer": 0.0
+  },
+  "flat_share_of_learners": {
+    "pre": 0.0,
+    "post": 0.0,
+    "delayed": 0.0,
+    "transfer": 0.0
+  },
+  "robustness": {
+    "ancova_cue_coef": {
+      "coef": 0.08496240601503777,
+      "p_two_sided": 0.3021026273078453,
+      "ci95": [
+        -0.07640752145018986,
+        0.2463323334802654
+      ]
+    },
+    "H1_on_p_correct": {
+      "t": 2.4110152566738607,
+      "p": 0.018312104852379205,
+      "mean_a": 0.67013068852625,
+      "mean_b": 0.6141569705973517,
+      "diff": 0.05597371792889827,
+      "d": 1.3920003074609484,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        0.01378968149121157,
+        0.09581527557903859
+      ],
+      "mde_80": 0.06212598785835637,
+      "outcome": "post_p_correct",
+      "group_a": "cue_training",
+      "group_b": "feedback_only"
+    },
+    "cue_adjusted_for_model": {
+      "coef": 0.08333333333333331,
+      "p_two_sided": 0.3291139859786085
+    },
+    "per_model_H1": {
+      "mock-student-1": {
+        "t": 1.414213562373096,
+        "p": 0.14644660940672607,
+        "mean_a": 0.8500000000000001,
+        "mean_b": 0.75,
+        "diff": 0.10000000000000009,
+        "d": 1.414213562373096,
+        "n_a": 2,
+        "n_b": 2,
+        "ci95_diff": [
+          0.0,
+          0.20000000000000007
+        ],
+        "mde_80": 0.28142849891224153,
+        "outcome": "post_acc",
+        "group_a": "cue_training",
+        "group_b": "feedback_only"
+      },
+      "mock-student-2": {
+        "t": 0.4999999999999999,
+        "p": 0.35241638234956674,
+        "mean_a": 0.9,
+        "mean_b": 0.8,
+        "diff": 0.09999999999999998,
+        "d": 0.4999999999999999,
+        "n_a": 2,
+        "n_b": 2,
+        "ci95_diff": [
+          -0.09999999999999998,
+          0.30000000000000004
+        ],
+        "mde_80": 0.7959999999999875,
+        "outcome": "post_acc",
+        "group_a": "cue_training",
+        "group_b": "feedback_only"
+      },
+      "mock-student-3": {
+        "t": 0.4472135954999582,
+        "p": 0.3558613956168347,
+        "mean_a": 0.8,
+        "mean_b": 0.75,
+        "diff": 0.050000000000000044,
+        "d": 0.4472135954999582,
+        "n_a": 2,
+        "n_b": 2,
+        "ci95_diff": [
+          -0.10000000000000009,
+          0.20000000000000007
+        ],
+        "mde_80": 0.4449775275224513,
+        "outcome": "post_acc",
+        "group_a": "cue_training",
+        "group_b": "feedback_only"
+      }
+    },
+    "response_bias_p_older_mean": {
+      "cue_training": 0.5092448948225062,
+      "feedback_only": 0.530956435286175,
+      "no_training": 0.5004532422664877,
+      "scrambled_cues": 0.5005846078825705
+    },
+    "item_level_twoway_cluster_H1": {
+      "coef": 0.08333333333333329,
+      "se_twoway": 0.060498188933202995,
+      "z": 1.3774517023202617,
+      "p_one_sided": 0.08418631866227755,
+      "n_items": 240,
+      "n_learners": 12,
+      "n_ecgs": 148
+    },
+    "H1_on_raw_accuracy": {
+      "t": 1.5866576560438366,
+      "p": 0.07506795616890975,
+      "mean_a": 0.8583333333333334,
+      "mean_b": 0.7583333333333333,
+      "diff": 0.10000000000000009,
+      "d": 0.9160572248286898,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.008541666666666838,
+        0.20833333333333348
+      ],
+      "mde_80": 0.1686575858062708,
+      "outcome": "post_acc_raw",
+      "group_a": "cue_training",
+      "group_b": "feedback_only"
+    },
+    "H1_on_auroc": {
+      "t": 1.2555004130810623,
+      "p": 0.12227395745062017,
+      "mean_a": 0.9233333333333332,
+      "mean_b": 0.8466666666666667,
+      "diff": 0.07666666666666655,
+      "d": 0.7248635014600376,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.030041666666666685,
+        0.18166666666666664
+      ],
+      "mde_80": 0.16341007618870879,
+      "outcome": "post_auroc",
+      "group_a": "cue_training",
+      "group_b": "feedback_only"
+    },
+    "raw_accuracy_post_by_group": {
+      "cue_training": 0.8583333333333334,
+      "feedback_only": 0.7583333333333333,
+      "no_training": 0.5333333333333333,
+      "scrambled_cues": 0.525
+    },
+    "auroc_post_by_group": {
+      "cue_training": 0.9233333333333333,
+      "feedback_only": 0.8466666666666667,
+      "no_training": 0.5233333333333333,
+      "scrambled_cues": 0.5983333333333333
+    },
+    "median_tie_share_post_by_group": {
+      "cue_training": 0.0,
+      "feedback_only": 0.0,
+      "no_training": 0.0,
+      "scrambled_cues": 0.0
+    }
+  },
+  "descriptives": [
+    {
+      "condition": "cue_training",
+      "test": "pre",
+      "n": 6,
+      "mean_acc": 0.4833333333333334,
+      "sd": 0.19407902170679517,
+      "ci_low": 0.32803777283300517,
+      "ci_high": 0.6386288938336616
+    },
+    {
+      "condition": "cue_training",
+      "test": "post",
+      "n": 6,
+      "mean_acc": 0.8500000000000001,
+      "sd": 0.08366600265340758,
+      "ci_low": 0.7830532549957308,
+      "ci_high": 0.9169467450042694
+    },
+    {
+      "condition": "cue_training",
+      "test": "delayed",
+      "n": 6,
+      "mean_acc": 0.8666666666666667,
+      "sd": 0.05163977794943222,
+      "ci_low": 0.8253462385737999,
+      "ci_high": 0.9079870947595335
+    },
+    {
+      "condition": "cue_training",
+      "test": "transfer",
+      "n": 6,
+      "mean_acc": 0.8833333333333334,
+      "sd": 0.07527726527090808,
+      "ci_low": 0.8230989762123533,
+      "ci_high": 0.9435676904543135
+    },
+    {
+      "condition": "cue_training",
+      "test": "gain",
+      "n": 6,
+      "mean_acc": 0.36666666666666664,
+      "sd": 0.25033311140691455,
+      "ci_low": 0.16635845970105625,
+      "ci_high": 0.566974873632277
+    },
+    {
+      "condition": "feedback_only",
+      "test": "pre",
+      "n": 6,
+      "mean_acc": 0.4666666666666666,
+      "sd": 0.08164965809277258,
+      "ci_low": 0.4013333333333333,
+      "ci_high": 0.5319999999999999
+    },
+    {
+      "condition": "feedback_only",
+      "test": "post",
+      "n": 6,
+      "mean_acc": 0.7666666666666667,
+      "sd": 0.13662601021279466,
+      "ci_low": 0.6573430898662141,
+      "ci_high": 0.8759902434671193
+    },
+    {
+      "condition": "feedback_only",
+      "test": "delayed",
+      "n": 6,
+      "mean_acc": 0.7833333333333333,
+      "sd": 0.11690451944500123,
+      "ci_low": 0.6897902357199278,
+      "ci_high": 0.8768764309467388
+    },
+    {
+      "condition": "feedback_only",
+      "test": "transfer",
+      "n": 6,
+      "mean_acc": 0.7833333333333332,
+      "sd": 0.16020819787597224,
+      "ci_low": 0.6551400764470557,
+      "ci_high": 0.9115265902196107
+    },
+    {
+      "condition": "feedback_only",
+      "test": "gain",
+      "n": 6,
+      "mean_acc": 0.3,
+      "sd": 0.1264911064067352,
+      "ci_low": 0.1987860352191128,
+      "ci_high": 0.40121396478088717
+    },
+    {
+      "condition": "no_training",
+      "test": "pre",
+      "n": 6,
+      "mean_acc": 0.4666666666666666,
+      "sd": 0.12110601416389964,
+      "ci_low": 0.36976167310194996,
+      "ci_high": 0.5635716602313833
+    },
+    {
+      "condition": "no_training",
+      "test": "post",
+      "n": 6,
+      "mean_acc": 0.5333333333333333,
+      "sd": 0.13662601021279464,
+      "ci_low": 0.4240097565328808,
+      "ci_high": 0.6426569101337859
+    },
+    {
+      "condition": "no_training",
+      "test": "delayed",
+      "n": 6,
+      "mean_acc": 0.4166666666666667,
+      "sd": 0.14719601443879746,
+      "ci_low": 0.29888532500150966,
+      "ci_high": 0.5344480083318237
+    },
+    {
+      "condition": "no_training",
+      "test": "transfer",
+      "n": 6,
+      "mean_acc": 0.48333333333333334,
+      "sd": 0.07527726527090808,
+      "ci_low": 0.42309897621235315,
+      "ci_high": 0.5435676904543135
+    },
+    {
+      "condition": "no_training",
+      "test": "gain",
+      "n": 6,
+      "mean_acc": 0.06666666666666664,
+      "sd": 0.1632993161855452,
+      "ci_low": -0.06400000000000002,
+      "ci_high": 0.1973333333333333
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "pre",
+      "n": 6,
+      "mean_acc": 0.5333333333333333,
+      "sd": 0.13662601021279464,
+      "ci_low": 0.4240097565328808,
+      "ci_high": 0.6426569101337859
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "post",
+      "n": 6,
+      "mean_acc": 0.5166666666666667,
+      "sd": 0.07527726527090808,
+      "ci_low": 0.45643230954568653,
+      "ci_high": 0.5769010237876468
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "delayed",
+      "n": 6,
+      "mean_acc": 0.75,
+      "sd": 0.05477225575051666,
+      "ci_low": 0.7061730676410041,
+      "ci_high": 0.7938269323589959
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "transfer",
+      "n": 6,
+      "mean_acc": 0.6166666666666666,
+      "sd": 0.13291601358251254,
+      "ci_low": 0.5103117054388152,
+      "ci_high": 0.723021627894518
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "gain",
+      "n": 6,
+      "mean_acc": -0.016666666666666653,
+      "sd": 0.14719601443879743,
+      "ci_low": -0.13444800833182363,
+      "ci_high": 0.10111467499849032
+    }
+  ]
+}

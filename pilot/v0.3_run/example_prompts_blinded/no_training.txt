@@ -1,0 +1,81 @@
+You are a student learning a new skill. You will see measurements taken from adults' resting 12-lead ECGs. Each ECG belongs either to a younger adult (under 40 years old) or to an older adult (65 years or older). Exactly half of all cases are younger and half are older.
+
+LESSON: How the cases are shown.
+- Each case lists 18 measurements, labelled Measure 1 to Measure 18.
+- The measurements are always listed in the same order.
+- Some measurements are times, some are angles and some are voltages; units are not shown.
+- Values differ from person to person, and no single value is shown on its own as decisive.
+- Read every measurement in a case before deciding.
+- Measure 1 is reported for every case.
+- Measure 2 is reported for every case.
+- Measure 3 is reported for every case.
+- Measure 4 is reported for every case.
+- Measure 5 is reported for every case.
+- Measure 6 is reported for every case.
+- Measure 7 is reported for every case.
+- Measure 8 is reported for every case.
+- Measure 9 is reported for every case.
+- Measure 10 is reported for every case.
+- Measure 11 is reported for every case.
+- Measure 12 is reported for every case.
+
+A DIFFERENT TASK: decide whether it rained at a weather station that day. Feedback is given.
+Day 1: humidity 24%, pressure 994 hPa, cloud cover 2/8. Answer: no rain.
+Day 2: humidity 85%, pressure 987 hPa, cloud cover 7/8. Answer: rain.
+Day 3: humidity 34%, pressure 991 hPa, cloud cover 8/8. Answer: rain.
+Day 4: humidity 93%, pressure 984 hPa, cloud cover 6/8. Answer: rain.
+Day 5: humidity 61%, pressure 1015 hPa, cloud cover 2/8. Answer: no rain.
+Day 6: humidity 42%, pressure 980 hPa, cloud cover 1/8. Answer: no rain.
+Day 7: humidity 88%, pressure 995 hPa, cloud cover 8/8. Answer: rain.
+Day 8: humidity 30%, pressure 1005 hPa, cloud cover 2/8. Answer: no rain.
+Day 9: humidity 62%, pressure 980 hPa, cloud cover 8/8. Answer: rain.
+Day 10: humidity 75%, pressure 1003 hPa, cloud cover 5/8. Answer: rain.
+Day 11: humidity 67%, pressure 1030 hPa, cloud cover 3/8. Answer: no rain.
+Day 12: humidity 62%, pressure 991 hPa, cloud cover 8/8. Answer: rain.
+Day 13: humidity 33%, pressure 1020 hPa, cloud cover 6/8. Answer: no rain.
+Day 14: humidity 45%, pressure 1006 hPa, cloud cover 4/8. Answer: no rain.
+Day 15: humidity 49%, pressure 1025 hPa, cloud cover 2/8. Answer: no rain.
+Day 16: humidity 77%, pressure 1020 hPa, cloud cover 8/8. Answer: rain.
+Day 17: humidity 53%, pressure 1000 hPa, cloud cover 7/8. Answer: rain.
+Day 18: humidity 99%, pressure 991 hPa, cloud cover 6/8. Answer: rain.
+Day 19: humidity 32%, pressure 996 hPa, cloud cover 1/8. Answer: no rain.
+Day 20: humidity 83%, pressure 1029 hPa, cloud cover 7/8. Answer: rain.
+Day 21: humidity 53%, pressure 994 hPa, cloud cover 2/8. Answer: no rain.
+Day 22: humidity 28%, pressure 1029 hPa, cloud cover 4/8. Answer: no rain.
+Day 23: humidity 85%, pressure 1031 hPa, cloud cover 4/8. Answer: no rain.
+Day 24: humidity 84%, pressure 1036 hPa, cloud cover 5/8. Answer: no rain.
+Day 25: humidity 78%, pressure 980 hPa, cloud cover 3/8. Answer: rain.
+Day 26: humidity 35%, pressure 1028 hPa, cloud cover 1/8. Answer: no rain.
+Day 27: humidity 52%, pressure 1015 hPa, cloud cover 8/8. Answer: rain.
+Day 28: humidity 84%, pressure 1009 hPa, cloud cover 2/8. Answer: rain.
+Day 29: humidity 23%, pressure 1036 hPa, cloud cover 2/8. Answer: no rain.
+Day 30: humidity 56%, pressure 1030 hPa, cloud cover 7/8. Answer: rain.
+Day 31: humidity 50%, pressure 981 hPa, cloud cover 4/8. Answer: no rain.
+Day 32: humidity 78%, pressure 1006 hPa, cloud cover 4/8. Answer: rain.
+Day 33: humidity 76%, pressure 1017 hPa, cloud cover 2/8. Answer: no rain.
+End of the different task. Now return to the ECG task.
+
+TEST CASE:
+Measure 1: 70
+Measure 2: 162
+Measure 3: 184
+Measure 4: 492
+Measure 5: 531
+Measure 6: 51
+Measure 7: -82
+Measure 8: 97
+Measure 9: 0.00
+Measure 10: 0
+Measure 11: 0.85
+Measure 12: 0.42
+Measure 13: -0.89
+Measure 14: 0.81
+Measure 15: 0.26
+Measure 16: 0.44
+Measure 17: 0.07
+Measure 18: -0.00
+
+Which adult does this ECG belong to?
+A) older adult (65 or over)
+B) younger adult (under 40)
+Answer with the single letter A or B.

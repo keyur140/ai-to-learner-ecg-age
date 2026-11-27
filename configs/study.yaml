@@ -1,0 +1,171 @@
+# ============================================================================
+# AI-to-learner knowledge transfer study: master configuration.
+# Every value here is part of the preregistration. Changing anything after the
+# prereg is frozen (python run_study.py freeze) is logged as a deviation.
+# ============================================================================
+author:
+  name: "KEYUR SHAILESHKUMAR PATEL"
+  given_names: "KEYUR SHAILESHKUMAR"
+  family_names: "PATEL"
+  orcid: "https://orcid.org/0009-0008-5261-043X"
+  affiliations:
+    - "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK"
+    - "Independent researcher"
+  note: "Conducted independently; not an official Brunel University London project."
+
+study:
+  title: "Can learners acquire a perceptual skill they never had from AI-derived cues? (ECG age)"
+  master_seed: 20261026
+  output_dir: runs
+
+data:
+  dir: data                     # PTB-XL and PTB-XL+ are downloaded here
+  sampling_rate: 100            # Hz (PTB-XL low-resolution records)
+  young_max_age: 39             # label 0 = "younger" : age <= 39  (i.e. < 40)
+  older_min_age: 65             # label 1 = "older"   : age >= 65
+  feature_source: 12sl          # PTB-XL+ feature set used for cues and learner display
+  max_missing_panel: 2          # drop ECGs missing more than this many panel features
+  # Folds (official PTB-XL stratified folds)
+  teacher_train_folds: [1, 2, 3, 4, 5, 6, 7, 8]
+  teacher_val_fraction: 0.10    # random part of the training folds for early stopping
+  cue_fold: 9                   # cues are extracted from the teacher's guesses here only
+  test_fold: 10                 # learners are tested on these (never seen by teacher or cues)
+  # Transfer test: ECGs from a recording device never used anywhere else.
+  # Rule (fixed in advance): the device with the 2nd-largest number of eligible ECGs.
+  transfer_device_rank: 2
+
+# A-priori display panel: standard clinical ECG measurements chosen BEFORE seeing
+# any data. Every learner in every group sees exactly these for every ECG.
+# Cue extraction can only pick from this panel.
+panel:
+  - {id: HR_Ventr_Global,     label: "Heart rate",               unit: "bpm"}
+  - {id: PR_Int_Global,       label: "PR interval",              unit: "ms"}
+  - {id: QRS_Dur_Global,      label: "QRS duration",             unit: "ms"}
+  - {id: QT_Int_Global,       label: "QT interval",              unit: "ms"}
+  - {id: QT_IntBazett_Global, label: "QTc (Bazett)",             unit: "ms"}
+  - {id: P_AxisFront_Global,  label: "P-wave axis",              unit: "deg"}
+  - {id: R_AxisFrontal_Global,label: "QRS axis",                 unit: "deg"}
+  - {id: T_AxisFront_Global,  label: "T-wave axis",              unit: "deg"}
+  - {id: P_Amp_II,            label: "P-wave height, lead II",   unit: "mV"}
+  - {id: P_Dur_II,            label: "P-wave duration, lead II", unit: "ms"}
+  - {id: R_Amp_aVL,           label: "R-wave height, lead aVL",  unit: "mV"}
+  - {id: R_Amp_V5,            label: "R-wave height, lead V5",   unit: "mV"}
+  - {id: S_Amp_V1,            label: "S-wave depth, lead V1",    unit: "mV"}
+  - {id: T_Amp_II,            label: "T-wave height, lead II",   unit: "mV"}
+  - {id: T_Amp_V1,            label: "T-wave height, lead V1",   unit: "mV"}
+  - {id: T_Amp_V5,            label: "T-wave height, lead V5",   unit: "mV"}
+  - {id: ST_Amp_V5,           label: "ST level, lead V5",        unit: "mV"}
+  - {id: Q_Amp_III,           label: "Q-wave depth, lead III",   unit: "mV"}
+
+teacher:
+  arch: resnet1d
+  channels: 64
+  blocks: 4
+  epochs: 40
+  batch_size: 128
+  lr: 0.001
+  weight_decay: 0.0001
+  patience: 6                   # early stopping on validation AUROC
+
+cues:
+  k_max: 8                      # at most 8 cues
+  k_min: 5                      # at least 5 cues
+  stability_bootstraps: 200
+  stability_threshold: 0.6      # keep features selected in >= 60% of bootstraps
+  l1_C_grid: [0.005, 0.01, 0.02, 0.05, 0.1, 0.2, 0.5, 1.0]
+  n_prototypes_per_class: 3     # "exaggerated" examples: most confident teacher cases
+  # Cue consensus (v0.3, decision D9): train this many teachers (seeds master_seed + 1000*k; k=0 is the
+  # primary teacher used everywhere else), run the selection on each one's guesses, and keep the
+  # features chosen by at least consensus_min of them. 1 = v0.2 behaviour (single teacher).
+  n_teacher_seeds: 5
+  consensus_min: 3
+  # Placebo must be neutral (v0.3, decision D10): re-draw the scrambled lesson (fixed seed) until its
+  # rules, as a tally, score inside this band on the TRUE labels of the cue fold. First passing draw is used.
+  scrambled_band: [0.45, 0.55]
+  scrambled_max_draws: 1000
+
+saliency:
+  n_ecgs: 400                   # fold-9 ECGs explained with integrated gradients
+  ig_steps: 32
+
+# Groups. scrambled_cues (secondary, added in v0.2) gets a lesson in the same format with
+# rules built from features the AI did not pick (placebo content).
+conditions: [no_training, feedback_only, cue_training, scrambled_cues]
+
+tests:
+  # Test sets are balanced 50/50 younger/older and disjoint within each learner.
+  primary: post                  # H1 is tested on this one
+  sets: [pre, post, delayed, transfer]
+
+experiment_llm:
+  enabled: true
+  n_per_condition: 1002
+  backend: hf                   # hf | openai | mock
+  models:                       # learners are assigned round-robin, balanced within condition
+    - Qwen/Qwen2.5-3B-Instruct
+    - meta-llama/Llama-3.2-3B-Instruct
+    - google/gemma-2-2b-it
+  dtype: bfloat16
+  # How the two answer letters are read (v0.4, issue P23): float32 = their logits are recomputed in
+  # float32 from the last hidden state (fine-grained probabilities); model = the model's own logits
+  # in its dtype (in bfloat16 only about 13 distinct probabilities per 40-item test).
+  answer_precision: float32
+  batch_size: 8
+  n_practice: 24                # practice ECGs with correct answers (feedback and cue groups)
+  n_items_per_test: 40
+  distractor_tokens: 1500       # approx. length of the interference block before the delayed test
+  openai_base_url: null         # e.g. http://localhost:8000/v1 (vLLM) or http://localhost:11434/v1 (Ollama)
+  # Pin each model to an exact Hugging Face commit before freezing (scripts/pin_models.py fills this in).
+  revisions: {Qwen/Qwen2.5-3B-Instruct: 'aa8e72537993ba99e69dfaafa59ed015b17504d1', meta-llama/Llama-3.2-3B-Instruct: '0cb88a4f764b7a12671c53f0838cd831a0843b95', google/gemma-2-2b-it: '299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8'}
+  # Blinded-labels run (secondary): measurement names become "Measure 1".."Measure 18", no units.
+  blinded_run: true
+  blinded_n_per_condition: 1002
+  # Known-answer gate: before a model's learners count for H1, it must follow one explicit rule.
+  gate:
+    n_items: 40
+    min_accuracy: 0.85
+    rule_feature: HR_Ventr_Global      # "older exactly when heart rate is above the median" (labels made by the rule)
+  # Primary score for every hypothesis of Experiment A (v0.4, decision D12 after the pilot):
+  #   bias_corrected = each learner's items on a test are split at that learner's own median P(older)
+  #                    (above = "older", below = "younger", exactly at the median = half credit);
+  #   raw            = "older" when P(older) > 0.5 (the v0.2 score; still reported next to it).
+  primary_score: bias_corrected
+  # Flat rule: a learner is flat on a test if more than this share of its items tie at its median
+  # (no ranking possible); a model is uninformative if more than flat_model_fraction of its learners
+  # are flat on the post-test.
+  flat_tie_share: 0.5
+  flat_model_fraction: 0.5
+  # Answer-collapse flag: a learner is flagged if >= this share of answers on a test are the same class.
+  # Always reported. It removes a model (more than collapse_model_fraction of learners flagged on the
+  # post-test) only if collapse_excludes_model is true; with the bias-corrected score it is false (D12).
+  collapse_share: 0.95
+  collapse_model_fraction: 0.5
+  collapse_excludes_model: false
+
+experiment_nets:
+  enabled: true
+  # Role in the study (v0.4.1, decision D13 after the pilot): secondary. Run and analysed exactly as designed,
+  # but its H1 is reported as a secondary result; the preregistration states that no difference is expected.
+  role: secondary
+  n_per_condition: 1002
+  n_practice: 64                # labelled ECGs each net learner gets (feedback and cue groups)
+  steps: 300
+  batch_size: 32
+  lr: 0.001
+  weight_decay: 0.0001
+  cue_loss_weight: 1.0          # cue (and scrambled) group: extra loss for predicting the cue values
+  # no_training nets practise on the same ECGs with SHUFFLED labels (practice without real feedback)
+  channels: 16
+  n_items_per_test: 200
+  distractor_task: sex          # interference before the delayed test
+  distractor_n: 256
+  distractor_steps: 300
+  device: auto                  # auto | cpu | cuda
+
+analysis:
+  alpha: 0.05
+  primary_alternative: greater  # one-sided: cue_training > feedback_only
+  bootstrap: 10000
+  item_level_robustness: true   # item-level regression, two-way cluster-robust errors (learner and ECG)
+  min_meaningful_diff: 0.03     # H1 needs p < alpha AND cue - feedback >= this (accuracy, 0-1 scale)
+  equivalence_margin: 0.03      # TOST margin for interpreting a null primary result (= min meaningful diff)

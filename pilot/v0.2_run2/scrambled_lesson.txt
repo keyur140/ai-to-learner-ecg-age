@@ -1,0 +1,11 @@
+LESSON: How an expert AI tells younger (under 40) from older (65+) adults on an ECG.
+The AI relies on these measurements, most important first:
+1. QT interval: in older adults it tends to be lower (cut-point about 392 ms; higher points to younger).
+2. Q-wave depth, lead III: in older adults it tends to be higher (cut-point about 0.00 mV; lower points to younger).
+3. P-wave axis: in older adults it tends to be higher (cut-point about 51 deg; lower points to younger).
+4. QRS duration: in older adults it tends to be lower (cut-point about 93 ms; higher points to younger).
+5. T-wave height, lead V5: in older adults it tends to be lower (cut-point about 0.22 mV; higher points to younger).
+6. P-wave duration, lead II: in older adults it tends to be lower (cut-point about 110 ms; higher points to younger).
+7. Heart rate: in older adults it tends to be higher (cut-point about 72 bpm; lower points to younger).
+8. R-wave height, lead V5: in older adults it tends to be lower (cut-point about 1.33 mV; higher points to younger).
+No single cue is decisive. Count how many cues point to 'older', giving more weight to the cues near the top of the list, and decide by the balance.

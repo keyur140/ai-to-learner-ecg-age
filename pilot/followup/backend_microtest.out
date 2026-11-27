@@ -1,0 +1,15 @@
+    loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+    prefix cache verified (max diff 0.0000)
+a_v03 seconds 607 distinct post: 16 of 16 | fp32 vs model logits max diff 0.000
+    loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+    prefix cache verified (max diff 0.0025)
+b_fp32 seconds 354 distinct post: 16 of 16 | fp32 vs model logits max diff 0.124
+    float32 answer read-out: largest difference from the model's own logits 0.124
+    loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+    prefix cache verified (max diff 0.0025)
+c_fp32_reuse seconds 269 distinct post: 16 of 16 | fp32 vs model logits max diff 0.124
+    float32 answer read-out: largest difference from the model's own logits 0.124
+post | max |p fp32 - p model| 0.0272 | max |p reuse - p no reuse| 0.00000 | same side of 0.5 (a vs b): 16/16
+transfer | max |p fp32 - p model| 0.0272 | max |p reuse - p no reuse| 0.00000 | same side of 0.5 (a vs b): 16/16
+delayed | max |p fp32 - p model| 0.0364 | max |p reuse - p no reuse| 0.05930 | same side of 0.5 (a vs b): 16/16
+post vs transfer (same prompt, reversed order), fp32+reuse: max diff 0.00000

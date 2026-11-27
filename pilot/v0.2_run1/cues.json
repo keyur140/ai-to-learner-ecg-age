@@ -1,0 +1,303 @@
+{
+  "cues": [
+    {
+      "id": "PR_Int_Global",
+      "label": "PR interval",
+      "unit": "ms",
+      "selection_frequency": 0.815,
+      "std_coef": 1.0571093648269987,
+      "older_is_higher": true,
+      "threshold": 158.0,
+      "median_teacher_older": 166.0,
+      "median_teacher_younger": 150.0,
+      "rank": 1,
+      "weight": 0.29995237665892666,
+      "rule": "PR interval: in older adults it tends to be higher (cut-point about 158 ms; lower points to younger)."
+    },
+    {
+      "id": "T_Amp_II",
+      "label": "T-wave height, lead II",
+      "unit": "mV",
+      "selection_frequency": 1.0,
+      "std_coef": -0.8435687882594751,
+      "older_is_higher": false,
+      "threshold": 0.214,
+      "median_teacher_older": 0.136,
+      "median_teacher_younger": 0.292,
+      "rank": 2,
+      "weight": 0.23936072400146619,
+      "rule": "T-wave height, lead II: in older adults it tends to be lower (cut-point about 0.21 mV; higher points to younger)."
+    },
+    {
+      "id": "R_Amp_aVL",
+      "label": "R-wave height, lead aVL",
+      "unit": "mV",
+      "selection_frequency": 0.855,
+      "std_coef": 0.7058811798082896,
+      "older_is_higher": true,
+      "threshold": 0.4245,
+      "median_teacher_older": 0.61,
+      "median_teacher_younger": 0.239,
+      "rank": 3,
+      "weight": 0.20029217843222347,
+      "rule": "R-wave height, lead aVL: in older adults it tends to be higher (cut-point about 0.42 mV; lower points to younger)."
+    },
+    {
+      "id": "T_Amp_V5",
+      "label": "T-wave height, lead V5",
+      "unit": "mV",
+      "selection_frequency": 0.74,
+      "std_coef": -0.5781609419303557,
+      "older_is_higher": false,
+      "threshold": 0.2485,
+      "median_teacher_older": 0.136,
+      "median_teacher_younger": 0.361,
+      "rank": 4,
+      "weight": 0.16405185158089589,
+      "rule": "T-wave height, lead V5: in older adults it tends to be lower (cut-point about 0.25 mV; higher points to younger)."
+    },
+    {
+      "id": "R_AxisFrontal_Global",
+      "label": "QRS axis",
+      "unit": "deg",
+      "selection_frequency": 0.735,
+      "std_coef": -0.33953706429584685,
+      "older_is_higher": false,
+      "threshold": 31.0,
+      "median_teacher_older": 6.0,
+      "median_teacher_younger": 56.0,
+      "rank": 5,
+      "weight": 0.0963428693264878,
+      "rule": "QRS axis: in older adults it tends to be lower (cut-point about 31 deg; higher points to younger)."
+    }
+  ],
+  "prototypes": {
+    "older": [
+      17393,
+      21742,
+      21781
+    ],
+    "younger": [
+      19923,
+      7267,
+      1257
+    ]
+  },
+  "report": {
+    "C": 0.01,
+    "selected": [
+      "PR_Int_Global",
+      "T_Amp_II",
+      "R_Amp_aVL",
+      "T_Amp_V5",
+      "R_AxisFrontal_Global"
+    ],
+    "stability_path": [
+      {
+        "C": 0.005,
+        "n_stable": 0,
+        "freq": {
+          "HR_Ventr_Global": 0.0,
+          "PR_Int_Global": 0.0,
+          "QRS_Dur_Global": 0.0,
+          "QT_Int_Global": 0.0,
+          "QT_IntBazett_Global": 0.0,
+          "P_AxisFront_Global": 0.0,
+          "R_AxisFrontal_Global": 0.0,
+          "T_AxisFront_Global": 0.0,
+          "P_Amp_II": 0.0,
+          "P_Dur_II": 0.0,
+          "R_Amp_aVL": 0.0,
+          "R_Amp_V5": 0.0,
+          "S_Amp_V1": 0.0,
+          "T_Amp_II": 0.015,
+          "T_Amp_V1": 0.0,
+          "T_Amp_V5": 0.0,
+          "ST_Amp_V5": 0.0,
+          "Q_Amp_III": 0.0
+        }
+      },
+      {
+        "C": 0.01,
+        "n_stable": 5,
+        "freq": {
+          "HR_Ventr_Global": 0.0,
+          "PR_Int_Global": 0.815,
+          "QRS_Dur_Global": 0.0,
+          "QT_Int_Global": 0.0,
+          "QT_IntBazett_Global": 0.07,
+          "P_AxisFront_Global": 0.0,
+          "R_AxisFrontal_Global": 0.735,
+          "T_AxisFront_Global": 0.0,
+          "P_Amp_II": 0.0,
+          "P_Dur_II": 0.0,
+          "R_Amp_aVL": 0.855,
+          "R_Amp_V5": 0.0,
+          "S_Amp_V1": 0.0,
+          "T_Amp_II": 1.0,
+          "T_Amp_V1": 0.005,
+          "T_Amp_V5": 0.74,
+          "ST_Amp_V5": 0.05,
+          "Q_Amp_III": 0.0
+        }
+      }
+    ],
+    "n_rows_used": 740,
+    "roles_used": [
+      "cue"
+    ],
+    "cue": {
+      "scrambled_tally_accuracy_true": 0.5202702702702703,
+      "surrogate_fidelity_to_teacher": 0.8256756756756757,
+      "surrogate_accuracy_true": 0.8189189189189189,
+      "rule_tally_fidelity_to_teacher": 0.8054054054054054,
+      "rule_tally_accuracy_true": 0.7932432432432432
+    },
+    "test": {
+      "scrambled_tally_accuracy_true": 0.5360655737704918,
+      "surrogate_fidelity_to_teacher": 0.8459016393442623,
+      "surrogate_accuracy_true": 0.8508196721311475,
+      "rule_tally_fidelity_to_teacher": 0.8032786885245902,
+      "rule_tally_accuracy_true": 0.8049180327868852
+    },
+    "transfer": {
+      "scrambled_tally_accuracy_true": 0.49410099103350635,
+      "surrogate_fidelity_to_teacher": 0.7904672015101463,
+      "surrogate_accuracy_true": 0.8074563473336479,
+      "rule_tally_fidelity_to_teacher": 0.752713544124587,
+      "rule_tally_accuracy_true": 0.7385559226050024
+    }
+  },
+  "scaler_mean": [
+    74.34594594594594,
+    165.31351351351353,
+    98.34054054054054,
+    395.5243243243243,
+    433.31216216216217,
+    48.78243243243243,
+    23.356756756756756,
+    58.95810810810811,
+    0.09644864864864863,
+    97.59054054054054,
+    0.5273567567567566,
+    1.4002432432432428,
+    -0.7877824324324318,
+    0.18606621621621605,
+    0.04660405405405404,
+    0.20957027027027061,
+    -0.03141081081081082,
+    -0.12424594594594597
+  ],
+  "scaler_scale": [
+    17.08901329675115,
+    29.372796406476255,
+    22.005471794465215,
+    39.349586387505866,
+    35.07237479417998,
+    22.939461209229844,
+    45.39493090250865,
+    57.998831551037384,
+    0.05844647642315104,
+    39.71515017926875,
+    0.386370131001378,
+    0.6546531062183797,
+    0.567034807515927,
+    0.16748556918637197,
+    0.21037949297554104,
+    0.25924420644558804,
+    0.058595142238390255,
+    0.26926766859099355
+  ],
+  "feature_order": [
+    "HR_Ventr_Global",
+    "PR_Int_Global",
+    "QRS_Dur_Global",
+    "QT_Int_Global",
+    "QT_IntBazett_Global",
+    "P_AxisFront_Global",
+    "R_AxisFrontal_Global",
+    "T_AxisFront_Global",
+    "P_Amp_II",
+    "P_Dur_II",
+    "R_Amp_aVL",
+    "R_Amp_V5",
+    "S_Amp_V1",
+    "T_Amp_II",
+    "T_Amp_V1",
+    "T_Amp_V5",
+    "ST_Amp_V5",
+    "Q_Amp_III"
+  ],
+  "scrambled": [
+    {
+      "id": "Q_Amp_III",
+      "label": "Q-wave depth, lead III",
+      "unit": "mV",
+      "older_is_higher": false,
+      "threshold": 0.0,
+      "rank": 1,
+      "weight": 0.29995237665892666,
+      "rule": "Q-wave depth, lead III: in older adults it tends to be lower (cut-point about 0.00 mV; higher points to younger)."
+    },
+    {
+      "id": "QT_IntBazett_Global",
+      "label": "QTc (Bazett)",
+      "unit": "ms",
+      "older_is_higher": true,
+      "threshold": 429.0,
+      "rank": 2,
+      "weight": 0.23936072400146619,
+      "rule": "QTc (Bazett): in older adults it tends to be higher (cut-point about 429 ms; lower points to younger)."
+    },
+    {
+      "id": "QRS_Dur_Global",
+      "label": "QRS duration",
+      "unit": "ms",
+      "older_is_higher": true,
+      "threshold": 93.0,
+      "rank": 3,
+      "weight": 0.20029217843222347,
+      "rule": "QRS duration: in older adults it tends to be higher (cut-point about 93 ms; lower points to younger)."
+    },
+    {
+      "id": "ST_Amp_V5",
+      "label": "ST level, lead V5",
+      "unit": "mV",
+      "older_is_higher": false,
+      "threshold": -0.025,
+      "rank": 4,
+      "weight": 0.16405185158089589,
+      "rule": "ST level, lead V5: in older adults it tends to be lower (cut-point about -0.03 mV; higher points to younger)."
+    },
+    {
+      "id": "QT_Int_Global",
+      "label": "QT interval",
+      "unit": "ms",
+      "older_is_higher": false,
+      "threshold": 392.0,
+      "rank": 5,
+      "weight": 0.0963428693264878,
+      "rule": "QT interval: in older adults it tends to be lower (cut-point about 392 ms; higher points to younger)."
+    }
+  ],
+  "blinded_labels": {
+    "HR_Ventr_Global": "Measure 1",
+    "PR_Int_Global": "Measure 2",
+    "QRS_Dur_Global": "Measure 3",
+    "QT_Int_Global": "Measure 4",
+    "QT_IntBazett_Global": "Measure 5",
+    "P_AxisFront_Global": "Measure 6",
+    "R_AxisFrontal_Global": "Measure 7",
+    "T_AxisFront_Global": "Measure 8",
+    "P_Amp_II": "Measure 9",
+    "P_Dur_II": "Measure 10",
+    "R_Amp_aVL": "Measure 11",
+    "R_Amp_V5": "Measure 12",
+    "S_Amp_V1": "Measure 13",
+    "T_Amp_II": "Measure 14",
+    "T_Amp_V1": "Measure 15",
+    "T_Amp_V5": "Measure 16",
+    "ST_Amp_V5": "Measure 17",
+    "Q_Amp_III": "Measure 18"
+  }
+}

@@ -1,0 +1,510 @@
+{
+  "run_id": "20261120T141531Z_smoke",
+  "author": {
+    "name": "KEYUR SHAILESHKUMAR PATEL",
+    "given_names": "KEYUR SHAILESHKUMAR",
+    "family_names": "PATEL",
+    "orcid": "https://orcid.org/0009-0008-5261-043X",
+    "affiliations": [
+      "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+      "Independent researcher"
+    ],
+    "note": "Conducted independently; not an official Brunel University London project."
+  },
+  "status": "complete",
+  "config_sha256": "2436f48f65c68b631cf520a7f67d6a912e79e21477d6fd6abe02c510d1807c65",
+  "config": {
+    "author": {
+      "name": "KEYUR SHAILESHKUMAR PATEL",
+      "given_names": "KEYUR SHAILESHKUMAR",
+      "family_names": "PATEL",
+      "orcid": "https://orcid.org/0009-0008-5261-043X",
+      "affiliations": [
+        "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+        "Independent researcher"
+      ],
+      "note": "Conducted independently; not an official Brunel University London project."
+    },
+    "study": {
+      "title": "Can learners acquire a perceptual skill they never had from AI-derived cues? (ECG age)",
+      "master_seed": 20261026,
+      "output_dir": "runs"
+    },
+    "data": {
+      "dir": "data",
+      "sampling_rate": 100,
+      "young_max_age": 39,
+      "older_min_age": 65,
+      "feature_source": "12sl",
+      "max_missing_panel": 2,
+      "teacher_train_folds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "teacher_val_fraction": 0.1,
+      "cue_fold": 9,
+      "test_fold": 10,
+      "transfer_device_rank": 2
+    },
+    "panel": [
+      {
+        "id": "HR_Ventr_Global",
+        "label": "Heart rate",
+        "unit": "bpm"
+      },
+      {
+        "id": "PR_Int_Global",
+        "label": "PR interval",
+        "unit": "ms"
+      },
+      {
+        "id": "QRS_Dur_Global",
+        "label": "QRS duration",
+        "unit": "ms"
+      },
+      {
+        "id": "QT_Int_Global",
+        "label": "QT interval",
+        "unit": "ms"
+      },
+      {
+        "id": "QT_IntBazett_Global",
+        "label": "QTc (Bazett)",
+        "unit": "ms"
+      },
+      {
+        "id": "P_AxisFront_Global",
+        "label": "P-wave axis",
+        "unit": "deg"
+      },
+      {
+        "id": "R_AxisFrontal_Global",
+        "label": "QRS axis",
+        "unit": "deg"
+      },
+      {
+        "id": "T_AxisFront_Global",
+        "label": "T-wave axis",
+        "unit": "deg"
+      },
+      {
+        "id": "P_Amp_II",
+        "label": "P-wave height, lead II",
+        "unit": "mV"
+      },
+      {
+        "id": "P_Dur_II",
+        "label": "P-wave duration, lead II",
+        "unit": "ms"
+      },
+      {
+        "id": "R_Amp_aVL",
+        "label": "R-wave height, lead aVL",
+        "unit": "mV"
+      },
+      {
+        "id": "R_Amp_V5",
+        "label": "R-wave height, lead V5",
+        "unit": "mV"
+      },
+      {
+        "id": "S_Amp_V1",
+        "label": "S-wave depth, lead V1",
+        "unit": "mV"
+      },
+      {
+        "id": "T_Amp_II",
+        "label": "T-wave height, lead II",
+        "unit": "mV"
+      },
+      {
+        "id": "T_Amp_V1",
+        "label": "T-wave height, lead V1",
+        "unit": "mV"
+      },
+      {
+        "id": "T_Amp_V5",
+        "label": "T-wave height, lead V5",
+        "unit": "mV"
+      },
+      {
+        "id": "ST_Amp_V5",
+        "label": "ST level, lead V5",
+        "unit": "mV"
+      },
+      {
+        "id": "Q_Amp_III",
+        "label": "Q-wave depth, lead III",
+        "unit": "mV"
+      }
+    ],
+    "teacher": {
+      "arch": "resnet1d",
+      "channels": 16,
+      "blocks": 2,
+      "epochs": 3,
+      "batch_size": 128,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "patience": 6
+    },
+    "cues": {
+      "k_max": 8,
+      "k_min": 5,
+      "stability_bootstraps": 20,
+      "stability_threshold": 0.6,
+      "l1_C_grid": [
+        0.005,
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5,
+        1.0
+      ],
+      "n_prototypes_per_class": 3,
+      "n_teacher_seeds": 3,
+      "consensus_min": 2,
+      "scrambled_band": [
+        0.45,
+        0.55
+      ],
+      "scrambled_max_draws": 1000
+    },
+    "saliency": {
+      "n_ecgs": 32,
+      "ig_steps": 8
+    },
+    "conditions": [
+      "no_training",
+      "feedback_only",
+      "cue_training",
+      "scrambled_cues"
+    ],
+    "tests": {
+      "primary": "post",
+      "sets": [
+        "pre",
+        "post",
+        "delayed",
+        "transfer"
+      ]
+    },
+    "experiment_llm": {
+      "enabled": true,
+      "n_per_condition": 6,
+      "backend": "mock",
+      "models": [
+        "mock-student-1",
+        "mock-student-2",
+        "mock-student-3"
+      ],
+      "dtype": "bfloat16",
+      "answer_precision": "float32",
+      "batch_size": 8,
+      "n_practice": 8,
+      "n_items_per_test": 20,
+      "distractor_tokens": 1500,
+      "openai_base_url": null,
+      "revisions": {},
+      "blinded_run": true,
+      "blinded_n_per_condition": 6,
+      "gate": {
+        "n_items": 20,
+        "min_accuracy": 0.85,
+        "rule_feature": "HR_Ventr_Global"
+      },
+      "primary_score": "bias_corrected",
+      "flat_tie_share": 0.5,
+      "flat_model_fraction": 0.5,
+      "collapse_share": 0.95,
+      "collapse_model_fraction": 0.5,
+      "collapse_excludes_model": false
+    },
+    "experiment_nets": {
+      "enabled": true,
+      "role": "secondary",
+      "n_per_condition": 6,
+      "n_practice": 64,
+      "steps": 30,
+      "batch_size": 32,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "cue_loss_weight": 1.0,
+      "channels": 16,
+      "n_items_per_test": 60,
+      "distractor_task": "sex",
+      "distractor_n": 64,
+      "distractor_steps": 30,
+      "device": "auto"
+    },
+    "analysis": {
+      "alpha": 0.05,
+      "primary_alternative": "greater",
+      "bootstrap": 500,
+      "item_level_robustness": true,
+      "min_meaningful_diff": 0.03,
+      "equivalence_margin": 0.03
+    },
+    "_smoke_n": 3000
+  },
+  "prereg_sha256": {
+    "preregistration.md": "760349d0a9e47555dcde0ed0444c74e1830dfc466d98b6c79d7628bc928b9a99"
+  },
+  "code_sha256": {
+    "ai2human/__init__.py": "3d9b626750d9cca735cc53be28eca55ce86f8eec9c8121e7e7f52ec49d18e8b6",
+    "ai2human/analysis.py": "1180ad367db15f384e754221ff4d3d5622541ef13d65afc3ed87d66fbdde9911",
+    "ai2human/checks.py": "704e3c15bd73bb6bf02a3e36baa279ce11d2bda08c9e7323e5841b3fa624311a",
+    "ai2human/cohort.py": "e1776b7b33b35c359ac937b5378f60abe2fcd6513dae9c9a046ebd3e504ecc6f",
+    "ai2human/cues.py": "96239d2dc3f958f4a9156eac8d8b16d76a479e297bf81c49778624810c9897ea",
+    "ai2human/data.py": "e75a30a3b315e55ff05f9cc889760a53d4124e1d7b299f64682b726269bd27b7",
+    "ai2human/exp_llm.py": "c4b612a01c26daef84ad765b3d9fa3e4639aaeaefb8251405f5441ea50aec619",
+    "ai2human/exp_nets.py": "1f21e0c2ae36e3da71ee6e3e51243aee17b4ee76883dc885e8dd5bbd0e09d0ca",
+    "ai2human/llm_backends.py": "c99601d0aaf24e67bd956b42d4d06a92c6e320a255e114f2d887fd4085292fb2",
+    "ai2human/models.py": "09a675b7bda7445af5d97e0854ef94aa2d4ee662edf1e1af6f66a09f9a6dc98e",
+    "ai2human/pdf_report.py": "bf0fe087557a2395a8dbe37176c4e509213b504bdd0e9d9d2e03cbfb52362e4a",
+    "ai2human/pipeline.py": "28369bdf0e0de526430b6e0dfe04e28e04074fd725f4b1722684d452adfe57d1",
+    "ai2human/prompts.py": "17a598b00926a574b8fd66f3bd761767c78551544d596c108c2f14c94f3c592f",
+    "ai2human/report.py": "56efe665f8fefd600fb14e77001205423419f1ac62cce1b37105c7f9d17f8792",
+    "ai2human/repro.py": "bdff9dc0ffa09276c2aa36bb723bbde1c2baa86f6f45700c484cd79f1d4116f0",
+    "ai2human/saliency.py": "534615b45d9952765119ff9837658c2e6be15117f559729943b8872c7013cc4b",
+    "ai2human/sampling.py": "8386e8a47b0ac0bf4a1584a29683cb175470783c865597852ef613a3e5e1f768",
+    "ai2human/stats.py": "ff0fae56cc0a23ebe4dfe6c336fff797f0013591dbc453c0e6c3ff98a0c41845",
+    "ai2human/teacher.py": "12d4380114d37e36ebf225c2d90de2ba023339db88d6c2b5fba38b3f6a9ee31f",
+    "ai2human/validate.py": "537f950456430352e615db0942bcc6da64aa08b4706a341dbe14d959fc82b16b",
+    "ai2human/validation_report.py": "d8c64e083cf56d5d992b38495ba6bb6ae6e7855b9ce5466f3e036ae37d69b0c9"
+  },
+  "code_digest": "d238e56b9c25d6471d7c2d41806e4ef7ad8b492ad05ec674c73caa04dfa7d2ce",
+  "stages": [
+    {
+      "stage": "cohort",
+      "seconds": 1.09,
+      "n": 2516
+    },
+    {
+      "stage": "teacher",
+      "seconds": 4.23,
+      "test_auroc": 0.9703681229773462
+    },
+    {
+      "stage": "cues",
+      "seconds": 0.48,
+      "selected": [
+        "R_AxisFrontal_Global",
+        "T_Amp_V1",
+        "R_Amp_V5",
+        "QT_IntBazett_Global",
+        "P_AxisFront_Global"
+      ]
+    },
+    {
+      "stage": "saliency",
+      "seconds": 0.14
+    },
+    {
+      "stage": "experiment_nets",
+      "seconds": 9.68,
+      "n": 24
+    },
+    {
+      "stage": "experiment_llm",
+      "seconds": 0.5,
+      "n": 24
+    },
+    {
+      "stage": "experiment_llm_blinded",
+      "seconds": 0.5,
+      "n": 24
+    },
+    {
+      "stage": "self_checks",
+      "seconds": 1.32,
+      "passed": 16
+    }
+  ],
+  "environment": {
+    "python": "3.13.18 (main, Oct 26 2026, 14:08:19) [Clang 23.1.3 ]",
+    "platform": "Linux-6.18.44-fc-v726-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "cpu_count": 4,
+    "time_utc": "2026-11-20T14:15:57Z",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.5",
+      "scipy": "1.18.1",
+      "sklearn": "1.9.1",
+      "statsmodels": "0.15.0",
+      "torch": "2.14.1+cu130",
+      "wfdb": "4.3.1",
+      "yaml": "6.0.3",
+      "matplotlib": "3.11.2"
+    },
+    "cuda": false,
+    "gpu": null,
+    "pip_freeze": [
+      "accelerate==1.15.0",
+      "aiohappyeyeballs==2.7.1",
+      "aiohttp==3.14.5",
+      "aiosignal==1.4.0",
+      "annotated-doc==0.0.5",
+      "annotated-types==0.8.0",
+      "anyio==4.16.0",
+      "attrs==26.1.0",
+      "certifi==2026.10.23",
+      "cffi==2.1.1",
+      "charset-normalizer==3.5.2",
+      "click==8.5.1",
+      "cloudpickle==3.1.2",
+      "contourpy==1.4.0",
+      "cuda-bindings==13.5.0",
+      "cuda-pathfinder==1.8.6",
+      "cuda-toolkit==13.0.3.0",
+      "cycler==0.12.1",
+      "filelock==4.2.9",
+      "fonttools==4.68.0",
+      "formulaic==1.2.2",
+      "frozenlist==1.8.0",
+      "fsspec==2026.9.0",
+      "h11==0.16.0",
+      "hf-xet==1.8.0",
+      "httpcore2==2.16.0",
+      "httpx2==2.16.0",
+      "huggingface_hub==2.3.0",
+      "idna==3.20",
+      "iniconfig==2.3.1",
+      "interface_meta==2.0.1",
+      "Jinja2==3.1.6",
+      "jiter==0.19.0",
+      "joblib==1.6.0",
+      "kiwisolver==1.5.1",
+      "Markdown==3.11.2",
+      "markdown-it-py==4.2.0",
+      "MarkupSafe==3.0.4",
+      "matplotlib==3.11.2",
+      "mdurl==0.1.2",
+      "mpmath==1.3.0",
+      "multidict==7.2.1",
+      "narwhals==2.28.0",
+      "networkx==3.7",
+      "numpy==2.5.3",
+      "nvidia-cublas==13.1.1.3",
+      "nvidia-cuda-cupti==13.0.85",
+      "nvidia-cuda-nvrtc==13.0.88",
+      "nvidia-cuda-runtime==13.0.96",
+      "nvidia-cudnn-cu13==9.24.0.43",
+      "nvidia-cufft==12.0.0.61",
+      "nvidia-cufile==1.15.1.6",
+      "nvidia-curand==10.4.0.35",
+      "nvidia-cusolver==12.0.4.66",
+      "nvidia-cusparse==12.6.3.3",
+      "nvidia-cusparselt-cu13==0.8.1",
+      "nvidia-nccl-cu13==2.30.7",
+      "nvidia-nvjitlink==13.5.37",
+      "nvidia-nvshmem-cu13==3.4.5",
+      "nvidia-nvtx==13.0.85",
+      "openai==3.43.0",
+      "packaging==26.3",
+      "pandas==3.0.5",
+      "patsy==1.0.3",
+      "pillow==13.0.0",
+      "pluggy==1.7.0",
+      "propcache==0.5.4",
+      "psutil==7.2.2",
+      "py-spy==0.4.3",
+      "pycparser==3.12",
+      "pydantic==2.14.3",
+      "pydantic_core==2.50.4",
+      "Pygments==2.21.0",
+      "pyparsing==3.3.3",
+      "pytest==9.1.1",
+      "python-dateutil==4.0.0",
+      "PyYAML==6.0.3",
+      "regex==2026.11.7",
+      "reportlab==5.0.1",
+      "requests==2.34.2",
+      "rich==15.0.0",
+      "safetensors==0.8.0",
+      "scikit-learn==1.9.1",
+      "scipy==1.18.1",
+      "setuptools==84.2.1",
+      "shellingham==1.5.4",
+      "sniffio==1.3.1",
+      "soundfile==0.14.0",
+      "statsmodels==0.15.0",
+      "sympy==1.14.0",
+      "threadpoolctl==3.8.0",
+      "tokenizers==0.23.3",
+      "torch==2.14.1",
+      "tqdm==4.70.1",
+      "transformers==5.20.2",
+      "triton==3.8.0",
+      "truststore==0.10.5",
+      "typer==0.28.0",
+      "typing-inspection==0.4.5",
+      "typing_extensions==4.16.0",
+      "tzdata==2026.6",
+      "urllib3==2.8.0",
+      "wfdb==4.3.1",
+      "wrapt==2.6.0.dev1",
+      "yarl==1.25.1"
+    ]
+  },
+  "outputs_sha256": {
+    "REPORT.html": "8218c03bbacbbe0372f16418df40a90777a693706e61e979e97f3e025e36cb8c",
+    "REPORT.md": "0770ca10b0c81ad5d9a0bec5ee491663c1cc2fc6f48118df3f6d2c3d6992f5db",
+    "REPORT.pdf": "205aae311e45eb1ad0aa5be2668f212d4bb2011478e9f3b1b6a8339a066cf78f",
+    "analysis_llm.json": "fcae4d4b6b50739c3be05794feca5a65c1156d7f2598f215b18c32b7a6dad383",
+    "analysis_llm_blinded.json": "7d31b3ce0181439a0b20879f20c5d430090aac8a7828e0bfc3851eedf5a4f430",
+    "analysis_nets.json": "916efab3aac2f2ae7cea16f6c25435c44519758eeec7dc616a4f6965c87ef82e",
+    "checks.json": "a532859659ee5fe668bd94dd491ba8363c0b8d15dbf477e84057143679799523",
+    "cohort.csv": "7ea5d64b6f372118c32d935a493c8b7b519eb42ec0d5815100444965baa07d6a",
+    "cohort_summary.json": "7d751f2367347f7f9a6bbec1f814041b0a05d766bb5f44e1fefb9f21dbfba70a",
+    "config_used.yaml": "7a9451ce9a4752436f7d8d533d96db3b472456c4b51bb61b8d802d8f622869a1",
+    "cue_lesson.txt": "8a83ddadea953e380785279690a1d495e97204e54e444d4744a65fc7dacaab5f",
+    "cue_lesson_blinded.txt": "683227f659b3162d7ace6ae168b28a9546edaf7db0b91d7415184d987e3834b9",
+    "cues.json": "669e001c83d329471e14f13361da84b5fcbad20c9cf341476d2a0a1749fcfba6",
+    "example_prompts/cue_training.txt": "e9d448e3ab5a2b93ad91f64fd3609b24c360f4f861d33bb6ed4f6aa9da9e17da",
+    "example_prompts/feedback_only.txt": "3a53c4c038c15f03df2ee9f87b69840d699d25762c97fbb0c9b1854a96499b88",
+    "example_prompts/no_training.txt": "c90425137e985e58b865b873884813aafaff9966e8f091bdae93df00c4edc453",
+    "example_prompts/scrambled_cues.txt": "c621ddf02493c6fedd4f733e73be1273da113d31c0ae63691560dae467136511",
+    "example_prompts_blinded/cue_training.txt": "675e5e947620599e53c47373f96f5c1352a8511d444e4d17374cdfdead115b88",
+    "example_prompts_blinded/feedback_only.txt": "2c968c56f8fd665503e80366fdca6ac1a8faa30dfe8389568a2e9c9ee5499bce",
+    "example_prompts_blinded/no_training.txt": "2e635e0db1ef398375106c5754b3999a4f6927e4e0e62319ba0e115d2fe2fefe",
+    "example_prompts_blinded/scrambled_cues.txt": "fa28e1f71390e7bd79a11ac7a8035bf18e7d6aa817fc5eb1ecf32ffc2da913ea",
+    "figures/accuracy_llm.png": "615b5f13586dc55dc6f63f52ea6d70593afee580a0a0f691e2128811c7225976",
+    "figures/accuracy_llm_blinded.png": "8a9a3e2e6bffd1dcc0347a33fc367c93858fb2413114e6be5d0a36bf83e9b25f",
+    "figures/accuracy_nets.png": "ccbd47b87b82a2eaceab7c13ec5ec48dc8a402bf078412130f84fe31826e3c14",
+    "figures/cues.png": "23734377c07c898ea20f4c9436f3c03886a9f1fc63cfffb6077180ecd0a91a14",
+    "figures/teacher_training.png": "845a00b3732e817ecb352970e9c867e461affa876317d984280ba948743a1462",
+    "gate_llm.json": "b3cc0ff8a0f5c2b8416550ec798cb08e5837af2e87d4e1c077586c7121ef9a09",
+    "gate_llm_blinded.json": "71d953cd41bfe2117817eb6c645f5901a8c203f15654dff8381d93b507f97f63",
+    "items_llm.csv": "9738606172ecf8ff8486fa922013a5e507daf265d5a92b9aade10137239f9b40",
+    "items_llm_blinded.csv": "8fb29804ed83e8b1f4600f08a638ce15f61e35ffe452d35e132efa76ca33039f",
+    "lead_norm.npz": "45e1ef9071a767622b9b9662d72fce45a1f5b96a1af2d40b8a68ad0b23262025",
+    "leak_scan.json": "7ae2424c8e32b51d202695b3df2e1eb19d7b49481d14f462a83e85b4e7a5edf2",
+    "leak_scan_blinded.json": "7ae2424c8e32b51d202695b3df2e1eb19d7b49481d14f462a83e85b4e7a5edf2",
+    "learners_llm.csv": "3e460f015d6d346198b68b6b4e249b98de6555c95bcfdd48543dd6c3d65f78cf",
+    "learners_llm_blinded.csv": "164e53e4a93052c9cf0cb79937b43bb84475c890cf4e4b523814375d858015a2",
+    "learners_nets.csv": "c16d049573c5907055bae7aff20c57276b9a0be22440bf04b2275a60b0f1438a",
+    "neutral_lesson.txt": "6aa95c45897e214abebd73271750697c95f20f2b708e081ff6fac44900f6065c",
+    "neutral_lesson_blinded.txt": "9bf831c1aed305727441df5b62bfc97c465082c2659f841e4645535561aa9f58",
+    "panel_features.csv": "f13a0b89c9648a60a98ee0c7ac22442cba93939ace0e88bbe5ac923fddf8ab6e",
+    "run.log": "bdfe0c0d785a2dee3efb545c27ef8f259b933a8b4b835b014ac81ab424446cdd",
+    "run_info.json": "a7e604997be162fe9f451fd135f46dd080091ecfa1e7058b61195fff6164c736",
+    "saliency.json": "87e1a27d4fc61cd2d06ab81c20d520c2a8853261538ce9b23b03ab796bce03ab",
+    "scrambled_lesson.txt": "8a8dd770d2498a35bdc1c04cdc625ff88c1bb6feeb4713bf5917d44a9467e2c1",
+    "scrambled_lesson_blinded.txt": "47c704ed7a708bae210faa80c0a2a608f3b6bdfa2d28ddf3f9ff27845c909bff",
+    "teacher.pt": "5f88b4e33c68341439ec25708e5210eca5dc10f651715a2ad4e90f7ee31d0892",
+    "teacher_metrics.json": "ac68545e67eadeddb4134eb813a22aaab5c1397aed8ecfbbcd0da5c52a20125c",
+    "teacher_predictions.csv": "461b08d9ecc396a6cb74a9c9a4bd55047ddf4c4199954141c9a0f902e3b7dca0",
+    "teacher_seed1.pt": "dedf88379c070e99f86789417540d73a4014a7ec0e5f470872f703be9f7e3d97",
+    "teacher_seed2.pt": "9a71d2e0b245fd9e88df8ba5386328e726cd7bb8b6cf49c920c9a81f39963933"
+  }
+}

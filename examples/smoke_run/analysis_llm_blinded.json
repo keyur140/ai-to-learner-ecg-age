@@ -1,0 +1,584 @@
+{
+  "experiment": "llm_blinded",
+  "n_learners_total": 24,
+  "primary_score": "bias_corrected",
+  "role": "primary",
+  "models": {
+    "mock-student-1": {
+      "model": "mock-student-1",
+      "run": "blinded",
+      "gate_accuracy": 1.0,
+      "gate_items": 20,
+      "gate_pass": true,
+      "gate_rule": "Measure 1 > 71",
+      "post_collapse_fraction": 0.0,
+      "collapsed_model": false,
+      "post_flat_fraction": 0.0,
+      "flat_model": false,
+      "primary_score": "bias_corrected",
+      "collapse_excludes_model": false,
+      "informative": true
+    },
+    "mock-student-2": {
+      "model": "mock-student-2",
+      "run": "blinded",
+      "gate_accuracy": 1.0,
+      "gate_items": 20,
+      "gate_pass": true,
+      "gate_rule": "Measure 1 > 71",
+      "post_collapse_fraction": 0.0,
+      "collapsed_model": false,
+      "post_flat_fraction": 0.0,
+      "flat_model": false,
+      "primary_score": "bias_corrected",
+      "collapse_excludes_model": false,
+      "informative": true
+    },
+    "mock-student-3": {
+      "model": "mock-student-3",
+      "run": "blinded",
+      "gate_accuracy": 1.0,
+      "gate_items": 20,
+      "gate_pass": true,
+      "gate_rule": "Measure 1 > 71",
+      "post_collapse_fraction": 0.0,
+      "collapsed_model": false,
+      "post_flat_fraction": 0.0,
+      "flat_model": false,
+      "primary_score": "bias_corrected",
+      "collapse_excludes_model": false,
+      "informative": true
+    }
+  },
+  "models_counted": [
+    "mock-student-1",
+    "mock-student-2",
+    "mock-student-3"
+  ],
+  "models_uninformative": [],
+  "n_learners": 24,
+  "n_per_condition": {
+    "no_training": 6,
+    "feedback_only": 6,
+    "cue_training": 6,
+    "scrambled_cues": 6
+  },
+  "H1_primary": {
+    "t": 0.5423261445466383,
+    "p": 0.30071979466085896,
+    "mean_a": 0.7999999999999999,
+    "mean_b": 0.7666666666666667,
+    "diff": 0.033333333333333215,
+    "d": 0.31311214554257355,
+    "n_a": 6,
+    "n_b": 6,
+    "ci95_diff": [
+      -0.08333333333333337,
+      0.13333333333333341
+    ],
+    "mde_80": 0.1644778100535134,
+    "outcome": "post_acc",
+    "group_a": "cue_training",
+    "group_b": "feedback_only",
+    "min_meaningful_diff": 0.03,
+    "significant": false,
+    "meaningful": true,
+    "supported": false
+  },
+  "H1_equivalence_TOST": {
+    "p": 0.5210021210947349,
+    "margin": 0.03
+  },
+  "secondary": {
+    "H2": {
+      "t": 4.714951667914446,
+      "p": 0.0007194750486295761,
+      "mean_a": 0.7999999999999999,
+      "mean_b": 0.5166666666666667,
+      "diff": 0.2833333333333332,
+      "d": 2.7221786146864795,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        0.1666666666666668,
+        0.3833333333333334
+      ],
+      "mde_80": 0.16080869845875764,
+      "outcome": "post_acc",
+      "group_a": "cue_training",
+      "group_b": "no_training",
+      "p_holm": 0.00359737524314788,
+      "supported": true
+    },
+    "H3": {
+      "t": 5.5141096657035575,
+      "p": 0.00013137153398196157,
+      "mean_a": 0.7666666666666667,
+      "mean_b": 0.5166666666666667,
+      "diff": 0.25,
+      "d": 3.183572699835066,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        0.16666666666666674,
+        0.3333333333333334
+      ],
+      "mde_80": 0.12132595559071355,
+      "outcome": "post_acc",
+      "group_a": "feedback_only",
+      "group_b": "no_training",
+      "p_holm": 0.0007882292038917695,
+      "supported": true
+    },
+    "H4": {
+      "t": 1.1351915229662501,
+      "p": 0.14149634283659013,
+      "mean_a": 0.8666666666666667,
+      "mean_b": 0.7833333333333333,
+      "diff": 0.08333333333333337,
+      "d": 0.6554031313663455,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.042083333333333375,
+        0.19999999999999996
+      ],
+      "mde_80": 0.19644398056443335,
+      "outcome": "delayed_acc",
+      "group_a": "cue_training",
+      "group_b": "feedback_only",
+      "p_holm": 0.4244890285097704,
+      "supported": false
+    },
+    "H5": {
+      "t": 0.6098367211363068,
+      "p": 0.2778234223970927,
+      "mean_a": 0.8333333333333334,
+      "mean_b": 0.7833333333333333,
+      "diff": 0.050000000000000044,
+      "d": 0.3520893951097654,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.11666666666666664,
+        0.1754166666666664
+      ],
+      "mde_80": 0.21940450656264868,
+      "outcome": "transfer_acc",
+      "group_a": "cue_training",
+      "group_b": "feedback_only",
+      "p_holm": 0.5025349626907019,
+      "supported": false
+    },
+    "H6": {
+      "t": 0.6956083436402514,
+      "p": 0.25126748134535093,
+      "mean_a": 0.3,
+      "mean_b": 0.25000000000000006,
+      "diff": 0.04999999999999993,
+      "d": 0.40160966445124885,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.09208333333333332,
+        0.17541666666666625
+      ],
+      "mde_80": 0.1923509487889246,
+      "outcome": "gain_acc",
+      "group_a": "cue_training",
+      "group_b": "feedback_only",
+      "p_holm": 0.5025349626907019,
+      "supported": false
+    },
+    "H7": {
+      "t": 2.236067977499788,
+      "p": 0.025103800878712876,
+      "mean_a": 0.7999999999999999,
+      "mean_b": 0.65,
+      "diff": 0.1499999999999999,
+      "d": 1.2909944487358045,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        0.016666666666666607,
+        0.2666666666666667
+      ],
+      "mde_80": 0.17951277809671257,
+      "outcome": "post_acc",
+      "group_a": "cue_training",
+      "group_b": "scrambled_cues",
+      "p_holm": 0.1004152035148515,
+      "supported": false
+    }
+  },
+  "pretest_vs_chance": {
+    "mean": 0.49583333333333335,
+    "t": -0.1959523638067907,
+    "p_two_sided": 0.8463684164902281
+  },
+  "transfer_fraction": {
+    "no_training": 0.04020202020202033,
+    "feedback_only": 0.6432323232323234,
+    "cue_training": 0.7236363636363635,
+    "scrambled_cues": 0.3618181818181819
+  },
+  "teacher_test_accuracy": 0.914572864321608,
+  "preconditions": {
+    "teacher_test_auroc": 0.9703681229773462,
+    "teacher_is_expert (AUROC >= 0.80)": true,
+    "pretest_mean": 0.49583333333333335,
+    "new_skill (pretest mean <= 0.65)": true
+  },
+  "rule_tally_accuracy_test": 0.864321608040201,
+  "collapse_share_of_learners": {
+    "pre": 0.0,
+    "post": 0.0,
+    "delayed": 0.0,
+    "transfer": 0.0
+  },
+  "flat_share_of_learners": {
+    "pre": 0.0,
+    "post": 0.0,
+    "delayed": 0.0,
+    "transfer": 0.0
+  },
+  "robustness": {
+    "ancova_cue_coef": {
+      "coef": 0.03846153846153848,
+      "p_two_sided": 0.6318841243053694,
+      "ci95": [
+        -0.11888955654006174,
+        0.1958126334631387
+      ]
+    },
+    "H1_on_p_correct": {
+      "t": 0.8202706971963069,
+      "p": 0.21586062331406647,
+      "mean_a": 0.6537245072639496,
+      "mean_b": 0.6320323828061681,
+      "diff": 0.02169212445778146,
+      "d": 0.47358350783464964,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.028432743583509397,
+        0.06780691934188765
+      ],
+      "mde_80": 0.07076752406457015,
+      "outcome": "post_p_correct",
+      "group_a": "cue_training",
+      "group_b": "feedback_only"
+    },
+    "cue_adjusted_for_model": {
+      "coef": 0.03333333333333338,
+      "p_two_sided": 0.605576616335346
+    },
+    "per_model_H1": {
+      "mock-student-1": {
+        "t": 1.414213562373096,
+        "p": 0.14644660940672607,
+        "mean_a": 0.8500000000000001,
+        "mean_b": 0.75,
+        "diff": 0.10000000000000009,
+        "d": 1.414213562373096,
+        "n_a": 2,
+        "n_b": 2,
+        "ci95_diff": [
+          0.0,
+          0.20000000000000007
+        ],
+        "mde_80": 0.28142849891224153,
+        "outcome": "post_acc",
+        "group_a": "cue_training",
+        "group_b": "feedback_only"
+      },
+      "mock-student-2": {
+        "t": 0.9999999999999994,
+        "p": 0.25000000000000017,
+        "mean_a": 0.9,
+        "mean_b": 0.8,
+        "diff": 0.09999999999999998,
+        "d": 0.9999999999999994,
+        "n_a": 2,
+        "n_b": 2,
+        "ci95_diff": [
+          0.0,
+          0.20000000000000007
+        ],
+        "mde_80": 0.39799999999999386,
+        "outcome": "post_acc",
+        "group_a": "cue_training",
+        "group_b": "feedback_only"
+      },
+      "mock-student-3": {
+        "t": -1.414213562373096,
+        "p": 0.853553390593274,
+        "mean_a": 0.6499999999999999,
+        "mean_b": 0.75,
+        "diff": -0.10000000000000009,
+        "d": -1.414213562373096,
+        "n_a": 2,
+        "n_b": 2,
+        "ci95_diff": [
+          -0.20000000000000007,
+          0.0
+        ],
+        "mde_80": 0.28142849891224153,
+        "outcome": "post_acc",
+        "group_a": "cue_training",
+        "group_b": "feedback_only"
+      }
+    },
+    "response_bias_p_older_mean": {
+      "cue_training": 0.4875674196669113,
+      "feedback_only": 0.5316660224264479,
+      "no_training": 0.5004532422664877,
+      "scrambled_cues": 0.5004102853694231
+    },
+    "item_level_twoway_cluster_H1": {
+      "coef": 0.0333333333333333,
+      "se_twoway": 0.05449827271019755,
+      "z": 0.6116401800583318,
+      "p_one_sided": 0.27038792398665135,
+      "n_items": 240,
+      "n_learners": 12,
+      "n_ecgs": 147
+    },
+    "H1_on_raw_accuracy": {
+      "t": 1.6061188730585583,
+      "p": 0.07803366981909317,
+      "mean_a": 0.7916666666666666,
+      "mean_b": 0.7166666666666668,
+      "diff": 0.07499999999999984,
+      "d": 0.927293163710897,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.016666666666666607,
+        0.15000000000000013
+      ],
+      "mde_80": 0.1249604812530737,
+      "outcome": "post_acc_raw",
+      "group_a": "cue_training",
+      "group_b": "feedback_only"
+    },
+    "H1_on_auroc": {
+      "t": 0.5686286613304545,
+      "p": 0.29374516052353045,
+      "mean_a": 0.8783333333333334,
+      "mean_b": 0.85,
+      "diff": 0.028333333333333433,
+      "d": 0.32829791068807446,
+      "n_a": 6,
+      "n_b": 6,
+      "ci95_diff": [
+        -0.06833333333333325,
+        0.10670833333333322
+      ],
+      "mde_80": 0.13333925856625925,
+      "outcome": "post_auroc",
+      "group_a": "cue_training",
+      "group_b": "feedback_only"
+    },
+    "raw_accuracy_post_by_group": {
+      "cue_training": 0.7916666666666666,
+      "feedback_only": 0.7166666666666667,
+      "no_training": 0.5666666666666667,
+      "scrambled_cues": 0.6333333333333333
+    },
+    "auroc_post_by_group": {
+      "cue_training": 0.8783333333333333,
+      "feedback_only": 0.85,
+      "no_training": 0.615,
+      "scrambled_cues": 0.68
+    },
+    "median_tie_share_post_by_group": {
+      "cue_training": 0.0,
+      "feedback_only": 0.0,
+      "no_training": 0.0,
+      "scrambled_cues": 0.0
+    }
+  },
+  "descriptives": [
+    {
+      "condition": "cue_training",
+      "test": "pre",
+      "n": 6,
+      "mean_acc": 0.5,
+      "sd": 0.06324555320336757,
+      "ci_low": 0.4493930176095564,
+      "ci_high": 0.5506069823904436
+    },
+    {
+      "condition": "cue_training",
+      "test": "post",
+      "n": 6,
+      "mean_acc": 0.7999999999999999,
+      "sd": 0.1264911064067352,
+      "ci_low": 0.6987860352191128,
+      "ci_high": 0.9012139647808871
+    },
+    {
+      "condition": "cue_training",
+      "test": "delayed",
+      "n": 6,
+      "mean_acc": 0.8666666666666667,
+      "sd": 0.12110601416389967,
+      "ci_low": 0.76976167310195,
+      "ci_high": 0.9635716602313834
+    },
+    {
+      "condition": "cue_training",
+      "test": "transfer",
+      "n": 6,
+      "mean_acc": 0.8333333333333334,
+      "sd": 0.13662601021279466,
+      "ci_low": 0.7240097565328808,
+      "ci_high": 0.9426569101337859
+    },
+    {
+      "condition": "cue_training",
+      "test": "gain",
+      "n": 6,
+      "mean_acc": 0.3,
+      "sd": 0.1264911064067352,
+      "ci_low": 0.1987860352191128,
+      "ci_high": 0.40121396478088717
+    },
+    {
+      "condition": "feedback_only",
+      "test": "pre",
+      "n": 6,
+      "mean_acc": 0.5166666666666667,
+      "sd": 0.13291601358251257,
+      "ci_low": 0.4103117054388153,
+      "ci_high": 0.6230216278945181
+    },
+    {
+      "condition": "feedback_only",
+      "test": "post",
+      "n": 6,
+      "mean_acc": 0.7666666666666667,
+      "sd": 0.08164965809277264,
+      "ci_low": 0.7013333333333334,
+      "ci_high": 0.8320000000000001
+    },
+    {
+      "condition": "feedback_only",
+      "test": "delayed",
+      "n": 6,
+      "mean_acc": 0.7833333333333333,
+      "sd": 0.1329160135825126,
+      "ci_low": 0.6769783721054818,
+      "ci_high": 0.8896882945611848
+    },
+    {
+      "condition": "feedback_only",
+      "test": "transfer",
+      "n": 6,
+      "mean_acc": 0.7833333333333333,
+      "sd": 0.14719601443879748,
+      "ci_low": 0.6655519916681762,
+      "ci_high": 0.9011146749984904
+    },
+    {
+      "condition": "feedback_only",
+      "test": "gain",
+      "n": 6,
+      "mean_acc": 0.25000000000000006,
+      "sd": 0.12247448713915893,
+      "ci_low": 0.15200000000000002,
+      "ci_high": 0.3480000000000001
+    },
+    {
+      "condition": "no_training",
+      "test": "pre",
+      "n": 6,
+      "mean_acc": 0.46666666666666656,
+      "sd": 0.13662601021279464,
+      "ci_low": 0.35734308986621405,
+      "ci_high": 0.5759902434671191
+    },
+    {
+      "condition": "no_training",
+      "test": "post",
+      "n": 6,
+      "mean_acc": 0.5166666666666667,
+      "sd": 0.07527726527090808,
+      "ci_low": 0.45643230954568653,
+      "ci_high": 0.5769010237876468
+    },
+    {
+      "condition": "no_training",
+      "test": "delayed",
+      "n": 6,
+      "mean_acc": 0.4833333333333334,
+      "sd": 0.13291601358251257,
+      "ci_low": 0.37697837210548196,
+      "ci_high": 0.5896882945611848
+    },
+    {
+      "condition": "no_training",
+      "test": "transfer",
+      "n": 6,
+      "mean_acc": 0.39999999999999997,
+      "sd": 0.0894427190999916,
+      "ci_low": 0.32843091915265826,
+      "ci_high": 0.47156908084734167
+    },
+    {
+      "condition": "no_training",
+      "test": "gain",
+      "n": 6,
+      "mean_acc": 0.049999999999999996,
+      "sd": 0.17606816861659008,
+      "ci_low": -0.09088387653193913,
+      "ci_high": 0.1908838765319391
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "pre",
+      "n": 6,
+      "mean_acc": 0.5,
+      "sd": 0.08944271909999157,
+      "ci_low": 0.4284309191526583,
+      "ci_high": 0.5715690808473417
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "post",
+      "n": 6,
+      "mean_acc": 0.65,
+      "sd": 0.10488088481701516,
+      "ci_low": 0.5660778138193878,
+      "ci_high": 0.7339221861806122
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "delayed",
+      "n": 6,
+      "mean_acc": 0.6833333333333332,
+      "sd": 0.07527726527090813,
+      "ci_low": 0.623098976212353,
+      "ci_high": 0.7435676904543135
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "transfer",
+      "n": 6,
+      "mean_acc": 0.5833333333333334,
+      "sd": 0.07527726527090808,
+      "ci_low": 0.5230989762123532,
+      "ci_high": 0.6435676904543135
+    },
+    {
+      "condition": "scrambled_cues",
+      "test": "gain",
+      "n": 6,
+      "mean_acc": 0.15,
+      "sd": 0.1224744871391589,
+      "ci_low": 0.05199999999999999,
+      "ci_high": 0.248
+    }
+  ]
+}

@@ -1,0 +1,2363 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Synthetic validation report</title><style>body{font-family:system-ui,sans-serif;max-width:980px;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#1b1b1b}table{border-collapse:collapse;margin:0.5rem 0}td,th{border:1px solid #ccc;padding:4px 8px;vertical-align:top}img{max-width:100%}pre{background:#f5f5f5;padding:1rem;overflow-x:auto;white-space:pre-wrap}blockquote{border-left:4px solid #e45756;margin:0.8rem 0;padding:0.4rem 1rem;background:#fdf3f2}</style></head><body><h1>Can learners acquire a perceptual skill they never had from AI-derived cues? (ECG age)</h1>
+<p><strong>Synthetic validation report - SYNTHETIC DATA - NOT SCIENTIFIC RESULTS</strong></p>
+<p><strong>KEYUR SHAILESHKUMAR PATEL</strong> · ORCID https://orcid.org/0009-0008-5261-043X<br />
+MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK; Independent researcher.<br />
+<em>Conducted independently; not an official Brunel University London project.</em></p>
+<p>Validation run: 20261120T132404Z_validation  |  Software version 0.5.2  |  full<br />
+Status: exploratory validation made BEFORE preregistration. No real ECGs were used.<br />
+Use of AI tools. The research questions, hypotheses and design choices are the author's. The code and draft documents were written with help from an AI assistant (Claude, by Anthropic) under the author's direction and checked by the author. Separately, the study uses AI models as its objects of study: the AI teacher (a neural network trained here) and the learners (open language models and small neural networks).<br />
+Licence: text and figures CC BY 4.0; code MIT.  </p>
+<h2>1. The short answer</h2>
+<ul>
+<li>The pipeline behaved as planned in <strong>26 of 31</strong> pre-stated checks across 6 fake worlds where the right answer was known in advance.</li>
+<li>W1 Informative world: 5 of 7 as expected; NOT as expected: H1 supported (main run); H1 supported (blinded run).</li>
+<li>W1b Strong teaching world: 2 of 4 as expected; NOT as expected: H1 supported (main run); H1 supported (blinded run).</li>
+<li>W2 Null learners: 5 of 5 as expected.</li>
+<li>W3 Prior knowledge: 4 of 5 as expected; NOT as expected: Blinded run still shows the lesson effect (H1 supported).</li>
+<li>W4 Broken models: 6 of 6 as expected.</li>
+<li>W5 No signal: 4 of 4 as expected.</li>
+<li>Large differences are found: real cues beat scrambled cues by +25 points (W1, supported), +32 points (W1b, supported), +24 points (W4, supported) in the worlds where the learners read lessons.</li>
+<li>At the planned size (1,002 learners per group), the H1 rule gave a false 'yes' in 0.00% of simulated no-effect studies (limit 5%). It found a true 5-point effect 100% of the time, a 4-point effect 100% and a 3-point effect only 49%.</li>
+<li>Holm correction kept the chance of any false 'yes' among H2-H7 at 3.8% (limit 5%).</li>
+<li>Re-running the same settings gave byte-identical results (41 files): yes. Changing one byte of a results file was caught: yes.</li>
+</ul>
+<blockquote>
+<p><strong>What this means in plain words.</strong> We built 6 pretend worlds where we knew in advance what should happen, and ran the whole study in each. The software said 'the cues help' when they clearly did, 'no' when they did not, caught learners that already knew the answer, threw out broken learners, and noticed when there was nothing to learn. These are machine tests only: they say nothing yet about real ECGs or real AI models. In W1, W1b, W3 the help we planted turned out smaller than the 3-point bar, so the study said 'real but too small to count', which is what the rule is for; our advance guess of the size was too high. One design fact to know: because H1 also needs the observed difference to reach 3 points, a true effect of exactly 3 points is found only about half the time. Effects of 4 points or more are found almost always.</p>
+</blockquote>
+<h2>2. What this report is, and what it is not</h2>
+<p>This is the exploratory validation run made before the study is preregistered. It uses made-up ECG-like data and scripted mock learners. Its only job is to show that the software, the checks and the statistics do what the plan says, so that the preregistration can point to it. It may be cited in the preregistration as 'synthetic validation'. It is not a pilot on real data: no PTB-XL record was opened (decision D3).</p>
+<p>Each fake world states in advance what the pipeline must report. A world 'passes' only if every one of its statements comes true. The worlds use the preregistered code unchanged; only data size, training length and the learner type are set for the world. Language-model worlds use the full planned number of learners (1,002 per group, main and blinded runs). Neural-net worlds use 30 learners per group to save time; their power at full size is covered by the simulations in Section 5.</p>
+<h2>3. How the fake worlds are built</h2>
+<ul>
+<li>Fake ECGs: 12-lead, 10-second signals with patients, folds and recording devices like PTB-XL. In worlds with signal, age shifts some of the 18 measurements and the waveform; in W5 it shifts nothing.</li>
+<li>Mock learners read the same prompts real models would read and answer with a probability for A or B. A 'student' applies any numbered rules it finds and learns a little from practice cases; a 'null' learner ignores lessons; a 'memoriser' already knows the AI's cues when real names are shown; 'collapse' always says 'older' outside the gate; 'random' guesses.</li>
+<li>Neural-net learners are real small networks trained on the fake signals, exactly as in the study.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>World</th>
+<th>Story</th>
+<th>Learner models</th>
+<th>Age signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W1</td>
+<td>Age leaves a trace in the ECG and the measurements. Learners read and apply the rules they are given, and learn a little from practice cases.</td>
+<td>mock-student-1, mock-student-2, mock-student-3</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>W1b (added)</td>
+<td>Same data as W1, but the learners lean much more on written rules than on practice cases, so a good lesson should give a large gain. Added after the dry run showed W1's planted gain was below 3 points.</td>
+<td>mock-strong-1, mock-strong-2, mock-strong-3</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>W2</td>
+<td>Same data. Learners can follow one explicit rule (so they pass the gate) but learn nothing from lessons or practice: their answers are noise.</td>
+<td>mock-null-1, mock-null-2, mock-null-3</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>W3</td>
+<td>Same data. Learners already 'know' the AI's cues whenever the real measurement names are shown, with or without a lesson, like a model that memorised ECG textbooks.</td>
+<td>mock-memorizer-1, mock-memorizer-2, mock-memorizer-3</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>W4</td>
+<td>One good learner model, one that follows an explicit rule but otherwise always says 'older', and one that answers at random.</td>
+<td>mock-student-1, mock-collapse-1, mock-random-1</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>W5</td>
+<td>Age leaves no trace at all in the ECG or the measurements. There is nothing for the AI to find.</td>
+<td>mock-student-1, mock-student-2, mock-student-3</td>
+<td>none</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Results in each world</h2>
+<p><img alt="Post-test accuracy by group in each world (language-model learners, main run, all models)." src="figures/worlds_post.png" />
+<em>Post-test accuracy by group in each world (language-model learners, main run, all models).</em></p>
+<h3>W1. Informative world</h3>
+<p>Age leaves a trace in the ECG and the measurements. Learners read and apply the rules they are given, and learn a little from practice cases.</p>
+<table>
+<thead>
+<tr>
+<th>Must happen</th>
+<th>Happened</th>
+<th>What we saw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No self-check fails</td>
+<td>yes</td>
+<td>16 pass, 0 fail, 0 n/a</td>
+</tr>
+<tr>
+<td>AI teacher is an expert (AUROC &gt;= 0.80)</td>
+<td>yes</td>
+<td>AUROC 0.973</td>
+</tr>
+<tr>
+<td>H1 supported (main run)</td>
+<td>NO</td>
+<td>diff +1.8 pts, p = 2.02e-11 (significant, but below the 3-point bar)</td>
+</tr>
+<tr>
+<td>H1 supported (blinded run)</td>
+<td>NO</td>
+<td>diff +1.7 pts, p = 7.22e-11 (significant, but below the 3-point bar)</td>
+</tr>
+<tr>
+<td>H7 supported: real cues beat scrambled cues</td>
+<td>yes</td>
+<td>diff +24.8 pts, p = 0</td>
+</tr>
+<tr>
+<td>Pre-test near chance (new skill)</td>
+<td>yes</td>
+<td>pre-test mean 0.501</td>
+</tr>
+<tr>
+<td>All three models count</td>
+<td>yes</td>
+<td>['mock-student-1', 'mock-student-2', 'mock-student-3']</td>
+</tr>
+</tbody>
+</table>
+<p>Language-model learners (main run). Teacher AUROC 0.973; cues: QRS axis, T-wave height, lead V1, R-wave height, lead V5, QRS duration, Heart rate, PR interval; the cue rules alone get 89.3% right on the test fold.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>1002</td>
+<td>50.1% [49.6%, 50.6%]</td>
+<td>49.9% [49.4%, 50.4%]</td>
+<td>49.5% [49.0%, 50.0%]</td>
+<td>50.1% [49.6%, 50.7%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>1002</td>
+<td>49.9% [49.5%, 50.4%]</td>
+<td>83.8% [83.4%, 84.2%]</td>
+<td>83.5% [83.1%, 83.9%]</td>
+<td>83.8% [83.4%, 84.2%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>1002</td>
+<td>50.2% [49.7%, 50.6%]</td>
+<td>85.5% [85.2%, 85.9%]</td>
+<td>85.3% [85.0%, 85.7%]</td>
+<td>85.3% [85.0%, 85.7%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>1002</td>
+<td>50.2% [49.7%, 50.7%]</td>
+<td>60.8% [60.3%, 61.3%]</td>
+<td>60.6% [60.1%, 61.1%]</td>
+<td>59.8% [59.3%, 60.3%]</td>
+</tr>
+</tbody>
+</table>
+<h3>W1b. Strong teaching world</h3>
+<p>Same data as W1, but the learners lean much more on written rules than on practice cases, so a good lesson should give a large gain. Added after the dry run showed W1's planted gain was below 3 points.</p>
+<table>
+<thead>
+<tr>
+<th>Must happen</th>
+<th>Happened</th>
+<th>What we saw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No self-check fails</td>
+<td>yes</td>
+<td>16 pass, 0 fail, 0 n/a</td>
+</tr>
+<tr>
+<td>H1 supported (main run)</td>
+<td>NO</td>
+<td>diff +1.0 pts, p = 0.000104 (significant, but below the 3-point bar)</td>
+</tr>
+<tr>
+<td>H1 supported (blinded run)</td>
+<td>NO</td>
+<td>diff +0.5 pts, p = 0.0451 (significant, but below the 3-point bar)</td>
+</tr>
+<tr>
+<td>H7 supported: real cues beat scrambled cues</td>
+<td>yes</td>
+<td>diff +31.5 pts, p = 0</td>
+</tr>
+</tbody>
+</table>
+<p>Language-model learners (main run). Teacher AUROC 0.973; cues: QRS axis, T-wave height, lead V1, R-wave height, lead V5, QRS duration, Heart rate, PR interval; the cue rules alone get 89.3% right on the test fold.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>1002</td>
+<td>50.1% [49.6%, 50.6%]</td>
+<td>50.5% [50.0%, 51.0%]</td>
+<td>50.3% [49.8%, 50.8%]</td>
+<td>50.2% [49.7%, 50.7%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>1002</td>
+<td>50.4% [49.9%, 50.9%]</td>
+<td>83.6% [83.2%, 84.0%]</td>
+<td>83.6% [83.2%, 84.0%]</td>
+<td>83.3% [82.9%, 83.7%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>1002</td>
+<td>50.0% [49.5%, 50.5%]</td>
+<td>84.6% [84.2%, 84.9%]</td>
+<td>84.3% [84.0%, 84.7%]</td>
+<td>84.3% [83.9%, 84.7%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>1002</td>
+<td>50.3% [49.8%, 50.8%]</td>
+<td>53.1% [52.6%, 53.6%]</td>
+<td>52.8% [52.4%, 53.3%]</td>
+<td>52.6% [52.1%, 53.1%]</td>
+</tr>
+</tbody>
+</table>
+<h3>W2. Null learners</h3>
+<p>Same data. Learners can follow one explicit rule (so they pass the gate) but learn nothing from lessons or practice: their answers are noise.</p>
+<table>
+<thead>
+<tr>
+<th>Must happen</th>
+<th>Happened</th>
+<th>What we saw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No self-check fails</td>
+<td>yes</td>
+<td>16 pass, 0 fail, 0 n/a</td>
+</tr>
+<tr>
+<td>All models pass the known-answer gate</td>
+<td>yes</td>
+<td>1.00, 1.00, 1.00</td>
+</tr>
+<tr>
+<td>H1 NOT supported (main run)</td>
+<td>yes</td>
+<td>diff +0.2 pts, p = 0.317</td>
+</tr>
+<tr>
+<td>H1 NOT supported (blinded run)</td>
+<td>yes</td>
+<td>diff -0.2 pts, p = 0.692</td>
+</tr>
+<tr>
+<td>H7 NOT supported</td>
+<td>yes</td>
+<td>diff +0.1 pts, p = 0.388</td>
+</tr>
+</tbody>
+</table>
+<p>Language-model learners (main run). Teacher AUROC 0.973; cues: QRS axis, T-wave height, lead V1, R-wave height, lead V5, QRS duration, Heart rate, PR interval; the cue rules alone get 89.3% right on the test fold.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>1002</td>
+<td>50.2% [49.7%, 50.7%]</td>
+<td>49.6% [49.1%, 50.1%]</td>
+<td>50.0% [49.6%, 50.5%]</td>
+<td>50.0% [49.5%, 50.5%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>1002</td>
+<td>49.8% [49.3%, 50.3%]</td>
+<td>49.9% [49.4%, 50.4%]</td>
+<td>49.8% [49.3%, 50.3%]</td>
+<td>49.9% [49.4%, 50.4%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>1002</td>
+<td>50.4% [49.9%, 50.9%]</td>
+<td>50.0% [49.6%, 50.5%]</td>
+<td>50.0% [49.5%, 50.5%]</td>
+<td>49.2% [48.7%, 49.7%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>1002</td>
+<td>50.1% [49.6%, 50.6%]</td>
+<td>49.9% [49.5%, 50.4%]</td>
+<td>50.4% [49.9%, 50.9%]</td>
+<td>49.6% [49.1%, 50.1%]</td>
+</tr>
+</tbody>
+</table>
+<h3>W3. Prior knowledge</h3>
+<p>Same data. Learners already 'know' the AI's cues whenever the real measurement names are shown, with or without a lesson, like a model that memorised ECG textbooks.</p>
+<table>
+<thead>
+<tr>
+<th>Must happen</th>
+<th>Happened</th>
+<th>What we saw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No self-check fails</td>
+<td>yes</td>
+<td>16 pass, 0 fail, 0 n/a</td>
+</tr>
+<tr>
+<td>Probe shows the models already know most cue directions</td>
+<td>yes</td>
+<td>[6, 6, 6] of 6</td>
+</tr>
+<tr>
+<td>Main run: pre-test far above chance, so the 'new skill' precondition fails</td>
+<td>yes</td>
+<td>pre-test mean 0.842</td>
+</tr>
+<tr>
+<td>Blinded run: pre-test back near chance</td>
+<td>yes</td>
+<td>pre-test mean 0.498</td>
+</tr>
+<tr>
+<td>Blinded run still shows the lesson effect (H1 supported)</td>
+<td>NO</td>
+<td>diff +1.5 pts, p = 2.52e-08 (significant, but below the 3-point bar)</td>
+</tr>
+</tbody>
+</table>
+<p>Language-model learners (main run). Teacher AUROC 0.973; cues: QRS axis, T-wave height, lead V1, R-wave height, lead V5, QRS duration, Heart rate, PR interval; the cue rules alone get 89.3% right on the test fold.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>1002</td>
+<td>84.2% [83.9%, 84.6%]</td>
+<td>84.0% [83.7%, 84.4%]</td>
+<td>84.4% [84.1%, 84.8%]</td>
+<td>83.8% [83.4%, 84.1%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>1002</td>
+<td>84.2% [83.8%, 84.5%]</td>
+<td>84.6% [84.2%, 85.0%]</td>
+<td>84.0% [83.6%, 84.4%]</td>
+<td>84.2% [83.8%, 84.5%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>1002</td>
+<td>83.9% [83.6%, 84.3%]</td>
+<td>84.4% [84.1%, 84.8%]</td>
+<td>84.0% [83.7%, 84.4%]</td>
+<td>83.8% [83.4%, 84.2%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>1002</td>
+<td>84.4% [84.0%, 84.7%]</td>
+<td>84.5% [84.2%, 84.9%]</td>
+<td>84.4% [84.0%, 84.7%]</td>
+<td>83.9% [83.5%, 84.2%]</td>
+</tr>
+</tbody>
+</table>
+<h3>W4. Broken models</h3>
+<p>One good learner model, one that follows an explicit rule but otherwise always says 'older', and one that answers at random.</p>
+<table>
+<thead>
+<tr>
+<th>Must happen</th>
+<th>Happened</th>
+<th>What we saw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No self-check fails</td>
+<td>yes</td>
+<td>16 pass, 0 fail, 0 n/a</td>
+</tr>
+<tr>
+<td>Random model fails the gate</td>
+<td>yes</td>
+<td>gate accuracy 0.47</td>
+</tr>
+<tr>
+<td>Collapsing model passes the gate but is flagged (collapsed, and flat: its answers cannot be ranked)</td>
+<td>yes</td>
+<td>gate 1.00, collapsed learners 100%, flat learners 100%</td>
+</tr>
+<tr>
+<td>Only the good model counts for H1</td>
+<td>yes</td>
+<td>['mock-student-1']</td>
+</tr>
+<tr>
+<td>H1 still testable on the good model</td>
+<td>yes</td>
+<td>diff +1.6 pts, p = 0.000221 (significant, but below the 3-point bar)</td>
+</tr>
+<tr>
+<td>Sensitivity analysis with all models is reported</td>
+<td>yes</td>
+<td>diff +0.4 pts, p = 0.298</td>
+</tr>
+</tbody>
+</table>
+<p>Language-model learners (main run). Teacher AUROC 0.973; cues: QRS axis, T-wave height, lead V1, R-wave height, lead V5, QRS duration, Heart rate, PR interval; the cue rules alone get 89.3% right on the test fold.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>334</td>
+<td>49.6% [48.8%, 50.5%]</td>
+<td>50.0% [49.1%, 50.8%]</td>
+<td>49.8% [49.0%, 50.5%]</td>
+<td>50.7% [49.9%, 51.6%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>334</td>
+<td>50.4% [49.6%, 51.3%]</td>
+<td>83.7% [83.0%, 84.4%]</td>
+<td>83.9% [83.3%, 84.6%]</td>
+<td>83.8% [83.0%, 84.6%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>334</td>
+<td>50.3% [49.5%, 51.1%]</td>
+<td>85.4% [84.8%, 86.0%]</td>
+<td>85.4% [84.8%, 86.0%]</td>
+<td>85.4% [84.9%, 86.0%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>334</td>
+<td>50.1% [49.3%, 50.9%]</td>
+<td>61.2% [60.3%, 62.0%]</td>
+<td>60.6% [59.8%, 61.5%]</td>
+<td>60.3% [59.4%, 61.1%]</td>
+</tr>
+</tbody>
+</table>
+<h3>W5. No signal</h3>
+<p>Age leaves no trace at all in the ECG or the measurements. There is nothing for the AI to find.</p>
+<table>
+<thead>
+<tr>
+<th>Must happen</th>
+<th>Happened</th>
+<th>What we saw</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No self-check fails</td>
+<td>yes</td>
+<td>16 pass, 0 fail, 0 n/a</td>
+</tr>
+<tr>
+<td>Teacher near chance, so the 'expert' precondition fails</td>
+<td>yes</td>
+<td>AUROC 0.496</td>
+</tr>
+<tr>
+<td>H1 NOT supported (language-model learners)</td>
+<td>yes</td>
+<td>diff -0.5 pts, p = 0.935</td>
+</tr>
+<tr>
+<td>H1 NOT supported (neural-net learners)</td>
+<td>yes</td>
+<td>diff +0.2 pts, p = 0.454</td>
+</tr>
+</tbody>
+</table>
+<p>Language-model learners (main run). Teacher AUROC 0.496; cues: QRS axis, Heart rate, R-wave height, lead V5, QRS duration, QTc (Bazett), T-wave height, lead V1; the cue rules alone get 48.4% right on the test fold.</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>1002</td>
+<td>50.1% [49.6%, 50.6%]</td>
+<td>49.9% [49.4%, 50.4%]</td>
+<td>49.5% [49.0%, 50.0%]</td>
+<td>50.1% [49.6%, 50.7%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>1002</td>
+<td>49.9% [49.5%, 50.4%]</td>
+<td>50.3% [49.8%, 50.7%]</td>
+<td>49.7% [49.3%, 50.2%]</td>
+<td>50.1% [49.6%, 50.6%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>1002</td>
+<td>50.2% [49.7%, 50.6%]</td>
+<td>49.7% [49.2%, 50.2%]</td>
+<td>50.1% [49.6%, 50.6%]</td>
+<td>50.1% [49.6%, 50.6%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>1002</td>
+<td>50.2% [49.7%, 50.7%]</td>
+<td>48.9% [48.5%, 49.4%]</td>
+<td>49.3% [48.8%, 49.7%]</td>
+<td>49.7% [49.2%, 50.2%]</td>
+</tr>
+</tbody>
+</table>
+<h2>5. How the statistics behave at the planned size (1,002 per group)</h2>
+<p>Simulated learners were given the spread seen in W1 (feedback-only mean 83.8%, SD 6.3 points, 40 test items each). Each figure below is from 4,000 simulated studies.</p>
+<p><img alt="Chance that the study says 'yes' for H1, by the true size of the effect. Dotted line: the preregistered minimum meaningful difference." src="figures/power_curve.png" />
+<em>Chance that the study says 'yes' for H1, by the true size of the effect. Dotted line: the preregistered minimum meaningful difference.</em></p>
+<table>
+<thead>
+<tr>
+<th>True difference (points)</th>
+<th>p &lt; 0.05</th>
+<th>H1 rule (p &lt; 0.05 and &gt;= 3 points)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0</td>
+<td>5.2%</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>97.6%</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>2.0</td>
+<td>100.0%</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>100.0%</td>
+<td>3.3%</td>
+</tr>
+<tr>
+<td>3.0</td>
+<td>100.0%</td>
+<td>48.8%</td>
+</tr>
+<tr>
+<td>3.5</td>
+<td>100.0%</td>
+<td>96.9%</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>100.0%</td>
+<td>100.0%</td>
+</tr>
+<tr>
+<td>5.0</td>
+<td>100.0%</td>
+<td>100.0%</td>
+</tr>
+<tr>
+<td>7.5</td>
+<td>100.0%</td>
+<td>100.0%</td>
+</tr>
+<tr>
+<td>10.0</td>
+<td>100.0%</td>
+<td>100.0%</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>False 'yes' for H1 when there is no effect: 0.00% (Welch test alone: 5.22%).</li>
+<li>Chance of at least one false 'yes' among H2-H7 after Holm correction, when nothing works: 3.8%.</li>
+<li>Learners sharing test ECGs: with 300 learners per group drawing from 400 ECGs of mixed difficulty, the learner-level Welch test said 'yes' falsely 5.0% of the time and the item-level two-way cluster test 5.3% (300 simulated studies; 5% is right).</li>
+</ul>
+<h3>Known-answer gate and collapse rule</h3>
+<table>
+<thead>
+<tr>
+<th>Model's true rule-following accuracy</th>
+<th>Chance it passes the gate (&gt;= 34 of 40)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50%</td>
+<td>0.0%</td>
+</tr>
+<tr>
+<td>60%</td>
+<td>0.1%</td>
+</tr>
+<tr>
+<td>70%</td>
+<td>2.4%</td>
+</tr>
+<tr>
+<td>75%</td>
+<td>9.6%</td>
+</tr>
+<tr>
+<td>80%</td>
+<td>28.6%</td>
+</tr>
+<tr>
+<td>85%</td>
+<td>60.7%</td>
+</tr>
+<tr>
+<td>90%</td>
+<td>90.0%</td>
+</tr>
+<tr>
+<td>95%</td>
+<td>99.7%</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Learner's lean toward one answer</th>
+<th>Chance it is flagged as collapsed (&gt;= 38 of 40 the same)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50%</td>
+<td>0.00%</td>
+</tr>
+<tr>
+<td>60%</td>
+<td>0.00%</td>
+</tr>
+<tr>
+<td>70%</td>
+<td>0.01%</td>
+</tr>
+<tr>
+<td>80%</td>
+<td>0.79%</td>
+</tr>
+<tr>
+<td>90%</td>
+<td>22.28%</td>
+</tr>
+<tr>
+<td>95%</td>
+<td>67.67%</td>
+</tr>
+<tr>
+<td>99%</td>
+<td>99.25%</td>
+</tr>
+</tbody>
+</table>
+<h2>6. Reproducibility and tamper test</h2>
+<ul>
+<li>The W1 settings (reduced size) were run twice from scratch. 41 result files compared (logs and run IDs left out): identical = True.</li>
+<li><code>verify</code> on the second run before tampering: all match. After changing one byte in learners_llm.csv: caught (learners_llm.csv). After putting it back: all match.</li>
+</ul>
+<h2>7. Problems found and what changed</h2>
+<ul>
+<li>W1: expected 'H1 supported (main run)' but saw diff +1.8 pts, p = 2.02e-11 (significant, but below the 3-point bar). Why: the mock learners already score about 83% from 30 practice cases, so the planted lesson adds only 1 to 2 points. The H1 rule correctly calls a gain this size detectable but not meaningful. The advance expectation was set too high; it is kept as written (ISSUES.md P9, P10).</li>
+<li>W1: expected 'H1 supported (blinded run)' but saw diff +1.7 pts, p = 7.22e-11 (significant, but below the 3-point bar). Why: the mock learners already score about 83% from 30 practice cases, so the planted lesson adds only 1 to 2 points. The H1 rule correctly calls a gain this size detectable but not meaningful. The advance expectation was set too high; it is kept as written (ISSUES.md P9, P10).</li>
+<li>W1b: expected 'H1 supported (main run)' but saw diff +1.0 pts, p = 0.000104 (significant, but below the 3-point bar). Why: the mock learners already score about 83% from 30 practice cases, so the planted lesson adds only 1 to 2 points. The H1 rule correctly calls a gain this size detectable but not meaningful. The advance expectation was set too high; it is kept as written (ISSUES.md P9, P10).</li>
+<li>W1b: expected 'H1 supported (blinded run)' but saw diff +0.5 pts, p = 0.0451 (significant, but below the 3-point bar). Why: the mock learners already score about 83% from 30 practice cases, so the planted lesson adds only 1 to 2 points. The H1 rule correctly calls a gain this size detectable but not meaningful. The advance expectation was set too high; it is kept as written (ISSUES.md P9, P10).</li>
+<li>W3: expected 'Blinded run still shows the lesson effect (H1 supported)' but saw diff +1.5 pts, p = 2.52e-08 (significant, but below the 3-point bar). Why: the mock learners already score about 83% from 30 practice cases, so the planted lesson adds only 1 to 2 points. The H1 rule correctly calls a gain this size detectable but not meaningful. The advance expectation was set too high; it is kept as written (ISSUES.md P9, P10).</li>
+<li>Design property (not a bug): requiring the observed difference to reach 3 points means a true 3-point effect is found only 49% of the time; 80% power is reached at about 4 points. The preregistration states this.</li>
+</ul>
+<h2>8. What we can and cannot say</h2>
+<h3>We can say</h3>
+<ul>
+<li>The software, self-checks and statistics behave as the plan says in the situations tested here.</li>
+<li>At the planned size the H1 rule keeps false positives well under 5% and finds effects of 4 points or more almost always.</li>
+<li>The gate, collapse rule, prior-knowledge probe and blinded run each catch the problem they were built for.</li>
+</ul>
+<h3>We cannot say</h3>
+<ul>
+<li>Anything about real ECGs, real AI models, or people. Mock learners are scripts.</li>
+<li>That real language models will pass the gate or not collapse. That is only known when the study runs.</li>
+<li>That the real effect, if any, is as large as in W1. W1 was built to have an effect.</li>
+</ul>
+<h2>9. Words used</h2>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI teacher</td>
+<td>The neural network trained here to tell younger from older adults from the raw ECG.</td>
+</tr>
+<tr>
+<td>Cue</td>
+<td>A plain rule taken from the AI, e.g. 'heart rate tends to be lower in older adults'.</td>
+</tr>
+<tr>
+<td>Learner</td>
+<td>One machine 'participant': one language-model session or one small neural network, with its own cases.</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>Learners practise on cases and are told the right answer, but get no rules.</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>A lesson that looks the same but uses measurements the AI did not pick, with random directions.</td>
+</tr>
+<tr>
+<td>Known-answer gate</td>
+<td>A test that a model can follow one simple written rule. Models that cannot are not counted.</td>
+</tr>
+<tr>
+<td>Collapse</td>
+<td>When a learner gives the same answer to nearly every case. Its accuracy then says nothing.</td>
+</tr>
+<tr>
+<td>AUROC</td>
+<td>How well a model ranks older above younger; 0.5 is guessing, 1.0 is perfect.</td>
+</tr>
+<tr>
+<td>p-value</td>
+<td>How surprising a result would be if there were no real difference. Small = unlikely to be luck.</td>
+</tr>
+<tr>
+<td>Holm correction</td>
+<td>A rule that makes p-values stricter when several hypotheses are tested together.</td>
+</tr>
+<tr>
+<td>MDE</td>
+<td>Minimum detectable effect: the smallest true difference the test would find 80% of the time.</td>
+</tr>
+<tr>
+<td>Equivalence test (TOST)</td>
+<td>A test of whether a difference is smaller than a set margin, so 'no difference' can be claimed.</td>
+</tr>
+<tr>
+<td>Preregistration</td>
+<td>Publishing the plan before running the test, so it cannot be changed after.</td>
+</tr>
+<tr>
+<td>SHA-256</td>
+<td>A file fingerprint. Change one letter and the fingerprint changes.</td>
+</tr>
+<tr>
+<td>Mock learner</td>
+<td>A small script that pretends to be a learner, used only to test the software.</td>
+</tr>
+<tr>
+<td>Synthetic world</td>
+<td>Made-up data and learners where the right answer is known in advance.</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>The chance that the study finds an effect that is really there.</td>
+</tr>
+</tbody>
+</table>
+<h2>10. How to check this report</h2>
+<ul>
+<li>Re-make it: python run_study.py validate (about an hour on a laptop CPU; add --quick for a 10-minute version).</li>
+<li>Every file in this folder is listed with its SHA-256 in SHA256SUMS.txt; each world folder has its own manifest and SHA256SUMS.txt.</li>
+<li>validation_summary.json holds every number in this report.</li>
+<li>Master seed 20261026; simulations use seed 20261125.</li>
+</ul>
+<h2>11. Common questions</h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Did an AI do the research?</td>
+<td>No. The idea, hypotheses and every design choice are the author's. An AI assistant helped write code and drafts under the author's direction.</td>
+</tr>
+<tr>
+<td>Why test on fake data first?</td>
+<td>So that any bug is found before the plan is locked, without looking at the real data and without being tempted to change the plan after seeing real results.</td>
+</tr>
+<tr>
+<td>Why didn't you run a small real pilot?</td>
+<td>Decided in advance (D3): looking at real data before locking the plan would weaken the preregistration. The fake worlds test the machinery instead.</td>
+</tr>
+<tr>
+<td>Can these numbers go in a paper as results?</td>
+<td>No. They can be cited as validation of the method, labelled synthetic.</td>
+</tr>
+</tbody>
+</table>
+<h2>Appendix A. Hypothesis tables for every world</h2>
+<h3>W1 Informative world: llm</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+1.8</td>
+<td>[+1.2, +2.3]</td>
+<td>0.30</td>
+<td>&lt; 0.001</td>
+<td>-</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+35.7</td>
+<td>[+35.0, +36.3]</td>
+<td>5.14</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+33.9</td>
+<td>[+33.3, +34.6]</td>
+<td>4.67</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+1.8</td>
+<td>[+1.3, +2.4]</td>
+<td>0.31</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+1.6</td>
+<td>[+1.1, +2.1]</td>
+<td>0.26</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+1.5</td>
+<td>[+0.7, +2.3]</td>
+<td>0.16</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>1.1</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+24.8</td>
+<td>[+24.2, +25.4]</td>
+<td>3.63</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W1 Informative world: llm_blinded</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+1.7</td>
+<td>[+1.2, +2.3]</td>
+<td>0.29</td>
+<td>&lt; 0.001</td>
+<td>-</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+35.7</td>
+<td>[+35.1, +36.3]</td>
+<td>5.15</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+33.9</td>
+<td>[+33.3, +34.6]</td>
+<td>4.70</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+1.2</td>
+<td>[+0.6, +1.7]</td>
+<td>0.19</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+1.6</td>
+<td>[+1.1, +2.1]</td>
+<td>0.26</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+2.0</td>
+<td>[+1.1, +2.8]</td>
+<td>0.20</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>1.2</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+24.3</td>
+<td>[+23.7, +24.9]</td>
+<td>3.53</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W1 Informative world: nets</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+2.2</td>
+<td>[+0.1, +4.4]</td>
+<td>0.53</td>
+<td>0.022</td>
+<td>-</td>
+<td>2.6</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+37.4</td>
+<td>[+32.2, +42.5]</td>
+<td>3.53</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>6.9</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+35.3</td>
+<td>[+30.1, +40.4]</td>
+<td>3.29</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>7.0</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+0.4</td>
+<td>[-6.1, +6.7]</td>
+<td>0.03</td>
+<td>0.453</td>
+<td>0.453</td>
+<td>8.3</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+2.7</td>
+<td>[+0.1, +5.3]</td>
+<td>0.50</td>
+<td>0.029</td>
+<td>0.059</td>
+<td>3.5</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+2.7</td>
+<td>[+0.6, +4.9]</td>
+<td>0.62</td>
+<td>0.009</td>
+<td>0.028</td>
+<td>2.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+3.1</td>
+<td>[+1.0, +5.2]</td>
+<td>0.74</td>
+<td>0.003</td>
+<td>0.011</td>
+<td>2.7</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W1b Strong teaching world: llm</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+1.0</td>
+<td>[+0.5, +1.5]</td>
+<td>0.17</td>
+<td>&lt; 0.001</td>
+<td>-</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+34.1</td>
+<td>[+33.5, +34.6]</td>
+<td>5.19</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+33.1</td>
+<td>[+32.5, +33.6]</td>
+<td>4.70</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+0.8</td>
+<td>[+0.2, +1.3]</td>
+<td>0.13</td>
+<td>0.003</td>
+<td>0.003</td>
+<td>0.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+0.9</td>
+<td>[+0.4, +1.5]</td>
+<td>0.15</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+1.4</td>
+<td>[+0.5, +2.3]</td>
+<td>0.14</td>
+<td>&lt; 0.001</td>
+<td>0.002</td>
+<td>1.2</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+31.5</td>
+<td>[+30.9, +32.1]</td>
+<td>4.69</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W1b Strong teaching world: llm_blinded</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+0.5</td>
+<td>[-0.1, +1.0]</td>
+<td>0.08</td>
+<td>0.045</td>
+<td>-</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+34.3</td>
+<td>[+33.7, +34.9]</td>
+<td>4.76</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+33.8</td>
+<td>[+33.1, +34.5]</td>
+<td>4.61</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+0.5</td>
+<td>[+0.0, +1.1]</td>
+<td>0.09</td>
+<td>0.022</td>
+<td>0.067</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+0.3</td>
+<td>[-0.3, +0.8]</td>
+<td>0.04</td>
+<td>0.161</td>
+<td>0.322</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>-0.1</td>
+<td>[-1.1, +0.8]</td>
+<td>-0.01</td>
+<td>0.629</td>
+<td>0.629</td>
+<td>1.2</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+30.8</td>
+<td>[+30.2, +31.4]</td>
+<td>4.42</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W2 Null learners: llm</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+0.2</td>
+<td>[-0.5, +0.8]</td>
+<td>0.02</td>
+<td>0.317</td>
+<td>-</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+0.4</td>
+<td>[-0.3, +1.1]</td>
+<td>0.05</td>
+<td>0.115</td>
+<td>0.687</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+0.3</td>
+<td>[-0.4, +1.0]</td>
+<td>0.03</td>
+<td>0.239</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+0.2</td>
+<td>[-0.5, +0.9]</td>
+<td>0.03</td>
+<td>0.264</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>-0.7</td>
+<td>[-1.4, +0.0]</td>
+<td>-0.09</td>
+<td>0.976</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>-0.4</td>
+<td>[-1.4, +0.6]</td>
+<td>-0.04</td>
+<td>0.792</td>
+<td>1.000</td>
+<td>1.3</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+0.1</td>
+<td>[-0.6, +0.8]</td>
+<td>0.01</td>
+<td>0.388</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3>W2 Null learners: llm_blinded</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>-0.2</td>
+<td>[-0.9, +0.5]</td>
+<td>-0.02</td>
+<td>0.692</td>
+<td>-</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>-0.4</td>
+<td>[-1.2, +0.3]</td>
+<td>-0.05</td>
+<td>0.877</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>-0.2</td>
+<td>[-1.0, +0.5]</td>
+<td>-0.03</td>
+<td>0.754</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>-0.4</td>
+<td>[-1.1, +0.3]</td>
+<td>-0.05</td>
+<td>0.886</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>-0.6</td>
+<td>[-1.3, +0.1]</td>
+<td>-0.07</td>
+<td>0.952</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>-0.5</td>
+<td>[-1.5, +0.5]</td>
+<td>-0.04</td>
+<td>0.814</td>
+<td>1.000</td>
+<td>1.3</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>-0.6</td>
+<td>[-1.3, +0.2]</td>
+<td>-0.07</td>
+<td>0.937</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3>W3 Prior knowledge: llm</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>-0.2</td>
+<td>[-0.7, +0.4]</td>
+<td>-0.03</td>
+<td>0.732</td>
+<td>-</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+0.4</td>
+<td>[-0.1, +0.9]</td>
+<td>0.07</td>
+<td>0.056</td>
+<td>0.281</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+0.6</td>
+<td>[+0.1, +1.1]</td>
+<td>0.10</td>
+<td>0.016</td>
+<td>0.094</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+0.0</td>
+<td>[-0.5, +0.5]</td>
+<td>0.00</td>
+<td>0.469</td>
+<td>1.000</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>-0.4</td>
+<td>[-0.9, +0.2]</td>
+<td>-0.06</td>
+<td>0.915</td>
+<td>1.000</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+0.1</td>
+<td>[-0.7, +0.8]</td>
+<td>0.01</td>
+<td>0.442</td>
+<td>1.000</td>
+<td>1.0</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>-0.1</td>
+<td>[-0.6, +0.4]</td>
+<td>-0.01</td>
+<td>0.616</td>
+<td>1.000</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3>W3 Prior knowledge: llm_blinded</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+1.5</td>
+<td>[+1.0, +2.0]</td>
+<td>0.24</td>
+<td>&lt; 0.001</td>
+<td>-</td>
+<td>0.7</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+35.1</td>
+<td>[+34.5, +35.7]</td>
+<td>4.97</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+33.6</td>
+<td>[+33.0, +34.3]</td>
+<td>4.54</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.9</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+1.2</td>
+<td>[+0.7, +1.7]</td>
+<td>0.20</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+1.8</td>
+<td>[+1.2, +2.3]</td>
+<td>0.29</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+1.1</td>
+<td>[+0.3, +2.0]</td>
+<td>0.11</td>
+<td>0.005</td>
+<td>0.005</td>
+<td>1.1</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+24.3</td>
+<td>[+23.8, +24.9]</td>
+<td>3.61</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.8</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W4 Broken models: llm</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+1.6</td>
+<td>[+0.8, +2.6]</td>
+<td>0.27</td>
+<td>&lt; 0.001</td>
+<td>-</td>
+<td>1.2</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+35.4</td>
+<td>[+34.3, +36.4]</td>
+<td>5.13</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>1.3</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+33.7</td>
+<td>[+32.6, +34.8]</td>
+<td>4.68</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>1.4</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+1.5</td>
+<td>[+0.6, +2.4]</td>
+<td>0.26</td>
+<td>&lt; 0.001</td>
+<td>0.001</td>
+<td>1.1</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+1.7</td>
+<td>[+0.6, +2.7]</td>
+<td>0.26</td>
+<td>&lt; 0.001</td>
+<td>0.001</td>
+<td>1.3</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+1.7</td>
+<td>[+0.3, +3.2]</td>
+<td>0.18</td>
+<td>0.011</td>
+<td>0.011</td>
+<td>1.9</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+24.2</td>
+<td>[+23.2, +25.2]</td>
+<td>3.59</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>1.3</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W4 Broken models: llm_blinded</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+1.8</td>
+<td>[+0.9, +2.7]</td>
+<td>0.30</td>
+<td>&lt; 0.001</td>
+<td>-</td>
+<td>1.2</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+35.5</td>
+<td>[+34.5, +36.6]</td>
+<td>5.09</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>1.4</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+33.7</td>
+<td>[+32.6, +34.8]</td>
+<td>4.62</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>1.4</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+0.9</td>
+<td>[-0.1, +1.8]</td>
+<td>0.14</td>
+<td>0.037</td>
+<td>0.037</td>
+<td>1.2</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+1.0</td>
+<td>[+0.2, +2.0]</td>
+<td>0.17</td>
+<td>0.013</td>
+<td>0.026</td>
+<td>1.2</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+2.0</td>
+<td>[+0.4, +3.5]</td>
+<td>0.20</td>
+<td>0.004</td>
+<td>0.013</td>
+<td>1.9</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+24.1</td>
+<td>[+23.0, +25.2]</td>
+<td>3.28</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>1.4</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W5 No signal: llm</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>-0.5</td>
+<td>[-1.2, +0.1]</td>
+<td>-0.07</td>
+<td>0.935</td>
+<td>-</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>-0.1</td>
+<td>[-0.8, +0.5]</td>
+<td>-0.02</td>
+<td>0.656</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+0.4</td>
+<td>[-0.3, +1.1]</td>
+<td>0.05</td>
+<td>0.137</td>
+<td>0.684</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+0.4</td>
+<td>[-0.3, +1.1]</td>
+<td>0.05</td>
+<td>0.151</td>
+<td>0.684</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>-0.1</td>
+<td>[-0.8, +0.7]</td>
+<td>-0.01</td>
+<td>0.566</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>-0.8</td>
+<td>[-1.7, +0.2]</td>
+<td>-0.07</td>
+<td>0.947</td>
+<td>1.000</td>
+<td>1.2</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+0.8</td>
+<td>[+0.1, +1.5]</td>
+<td>0.10</td>
+<td>0.013</td>
+<td>0.077</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3>W5 No signal: llm_blinded</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+0.6</td>
+<td>[-0.2, +1.3]</td>
+<td>0.07</td>
+<td>0.056</td>
+<td>-</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+0.3</td>
+<td>[-0.4, +1.1]</td>
+<td>0.04</td>
+<td>0.167</td>
+<td>0.667</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>-0.2</td>
+<td>[-0.9, +0.5]</td>
+<td>-0.03</td>
+<td>0.731</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>-0.9</td>
+<td>[-1.6, -0.2]</td>
+<td>-0.12</td>
+<td>0.996</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>-0.2</td>
+<td>[-0.9, +0.6]</td>
+<td>-0.02</td>
+<td>0.678</td>
+<td>1.000</td>
+<td>0.9</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+0.8</td>
+<td>[-0.2, +1.8]</td>
+<td>0.07</td>
+<td>0.052</td>
+<td>0.260</td>
+<td>1.3</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+1.3</td>
+<td>[+0.6, +2.0]</td>
+<td>0.16</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>0.9</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<h3>W5 No signal: nets</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>+0.2</td>
+<td>[-2.6, +2.9]</td>
+<td>0.03</td>
+<td>0.454</td>
+<td>-</td>
+<td>3.6</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+0.6</td>
+<td>[-2.1, +3.3]</td>
+<td>0.11</td>
+<td>0.337</td>
+<td>1.000</td>
+<td>3.6</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+0.4</td>
+<td>[-2.5, +3.4]</td>
+<td>0.08</td>
+<td>0.385</td>
+<td>1.000</td>
+<td>3.8</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>-0.6</td>
+<td>[-3.0, +1.9]</td>
+<td>-0.11</td>
+<td>0.670</td>
+<td>1.000</td>
+<td>3.2</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>-1.4</td>
+<td>[-4.8, +2.2]</td>
+<td>-0.20</td>
+<td>0.774</td>
+<td>1.000</td>
+<td>4.6</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>-0.1</td>
+<td>[-2.8, +2.5]</td>
+<td>-0.02</td>
+<td>0.531</td>
+<td>1.000</td>
+<td>3.5</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>-0.1</td>
+<td>[-2.9, +2.8]</td>
+<td>-0.01</td>
+<td>0.515</td>
+<td>1.000</td>
+<td>3.7</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2>Appendix B. Self-checks in every world</h2>
+<table>
+<thead>
+<tr>
+<th>World</th>
+<th>C1</th>
+<th>C2</th>
+<th>C3</th>
+<th>C4</th>
+<th>C5</th>
+<th>C6</th>
+<th>C7</th>
+<th>C8</th>
+<th>C9</th>
+<th>C10</th>
+<th>C11</th>
+<th>C12</th>
+<th>C13</th>
+<th>C14</th>
+<th>C16</th>
+<th>C17</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>W1</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>W1b</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>W2</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>W3</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>W4</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+</tr>
+<tr>
+<td>W5</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+<td>pass</td>
+</tr>
+</tbody>
+</table></body></html>

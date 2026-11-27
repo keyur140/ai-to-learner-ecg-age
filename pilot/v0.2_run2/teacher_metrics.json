@@ -1,0 +1,123 @@
+{
+  "best_epoch": 10,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.3562691065266883,
+      "val_auroc": 0.9458279220779221
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.23381834541637592,
+      "val_auroc": 0.955616883116883
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.1878436071649967,
+      "val_auroc": 0.9636525974025973
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.16821472264284906,
+      "val_auroc": 0.973538961038961
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.16064234495575452,
+      "val_auroc": 0.9731168831168832
+    },
+    {
+      "epoch": 6,
+      "train_loss": 0.1566105194157795,
+      "val_auroc": 0.9750649350649351
+    },
+    {
+      "epoch": 7,
+      "train_loss": 0.14880835231406467,
+      "val_auroc": 0.9737337662337663
+    },
+    {
+      "epoch": 8,
+      "train_loss": 0.12323296838359436,
+      "val_auroc": 0.9740097402597402
+    },
+    {
+      "epoch": 9,
+      "train_loss": 0.13968120733192224,
+      "val_auroc": 0.9760876623376623
+    },
+    {
+      "epoch": 10,
+      "train_loss": 0.12004612123264986,
+      "val_auroc": 0.9774188311688312
+    },
+    {
+      "epoch": 11,
+      "train_loss": 0.13555083782202645,
+      "val_auroc": 0.9656655844155845
+    },
+    {
+      "epoch": 12,
+      "train_loss": 0.11905395761647851,
+      "val_auroc": 0.9755357142857142
+    },
+    {
+      "epoch": 13,
+      "train_loss": 0.09067175173841958,
+      "val_auroc": 0.9741801948051948
+    },
+    {
+      "epoch": 14,
+      "train_loss": 0.09424765789591318,
+      "val_auroc": 0.9755844155844156
+    },
+    {
+      "epoch": 15,
+      "train_loss": 0.09099213325234845,
+      "val_auroc": 0.9748782467532467
+    },
+    {
+      "epoch": 16,
+      "train_loss": 0.08212530159207776,
+      "val_auroc": 0.9766720779220779
+    }
+  ],
+  "device": "cpu",
+  "weights_sha256": "2058dde863300fd05d0e5a79b4ad199397ece56f212abe533c39aa33f69ebb5f",
+  "roles_used_for_training": [
+    "teacher_train"
+  ],
+  "roles_used_for_early_stopping": [
+    "teacher_val"
+  ],
+  "n_train": 4624,
+  "n_val": 527,
+  "teacher_val": {
+    "n": 527,
+    "teacher_auroc": 0.9774188311688312,
+    "teacher_accuracy": 0.9316888045540797,
+    "features_baseline_auroc": 0.901185064935065,
+    "features_baseline_accuracy": 0.8595825426944972
+  },
+  "cue": {
+    "n": 740,
+    "teacher_auroc": 0.9787818706737625,
+    "teacher_accuracy": 0.9337837837837838,
+    "features_baseline_auroc": 0.9127447911231694,
+    "features_baseline_accuracy": 0.8729729729729729
+  },
+  "test": {
+    "n": 610,
+    "teacher_auroc": 0.9885249447274824,
+    "teacher_accuracy": 0.9278688524590164,
+    "features_baseline_auroc": 0.9468062097471882,
+    "features_baseline_accuracy": 0.8836065573770492
+  },
+  "transfer": {
+    "n": 2119,
+    "teacher_auroc": 0.9557706161037759,
+    "teacher_accuracy": 0.8721094856064181,
+    "features_baseline_auroc": 0.8804047765526164,
+    "features_baseline_accuracy": 0.8914582350165172
+  }
+}

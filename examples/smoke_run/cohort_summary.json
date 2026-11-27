@@ -1,0 +1,65 @@
+{
+  "source": {
+    "dataset": "SYNTHETIC (pipeline test only; not real ECGs)"
+  },
+  "n_total_records": 3000,
+  "n_in_age_groups": 2516,
+  "n_cohort": 2516,
+  "transfer_device": "AT-6 C 5.5",
+  "n_patients": 2188,
+  "ecgs_set_aside_for_patient_overlap": 101,
+  "patients_in_more_than_one_role": 0,
+  "protected": null,
+  "device_counts": {
+    "CS-12   E": 1405,
+    "AT-6 C 5.5": 595,
+    "CS100    3": 308,
+    "AT-60    3": 208
+  },
+  "roles": {
+    "teacher_train": {
+      "n": 1310,
+      "n_older": 630
+    },
+    "teacher_val": {
+      "n": 134,
+      "n_older": 70
+    },
+    "cue": {
+      "n": 177,
+      "n_older": 76
+    },
+    "test": {
+      "n": 199,
+      "n_older": 103
+    },
+    "transfer": {
+      "n": 595,
+      "n_older": 292
+    },
+    "unused": {
+      "n": 101,
+      "n_older": 55
+    }
+  },
+  "imputation_medians": {
+    "HR_Ventr_Global": 70.81811758685676,
+    "PR_Int_Global": 152.593803304481,
+    "QRS_Dur_Global": 94.65846354901893,
+    "QT_Int_Global": 388.9710697673596,
+    "QT_IntBazett_Global": 414.6320625803527,
+    "P_AxisFront_Global": 56.650381727181625,
+    "R_AxisFrontal_Global": 46.592966761116095,
+    "T_AxisFront_Global": 44.42022913161999,
+    "P_Amp_II": 0.2995331857812453,
+    "P_Dur_II": 100.27975139302937,
+    "R_Amp_aVL": 0.30127899460857466,
+    "R_Amp_V5": 1.638406899138122,
+    "S_Amp_V1": -0.9145572711214789,
+    "T_Amp_II": 0.29495673592143173,
+    "T_Amp_V1": 0.034196372329591676,
+    "T_Amp_V5": 0.3040549397230879,
+    "ST_Amp_V5": 0.30159695482865584,
+    "Q_Amp_III": 0.3008998282888077
+  }
+}

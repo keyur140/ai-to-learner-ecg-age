@@ -1,0 +1,16 @@
+LESSON: What the ECG measurements mean.
+- Heart rate is the number of ventricular beats per minute.
+- The PR interval is the time from the start of the P wave to the start of the QRS complex.
+- QRS duration is how long the ventricles take to depolarise.
+- The QT interval runs from the start of the QRS complex to the end of the T wave.
+- QTc is the QT interval corrected for heart rate with Bazett's formula.
+- The P-wave axis is the main direction of atrial depolarisation in the frontal plane.
+- The QRS axis is the main direction of ventricular depolarisation in the frontal plane.
+- The T-wave axis is the main direction of ventricular repolarisation in the frontal plane.
+- P-wave height in lead II is the peak voltage of the atrial wave.
+- P-wave duration in lead II is how long the atrial wave lasts.
+- R-wave height in aVL is the peak upward QRS voltage in that lead.
+- R-wave height in V5 is the peak upward QRS voltage in that chest lead.
+- S-wave depth in V1 is the downward QRS voltage in that chest lead.
+- T-wave height in lead II is the peak voltage of the repolarisation wave.
+- T-wave height in V1 is the peak repolarisation voltage in that chest lead.

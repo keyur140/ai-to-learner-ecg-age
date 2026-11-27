@@ -1,0 +1,92 @@
+[
+  {
+    "id": "C1",
+    "check": "No patient appears in two roles",
+    "result": "pass",
+    "detail": "0 shared; 69 ECGs set aside"
+  },
+  {
+    "id": "C2",
+    "check": "Teacher saw only its training and validation ECGs",
+    "result": "pass",
+    "detail": "train roles ['teacher_train'], early-stopping roles ['teacher_val']"
+  },
+  {
+    "id": "C3",
+    "check": "Cues built only from the cue fold, from the teacher's guesses",
+    "result": "pass",
+    "detail": "740 ECGs, roles ['cue']"
+  },
+  {
+    "id": "C4",
+    "check": "Learner sets come from the right roles, balanced, one ECG per patient",
+    "result": "pass",
+    "detail": "20 learners re-drawn from their seeds; problems: none"
+  },
+  {
+    "id": "C5",
+    "check": "Seeds reproduce exactly the test items each learner saw",
+    "result": "n/a",
+    "detail": "no item-level files in this run"
+  },
+  {
+    "id": "C6",
+    "check": "Learner accuracies recomputed from the item files",
+    "result": "n/a",
+    "detail": "no item-level files"
+  },
+  {
+    "id": "C7",
+    "check": "H1 p-values recomputed with a hand-written Welch test",
+    "result": "pass",
+    "detail": "1 experiments, largest difference 0.0e+00"
+  },
+  {
+    "id": "C8",
+    "check": "Holm adjustment recomputed with statsmodels",
+    "result": "pass",
+    "detail": "1 families, largest difference 0.0e+00"
+  },
+  {
+    "id": "C9",
+    "check": "Cue-rule accuracy recomputed from the saved files",
+    "result": "pass",
+    "detail": "0.8049 vs 0.8049"
+  },
+  {
+    "id": "C10",
+    "check": "Prompt leak scan",
+    "result": "n/a",
+    "detail": "no language-model run"
+  },
+  {
+    "id": "C11",
+    "check": "Answer letters balanced: in every group and model, 'older = A' for half the learners (within one)",
+    "result": "n/a",
+    "detail": "no language-model run"
+  },
+  {
+    "id": "C12",
+    "check": "Known-answer gate decisions follow the preregistered rule",
+    "result": "n/a",
+    "detail": "0 model decisions"
+  },
+  {
+    "id": "C13",
+    "check": "Scrambled lesson uses features the AI did not pick",
+    "result": "pass",
+    "detail": "0 shared features; scrambled-rule accuracy on test 0.536"
+  },
+  {
+    "id": "C14",
+    "check": "Teacher weights match their recorded SHA-256",
+    "result": "pass",
+    "detail": "6a11619bd36a9677..."
+  },
+  {
+    "id": "C15",
+    "check": "Protected pilot: no ECG from the sealed test fold or the sealed device was used",
+    "result": "pass",
+    "detail": "3646 ECGs of 3347 patients sealed; 0 found in the run"
+  }
+]

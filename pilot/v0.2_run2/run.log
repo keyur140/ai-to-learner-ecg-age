@@ -1,0 +1,55 @@
+2026-11-07T12:01:08 | INFO | ai2human 0.2.0 | run 20261107T120108Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-07T12:01:13 | INFO | already downloaded: data/ptbxl.zip
+2026-11-07T12:01:13 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-07T12:01:14 | INFO | PhysioNet checksums: already verified
+2026-11-07T12:01:14 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-07T12:01:16 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-07T12:01:16 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-07T12:01:16 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-07T12:01:16 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-07T12:01:16 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-07T12:01:16 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-07T12:01:16 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-07T12:01:16 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-07T12:01:16 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-07T12:01:16 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-07T12:01:16 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-07T12:01:16 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-07T12:01:16 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-07T12:01:16 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-07T12:01:16 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-07T12:01:16 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-07T12:01:16 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-07T12:01:16 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-07T12:01:16 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-07T12:01:16 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-07T12:01:16 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-07T12:01:16 | INFO | teacher device: cpu
+2026-11-07T12:01:35 | INFO | teacher epoch   1: loss 0.3563  val AUROC 0.9458
+2026-11-07T12:01:51 | INFO | teacher epoch   2: loss 0.2338  val AUROC 0.9556
+2026-11-07T12:02:05 | INFO | teacher epoch   3: loss 0.1878  val AUROC 0.9637
+2026-11-07T12:02:21 | INFO | teacher epoch   4: loss 0.1682  val AUROC 0.9735
+2026-11-07T12:02:36 | INFO | teacher epoch   5: loss 0.1606  val AUROC 0.9731
+2026-11-07T12:02:51 | INFO | teacher epoch   6: loss 0.1566  val AUROC 0.9751
+2026-11-07T12:03:06 | INFO | teacher epoch   7: loss 0.1488  val AUROC 0.9737
+2026-11-07T12:03:21 | INFO | teacher epoch   8: loss 0.1232  val AUROC 0.9740
+2026-11-07T12:03:37 | INFO | teacher epoch   9: loss 0.1397  val AUROC 0.9761
+2026-11-07T12:03:52 | INFO | teacher epoch  10: loss 0.1200  val AUROC 0.9774
+2026-11-07T12:04:07 | INFO | teacher epoch  11: loss 0.1356  val AUROC 0.9657
+2026-11-07T12:04:21 | INFO | teacher epoch  12: loss 0.1191  val AUROC 0.9755
+2026-11-07T12:04:35 | INFO | teacher epoch  13: loss 0.0907  val AUROC 0.9742
+2026-11-07T12:04:49 | INFO | teacher epoch  14: loss 0.0942  val AUROC 0.9756
+2026-11-07T12:05:05 | INFO | teacher epoch  15: loss 0.0910  val AUROC 0.9749
+2026-11-07T12:05:20 | INFO | teacher epoch  16: loss 0.0821  val AUROC 0.9767
+2026-11-07T12:05:20 | INFO | early stop at epoch 16 (best 10)
+2026-11-07T12:05:28 | INFO | teacher test: {'n': 610, 'teacher_auroc': 0.9885249447274824, 'teacher_accuracy': 0.9278688524590164, 'features_baseline_auroc': 0.9468062097471882, 'features_baseline_accuracy': 0.8836065573770492}
+2026-11-07T12:05:28 | INFO | cue stability C=0.005: 0 stable features
+2026-11-07T12:05:29 | INFO | cue stability C=0.01: 4 stable features
+2026-11-07T12:05:29 | INFO | cue stability C=0.02: 4 stable features
+2026-11-07T12:05:29 | INFO | cue stability C=0.05: 8 stable features
+2026-11-07T12:05:29 | INFO | cues: ['PR_Int_Global', 'T_Amp_II', 'S_Amp_V1', 'T_Amp_V1', 'R_Amp_aVL', 'R_AxisFrontal_Global', 'ST_Amp_V5', 'QT_IntBazett_Global']; test fidelity {'scrambled_tally_accuracy_true': 0.4639344262295082, 'surrogate_fidelity_to_teacher': 0.860655737704918, 'surrogate_accuracy_true': 0.8770491803278688, 'rule_tally_fidelity_to_teacher': 0.8262295081967214, 'rule_tally_accuracy_true': 0.8229508196721311}
+2026-11-07T12:05:56 | INFO | saliency: densest segment QRS, most cue weight ST-T
+2026-11-07T12:05:56 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 120 learners (main run)
+2026-11-07T12:05:58 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-07T12:06:39 | INFO | prefix cache verified (max diff 0.0000)
+2026-11-07T12:07:29 | INFO | gate Qwen/Qwen2.5-3B-Instruct (main): accuracy 0.90 -> PASS

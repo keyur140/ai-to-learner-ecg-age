@@ -1,0 +1,79 @@
+You are a student learning a new skill. You will see measurements taken from adults' resting 12-lead ECGs. Each ECG belongs either to a younger adult (under 40 years old) or to an older adult (65 years or older). Exactly half of all cases are younger and half are older.
+
+LESSON: How the cases are shown.
+- Each case lists 18 measurements, labelled Measure 1 to Measure 18.
+- The measurements are always listed in the same order.
+- Some measurements are times, some are angles and some are voltages; units are not shown.
+- Values differ from person to person, and no single value is shown on its own as decisive.
+- Read every measurement in a case before deciding.
+- Measure 1 is reported for every case.
+- Measure 2 is reported for every case.
+- Measure 3 is reported for every case.
+- Measure 4 is reported for every case.
+- Measure 5 is reported for every case.
+- Measure 6 is reported for every case.
+- Measure 7 is reported for every case.
+- Measure 8 is reported for every case.
+- Measure 9 is reported for every case.
+- Measure 10 is reported for every case.
+
+A DIFFERENT TASK: decide whether it rained at a weather station that day. Feedback is given.
+Day 1: humidity 33%, pressure 980 hPa, cloud cover 5/8. Answer: no rain.
+Day 2: humidity 41%, pressure 1004 hPa, cloud cover 1/8. Answer: no rain.
+Day 3: humidity 84%, pressure 1009 hPa, cloud cover 8/8. Answer: rain.
+Day 4: humidity 93%, pressure 1002 hPa, cloud cover 0/8. Answer: rain.
+Day 5: humidity 32%, pressure 1027 hPa, cloud cover 3/8. Answer: no rain.
+Day 6: humidity 74%, pressure 1029 hPa, cloud cover 8/8. Answer: rain.
+Day 7: humidity 33%, pressure 989 hPa, cloud cover 5/8. Answer: no rain.
+Day 8: humidity 42%, pressure 1012 hPa, cloud cover 7/8. Answer: rain.
+Day 9: humidity 71%, pressure 998 hPa, cloud cover 2/8. Answer: rain.
+Day 10: humidity 34%, pressure 996 hPa, cloud cover 5/8. Answer: no rain.
+Day 11: humidity 45%, pressure 1014 hPa, cloud cover 3/8. Answer: no rain.
+Day 12: humidity 97%, pressure 1024 hPa, cloud cover 8/8. Answer: rain.
+Day 13: humidity 41%, pressure 1009 hPa, cloud cover 2/8. Answer: no rain.
+Day 14: humidity 62%, pressure 1008 hPa, cloud cover 3/8. Answer: no rain.
+Day 15: humidity 39%, pressure 1032 hPa, cloud cover 8/8. Answer: rain.
+Day 16: humidity 47%, pressure 994 hPa, cloud cover 4/8. Answer: no rain.
+Day 17: humidity 33%, pressure 1005 hPa, cloud cover 7/8. Answer: rain.
+Day 18: humidity 70%, pressure 1033 hPa, cloud cover 1/8. Answer: no rain.
+Day 19: humidity 63%, pressure 980 hPa, cloud cover 2/8. Answer: no rain.
+Day 20: humidity 74%, pressure 1016 hPa, cloud cover 5/8. Answer: no rain.
+Day 21: humidity 72%, pressure 1003 hPa, cloud cover 1/8. Answer: rain.
+Day 22: humidity 81%, pressure 995 hPa, cloud cover 5/8. Answer: rain.
+Day 23: humidity 57%, pressure 1008 hPa, cloud cover 7/8. Answer: rain.
+Day 24: humidity 78%, pressure 1006 hPa, cloud cover 0/8. Answer: rain.
+Day 25: humidity 53%, pressure 1031 hPa, cloud cover 8/8. Answer: rain.
+Day 26: humidity 34%, pressure 1020 hPa, cloud cover 1/8. Answer: no rain.
+Day 27: humidity 64%, pressure 1018 hPa, cloud cover 3/8. Answer: no rain.
+Day 28: humidity 95%, pressure 1028 hPa, cloud cover 5/8. Answer: no rain.
+Day 29: humidity 68%, pressure 1015 hPa, cloud cover 1/8. Answer: no rain.
+Day 30: humidity 47%, pressure 1036 hPa, cloud cover 8/8. Answer: rain.
+Day 31: humidity 69%, pressure 1024 hPa, cloud cover 1/8. Answer: no rain.
+Day 32: humidity 42%, pressure 1008 hPa, cloud cover 4/8. Answer: no rain.
+Day 33: humidity 84%, pressure 987 hPa, cloud cover 3/8. Answer: rain.
+End of the different task. Now return to the ECG task.
+
+TEST CASE:
+Measure 1: 56
+Measure 2: 119
+Measure 3: 103
+Measure 4: 344
+Measure 5: 399
+Measure 6: 58
+Measure 7: 44
+Measure 8: 55
+Measure 9: 0.32
+Measure 10: 108
+Measure 11: 0.42
+Measure 12: 1.58
+Measure 13: -0.37
+Measure 14: 0.28
+Measure 15: 0.12
+Measure 16: 0.30
+Measure 17: 0.23
+Measure 18: 0.30
+
+Which adult does this ECG belong to?
+A) older adult (65 or over)
+B) younger adult (under 40)
+Answer with the single letter A or B.

@@ -1,0 +1,47 @@
+{
+  "mock-student-1": {
+    "model": "mock-student-1",
+    "run": "blinded",
+    "gate_accuracy": 1.0,
+    "gate_items": 20,
+    "gate_pass": true,
+    "gate_rule": "Measure 1 > 71",
+    "post_collapse_fraction": 0.0,
+    "collapsed_model": false,
+    "post_flat_fraction": 0.0,
+    "flat_model": false,
+    "primary_score": "bias_corrected",
+    "collapse_excludes_model": false,
+    "informative": true
+  },
+  "mock-student-2": {
+    "model": "mock-student-2",
+    "run": "blinded",
+    "gate_accuracy": 1.0,
+    "gate_items": 20,
+    "gate_pass": true,
+    "gate_rule": "Measure 1 > 71",
+    "post_collapse_fraction": 0.0,
+    "collapsed_model": false,
+    "post_flat_fraction": 0.0,
+    "flat_model": false,
+    "primary_score": "bias_corrected",
+    "collapse_excludes_model": false,
+    "informative": true
+  },
+  "mock-student-3": {
+    "model": "mock-student-3",
+    "run": "blinded",
+    "gate_accuracy": 1.0,
+    "gate_items": 20,
+    "gate_pass": true,
+    "gate_rule": "Measure 1 > 71",
+    "post_collapse_fraction": 0.0,
+    "collapsed_model": false,
+    "post_flat_fraction": 0.0,
+    "flat_model": false,
+    "primary_score": "bias_corrected",
+    "collapse_excludes_model": false,
+    "informative": true
+  }
+}

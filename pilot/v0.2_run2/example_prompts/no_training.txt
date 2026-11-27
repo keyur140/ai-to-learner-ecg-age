@@ -1,0 +1,79 @@
+You are a student learning a new skill. You will see measurements taken from adults' resting 12-lead ECGs. Each ECG belongs either to a younger adult (under 40 years old) or to an older adult (65 years or older). Exactly half of all cases are younger and half are older.
+
+LESSON: What the ECG measurements mean.
+- Heart rate is the number of ventricular beats per minute.
+- The PR interval is the time from the start of the P wave to the start of the QRS complex.
+- QRS duration is how long the ventricles take to depolarise.
+- The QT interval runs from the start of the QRS complex to the end of the T wave.
+- QTc is the QT interval corrected for heart rate with Bazett's formula.
+- The P-wave axis is the main direction of atrial depolarisation in the frontal plane.
+- The QRS axis is the main direction of ventricular depolarisation in the frontal plane.
+- The T-wave axis is the main direction of ventricular repolarisation in the frontal plane.
+- P-wave height in lead II is the peak voltage of the atrial wave.
+- P-wave duration in lead II is how long the atrial wave lasts.
+- R-wave height in aVL is the peak upward QRS voltage in that lead.
+- R-wave height in V5 is the peak upward QRS voltage in that chest lead.
+- S-wave depth in V1 is the downward QRS voltage in that chest lead.
+- T-wave height in lead II is the peak voltage of the repolarisation wave.
+- T-wave height in V1 is the peak repolarisation voltage in that chest lead.
+
+A DIFFERENT TASK: decide whether it rained at a weather station that day. Feedback is given.
+Day 1: humidity 23%, pressure 1016 hPa, cloud cover 2/8. Answer: no rain.
+Day 2: humidity 68%, pressure 990 hPa, cloud cover 6/8. Answer: no rain.
+Day 3: humidity 85%, pressure 1025 hPa, cloud cover 5/8. Answer: no rain.
+Day 4: humidity 40%, pressure 1010 hPa, cloud cover 7/8. Answer: rain.
+Day 5: humidity 39%, pressure 998 hPa, cloud cover 6/8. Answer: no rain.
+Day 6: humidity 98%, pressure 996 hPa, cloud cover 7/8. Answer: rain.
+Day 7: humidity 82%, pressure 1025 hPa, cloud cover 0/8. Answer: no rain.
+Day 8: humidity 54%, pressure 1009 hPa, cloud cover 1/8. Answer: no rain.
+Day 9: humidity 71%, pressure 997 hPa, cloud cover 5/8. Answer: rain.
+Day 10: humidity 54%, pressure 1014 hPa, cloud cover 0/8. Answer: no rain.
+Day 11: humidity 98%, pressure 1032 hPa, cloud cover 3/8. Answer: no rain.
+Day 12: humidity 84%, pressure 990 hPa, cloud cover 7/8. Answer: rain.
+Day 13: humidity 66%, pressure 1036 hPa, cloud cover 4/8. Answer: no rain.
+Day 14: humidity 88%, pressure 1032 hPa, cloud cover 0/8. Answer: no rain.
+Day 15: humidity 73%, pressure 1020 hPa, cloud cover 7/8. Answer: rain.
+Day 16: humidity 34%, pressure 1027 hPa, cloud cover 5/8. Answer: no rain.
+Day 17: humidity 62%, pressure 1023 hPa, cloud cover 1/8. Answer: no rain.
+Day 18: humidity 97%, pressure 1002 hPa, cloud cover 3/8. Answer: rain.
+Day 19: humidity 53%, pressure 992 hPa, cloud cover 8/8. Answer: rain.
+Day 20: humidity 86%, pressure 983 hPa, cloud cover 7/8. Answer: rain.
+Day 21: humidity 37%, pressure 1006 hPa, cloud cover 3/8. Answer: no rain.
+Day 22: humidity 83%, pressure 1038 hPa, cloud cover 3/8. Answer: no rain.
+Day 23: humidity 93%, pressure 1016 hPa, cloud cover 6/8. Answer: no rain.
+Day 24: humidity 81%, pressure 1013 hPa, cloud cover 8/8. Answer: rain.
+Day 25: humidity 55%, pressure 996 hPa, cloud cover 5/8. Answer: no rain.
+Day 26: humidity 99%, pressure 1018 hPa, cloud cover 3/8. Answer: no rain.
+Day 27: humidity 58%, pressure 1016 hPa, cloud cover 5/8. Answer: no rain.
+Day 28: humidity 76%, pressure 1000 hPa, cloud cover 4/8. Answer: rain.
+Day 29: humidity 21%, pressure 1025 hPa, cloud cover 6/8. Answer: no rain.
+Day 30: humidity 88%, pressure 1027 hPa, cloud cover 5/8. Answer: no rain.
+Day 31: humidity 45%, pressure 1024 hPa, cloud cover 8/8. Answer: rain.
+Day 32: humidity 29%, pressure 1006 hPa, cloud cover 8/8. Answer: rain.
+Day 33: humidity 23%, pressure 1032 hPa, cloud cover 6/8. Answer: no rain.
+End of the different task. Now return to the ECG task.
+
+TEST CASE:
+Heart rate: 56 bpm
+PR interval: 234 ms
+QRS duration: 88 ms
+QT interval: 420 ms
+QTc (Bazett): 405 ms
+P-wave axis: -10 deg
+QRS axis: 19 deg
+T-wave axis: 37 deg
+P-wave height, lead II: 0.00 mV
+P-wave duration, lead II: 0 ms
+R-wave height, lead aVL: 0.64 mV
+R-wave height, lead V5: 1.38 mV
+S-wave depth, lead V1: -1.38 mV
+T-wave height, lead II: 0.44 mV
+T-wave height, lead V1: -0.13 mV
+T-wave height, lead V5: 0.57 mV
+ST level, lead V5: 0.03 mV
+Q-wave depth, lead III: -0.00 mV
+
+Which adult does this ECG belong to?
+A) older adult (65 or over)
+B) younger adult (under 40)
+Answer with the single letter A or B.

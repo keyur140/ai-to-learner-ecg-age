@@ -1,0 +1,9 @@
+LESSON: How an expert AI tells younger (under 40) from older (65+) adults on an ECG.
+The AI relies on these measurements, most important first:
+1. P-wave axis: in older adults it tends to be lower (cut-point about 51 deg; higher points to younger).
+2. T-wave axis: in older adults it tends to be higher (cut-point about 49 deg; lower points to younger).
+3. T-wave height, lead V1: in older adults it tends to be lower (cut-point about 0.00 mV; higher points to younger).
+4. Heart rate: in older adults it tends to be lower (cut-point about 72 bpm; higher points to younger).
+5. P-wave height, lead II: in older adults it tends to be lower (cut-point about 0.10 mV; higher points to younger).
+6. T-wave height, lead V5: in older adults it tends to be lower (cut-point about 0.22 mV; higher points to younger).
+No single cue is decisive. Count how many cues point to 'older', giving more weight to the cues near the top of the list, and decide by the balance.

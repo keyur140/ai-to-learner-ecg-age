@@ -1,0 +1,547 @@
+{
+  "cues": [
+    {
+      "id": "PR_Int_Global",
+      "label": "PR interval",
+      "unit": "ms",
+      "selection_frequency": 0.9789999999999999,
+      "std_coef": 1.1161314589832263,
+      "older_is_higher": true,
+      "threshold": 158.0,
+      "median_teacher_older": 166.0,
+      "median_teacher_younger": 150.0,
+      "rank": 1,
+      "weight": 0.25072967057184337,
+      "rule": "PR interval: in older adults it tends to be higher (cut-point about 158 ms; lower points to younger).",
+      "teacher_votes": 5,
+      "direction_agreement": 1.0
+    },
+    {
+      "id": "T_Amp_II",
+      "label": "T-wave height, lead II",
+      "unit": "mV",
+      "selection_frequency": 0.998,
+      "std_coef": -1.0542826650018307,
+      "older_is_higher": false,
+      "threshold": 0.21775,
+      "median_teacher_older": 0.1435,
+      "median_teacher_younger": 0.292,
+      "rank": 2,
+      "weight": 0.23683585222687167,
+      "rule": "T-wave height, lead II: in older adults it tends to be lower (cut-point about 0.22 mV; higher points to younger).",
+      "teacher_votes": 5,
+      "direction_agreement": 1.0
+    },
+    {
+      "id": "R_Amp_aVL",
+      "label": "R-wave height, lead aVL",
+      "unit": "mV",
+      "selection_frequency": 0.869,
+      "std_coef": 0.719864928882771,
+      "older_is_higher": true,
+      "threshold": 0.40825,
+      "median_teacher_older": 0.6025,
+      "median_teacher_younger": 0.214,
+      "rank": 3,
+      "weight": 0.1617116828150555,
+      "rule": "R-wave height, lead aVL: in older adults it tends to be higher (cut-point about 0.41 mV; lower points to younger).",
+      "teacher_votes": 5,
+      "direction_agreement": 1.0
+    },
+    {
+      "id": "QT_IntBazett_Global",
+      "label": "QTc (Bazett)",
+      "unit": "ms",
+      "selection_frequency": 0.536,
+      "std_coef": 0.5909594490461394,
+      "older_is_higher": true,
+      "threshold": 427.5,
+      "median_teacher_older": 435.0,
+      "median_teacher_younger": 420.0,
+      "rank": 4,
+      "weight": 0.1327541364308802,
+      "rule": "QTc (Bazett): in older adults it tends to be higher (cut-point about 428 ms; lower points to younger).",
+      "teacher_votes": 3,
+      "direction_agreement": 1.0
+    },
+    {
+      "id": "S_Amp_V1",
+      "label": "S-wave depth, lead V1",
+      "unit": "mV",
+      "selection_frequency": 0.457,
+      "std_coef": 0.54080485861075,
+      "older_is_higher": true,
+      "threshold": -0.77725,
+      "median_teacher_older": -0.6805000000000001,
+      "median_teacher_younger": -0.874,
+      "rank": 5,
+      "weight": 0.12148732387370462,
+      "rule": "S-wave depth, lead V1: in older adults it tends to be higher (cut-point about -0.78 mV; lower points to younger).",
+      "teacher_votes": 3,
+      "direction_agreement": 1.0
+    },
+    {
+      "id": "R_AxisFrontal_Global",
+      "label": "QRS axis",
+      "unit": "deg",
+      "selection_frequency": 0.968,
+      "std_coef": -0.4294898642334324,
+      "older_is_higher": false,
+      "threshold": 33.0,
+      "median_teacher_older": 7.0,
+      "median_teacher_younger": 59.0,
+      "rank": 6,
+      "weight": 0.09648133408164475,
+      "rule": "QRS axis: in older adults it tends to be lower (cut-point about 33 deg; higher points to younger).",
+      "teacher_votes": 5,
+      "direction_agreement": 1.0
+    }
+  ],
+  "prototypes": {
+    "older": [
+      9927,
+      9932,
+      5476
+    ],
+    "younger": [
+      19923,
+      7267,
+      15680
+    ]
+  },
+  "report": {
+    "C": 0.02,
+    "selected": [
+      "PR_Int_Global",
+      "T_Amp_II",
+      "R_Amp_aVL",
+      "QT_IntBazett_Global",
+      "S_Amp_V1",
+      "R_AxisFrontal_Global"
+    ],
+    "stability_path": [
+      {
+        "C": 0.005,
+        "n_stable": 0,
+        "freq": {
+          "HR_Ventr_Global": 0.0,
+          "PR_Int_Global": 0.0,
+          "QRS_Dur_Global": 0.0,
+          "QT_Int_Global": 0.0,
+          "QT_IntBazett_Global": 0.0,
+          "P_AxisFront_Global": 0.0,
+          "R_AxisFrontal_Global": 0.0,
+          "T_AxisFront_Global": 0.0,
+          "P_Amp_II": 0.0,
+          "P_Dur_II": 0.0,
+          "R_Amp_aVL": 0.0,
+          "R_Amp_V5": 0.0,
+          "S_Amp_V1": 0.0,
+          "T_Amp_II": 0.005,
+          "T_Amp_V1": 0.0,
+          "T_Amp_V5": 0.0,
+          "ST_Amp_V5": 0.0,
+          "Q_Amp_III": 0.0
+        }
+      },
+      {
+        "C": 0.01,
+        "n_stable": 4,
+        "freq": {
+          "HR_Ventr_Global": 0.0,
+          "PR_Int_Global": 0.81,
+          "QRS_Dur_Global": 0.0,
+          "QT_Int_Global": 0.0,
+          "QT_IntBazett_Global": 0.075,
+          "P_AxisFront_Global": 0.0,
+          "R_AxisFrontal_Global": 0.85,
+          "T_AxisFront_Global": 0.0,
+          "P_Amp_II": 0.0,
+          "P_Dur_II": 0.0,
+          "R_Amp_aVL": 0.865,
+          "R_Amp_V5": 0.0,
+          "S_Amp_V1": 0.0,
+          "T_Amp_II": 1.0,
+          "T_Amp_V1": 0.03,
+          "T_Amp_V5": 0.115,
+          "ST_Amp_V5": 0.03,
+          "Q_Amp_III": 0.0
+        }
+      },
+      {
+        "C": 0.02,
+        "n_stable": 6,
+        "freq": {
+          "HR_Ventr_Global": 0.0,
+          "PR_Int_Global": 1.0,
+          "QRS_Dur_Global": 0.075,
+          "QT_Int_Global": 0.0,
+          "QT_IntBazett_Global": 0.9,
+          "P_AxisFront_Global": 0.0,
+          "R_AxisFrontal_Global": 0.975,
+          "T_AxisFront_Global": 0.005,
+          "P_Amp_II": 0.025,
+          "P_Dur_II": 0.0,
+          "R_Amp_aVL": 0.995,
+          "R_Amp_V5": 0.0,
+          "S_Amp_V1": 0.465,
+          "T_Amp_II": 1.0,
+          "T_Amp_V1": 0.695,
+          "T_Amp_V5": 0.12,
+          "ST_Amp_V5": 0.425,
+          "Q_Amp_III": 0.0
+        }
+      }
+    ],
+    "consensus": {
+      "n_teachers": 5,
+      "min_votes": 3,
+      "votes": {
+        "HR_Ventr_Global": 0,
+        "PR_Int_Global": 5,
+        "QRS_Dur_Global": 0,
+        "QT_Int_Global": 0,
+        "QT_IntBazett_Global": 3,
+        "P_AxisFront_Global": 0,
+        "R_AxisFrontal_Global": 5,
+        "T_AxisFront_Global": 1,
+        "P_Amp_II": 0,
+        "P_Dur_II": 0,
+        "R_Amp_aVL": 5,
+        "R_Amp_V5": 0,
+        "S_Amp_V1": 3,
+        "T_Amp_II": 5,
+        "T_Amp_V1": 2,
+        "T_Amp_V5": 1,
+        "ST_Amp_V5": 1,
+        "Q_Amp_III": 0
+      },
+      "mean_frequency": {
+        "HR_Ventr_Global": 0.0,
+        "PR_Int_Global": 0.9789999999999999,
+        "QRS_Dur_Global": 0.0,
+        "QT_Int_Global": 0.0,
+        "QT_IntBazett_Global": 0.536,
+        "P_AxisFront_Global": 0.0,
+        "R_AxisFrontal_Global": 0.968,
+        "T_AxisFront_Global": 0.136,
+        "P_Amp_II": 0.0,
+        "P_Dur_II": 0.0,
+        "R_Amp_aVL": 0.869,
+        "R_Amp_V5": 0.0,
+        "S_Amp_V1": 0.457,
+        "T_Amp_II": 0.998,
+        "T_Amp_V1": 0.27999999999999997,
+        "T_Amp_V5": 0.136,
+        "ST_Amp_V5": 0.18,
+        "Q_Amp_III": 0.0
+      },
+      "per_teacher": [
+        {
+          "teacher": 0,
+          "C": 0.02,
+          "selected": [
+            "PR_Int_Global",
+            "T_Amp_II",
+            "R_Amp_aVL",
+            "R_AxisFrontal_Global",
+            "QT_IntBazett_Global",
+            "T_Amp_V1"
+          ],
+          "freq": {
+            "PR_Int_Global": 1.0,
+            "T_Amp_II": 1.0,
+            "R_Amp_aVL": 0.995,
+            "R_AxisFrontal_Global": 0.975,
+            "QT_IntBazett_Global": 0.9,
+            "T_Amp_V1": 0.695
+          }
+        },
+        {
+          "teacher": 1,
+          "C": 0.05,
+          "selected": [
+            "PR_Int_Global",
+            "R_AxisFrontal_Global",
+            "T_Amp_II",
+            "S_Amp_V1",
+            "QT_IntBazett_Global",
+            "R_Amp_aVL",
+            "ST_Amp_V5",
+            "T_AxisFront_Global"
+          ],
+          "freq": {
+            "PR_Int_Global": 1.0,
+            "R_AxisFrontal_Global": 1.0,
+            "T_Amp_II": 1.0,
+            "S_Amp_V1": 0.98,
+            "QT_IntBazett_Global": 0.93,
+            "R_Amp_aVL": 0.925,
+            "ST_Amp_V5": 0.9,
+            "T_AxisFront_Global": 0.68
+          }
+        },
+        {
+          "teacher": 2,
+          "C": 0.02,
+          "selected": [
+            "PR_Int_Global",
+            "R_AxisFrontal_Global",
+            "T_Amp_II",
+            "QT_IntBazett_Global",
+            "R_Amp_aVL",
+            "T_Amp_V1",
+            "S_Amp_V1"
+          ],
+          "freq": {
+            "PR_Int_Global": 1.0,
+            "R_AxisFrontal_Global": 1.0,
+            "T_Amp_II": 1.0,
+            "QT_IntBazett_Global": 0.85,
+            "R_Amp_aVL": 0.825,
+            "T_Amp_V1": 0.705,
+            "S_Amp_V1": 0.63
+          }
+        },
+        {
+          "teacher": 3,
+          "C": 0.01,
+          "selected": [
+            "T_Amp_II",
+            "R_AxisFrontal_Global",
+            "PR_Int_Global",
+            "T_Amp_V5",
+            "R_Amp_aVL"
+          ],
+          "freq": {
+            "T_Amp_II": 0.99,
+            "R_AxisFrontal_Global": 0.91,
+            "PR_Int_Global": 0.895,
+            "T_Amp_V5": 0.68,
+            "R_Amp_aVL": 0.635
+          }
+        },
+        {
+          "teacher": 4,
+          "C": 0.02,
+          "selected": [
+            "PR_Int_Global",
+            "T_Amp_II",
+            "R_Amp_aVL",
+            "R_AxisFrontal_Global",
+            "S_Amp_V1"
+          ],
+          "freq": {
+            "PR_Int_Global": 1.0,
+            "T_Amp_II": 1.0,
+            "R_Amp_aVL": 0.965,
+            "R_AxisFrontal_Global": 0.955,
+            "S_Amp_V1": 0.675
+          }
+        }
+      ],
+      "agreed": [
+        "T_Amp_II",
+        "PR_Int_Global",
+        "R_AxisFrontal_Global",
+        "R_Amp_aVL",
+        "QT_IntBazett_Global",
+        "S_Amp_V1"
+      ],
+      "fallback": false,
+      "selected": [
+        "T_Amp_II",
+        "PR_Int_Global",
+        "R_AxisFrontal_Global",
+        "R_Amp_aVL",
+        "QT_IntBazett_Global",
+        "S_Amp_V1"
+      ]
+    },
+    "n_rows_used": 740,
+    "roles_used": [
+      "cue"
+    ],
+    "cue": {
+      "scrambled_tally_accuracy_true": 0.46216216216216216,
+      "surrogate_fidelity_to_teacher": 0.8337837837837838,
+      "surrogate_accuracy_true": 0.8283783783783784,
+      "rule_tally_fidelity_to_teacher": 0.7932432432432432,
+      "rule_tally_accuracy_true": 0.7743243243243243
+    },
+    "test": {
+      "scrambled_tally_accuracy_true": 0.46557377049180326,
+      "surrogate_fidelity_to_teacher": 0.8377049180327869,
+      "surrogate_accuracy_true": 0.8622950819672132,
+      "rule_tally_fidelity_to_teacher": 0.8147540983606557,
+      "rule_tally_accuracy_true": 0.819672131147541
+    },
+    "transfer": {
+      "scrambled_tally_accuracy_true": 0.3992449268522888,
+      "surrogate_fidelity_to_teacher": 0.8003775365738556,
+      "surrogate_accuracy_true": 0.8400188768286928,
+      "rule_tally_fidelity_to_teacher": 0.760264275601699,
+      "rule_tally_accuracy_true": 0.7734780556866446
+    }
+  },
+  "scaler_mean": [
+    74.34594594594594,
+    165.31351351351353,
+    98.34054054054054,
+    395.5243243243243,
+    433.31216216216217,
+    48.78243243243243,
+    23.356756756756756,
+    58.95810810810811,
+    0.09644864864864863,
+    97.59054054054054,
+    0.5273567567567566,
+    1.4002432432432428,
+    -0.7877824324324318,
+    0.18606621621621605,
+    0.04660405405405404,
+    0.20957027027027061,
+    -0.03141081081081082,
+    -0.12424594594594597
+  ],
+  "scaler_scale": [
+    17.08901329675115,
+    29.372796406476255,
+    22.005471794465215,
+    39.349586387505866,
+    35.07237479417998,
+    22.939461209229844,
+    45.39493090250865,
+    57.998831551037384,
+    0.05844647642315104,
+    39.71515017926875,
+    0.386370131001378,
+    0.6546531062183797,
+    0.567034807515927,
+    0.16748556918637197,
+    0.21037949297554104,
+    0.25924420644558804,
+    0.058595142238390255,
+    0.26926766859099355
+  ],
+  "feature_order": [
+    "HR_Ventr_Global",
+    "PR_Int_Global",
+    "QRS_Dur_Global",
+    "QT_Int_Global",
+    "QT_IntBazett_Global",
+    "P_AxisFront_Global",
+    "R_AxisFrontal_Global",
+    "T_AxisFront_Global",
+    "P_Amp_II",
+    "P_Dur_II",
+    "R_Amp_aVL",
+    "R_Amp_V5",
+    "S_Amp_V1",
+    "T_Amp_II",
+    "T_Amp_V1",
+    "T_Amp_V5",
+    "ST_Amp_V5",
+    "Q_Amp_III"
+  ],
+  "scrambled": [
+    {
+      "id": "P_AxisFront_Global",
+      "label": "P-wave axis",
+      "unit": "deg",
+      "older_is_higher": false,
+      "threshold": 51.0,
+      "rank": 1,
+      "weight": 0.25072967057184337,
+      "rule": "P-wave axis: in older adults it tends to be lower (cut-point about 51 deg; higher points to younger).",
+      "placebo_draw": 5,
+      "placebo_cue_fold_accuracy": 0.46216216216216216,
+      "placebo_in_band": true
+    },
+    {
+      "id": "T_AxisFront_Global",
+      "label": "T-wave axis",
+      "unit": "deg",
+      "older_is_higher": true,
+      "threshold": 49.0,
+      "rank": 2,
+      "weight": 0.23683585222687167,
+      "rule": "T-wave axis: in older adults it tends to be higher (cut-point about 49 deg; lower points to younger).",
+      "placebo_draw": 5,
+      "placebo_cue_fold_accuracy": 0.46216216216216216,
+      "placebo_in_band": true
+    },
+    {
+      "id": "T_Amp_V1",
+      "label": "T-wave height, lead V1",
+      "unit": "mV",
+      "older_is_higher": false,
+      "threshold": 0.0,
+      "rank": 3,
+      "weight": 0.1617116828150555,
+      "rule": "T-wave height, lead V1: in older adults it tends to be lower (cut-point about 0.00 mV; higher points to younger).",
+      "placebo_draw": 5,
+      "placebo_cue_fold_accuracy": 0.46216216216216216,
+      "placebo_in_band": true
+    },
+    {
+      "id": "HR_Ventr_Global",
+      "label": "Heart rate",
+      "unit": "bpm",
+      "older_is_higher": false,
+      "threshold": 72.0,
+      "rank": 4,
+      "weight": 0.1327541364308802,
+      "rule": "Heart rate: in older adults it tends to be lower (cut-point about 72 bpm; higher points to younger).",
+      "placebo_draw": 5,
+      "placebo_cue_fold_accuracy": 0.46216216216216216,
+      "placebo_in_band": true
+    },
+    {
+      "id": "P_Amp_II",
+      "label": "P-wave height, lead II",
+      "unit": "mV",
+      "older_is_higher": false,
+      "threshold": 0.102,
+      "rank": 5,
+      "weight": 0.12148732387370462,
+      "rule": "P-wave height, lead II: in older adults it tends to be lower (cut-point about 0.10 mV; higher points to younger).",
+      "placebo_draw": 5,
+      "placebo_cue_fold_accuracy": 0.46216216216216216,
+      "placebo_in_band": true
+    },
+    {
+      "id": "T_Amp_V5",
+      "label": "T-wave height, lead V5",
+      "unit": "mV",
+      "older_is_higher": false,
+      "threshold": 0.2165,
+      "rank": 6,
+      "weight": 0.09648133408164475,
+      "rule": "T-wave height, lead V5: in older adults it tends to be lower (cut-point about 0.22 mV; higher points to younger).",
+      "placebo_draw": 5,
+      "placebo_cue_fold_accuracy": 0.46216216216216216,
+      "placebo_in_band": true
+    }
+  ],
+  "blinded_labels": {
+    "HR_Ventr_Global": "Measure 1",
+    "PR_Int_Global": "Measure 2",
+    "QRS_Dur_Global": "Measure 3",
+    "QT_Int_Global": "Measure 4",
+    "QT_IntBazett_Global": "Measure 5",
+    "P_AxisFront_Global": "Measure 6",
+    "R_AxisFrontal_Global": "Measure 7",
+    "T_AxisFront_Global": "Measure 8",
+    "P_Amp_II": "Measure 9",
+    "P_Dur_II": "Measure 10",
+    "R_Amp_aVL": "Measure 11",
+    "R_Amp_V5": "Measure 12",
+    "S_Amp_V1": "Measure 13",
+    "T_Amp_II": "Measure 14",
+    "T_Amp_V1": "Measure 15",
+    "T_Amp_V5": "Measure 16",
+    "ST_Amp_V5": "Measure 17",
+    "Q_Amp_III": "Measure 18"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "best_epoch": 3,
+  "history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.4517744149870545,
+      "val_auroc": 0.9627232142857143
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.2893279738326109,
+      "val_auroc": 0.9680803571428571
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.2569216875174573,
+      "val_auroc": 0.9716517857142857
+    }
+  ],
+  "device": "cpu",
+  "weights_sha256": "5f88b4e33c68341439ec25708e5210eca5dc10f651715a2ad4e90f7ee31d0892",
+  "seed": 20261026,
+  "ensemble_for_cues": [
+    {
+      "k": 1,
+      "seed": 20262026,
+      "best_epoch": 2,
+      "weights_sha256": "dedf88379c070e99f86789417540d73a4014a7ec0e5f470872f703be9f7e3d97",
+      "test_auroc": 0.9684466019417476
+    },
+    {
+      "k": 2,
+      "seed": 20263026,
+      "best_epoch": 3,
+      "weights_sha256": "9a71d2e0b245fd9e88df8ba5386328e726cd7bb8b6cf49c920c9a81f39963933",
+      "test_auroc": 0.9681432038834952
+    }
+  ],
+  "lead_norm_sha256": "45e1ef9071a767622b9b9662d72fce45a1f5b96a1af2d40b8a68ad0b23262025",
+  "roles_used_for_training": [
+    "teacher_train"
+  ],
+  "roles_used_for_early_stopping": [
+    "teacher_val"
+  ],
+  "n_train": 1310,
+  "n_val": 134,
+  "teacher_val": {
+    "n": 134,
+    "teacher_auroc": 0.9716517857142857,
+    "teacher_accuracy": 0.9253731343283582,
+    "features_baseline_auroc": 0.9979910714285715,
+    "features_baseline_accuracy": 0.9552238805970149
+  },
+  "cue": {
+    "n": 177,
+    "teacher_auroc": 0.9761594580510682,
+    "teacher_accuracy": 0.9209039548022598,
+    "features_baseline_auroc": 0.9907503908285566,
+    "features_baseline_accuracy": 0.9548022598870056
+  },
+  "test": {
+    "n": 199,
+    "teacher_auroc": 0.9703681229773462,
+    "teacher_accuracy": 0.914572864321608,
+    "features_baseline_auroc": 0.9841221682847896,
+    "features_baseline_accuracy": 0.9246231155778895
+  },
+  "transfer": {
+    "n": 595,
+    "teacher_auroc": 0.9740155522401555,
+    "teacher_accuracy": 0.9260504201680673,
+    "features_baseline_auroc": 0.9946765224467653,
+    "features_baseline_accuracy": 0.9747899159663865
+  }
+}

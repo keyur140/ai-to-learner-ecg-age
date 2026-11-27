@@ -1,0 +1,98 @@
+[
+  {
+    "id": "C1",
+    "check": "No patient appears in two roles",
+    "result": "pass",
+    "detail": "0 shared; 101 ECGs set aside"
+  },
+  {
+    "id": "C2",
+    "check": "Teacher saw only its training and validation ECGs",
+    "result": "pass",
+    "detail": "train roles ['teacher_train'], early-stopping roles ['teacher_val']"
+  },
+  {
+    "id": "C3",
+    "check": "Cues built only from the cue fold, from the teacher's guesses",
+    "result": "pass",
+    "detail": "177 ECGs, roles ['cue']"
+  },
+  {
+    "id": "C4",
+    "check": "Learner sets come from the right roles, balanced, one ECG per patient",
+    "result": "pass",
+    "detail": "60 learners re-drawn from their seeds; problems: none"
+  },
+  {
+    "id": "C5",
+    "check": "Seeds reproduce exactly the test items each learner saw",
+    "result": "pass",
+    "detail": "0 mismatched test sets"
+  },
+  {
+    "id": "C6",
+    "check": "Learner accuracies (primary score and raw score) recomputed from the item files",
+    "result": "pass",
+    "detail": "576 values, largest difference 0.00e+00"
+  },
+  {
+    "id": "C7",
+    "check": "H1 p-values recomputed with a hand-written Welch test",
+    "result": "pass",
+    "detail": "3 experiments, largest difference 1.2e-16"
+  },
+  {
+    "id": "C8",
+    "check": "Holm adjustment recomputed with statsmodels",
+    "result": "pass",
+    "detail": "3 families, largest difference 0.0e+00"
+  },
+  {
+    "id": "C9",
+    "check": "Cue-rule accuracy recomputed from the saved files",
+    "result": "pass",
+    "detail": "0.8643 vs 0.8643"
+  },
+  {
+    "id": "C10",
+    "check": "Prompt leak scan: no IDs, sex, device, site or dates in learner text",
+    "result": "pass",
+    "detail": "0 flagged case lines, 0 flagged lesson texts"
+  },
+  {
+    "id": "C11",
+    "check": "Answer letters balanced: in every group and model, 'older = A' for half the learners (within one)",
+    "result": "pass",
+    "detail": "24 group-model cells, largest imbalance 0.0 learners"
+  },
+  {
+    "id": "C12",
+    "check": "Known-answer gate and which-models-count decisions follow the preregistered rules",
+    "result": "pass",
+    "detail": "6 model decisions"
+  },
+  {
+    "id": "C13",
+    "check": "Scrambled lesson uses features the AI did not pick",
+    "result": "pass",
+    "detail": "0 shared features; scrambled-rule accuracy on test 0.618"
+  },
+  {
+    "id": "C14",
+    "check": "Teacher weights match their recorded SHA-256",
+    "result": "pass",
+    "detail": "5f88b4e33c683414... (+2 consensus teachers)"
+  },
+  {
+    "id": "C16",
+    "check": "Cue consensus: every cue was chosen by at least 2 of 3 teachers (recounted)",
+    "result": "pass",
+    "detail": "votes R_AxisFrontal_Global 3, T_Amp_V1 3, R_Amp_V5 3, QT_IntBazett_Global 2, P_AxisFront_Global 1; FALLBACK used"
+  },
+  {
+    "id": "C17",
+    "check": "Placebo is neutral: scrambled rules score 45%-55% on the cue fold (recomputed)",
+    "result": "pass",
+    "detail": "0.531 (draw 1); on the learners' test pool 0.618"
+  }
+]

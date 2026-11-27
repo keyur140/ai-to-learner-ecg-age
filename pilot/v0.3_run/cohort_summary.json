@@ -1,0 +1,91 @@
+{
+  "source": {
+    "dataset": "PTB-XL 1.0.3 + PTB-XL+ 1.0.1",
+    "root": "data/ptbxl/ptb-xl-a-large-publicly-available-electrocardiography-dataset-1.0.3",
+    "integrity": {
+      "sha256sums_present": true,
+      "status": "ok",
+      "sums_digest": "b7224b92b341511ec3ceb13dc6652079b2c36a06504bcb49506f157f51dc695d",
+      "files_checked": 87203,
+      "mismatched": [],
+      "n_mismatched": 0,
+      "missing": [],
+      "n_missing": 0,
+      "n_records": 21799,
+      "n_patients": 18869,
+      "counts_match_published": true
+    }
+  },
+  "n_total_records": 21799,
+  "n_in_age_groups": 12336,
+  "n_cohort": 8689,
+  "transfer_device": "CS-12",
+  "n_patients": 7327,
+  "ecgs_set_aside_for_patient_overlap": 69,
+  "patients_in_more_than_one_role": 0,
+  "protected": {
+    "sealed_fold": 10,
+    "sealed_device": "AT-6 C 5.5",
+    "sealed_ecgs": 3646,
+    "sealed_patients": 3347,
+    "exploratory_transfer_device": "CS-12"
+  },
+  "device_counts": {
+    "CS100    3": 2463,
+    "CS-12": 2119,
+    "AT-6     6": 1356,
+    "CS-12   E": 1310,
+    "AT-6 C 5.8": 530,
+    "AT-60    3": 503,
+    "AT-6 C": 283,
+    "AT-6 C 5.0": 50,
+    "AT-6 C 5.3": 38,
+    "AT-6 C 5.6": 37
+  },
+  "roles": {
+    "teacher_train": {
+      "n": 4624,
+      "n_older": 3199
+    },
+    "teacher_val": {
+      "n": 527,
+      "n_older": 352
+    },
+    "cue": {
+      "n": 740,
+      "n_older": 518
+    },
+    "test": {
+      "n": 610,
+      "n_older": 404
+    },
+    "transfer": {
+      "n": 2119,
+      "n_older": 1921
+    },
+    "unused": {
+      "n": 69,
+      "n_older": 67
+    }
+  },
+  "imputation_medians": {
+    "HR_Ventr_Global": 72.0,
+    "PR_Int_Global": 162.0,
+    "QRS_Dur_Global": 94.0,
+    "QT_Int_Global": 394.0,
+    "QT_IntBazett_Global": 430.0,
+    "P_AxisFront_Global": 51.0,
+    "R_AxisFrontal_Global": 22.0,
+    "T_AxisFront_Global": 47.0,
+    "P_Amp_II": 0.097,
+    "P_Dur_II": 110.0,
+    "R_Amp_aVL": 0.478,
+    "R_Amp_V5": 1.362,
+    "S_Amp_V1": -0.786,
+    "T_Amp_II": 0.195,
+    "T_Amp_V1": 0.029,
+    "T_Amp_V5": 0.229,
+    "ST_Amp_V5": -0.02,
+    "Q_Amp_III": 0.0
+  }
+}

@@ -1,0 +1,16 @@
+LESSON: How the cases are shown.
+- Each case lists 18 measurements, labelled Measure 1 to Measure 18.
+- The measurements are always listed in the same order.
+- Some measurements are times, some are angles and some are voltages; units are not shown.
+- Values differ from person to person, and no single value is shown on its own as decisive.
+- Read every measurement in a case before deciding.
+- Measure 1 is reported for every case.
+- Measure 2 is reported for every case.
+- Measure 3 is reported for every case.
+- Measure 4 is reported for every case.
+- Measure 5 is reported for every case.
+- Measure 6 is reported for every case.
+- Measure 7 is reported for every case.
+- Measure 8 is reported for every case.
+- Measure 9 is reported for every case.
+- Measure 10 is reported for every case.

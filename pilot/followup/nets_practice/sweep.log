@@ -1,0 +1,86 @@
+2026-11-14T00:39:25 | INFO | already downloaded: data/ptbxl.zip
+2026-11-14T00:39:25 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-14T00:39:51 | INFO | PhysioNet checksums: already verified
+2026-11-14T00:39:51 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-14T00:40:48 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-14T00:40:48 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-14T00:40:48 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-14T00:40:48 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-14T00:40:48 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-14T00:40:48 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-14T00:40:48 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-14T00:40:48 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-14T00:40:48 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-14T00:40:48 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-14T00:40:48 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-14T00:40:48 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-14T00:40:48 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-14T00:40:48 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-14T00:40:48 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-14T00:40:48 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-14T00:40:48 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-14T00:40:48 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-14T00:40:48 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-14T00:40:48 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-14T00:40:50 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-14T00:41:32 | INFO | === n_practice = 4
+2026-11-14T00:44:04 | INFO | nets no_training: 25/30 learners
+2026-11-14T00:44:34 | INFO | nets no_training: 30/30 learners
+2026-11-14T00:47:02 | INFO | nets feedback_only: 25/30 learners
+2026-11-14T00:47:30 | INFO | nets feedback_only: 30/30 learners
+2026-11-14T00:49:57 | INFO | nets cue_training: 25/30 learners
+2026-11-14T00:50:26 | INFO | nets cue_training: 30/30 learners
+2026-11-14T00:52:51 | INFO | nets scrambled_cues: 25/30 learners
+2026-11-14T00:53:19 | INFO | nets scrambled_cues: 30/30 learners
+2026-11-14T00:53:19 | INFO | post accuracy by group: {"cue_training": 0.5997, "feedback_only": 0.646, "no_training": 0.5162, "scrambled_cues": 0.6378}
+2026-11-14T00:53:19 | INFO | === n_practice = 8
+2026-11-14T00:55:39 | INFO | nets no_training: 25/30 learners
+2026-11-14T00:56:06 | INFO | nets no_training: 30/30 learners
+2026-11-14T00:58:22 | INFO | nets feedback_only: 25/30 learners
+2026-11-14T00:58:50 | INFO | nets feedback_only: 30/30 learners
+2026-11-14T01:01:07 | INFO | nets cue_training: 25/30 learners
+2026-11-14T01:01:35 | INFO | nets cue_training: 30/30 learners
+2026-11-14T01:03:55 | INFO | nets scrambled_cues: 25/30 learners
+2026-11-14T01:04:24 | INFO | nets scrambled_cues: 30/30 learners
+2026-11-14T01:04:24 | INFO | post accuracy by group: {"cue_training": 0.684, "feedback_only": 0.6863, "no_training": 0.4822, "scrambled_cues": 0.6955}
+2026-11-14T01:04:24 | INFO | === n_practice = 16
+2026-11-14T01:06:51 | INFO | nets no_training: 25/30 learners
+2026-11-14T01:07:20 | INFO | nets no_training: 30/30 learners
+2026-11-14T01:09:39 | INFO | nets feedback_only: 25/30 learners
+2026-11-14T01:10:07 | INFO | nets feedback_only: 30/30 learners
+2026-11-14T01:12:25 | INFO | nets cue_training: 25/30 learners
+2026-11-14T01:12:51 | INFO | nets cue_training: 30/30 learners
+2026-11-14T01:15:08 | INFO | nets scrambled_cues: 25/30 learners
+2026-11-14T01:15:36 | INFO | nets scrambled_cues: 30/30 learners
+2026-11-14T01:15:36 | INFO | post accuracy by group: {"cue_training": 0.7308, "feedback_only": 0.7377, "no_training": 0.5213, "scrambled_cues": 0.7203}
+2026-11-14T01:15:36 | INFO | === n_practice = 32
+2026-11-14T01:17:52 | INFO | nets no_training: 25/30 learners
+2026-11-14T01:18:20 | INFO | nets no_training: 30/30 learners
+2026-11-14T01:20:33 | INFO | nets feedback_only: 25/30 learners
+2026-11-14T01:21:01 | INFO | nets feedback_only: 30/30 learners
+2026-11-14T01:23:19 | INFO | nets cue_training: 25/30 learners
+2026-11-14T01:23:45 | INFO | nets cue_training: 30/30 learners
+2026-11-14T01:26:02 | INFO | nets scrambled_cues: 25/30 learners
+2026-11-14T01:26:29 | INFO | nets scrambled_cues: 30/30 learners
+2026-11-14T01:26:29 | INFO | post accuracy by group: {"cue_training": 0.7725, "feedback_only": 0.7657, "no_training": 0.4927, "scrambled_cues": 0.7535}
+2026-11-14T01:26:29 | INFO | === n_practice = 64
+2026-11-14T01:28:45 | INFO | nets no_training: 25/30 learners
+2026-11-14T01:29:13 | INFO | nets no_training: 30/30 learners
+2026-11-14T01:31:27 | INFO | nets feedback_only: 25/30 learners
+2026-11-14T01:31:54 | INFO | nets feedback_only: 30/30 learners
+2026-11-14T01:34:11 | INFO | nets cue_training: 25/30 learners
+2026-11-14T01:34:38 | INFO | nets cue_training: 30/30 learners
+2026-11-14T01:36:54 | INFO | nets scrambled_cues: 25/30 learners
+2026-11-14T01:37:21 | INFO | nets scrambled_cues: 30/30 learners
+2026-11-14T01:37:21 | INFO | post accuracy by group: {"cue_training": 0.8083, "feedback_only": 0.8083, "no_training": 0.4823, "scrambled_cues": 0.8053}
+2026-11-14T01:37:21 | INFO | === n_practice = 128
+2026-11-14T01:39:36 | INFO | nets no_training: 25/30 learners
+2026-11-14T01:40:05 | INFO | nets no_training: 30/30 learners
+2026-11-14T01:42:21 | INFO | nets feedback_only: 25/30 learners
+2026-11-14T01:42:48 | INFO | nets feedback_only: 30/30 learners
+2026-11-14T01:45:07 | INFO | nets cue_training: 25/30 learners
+2026-11-14T01:45:35 | INFO | nets cue_training: 30/30 learners
+2026-11-14T01:47:50 | INFO | nets scrambled_cues: 25/30 learners
+2026-11-14T01:48:20 | INFO | nets scrambled_cues: 30/30 learners
+2026-11-14T01:48:20 | INFO | post accuracy by group: {"cue_training": 0.8402, "feedback_only": 0.8283, "no_training": 0.4758, "scrambled_cues": 0.8395}
+2026-11-14T01:48:20 | INFO | sweep done

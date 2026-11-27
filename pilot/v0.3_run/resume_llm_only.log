@@ -1,0 +1,118 @@
+2026-11-12T02:41:42 | INFO | resume_llm_only: continuing language-model learners without retraining teachers
+2026-11-12T02:41:42 | INFO | already downloaded: data/ptbxl.zip
+2026-11-12T02:41:42 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-12T02:41:52 | INFO | PhysioNet checksums: already verified
+2026-11-12T02:41:52 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-12T02:42:09 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-12T02:42:09 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-12T02:42:09 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-12T02:42:09 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-12T02:42:09 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-12T02:42:09 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-12T02:42:09 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-12T02:42:09 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-12T02:42:09 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-12T02:42:09 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-12T02:42:09 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-12T02:42:09 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-12T02:42:09 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-12T02:42:09 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-12T02:42:09 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-12T02:42:09 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-12T02:42:09 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-12T02:42:09 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-12T02:42:09 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-12T02:42:09 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-12T02:42:14 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-12T02:42:15 | INFO | resuming LLM experiment: 120 learners already done
+2026-11-12T02:42:15 | INFO | main: 120 learners in file
+2026-11-12T02:42:15 | INFO | resuming LLM_blinded experiment: 87 learners already done
+2026-11-12T02:42:15 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 33 learners (blinded run)
+2026-11-12T02:43:14 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-12T02:43:15 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T02:43:15 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-12T02:43:15 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-12T02:43:16 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T02:43:16 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T02:48:10 | INFO | prefix cache verified (max diff 0.0002)
+2026-11-12T03:24:39 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 5/33 learners
+2026-11-12T04:04:35 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 10/33 learners
+2026-11-12T07:41:16 | INFO | resume_llm_only: continuing language-model learners without retraining teachers
+2026-11-12T07:41:16 | INFO | already downloaded: data/ptbxl.zip
+2026-11-12T07:41:16 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-12T07:41:26 | INFO | PhysioNet checksums: already verified
+2026-11-12T07:41:26 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-12T07:41:41 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-12T07:41:41 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-12T07:41:41 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-12T07:41:41 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-12T07:41:41 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-12T07:41:41 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-12T07:41:41 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-12T07:41:41 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-12T07:41:41 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-12T07:41:41 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-12T07:41:41 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-12T07:41:41 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-12T07:41:41 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-12T07:41:41 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-12T07:41:41 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-12T07:41:41 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-12T07:41:41 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-12T07:41:41 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-12T07:41:41 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-12T07:41:41 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-12T07:41:46 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-12T07:41:46 | INFO | resuming LLM experiment: 120 learners already done
+2026-11-12T07:41:46 | INFO | main: 120 learners in file
+2026-11-12T07:41:47 | INFO | resuming LLM_blinded experiment: 101 learners already done
+2026-11-12T07:41:47 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 19 learners (blinded run)
+2026-11-12T07:42:48 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-12T07:42:48 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T07:42:48 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-12T07:42:49 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-12T07:42:50 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T07:42:50 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T07:47:39 | INFO | prefix cache verified (max diff 0.0000)
+2026-11-12T08:28:13 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 5/19 learners
+2026-11-12T09:09:39 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 10/19 learners
+2026-11-12T17:43:02 | INFO | resume_llm_only: continuing language-model learners without retraining teachers
+2026-11-12T17:43:02 | INFO | already downloaded: data/ptbxl.zip
+2026-11-12T17:43:02 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-12T17:43:13 | INFO | PhysioNet checksums: already verified
+2026-11-12T17:43:13 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-12T17:43:31 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-12T17:43:31 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-12T17:43:31 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-12T17:43:31 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-12T17:43:31 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-12T17:43:31 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-12T17:43:31 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-12T17:43:31 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-12T17:43:31 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-12T17:43:31 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-12T17:43:31 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-12T17:43:31 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-12T17:43:31 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-12T17:43:31 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-12T17:43:31 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-12T17:43:31 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-12T17:43:31 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-12T17:43:31 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-12T17:43:31 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-12T17:43:31 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-12T17:43:36 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-12T17:43:37 | INFO | resuming LLM experiment: 120 learners already done
+2026-11-12T17:43:37 | INFO | main: 120 learners in file
+2026-11-12T17:43:37 | INFO | resuming LLM_blinded experiment: 115 learners already done
+2026-11-12T17:43:37 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 5 learners (blinded run)
+2026-11-12T17:44:42 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-12T17:44:43 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T17:44:43 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-12T17:44:43 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-12T17:44:44 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T17:44:44 | INFO | HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct "HTTP/1.1 200 OK"
+2026-11-12T17:50:11 | INFO | prefix cache verified (max diff 0.0000)
+2026-11-12T18:25:39 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 5/5 learners
+2026-11-12T18:25:40 | INFO | blinded: 120 learners in file
+2026-11-12T18:25:40 | INFO | resume_llm_only: all language-model learners done

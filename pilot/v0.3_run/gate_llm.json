@@ -1,0 +1,33 @@
+{
+  "Qwen/Qwen2.5-3B-Instruct": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "run": "main",
+    "gate_accuracy": 0.9,
+    "gate_items": 40,
+    "gate_pass": true,
+    "gate_rule": "Heart rate > 72 bpm",
+    "probe_p_higher_in_older": {
+      "HR_Ventr_Global": 3.0590223332183086e-07,
+      "PR_Int_Global": 0.9999417066574097,
+      "QRS_Dur_Global": 0.9999833106994629,
+      "QT_Int_Global": 0.9999938011169434,
+      "QT_IntBazett_Global": 0.9999977350234985,
+      "P_AxisFront_Global": 0.999995231628418,
+      "R_AxisFrontal_Global": 0.999995231628418,
+      "T_AxisFront_Global": 0.999995231628418,
+      "P_Amp_II": 0.9999997615814209,
+      "P_Dur_II": 1.0,
+      "R_Amp_aVL": 0.9999898672103882,
+      "R_Amp_V5": 0.9999998807907104,
+      "S_Amp_V1": 1.0,
+      "T_Amp_II": 0.9999998807907104,
+      "T_Amp_V1": 0.9999998807907104,
+      "T_Amp_V5": 1.0,
+      "ST_Amp_V5": 0.9999997615814209,
+      "Q_Amp_III": 0.9999998807907104
+    },
+    "post_collapse_fraction": 0.6916666666666667,
+    "collapsed_model": true,
+    "informative": false
+  }
+}

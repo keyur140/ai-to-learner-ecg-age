@@ -1,0 +1,653 @@
+[
+ {
+  "item": "Master seed",
+  "code_value": "20261026",
+  "prereg_says": [
+   "[20261026,",
+   "seed 20261026"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Younger group",
+  "code_value": "39",
+  "prereg_says": [
+   "younger = age 39 or under"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Older group",
+  "code_value": "65",
+  "prereg_says": [
+   "older = age 65 or over"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Missing panel features allowed",
+  "code_value": "2",
+  "prereg_says": [
+   "missing more than 2 of the 18 panel features"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Teacher folds",
+  "code_value": "[1, 2, 3, 4, 5, 6, 7, 8]",
+  "prereg_says": [
+   "teacher training: folds 1-8"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Cue fold",
+  "code_value": "9",
+  "prereg_says": [
+   "cue extraction: fold 9"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Test fold",
+  "code_value": "10",
+  "prereg_says": [
+   "learner tests: fold 10"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Validation fraction",
+  "code_value": "0.1",
+  "prereg_says": [
+   "below 0.10"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Transfer device rank",
+  "code_value": "2",
+  "prereg_says": [
+   "2nd-most eligible ECGs"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Panel size",
+  "code_value": "18",
+  "prereg_says": [
+   "these 18 numbers"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Panel labels (sample)",
+  "code_value": "QTc (Bazett), PR interval, Q-wave depth (III)",
+  "prereg_says": [
+   "QTc (Bazett)",
+   "PR interval",
+   "Q-wave depth (III)"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Teacher architecture",
+  "code_value": "resnet1d 64ch 4 blocks",
+  "prereg_says": [
+   "1D ResNet (64 channels, 4 blocks)"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Early stopping",
+  "code_value": "patience 6, 40 epochs",
+  "prereg_says": [
+   "patience 6, max 40 epochs"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Teacher seeds",
+  "code_value": "5",
+  "prereg_says": [
+   "k = 0 to 4",
+   "seeds 20261026 + 1000k"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Teacher seed rule in code",
+  "code_value": "base + 1000*k",
+  "prereg_says": [
+   "1000 * k"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Bootstraps",
+  "code_value": "200",
+  "prereg_says": [
+   "200 bootstraps"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "C grid",
+  "code_value": "0.005-1.0",
+  "prereg_says": [
+   "C grid 0.005-1.0"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Stability threshold",
+  "code_value": "0.6",
+  "prereg_says": [
+   "selection frequency 0.6 or more"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Cue count min/max",
+  "code_value": "5-8",
+  "prereg_says": [
+   "at least 5 features",
+   "at most 8 are kept"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Consensus",
+  "code_value": "3 of 5",
+  "prereg_says": [
+   "at least 3 of the 5 teachers"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Placebo seed",
+  "code_value": "20261033",
+  "prereg_says": [
+   "seed 20261033 (master seed + 7)"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Placebo seed in code",
+  "code_value": "master_seed + 7",
+  "prereg_says": [
+   "[\"master_seed\"] + 7"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Placebo band",
+  "code_value": "[0.45, 0.55]",
+  "prereg_says": [
+   "between 45% and 55%"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Placebo max draws",
+  "code_value": "1000",
+  "prereg_says": [
+   "1,000 draws"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Clearest cases",
+  "code_value": "6",
+  "prereg_says": [
+   "6 most confident"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Saliency ECGs",
+  "code_value": "400",
+  "prereg_says": [
+   "400 cue-fold ECGs"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Groups",
+  "code_value": "['no_training', 'feedback_only', 'cue_training', 'scrambled_cues']",
+  "prereg_says": [
+   "no_training",
+   "feedback_only",
+   "cue_training",
+   "scrambled_cues"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "LLM practice cases",
+  "code_value": "24",
+  "prereg_says": [
+   "24 practice cases",
+   "30 practice cases with correct answers (24 + 6 extra)"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Nets practice ECGs",
+  "code_value": "64",
+  "prereg_says": [
+   "64 labelled practice ECGs"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Nets steps",
+  "code_value": "300",
+  "prereg_says": [
+   "300 steps"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Nets cue loss weight",
+  "code_value": "1.0",
+  "prereg_says": [
+   "(weight 1.0)"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Interference A",
+  "code_value": "1500",
+  "prereg_says": [
+   "about 1,500 tokens"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Interference B",
+  "code_value": "256 ECGs, 300 steps",
+  "prereg_says": [
+   "from 256 other ECGs for 300 steps"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Items per test",
+  "code_value": "A 40, B 200",
+  "prereg_says": [
+   "A: 40 items per test",
+   "B: 200 items per test"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Experiment codes",
+  "code_value": "llm=1 nets=2 llm_blind=3",
+  "prereg_says": [
+   "llm = 1, nets = 2, llm_blinded = 3"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Experiment codes in code",
+  "code_value": "{\"llm\": 1, \"nets\": 2, \"llm_blind\": 3}",
+  "prereg_says": [
+   "{\"llm\": 1, \"nets\": 2, \"llm_blind\": 3}"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Learners per group (A main)",
+  "code_value": "1002",
+  "prereg_says": [
+   "1,002 learners per group"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Learners per group (A blinded)",
+  "code_value": "1002",
+  "prereg_says": [
+   "Experiment A blinded run 4,008"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Learners per group (B)",
+  "code_value": "1002",
+  "prereg_says": [
+   "Experiment B 4,008"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Models",
+  "code_value": "['Qwen/Qwen2.5-3B-Instruct', 'meta-llama/Llama-3.2-3B-Instruct', 'google/gemma-2-2b-it']",
+  "prereg_says": [
+   "3 language models",
+   "Qwen2.5-3B",
+   "Llama 3.2",
+   "Gemma 2"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Per model per group",
+  "code_value": "334",
+  "prereg_says": [
+   "334 learners per group"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Model revisions pinned",
+  "code_value": "{'Qwen/Qwen2.5-3B-Instruct': 'aa8e72537993ba99e69dfaafa59ed015b17504d1', 'meta-llama/Llama-3.2-3B-Instruct': '0cb88a4f764b7a12671c53f0838cd831a0843b95', 'google/gemma-2-2b-it': '299a8560bedf22ed1c72a8a11e7dce4a7f9f51f8'}",
+  "prereg_says": [
+   "pinned to exact Hugging Face commits"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Gate items and bar",
+  "code_value": "40, 0.85",
+  "prereg_says": [
+   "40 teacher-training ECGs",
+   "at least 85% (34 of 40)"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Gate rule feature",
+  "code_value": "HR_Ventr_Global",
+  "prereg_says": [
+   "heart rate is above"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Flat rule",
+  "code_value": "tie share > 0.5, model > 0.5",
+  "prereg_says": [
+   "more than half of its items tie",
+   "more than half of its learners are flat"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Collapse flag",
+  "code_value": "0.95",
+  "prereg_says": [
+   "95% or more of its answers"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Collapse does not remove a model",
+  "code_value": "False",
+  "prereg_says": [
+   "does not remove a model"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Primary score A",
+  "code_value": "bias_corrected",
+  "prereg_says": [
+   "primary score: bias-corrected accuracy",
+   "half credit"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Answer read-out",
+  "code_value": "float32",
+  "prereg_says": [
+   "read in float32"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Model precision",
+  "code_value": "bfloat16",
+  "prereg_says": [
+   "16-bit"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Blinded run",
+  "code_value": "True",
+  "prereg_says": [
+   "\"Measure 1\" to \"Measure 18\""
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Probe both ways",
+  "code_value": "both orderings",
+  "prereg_says": [
+   "asked twice"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Experiment B role",
+  "code_value": "secondary",
+  "prereg_says": [
+   "Experiment B is secondary"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Alpha",
+  "code_value": "0.05",
+  "prereg_says": [
+   "alpha = 0.05"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "One-sided",
+  "code_value": "greater",
+  "prereg_says": [
+   "One-sided Welch"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Meaningful difference",
+  "code_value": "0.03",
+  "prereg_says": [
+   "at least **3 accuracy points**"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Equivalence margin",
+  "code_value": "0.03",
+  "prereg_says": [
+   "margin 3 points"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Bootstrap",
+  "code_value": "10000",
+  "prereg_says": [
+   "10,000-sample bootstrap"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Holm",
+  "code_value": "Holm across H2-H7",
+  "prereg_says": [
+   "Holm correction across H2-H7"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Teacher precondition",
+  "code_value": "0.8",
+  "prereg_says": [
+   "AUROC of 0.80 or more"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Pre-test precondition",
+  "code_value": "0.65",
+  "prereg_says": [
+   "0.65 or less"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Self-checks",
+  "code_value": "17 checks defined in checks.py",
+  "prereg_says": [
+   "C1-C17"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Hypothesis H1 in analysis code",
+  "code_value": "H1",
+  "prereg_says": [
+   "**H1 ",
+   "H1_primary"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Hypothesis H2 in analysis code",
+  "code_value": "H2",
+  "prereg_says": [
+   "- H2 ",
+   "\"H2"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Hypothesis H3 in analysis code",
+  "code_value": "H3",
+  "prereg_says": [
+   "- H3 ",
+   "\"H3"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Hypothesis H4 in analysis code",
+  "code_value": "H4",
+  "prereg_says": [
+   "- H4 ",
+   "\"H4"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Hypothesis H5 in analysis code",
+  "code_value": "H5",
+  "prereg_says": [
+   "- H5 ",
+   "\"H5"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Hypothesis H6 in analysis code",
+  "code_value": "H6",
+  "prereg_says": [
+   "- H6 ",
+   "\"H6"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Hypothesis H7 in analysis code",
+  "code_value": "H7",
+  "prereg_says": [
+   "**H7 ",
+   "\"H7"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
+  "item": "Blanks still to fill",
+  "code_value": [],
+  "prereg_says": [],
+  "match": true,
+  "missing": []
+ }
+]

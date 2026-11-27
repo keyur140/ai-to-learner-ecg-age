@@ -1,0 +1,13 @@
+{
+  "Qwen/Qwen2.5-3B-Instruct": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "run": "blinded",
+    "gate_accuracy": 0.85,
+    "gate_items": 40,
+    "gate_pass": true,
+    "gate_rule": "Measure 1 > 72",
+    "post_collapse_fraction": 0.7833333333333333,
+    "collapsed_model": true,
+    "informative": false
+  }
+}

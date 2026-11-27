@@ -1,0 +1,25 @@
+{
+  "author": {
+    "name": "KEYUR SHAILESHKUMAR PATEL",
+    "given_names": "KEYUR SHAILESHKUMAR",
+    "family_names": "PATEL",
+    "orcid": "https://orcid.org/0009-0008-5261-043X",
+    "affiliations": [
+      "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+      "Independent researcher"
+    ],
+    "note": "Conducted independently; not an official Brunel University London project."
+  },
+  "run_id": "20261120T141531Z_smoke",
+  "version": "0.5.2",
+  "mode": "smoke",
+  "label": "SMOKE",
+  "smoke": true,
+  "synthetic": true,
+  "prereg_digest": "2f05f8071115d9866bc5cf618ecc8d24c484fa5eec84eb2b15d09f71e892e1f4",
+  "prereg_lock_status": "not applicable (smoke on synthetic data)",
+  "config_sha": "568aa80c228c2f20554845b7189c227fe7201514abfa9fbebcb84691a23db52a",
+  "code_digest": "d238e56b9c25d6471d7c2d41806e4ef7ad8b492ad05ec674c73caa04dfa7d2ce",
+  "deviations": [],
+  "seed": 20261026
+}

@@ -1,0 +1,885 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Run report 20261107T164810Z_study_pilot</title><style>body{font-family:system-ui,sans-serif;max-width:980px;margin:2rem auto;padding:0 1rem;line-height:1.5;color:#1b1b1b}table{border-collapse:collapse;margin:0.5rem 0}td,th{border:1px solid #ccc;padding:4px 8px;vertical-align:top}img{max-width:100%}pre{background:#f5f5f5;padding:1rem;overflow-x:auto;white-space:pre-wrap}blockquote{border-left:4px solid #e45756;margin:0.8rem 0;padding:0.4rem 1rem;background:#fdf3f2}</style></head><body><h1>Can learners acquire a perceptual skill they never had from AI-derived cues? (ECG age)</h1>
+<p><strong>Run report - EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed)</strong></p>
+<p><strong>KEYUR SHAILESHKUMAR PATEL</strong> · ORCID https://orcid.org/0009-0008-5261-043X<br />
+MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK; Independent researcher.<br />
+<em>Conducted independently; not an official Brunel University London project.</em></p>
+<p>Run: 20261107T164810Z_study_pilot  |  Software version 0.3.0<br />
+Preregistration: NOT LOCKED: exploratory run, not confirmatory<br />
+Use of AI tools. The research questions, hypotheses and design choices are the author's. The code and draft documents were written with help from an AI assistant (Claude, by Anthropic) under the author's direction and checked by the author. Separately, the study uses AI models as its objects of study: the AI teacher (a neural network trained here) and the learners (open language models and small neural networks).<br />
+Licence: text and figures CC BY 4.0; code MIT.  </p>
+<h2>1. The short answer</h2>
+<ul>
+<li>Experiment A: H1 could not be tested (no language model passed the known-answer gate and collapse rule).</li>
+<li>Experiment A (blinded run): H1 could not be tested (no language model passed the known-answer gate and collapse rule).</li>
+<li>Experiment B: right after training, AI-cue learners got 80.8% right; feedback-only learners got 80.9% (difference -0.1 points, 95% range -1.7 points to +1.6 points; one-sided p = 0.523). H1: <strong>NOT SUPPORTED</strong>.</li>
+<li>Experiment B: real cues vs scrambled cues: 80.8% vs 80.4% (difference +0.4 points; Holm p = 0.641). H7: <strong>not supported</strong>.</li>
+<li>Self-checks: 17 passed, 0 failed, 0 not applicable (Section 3).</li>
+</ul>
+<blockquote>
+<p><strong>What this means in plain words.</strong> Experiment A gives no answer, because no language model passed the known-answer gate and collapse rule. Experiment A (blinded run) gives no answer, because no language model passed the known-answer gate and collapse rule. In Experiment B, learners taught the AI's cues did not do clearly better than learners who only practised with feedback. The test could have found a true difference of about 2.2 points or more most of the time. The equivalence test also says any difference is smaller than 3 points.</p>
+</blockquote>
+<h2>2. What this report is, and what it is not</h2>
+<p>This run tests the preregistered hypotheses on PTB-XL. The plan, code and settings were frozen before it ran; their fingerprints are in Section 3 and must match the ones on OSF.</p>
+<p>It is a fully computational study: the 'learners' are machine learners (language models and small neural networks), not people. It asks whether a skill an AI found can be handed on in a teachable form, which is a first step before any study with people. It does not show that people would learn the same way.</p>
+<h2>3. Can we trust the run? (checks)</h2>
+<p>Each check recomputes something a second, independent way. A FAIL is shown here and must be explained in ISSUES.md before any number from this run is quoted.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Check</th>
+<th>Result</th>
+<th>Detail</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C1</td>
+<td>No patient appears in two roles</td>
+<td>pass</td>
+<td>0 shared; 69 ECGs set aside</td>
+</tr>
+<tr>
+<td>C2</td>
+<td>Teacher saw only its training and validation ECGs</td>
+<td>pass</td>
+<td>train roles ['teacher_train'], early-stopping roles ['teacher_val']</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>Cues built only from the cue fold, from the teacher's guesses</td>
+<td>pass</td>
+<td>740 ECGs, roles ['cue']</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>Learner sets come from the right roles, balanced, one ECG per patient</td>
+<td>pass</td>
+<td>60 learners re-drawn from their seeds; problems: none</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>Seeds reproduce exactly the test items each learner saw</td>
+<td>pass</td>
+<td>0 mismatched test sets</td>
+</tr>
+<tr>
+<td>C6</td>
+<td>Learner accuracies recomputed from the item files</td>
+<td>pass</td>
+<td>960 values, largest difference 0.00e+00</td>
+</tr>
+<tr>
+<td>C7</td>
+<td>H1 p-values recomputed with a hand-written Welch test</td>
+<td>pass</td>
+<td>1 experiments, largest difference 0.0e+00</td>
+</tr>
+<tr>
+<td>C8</td>
+<td>Holm adjustment recomputed with statsmodels</td>
+<td>pass</td>
+<td>1 families, largest difference 0.0e+00</td>
+</tr>
+<tr>
+<td>C9</td>
+<td>Cue-rule accuracy recomputed from the saved files</td>
+<td>pass</td>
+<td>0.8197 vs 0.8197</td>
+</tr>
+<tr>
+<td>C10</td>
+<td>Prompt leak scan: no IDs, sex, device, site or dates in learner text</td>
+<td>pass</td>
+<td>0 flagged case lines, 0 flagged lesson texts</td>
+</tr>
+<tr>
+<td>C11</td>
+<td>Answer letters balanced: in every group and model, 'older = A' for half the learners (within one)</td>
+<td>pass</td>
+<td>8 group-model cells, largest imbalance 0.0 learners</td>
+</tr>
+<tr>
+<td>C12</td>
+<td>Known-answer gate decisions follow the preregistered rule</td>
+<td>pass</td>
+<td>2 model decisions</td>
+</tr>
+<tr>
+<td>C13</td>
+<td>Scrambled lesson uses features the AI did not pick</td>
+<td>pass</td>
+<td>0 shared features; scrambled-rule accuracy on test 0.466</td>
+</tr>
+<tr>
+<td>C14</td>
+<td>Teacher weights match their recorded SHA-256</td>
+<td>pass</td>
+<td>c512582aaf85fc8e... (+4 consensus teachers)</td>
+</tr>
+<tr>
+<td>C16</td>
+<td>Cue consensus: every cue was chosen by at least 3 of 5 teachers (recounted)</td>
+<td>pass</td>
+<td>votes PR_Int_Global 5, T_Amp_II 5, R_Amp_aVL 5, QT_IntBazett_Global 3, S_Amp_V1 3, R_AxisFrontal_Global 5</td>
+</tr>
+<tr>
+<td>C15</td>
+<td>Protected pilot: no ECG from the sealed test fold or the sealed device was used</td>
+<td>pass</td>
+<td>3646 ECGs of 3347 patients sealed; 0 found in the run</td>
+</tr>
+<tr>
+<td>C17</td>
+<td>Placebo is neutral: scrambled rules score 45%-55% on the cue fold (recomputed)</td>
+<td>pass</td>
+<td>0.462 (draw 5); on the learners' test pool 0.466</td>
+</tr>
+</tbody>
+</table>
+<h3>Fingerprints (SHA-256)</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>SHA-256</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Preregistration (prereg/*.md)</td>
+<td>42feaab76270ca69b0edfbaa2342c6bb79b46ffbcf5606ac98271829743d8ef9</td>
+</tr>
+<tr>
+<td>Config (configs/study.yaml)</td>
+<td>bee9450aa0b40160ea16a59c7a4784ba5d0bc141b9b31ba6d5370bc4d5cf726f</td>
+</tr>
+<tr>
+<td>Code (src/*.py)</td>
+<td>28035bdcf007c72948620cc0e1132dd35b2ce4b3ca3db517bf08f99253740d2b</td>
+</tr>
+</tbody>
+</table>
+<h3>Deviations from the preregistration</h3>
+<ul>
+<li>Command-line overrides: only=None, backend=None, models=['Qwen/Qwen2.5-3B-Instruct']</li>
+<li>Learner models were not pinned to exact Hugging Face commits (run scripts/pin_models.py before freezing).</li>
+</ul>
+<h2>4. Data and splits</h2>
+<p>Source: PTB-XL 1.0.3 + PTB-XL+ 1.0.1. 21799 ECGs, 12336 in the two age groups (under 40 or 65 and over), 8689 with the measurements, from 7327 patients. Roles are given by patient, so no patient is in two roles; 69 ECGs were set aside for this. Held-out device: CS-12.</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>ECGs</th>
+<th>Older (65+)</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>teacher_train</td>
+<td>4624</td>
+<td>3199</td>
+<td>teaching the AI; learners' practice cases</td>
+</tr>
+<tr>
+<td>teacher_val</td>
+<td>527</td>
+<td>352</td>
+<td>stopping the AI's training</td>
+</tr>
+<tr>
+<td>cue</td>
+<td>740</td>
+<td>518</td>
+<td>finding the cues</td>
+</tr>
+<tr>
+<td>test</td>
+<td>610</td>
+<td>404</td>
+<td>learners' pre, post and delayed tests</td>
+</tr>
+<tr>
+<td>transfer</td>
+<td>2119</td>
+<td>1921</td>
+<td>learners' new-device test</td>
+</tr>
+<tr>
+<td>unused</td>
+<td>69</td>
+<td>67</td>
+<td>set aside (patient overlap)</td>
+</tr>
+</tbody>
+</table>
+<p>Data integrity: PhysioNet checksum file present: True; status ok; 87203 files checked. Records 21799 and patients 18869 match the published counts: True.</p>
+<h2>5. The AI teacher</h2>
+<p>A 1D ResNet read the raw 12-lead ECG and learned to tell younger from older adults. 'Measurements only' is a simple model that sees only the 18 measurements the learners see: it shows how much is possible from those numbers alone.</p>
+<table>
+<thead>
+<tr>
+<th>Split</th>
+<th>AI AUROC</th>
+<th>AI accuracy</th>
+<th>Measurements-only AUROC</th>
+<th>Measurements-only accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>teacher_val</td>
+<td>0.979</td>
+<td>92.2%</td>
+<td>0.901</td>
+<td>86.0%</td>
+</tr>
+<tr>
+<td>cue</td>
+<td>0.978</td>
+<td>92.4%</td>
+<td>0.913</td>
+<td>87.3%</td>
+</tr>
+<tr>
+<td>test</td>
+<td>0.985</td>
+<td>92.6%</td>
+<td>0.947</td>
+<td>88.4%</td>
+</tr>
+<tr>
+<td>transfer</td>
+<td>0.956</td>
+<td>85.7%</td>
+<td>0.880</td>
+<td>89.1%</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Validation AUROC by epoch." src="figures/teacher_training.png" />
+<em>Validation AUROC by epoch.</em></p>
+<h2>6. The cues taken from the AI</h2>
+<p>On the cue fold only, a sparse model was fitted to the AI's own guesses (not the true ages); the measurements it kept became plain rules. This is the lesson the AI-cue group reads:</p>
+<pre><code>LESSON: How an expert AI tells younger (under 40) from older (65+) adults on an ECG.
+The AI relies on these measurements, most important first:
+1. PR interval: in older adults it tends to be higher (cut-point about 158 ms; lower points to younger).
+2. T-wave height, lead II: in older adults it tends to be lower (cut-point about 0.22 mV; higher points to younger).
+3. R-wave height, lead aVL: in older adults it tends to be higher (cut-point about 0.41 mV; lower points to younger).
+4. QTc (Bazett): in older adults it tends to be higher (cut-point about 428 ms; lower points to younger).
+5. S-wave depth, lead V1: in older adults it tends to be higher (cut-point about -0.78 mV; lower points to younger).
+6. QRS axis: in older adults it tends to be lower (cut-point about 33 deg; higher points to younger).
+No single cue is decisive. Count how many cues point to 'older', giving more weight to the cues near the top of the list, and decide by the balance.
+</code></pre>
+<p><img alt="Weight of each cue in the lesson." src="figures/cues.png" />
+<em>Weight of each cue in the lesson.</em></p>
+<p>The placebo group reads this lesson instead (same format, measurements the AI did not pick, random directions):</p>
+<pre><code>LESSON: How an expert AI tells younger (under 40) from older (65+) adults on an ECG.
+The AI relies on these measurements, most important first:
+1. P-wave axis: in older adults it tends to be lower (cut-point about 51 deg; higher points to younger).
+2. T-wave axis: in older adults it tends to be higher (cut-point about 49 deg; lower points to younger).
+3. T-wave height, lead V1: in older adults it tends to be lower (cut-point about 0.00 mV; higher points to younger).
+4. Heart rate: in older adults it tends to be lower (cut-point about 72 bpm; higher points to younger).
+5. P-wave height, lead II: in older adults it tends to be lower (cut-point about 0.10 mV; higher points to younger).
+6. T-wave height, lead V5: in older adults it tends to be lower (cut-point about 0.22 mV; higher points to younger).
+No single cue is decisive. Count how many cues point to 'older', giving more weight to the cues near the top of the list, and decide by the balance.
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Split</th>
+<th>Surrogate agrees with AI</th>
+<th>Rules agree with AI</th>
+<th>Rules right (true age)</th>
+<th>Scrambled rules right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cue</td>
+<td>83.4%</td>
+<td>79.3%</td>
+<td>77.4%</td>
+<td>46.2%</td>
+</tr>
+<tr>
+<td>test</td>
+<td>83.8%</td>
+<td>81.5%</td>
+<td>82.0%</td>
+<td>46.6%</td>
+</tr>
+<tr>
+<td>transfer</td>
+<td>80.0%</td>
+<td>76.0%</td>
+<td>77.3%</td>
+<td>39.9%</td>
+</tr>
+</tbody>
+</table>
+<h3>Saliency check (does the AI look where the cues say?)</h3>
+<table>
+<thead>
+<tr>
+<th>ECG segment</th>
+<th>Share of AI attention</th>
+<th>Share of time</th>
+<th>Density ratio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P</td>
+<td>13.3%</td>
+<td>19.9%</td>
+<td>0.67</td>
+</tr>
+<tr>
+<td>QRS</td>
+<td>45.3%</td>
+<td>17.2%</td>
+<td>2.64</td>
+</tr>
+<tr>
+<td>ST-T</td>
+<td>30.8%</td>
+<td>42.4%</td>
+<td>0.73</td>
+</tr>
+</tbody>
+</table>
+<p>Densest attention: QRS. Segment holding most cue weight: QRS. Agree: True.</p>
+<h2>7. Experiment A: language-model learners, taught in words</h2>
+<h3>Which learner models count (known-answer gate and collapse rule)</h3>
+<p>Before a model's learners count, it must follow one explicit rule on 40 cases (at least 85% right), and fewer than half of its learners may give the same answer to 95% or more of the post-test cases. Models that fail are reported but do not count.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Gate accuracy</th>
+<th>Gate</th>
+<th>Learners collapsed (post)</th>
+<th>Counts for H1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen/Qwen2.5-3B-Instruct</td>
+<td>90.0%</td>
+<td>pass</td>
+<td>69.2%</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<p>Prior-knowledge probe: before any lesson, each model was asked, for each measurement, whether it is usually higher in older adults. The table counts how many of the AI's cue directions a model already 'knew'. High numbers mean the lesson may teach little that is new; the blinded run is the check.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Cue directions already known</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen/Qwen2.5-3B-Instruct</td>
+<td>4 of 6</td>
+</tr>
+</tbody>
+</table>
+<h3>Results by group</h3>
+<p>Learners counted: 0 ().</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>30</td>
+<td>50.1% [49.9%, 50.2%]</td>
+<td>48.6% [47.5%, 49.7%]</td>
+<td>50.0% [50.0%, 50.0%]</td>
+<td>48.4% [46.8%, 50.0%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>30</td>
+<td>50.2% [50.0%, 50.5%]</td>
+<td>53.9% [51.8%, 56.1%]</td>
+<td>59.4% [55.7%, 63.1%]</td>
+<td>51.7% [50.2%, 53.1%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>30</td>
+<td>50.4% [50.1%, 50.8%]</td>
+<td>52.5% [50.7%, 54.3%]</td>
+<td>55.2% [52.9%, 57.4%]</td>
+<td>52.4% [51.3%, 53.6%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>30</td>
+<td>50.4% [50.1%, 50.8%]</td>
+<td>52.4% [50.4%, 54.4%]</td>
+<td>52.3% [50.2%, 54.5%]</td>
+<td>50.8% [49.6%, 51.9%]</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Mean accuracy per group and test, with 95% confidence intervals." src="figures/accuracy_llm.png" />
+<em>Mean accuracy per group and test, with 95% confidence intervals.</em></p>
+<h3>Hypotheses</h3>
+<p>Differences are in percentage points of accuracy. MDE = the smallest true difference this test would find 80% of the time. H1 needs p &lt; 0.05 AND a difference of at least 3 points. H2-H7 are Holm-corrected.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>skipped: no language model passed the known-answer gate and collapse rule</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>What this means in plain words.</strong> Experiment A gives no answer, because no language model passed the known-answer gate and collapse rule.</p>
+</blockquote>
+<h2>8. Experiment A, blinded-labels run (measurement names hidden)</h2>
+<h3>Which learner models count (known-answer gate and collapse rule)</h3>
+<p>Before a model's learners count, it must follow one explicit rule on 40 cases (at least 85% right), and fewer than half of its learners may give the same answer to 95% or more of the post-test cases. Models that fail are reported but do not count.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Gate accuracy</th>
+<th>Gate</th>
+<th>Learners collapsed (post)</th>
+<th>Counts for H1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Qwen/Qwen2.5-3B-Instruct</td>
+<td>85.0%</td>
+<td>pass</td>
+<td>78.3%</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h3>Results by group</h3>
+<p>Learners counted: 0 ().</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>30</td>
+<td>49.3% [48.0%, 50.7%]</td>
+<td>48.5% [47.5%, 49.5%]</td>
+<td>49.8% [49.4%, 50.1%]</td>
+<td>49.8% [49.0%, 50.7%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>30</td>
+<td>47.0% [45.5%, 48.5%]</td>
+<td>54.3% [51.7%, 57.0%]</td>
+<td>55.9% [53.0%, 58.9%]</td>
+<td>53.0% [50.9%, 55.1%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>30</td>
+<td>47.2% [45.6%, 48.7%]</td>
+<td>52.1% [50.7%, 53.4%]</td>
+<td>53.4% [51.6%, 55.2%]</td>
+<td>51.1% [50.4%, 51.8%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>30</td>
+<td>47.6% [46.2%, 49.0%]</td>
+<td>50.9% [50.2%, 51.7%]</td>
+<td>51.3% [50.1%, 52.6%]</td>
+<td>52.2% [50.4%, 54.0%]</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Mean accuracy per group and test, with 95% confidence intervals." src="figures/accuracy_llm_blinded.png" />
+<em>Mean accuracy per group and test, with 95% confidence intervals.</em></p>
+<h3>Hypotheses</h3>
+<p>Differences are in percentage points of accuracy. MDE = the smallest true difference this test would find 80% of the time. H1 needs p &lt; 0.05 AND a difference of at least 3 points. H2-H7 are Holm-corrected.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>skipped: no language model passed the known-answer gate and collapse rule</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>What this means in plain words.</strong> Experiment A (blinded run) gives no answer, because no language model passed the known-answer gate and collapse rule.</p>
+</blockquote>
+<h2>9. Experiment B: small neural-net learners, taught with data</h2>
+<h3>Results by group</h3>
+<p>Learners counted: 120 (No training 30, Feedback only 30, AI-cue training 30, Scrambled cues (placebo) 30).</p>
+<table>
+<thead>
+<tr>
+<th>Group</th>
+<th>n</th>
+<th>Pre</th>
+<th>Post</th>
+<th>Delayed</th>
+<th>New device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No training</td>
+<td>30</td>
+<td>49.9% [49.8%, 50.0%]</td>
+<td>48.2% [45.6%, 50.8%]</td>
+<td>49.6% [47.4%, 51.8%]</td>
+<td>49.8% [47.5%, 52.1%]</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>30</td>
+<td>50.0% [50.0%, 50.0%]</td>
+<td>80.9% [79.7%, 82.1%]</td>
+<td>53.2% [50.7%, 55.8%]</td>
+<td>71.5% [70.1%, 72.9%]</td>
+</tr>
+<tr>
+<td>AI-cue training</td>
+<td>30</td>
+<td>49.9% [49.8%, 50.1%]</td>
+<td>80.8% [79.6%, 82.0%]</td>
+<td>58.8% [56.3%, 61.3%]</td>
+<td>72.6% [71.5%, 73.8%]</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>30</td>
+<td>50.0% [49.9%, 50.0%]</td>
+<td>80.4% [79.0%, 81.8%]</td>
+<td>61.0% [58.3%, 63.7%]</td>
+<td>71.7% [70.2%, 73.2%]</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Mean accuracy per group and test, with 95% confidence intervals." src="figures/accuracy_nets.png" />
+<em>Mean accuracy per group and test, with 95% confidence intervals.</em></p>
+<h3>Hypotheses</h3>
+<p>Differences are in percentage points of accuracy. MDE = the smallest true difference this test would find 80% of the time. H1 needs p &lt; 0.05 AND a difference of at least 3 points. H2-H7 are Holm-corrected.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Claim</th>
+<th>Diff</th>
+<th>95% CI</th>
+<th>d</th>
+<th>p</th>
+<th>p (Holm)</th>
+<th>MDE</th>
+<th>Supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 (primary)</td>
+<td>AI-cue training beats feedback only, right after training</td>
+<td>-0.1</td>
+<td>[-1.7, +1.6]</td>
+<td>-0.02</td>
+<td>0.523</td>
+<td>-</td>
+<td>2.2</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H2</td>
+<td>AI-cue training beats no training, right after training</td>
+<td>+32.7</td>
+<td>[+29.9, +35.5]</td>
+<td>5.78</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>3.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H3</td>
+<td>Feedback only beats no training, right after training</td>
+<td>+32.7</td>
+<td>[+29.9, +35.5]</td>
+<td>5.79</td>
+<td>&lt; 0.001</td>
+<td>&lt; 0.001</td>
+<td>3.7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H4</td>
+<td>AI-cue training beats feedback only after the interference task (delayed)</td>
+<td>+5.6</td>
+<td>[+2.1, +9.2]</td>
+<td>0.79</td>
+<td>0.002</td>
+<td>0.007</td>
+<td>4.6</td>
+<td>yes</td>
+</tr>
+<tr>
+<td>H5</td>
+<td>AI-cue training beats feedback only on the held-out device (transfer)</td>
+<td>+1.1</td>
+<td>[-0.7, +2.8]</td>
+<td>0.31</td>
+<td>0.119</td>
+<td>0.356</td>
+<td>2.3</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H6</td>
+<td>AI-cue learners improve more from pre- to post-test than feedback-only learners</td>
+<td>+0.0</td>
+<td>[-1.7, +1.7]</td>
+<td>0.00</td>
+<td>0.500</td>
+<td>0.641</td>
+<td>2.2</td>
+<td>no</td>
+</tr>
+<tr>
+<td>H7</td>
+<td>The AI's real cues beat scrambled cues in the same format (placebo control)</td>
+<td>+0.4</td>
+<td>[-1.3, +2.2]</td>
+<td>0.12</td>
+<td>0.320</td>
+<td>0.641</td>
+<td>2.3</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>What this means in plain words.</strong> In Experiment B, learners taught the AI's cues did not do clearly better than learners who only practised with feedback. The test could have found a true difference of about 2.2 points or more most of the time. The equivalence test also says any difference is smaller than 3 points.</p>
+</blockquote>
+<h3>Preregistered preconditions</h3>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>teacher_test_auroc</td>
+<td>0.985</td>
+</tr>
+<tr>
+<td>teacher_is_expert (AUROC &gt;= 0.80)</td>
+<td>True</td>
+</tr>
+<tr>
+<td>pretest_mean</td>
+<td>0.499</td>
+</tr>
+<tr>
+<td>new_skill (pretest mean &lt;= 0.65)</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<h3>Robustness checks (reported, not used for the verdict)</h3>
+<ul>
+<li>Adjusting for each learner's pre-test score (ANCOVA): cue effect -0.0 points, two-sided p = 0.980.</li>
+<li>Same test on mean probability of the right answer: difference -0.2 points, p = 0.611.</li>
+<li>Share of learners whose answers collapsed to one class: Pre-test 98.3%, Post-test (primary) 0.0%, Delayed 9.2%, New device 0.0%.</li>
+<li>Transfer fraction (share of the AI teacher's advantage over chance reached at post-test): No training -0.04, Feedback only 0.72, AI-cue training 0.72, Scrambled cues (placebo) 0.71.</li>
+</ul>
+<h2>10. Problems found</h2>
+<ul>
+<li>No self-check failed in this run. Known design limits are listed in ISSUES.md and in Section 11.</li>
+</ul>
+<h2>11. What we can and cannot say</h2>
+<h3>We can say</h3>
+<ul>
+<li>Whether, in this setting, machine learners taught the AI's cues beat machine learners given only feedback (H1), and whether the AI's real cues beat a placebo lesson in the same format (H7).</li>
+</ul>
+<h3>We cannot say</h3>
+<ul>
+<li>That people would learn the same way. All learners here are machines.</li>
+<li>That the cues are how the AI 'really' works. They are a simple summary that agrees with the AI most of the time (Section 6).</li>
+<li>Anything clinical. Telling younger from older ECGs is a test task, not a diagnosis.</li>
+</ul>
+<h2>12. Words used</h2>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI teacher</td>
+<td>The neural network trained here to tell younger from older adults from the raw ECG.</td>
+</tr>
+<tr>
+<td>Cue</td>
+<td>A plain rule taken from the AI, e.g. 'heart rate tends to be lower in older adults'.</td>
+</tr>
+<tr>
+<td>Learner</td>
+<td>One machine 'participant': one language-model session or one small neural network, with its own cases.</td>
+</tr>
+<tr>
+<td>Feedback only</td>
+<td>Learners practise on cases and are told the right answer, but get no rules.</td>
+</tr>
+<tr>
+<td>Scrambled cues (placebo)</td>
+<td>A lesson that looks the same but uses measurements the AI did not pick, with random directions.</td>
+</tr>
+<tr>
+<td>Known-answer gate</td>
+<td>A test that a model can follow one simple written rule. Models that cannot are not counted.</td>
+</tr>
+<tr>
+<td>Collapse</td>
+<td>When a learner gives the same answer to nearly every case. Its accuracy then says nothing.</td>
+</tr>
+<tr>
+<td>AUROC</td>
+<td>How well a model ranks older above younger; 0.5 is guessing, 1.0 is perfect.</td>
+</tr>
+<tr>
+<td>p-value</td>
+<td>How surprising a result would be if there were no real difference. Small = unlikely to be luck.</td>
+</tr>
+<tr>
+<td>Holm correction</td>
+<td>A rule that makes p-values stricter when several hypotheses are tested together.</td>
+</tr>
+<tr>
+<td>MDE</td>
+<td>Minimum detectable effect: the smallest true difference the test would find 80% of the time.</td>
+</tr>
+<tr>
+<td>Equivalence test (TOST)</td>
+<td>A test of whether a difference is smaller than a set margin, so 'no difference' can be claimed.</td>
+</tr>
+<tr>
+<td>Preregistration</td>
+<td>Publishing the plan before running the test, so it cannot be changed after.</td>
+</tr>
+<tr>
+<td>SHA-256</td>
+<td>A file fingerprint. Change one letter and the fingerprint changes.</td>
+</tr>
+</tbody>
+</table>
+<h2>13. How to check this report</h2>
+<ul>
+<li>Master seed: 20261026. Every learner's cases and letters come from its own seed, so any learner can be re-made.</li>
+<li>Re-hash every output: python run_study.py verify runs/20261107T164810Z_study_pilot</li>
+<li>Compare the three fingerprints in Section 3 with prereg/LOCK.json and with the OSF registration.</li>
+<li>All learner-level results are in learners_<em>.csv; every single answer is in items_</em>.csv; checks.json holds the self-checks.</li>
+</ul>
+<h2>14. Common questions</h2>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Did an AI do the research?</td>
+<td>No. The idea, hypotheses and every design choice are the author's. An AI assistant helped write code and drafts under the author's direction. Separately, AI models are what the study tests.</td>
+</tr>
+<tr>
+<td>Why machines and not people?</td>
+<td>It is cheaper, fully repeatable and can use 1,002 learners per group. If cues do not transfer even to machines, a study with people is unlikely to work; if they do, it is the next step.</td>
+</tr>
+<tr>
+<td>Why a placebo lesson?</td>
+<td>A lesson might help just because it is a lesson. The placebo has the same format and length, so only the AI's content differs.</td>
+</tr>
+<tr>
+<td>Why hide the measurement names in one run?</td>
+<td>Language models may already know how ECGs change with age. With names hidden, they can only use what the lesson tells them.</td>
+</tr>
+<tr>
+<td>What if no model passes the gate?</td>
+<td>Then Experiment A gives no answer for H1, and the report says so. The rule was fixed in advance.</td>
+</tr>
+</tbody>
+</table></body></html>

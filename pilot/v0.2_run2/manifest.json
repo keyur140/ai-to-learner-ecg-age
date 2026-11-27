@@ -1,0 +1,302 @@
+{
+  "run_id": "20261107T120108Z_study_pilot",
+  "author": {
+    "name": "KEYUR SHAILESHKUMAR PATEL",
+    "given_names": "KEYUR SHAILESHKUMAR",
+    "family_names": "PATEL",
+    "orcid": "https://orcid.org/0009-0008-5261-043X",
+    "affiliations": [
+      "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+      "Independent researcher"
+    ],
+    "note": "Conducted independently; not an official Brunel University London project."
+  },
+  "status": "partial",
+  "config_sha256": "f03d43e9e94385c30888f37b5e8c47448fda5764b32ec33b012b963e082d3c36",
+  "config": {
+    "author": {
+      "name": "KEYUR SHAILESHKUMAR PATEL",
+      "given_names": "KEYUR SHAILESHKUMAR",
+      "family_names": "PATEL",
+      "orcid": "https://orcid.org/0009-0008-5261-043X",
+      "affiliations": [
+        "MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK",
+        "Independent researcher"
+      ],
+      "note": "Conducted independently; not an official Brunel University London project."
+    },
+    "study": {
+      "title": "Can learners acquire a perceptual skill they never had from AI-derived cues? (ECG age)",
+      "master_seed": 20261026,
+      "output_dir": "runs"
+    },
+    "data": {
+      "dir": "data",
+      "sampling_rate": 100,
+      "young_max_age": 39,
+      "older_min_age": 65,
+      "feature_source": "12sl",
+      "max_missing_panel": 2,
+      "teacher_train_folds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "teacher_val_fraction": 0.1,
+      "cue_fold": 8,
+      "test_fold": 9,
+      "transfer_device_rank": 2
+    },
+    "panel": [
+      {
+        "id": "HR_Ventr_Global",
+        "label": "Heart rate",
+        "unit": "bpm"
+      },
+      {
+        "id": "PR_Int_Global",
+        "label": "PR interval",
+        "unit": "ms"
+      },
+      {
+        "id": "QRS_Dur_Global",
+        "label": "QRS duration",
+        "unit": "ms"
+      },
+      {
+        "id": "QT_Int_Global",
+        "label": "QT interval",
+        "unit": "ms"
+      },
+      {
+        "id": "QT_IntBazett_Global",
+        "label": "QTc (Bazett)",
+        "unit": "ms"
+      },
+      {
+        "id": "P_AxisFront_Global",
+        "label": "P-wave axis",
+        "unit": "deg"
+      },
+      {
+        "id": "R_AxisFrontal_Global",
+        "label": "QRS axis",
+        "unit": "deg"
+      },
+      {
+        "id": "T_AxisFront_Global",
+        "label": "T-wave axis",
+        "unit": "deg"
+      },
+      {
+        "id": "P_Amp_II",
+        "label": "P-wave height, lead II",
+        "unit": "mV"
+      },
+      {
+        "id": "P_Dur_II",
+        "label": "P-wave duration, lead II",
+        "unit": "ms"
+      },
+      {
+        "id": "R_Amp_aVL",
+        "label": "R-wave height, lead aVL",
+        "unit": "mV"
+      },
+      {
+        "id": "R_Amp_V5",
+        "label": "R-wave height, lead V5",
+        "unit": "mV"
+      },
+      {
+        "id": "S_Amp_V1",
+        "label": "S-wave depth, lead V1",
+        "unit": "mV"
+      },
+      {
+        "id": "T_Amp_II",
+        "label": "T-wave height, lead II",
+        "unit": "mV"
+      },
+      {
+        "id": "T_Amp_V1",
+        "label": "T-wave height, lead V1",
+        "unit": "mV"
+      },
+      {
+        "id": "T_Amp_V5",
+        "label": "T-wave height, lead V5",
+        "unit": "mV"
+      },
+      {
+        "id": "ST_Amp_V5",
+        "label": "ST level, lead V5",
+        "unit": "mV"
+      },
+      {
+        "id": "Q_Amp_III",
+        "label": "Q-wave depth, lead III",
+        "unit": "mV"
+      }
+    ],
+    "teacher": {
+      "arch": "resnet1d",
+      "channels": 64,
+      "blocks": 4,
+      "epochs": 40,
+      "batch_size": 128,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "patience": 6
+    },
+    "cues": {
+      "k_max": 8,
+      "k_min": 5,
+      "stability_bootstraps": 200,
+      "stability_threshold": 0.6,
+      "l1_C_grid": [
+        0.005,
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5,
+        1.0
+      ],
+      "n_prototypes_per_class": 3
+    },
+    "saliency": {
+      "n_ecgs": 400,
+      "ig_steps": 32
+    },
+    "conditions": [
+      "no_training",
+      "feedback_only",
+      "cue_training",
+      "scrambled_cues"
+    ],
+    "tests": {
+      "primary": "post",
+      "sets": [
+        "pre",
+        "post",
+        "delayed",
+        "transfer"
+      ]
+    },
+    "experiment_llm": {
+      "enabled": true,
+      "n_per_condition": 30,
+      "backend": "hf",
+      "models": [
+        "Qwen/Qwen2.5-3B-Instruct"
+      ],
+      "dtype": "bfloat16",
+      "batch_size": 8,
+      "n_practice": 24,
+      "n_items_per_test": 40,
+      "distractor_tokens": 1500,
+      "openai_base_url": null,
+      "revisions": {},
+      "blinded_run": true,
+      "blinded_n_per_condition": 30,
+      "gate": {
+        "n_items": 40,
+        "min_accuracy": 0.85,
+        "rule_feature": "HR_Ventr_Global"
+      },
+      "collapse_share": 0.95,
+      "collapse_model_fraction": 0.5
+    },
+    "experiment_nets": {
+      "enabled": false,
+      "n_per_condition": 30,
+      "n_practice": 64,
+      "steps": 300,
+      "batch_size": 32,
+      "lr": 0.001,
+      "weight_decay": 0.0001,
+      "cue_loss_weight": 1.0,
+      "channels": 16,
+      "n_items_per_test": 200,
+      "distractor_task": "sex",
+      "distractor_n": 256,
+      "distractor_steps": 300,
+      "device": "auto"
+    },
+    "analysis": {
+      "alpha": 0.05,
+      "primary_alternative": "greater",
+      "bootstrap": 10000,
+      "item_level_robustness": true,
+      "min_meaningful_diff": 0.03,
+      "equivalence_margin": 0.03
+    },
+    "_protected": {
+      "sealed_fold": 10
+    }
+  },
+  "prereg_sha256": {
+    "preregistration.md": "5f798985deff86046b6f79c07a7163bc7ed241faced762993d6d36254bcd227c"
+  },
+  "code_sha256": {
+    "ai2human/__init__.py": "e5e648e14a87333975fb60671116b260ca12de4b4c336f1270930a5ce7123694",
+    "ai2human/analysis.py": "edb7643304864cbd705f1662cd2cd8f40b7181f062e5d40e79404e2a6b93c654",
+    "ai2human/checks.py": "8dcc7f3f7d568d65e3ace16647a0f394f5ec0621f187708cbf91988d508d5f23",
+    "ai2human/cohort.py": "e1776b7b33b35c359ac937b5378f60abe2fcd6513dae9c9a046ebd3e504ecc6f",
+    "ai2human/cues.py": "c46f42d9427791cc9de848e85a6fd2472284b5aa80e3add93d0b75e6023daa19",
+    "ai2human/data.py": "e75a30a3b315e55ff05f9cc889760a53d4124e1d7b299f64682b726269bd27b7",
+    "ai2human/exp_llm.py": "8b6e0af78c5bd0f46eed7da2d44cfc58c7e654b89a7bcbfb1c00244abe005388",
+    "ai2human/exp_nets.py": "1f21e0c2ae36e3da71ee6e3e51243aee17b4ee76883dc885e8dd5bbd0e09d0ca",
+    "ai2human/llm_backends.py": "4259f98ad34b9a45834594582068a4c5253530157958a78d4e706d2f0eecfe1c",
+    "ai2human/models.py": "09a675b7bda7445af5d97e0854ef94aa2d4ee662edf1e1af6f66a09f9a6dc98e",
+    "ai2human/pdf_report.py": "bf0fe087557a2395a8dbe37176c4e509213b504bdd0e9d9d2e03cbfb52362e4a",
+    "ai2human/pipeline.py": "28369bdf0e0de526430b6e0dfe04e28e04074fd725f4b1722684d452adfe57d1",
+    "ai2human/prompts.py": "5a810cef2099e79f0c0ed216265667833350f11e89c1b27d89d25f00c4b6468b",
+    "ai2human/report.py": "2fe659e9ab8a1247859e5cdfd9c14dd1fd3394b47b68a47e0a33f003928042b1",
+    "ai2human/repro.py": "bdff9dc0ffa09276c2aa36bb723bbde1c2baa86f6f45700c484cd79f1d4116f0",
+    "ai2human/saliency.py": "534615b45d9952765119ff9837658c2e6be15117f559729943b8872c7013cc4b",
+    "ai2human/sampling.py": "8386e8a47b0ac0bf4a1584a29683cb175470783c865597852ef613a3e5e1f768",
+    "ai2human/stats.py": "1ac2a2c8bf33c7fd7f3ace09495903029d04522614294439334c9920724cd7fd",
+    "ai2human/teacher.py": "09c7147cab30d9b1f02a7f689d45675bf9aeb6df1b663094f0d1b61a2cc2e931",
+    "ai2human/validate.py": "40abe0586caca6556bd6e4cbc8d5ff403e1cc8b61e7c92e0f56402c6521abe3e",
+    "ai2human/validation_report.py": "d8c64e083cf56d5d992b38495ba6bb6ae6e7855b9ce5466f3e036ae37d69b0c9"
+  },
+  "code_digest": "65a3c3a51d8d18bb1b933d665f71350ce17e0bcb793d32d116f149120e95b463",
+  "stages": [
+    {
+      "stage": "cohort",
+      "seconds": 3.2,
+      "n": 8689
+    },
+    {
+      "stage": "teacher",
+      "seconds": 251.62,
+      "test_auroc": 0.9885249447274824
+    },
+    {
+      "stage": "cues",
+      "seconds": 1.11,
+      "selected": [
+        "PR_Int_Global",
+        "T_Amp_II",
+        "S_Amp_V1",
+        "T_Amp_V1",
+        "R_Amp_aVL",
+        "R_AxisFrontal_Global",
+        "ST_Amp_V5",
+        "QT_IntBazett_Global"
+      ]
+    },
+    {
+      "stage": "saliency",
+      "seconds": 26.64
+    }
+  ],
+  "environment": null
+}

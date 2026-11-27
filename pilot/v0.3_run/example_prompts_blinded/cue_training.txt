@@ -1,0 +1,706 @@
+You are a student learning a new skill. You will see measurements taken from adults' resting 12-lead ECGs. Each ECG belongs either to a younger adult (under 40 years old) or to an older adult (65 years or older). Exactly half of all cases are younger and half are older.
+
+LESSON: How an expert AI tells younger (under 40) from older (65+) adults on an ECG.
+The AI relies on these measurements, most important first:
+1. Measure 2: in older adults it tends to be higher (cut-point about 158; lower points to younger).
+2. Measure 14: in older adults it tends to be lower (cut-point about 0.218; higher points to younger).
+3. Measure 11: in older adults it tends to be higher (cut-point about 0.408; lower points to younger).
+4. Measure 5: in older adults it tends to be higher (cut-point about 428; lower points to younger).
+5. Measure 13: in older adults it tends to be higher (cut-point about -0.777; lower points to younger).
+6. Measure 7: in older adults it tends to be lower (cut-point about 33; higher points to younger).
+No single cue is decisive. Count how many cues point to 'older', giving more weight to the cues near the top of the list, and decide by the balance.
+
+CLEAREST EXAMPLES (the AI is most sure about these):
+
+Case 1:
+Measure 1: 117
+Measure 2: 138
+Measure 3: 126
+Measure 4: 374
+Measure 5: 521
+Measure 6: 72
+Measure 7: 27
+Measure 8: 122
+Measure 9: 0.26
+Measure 10: 106
+Measure 11: 1.34
+Measure 12: 3.19
+Measure 13: -1.71
+Measure 14: -0.12
+Measure 15: 0.00
+Measure 16: 0.11
+Measure 17: -0.26
+Measure 18: -1.05
+Correct answer: A) older adult (65 or over)
+
+Case 2:
+Measure 1: 101
+Measure 2: 164
+Measure 3: 128
+Measure 4: 366
+Measure 5: 474
+Measure 6: 59
+Measure 7: 21
+Measure 8: 159
+Measure 9: 0.22
+Measure 10: 140
+Measure 11: 1.38
+Measure 12: 4.03
+Measure 13: -2.48
+Measure 14: -0.11
+Measure 15: 0.32
+Measure 16: 0.00
+Measure 17: -0.40
+Measure 18: -1.04
+Correct answer: A) older adult (65 or over)
+
+Case 3:
+Measure 1: 72
+Measure 2: 218
+Measure 3: 96
+Measure 4: 376
+Measure 5: 411
+Measure 6: 50
+Measure 7: 11
+Measure 8: 242
+Measure 9: 0.13
+Measure 10: 120
+Measure 11: 0.56
+Measure 12: 1.36
+Measure 13: -0.83
+Measure 14: -0.13
+Measure 15: 0.07
+Measure 16: 0.11
+Measure 17: -0.07
+Measure 18: -0.00
+Correct answer: A) older adult (65 or over)
+
+Case 4:
+Measure 1: 72
+Measure 2: 138
+Measure 3: 88
+Measure 4: 356
+Measure 5: 389
+Measure 6: 71
+Measure 7: 74
+Measure 8: 54
+Measure 9: 0.20
+Measure 10: 98
+Measure 11: 0.13
+Measure 12: 3.93
+Measure 13: -2.30
+Measure 14: 0.47
+Measure 15: 0.17
+Measure 16: 0.70
+Measure 17: 0.14
+Measure 18: -0.05
+Correct answer: B) younger adult (under 40)
+
+Case 5:
+Measure 1: 62
+Measure 2: 124
+Measure 3: 94
+Measure 4: 394
+Measure 5: 399
+Measure 6: -8
+Measure 7: 87
+Measure 8: 44
+Measure 9: 0.00
+Measure 10: 0
+Measure 11: 0.17
+Measure 12: 2.39
+Measure 13: -1.54
+Measure 14: 0.49
+Measure 15: 0.19
+Measure 16: 0.62
+Measure 17: 0.04
+Measure 18: -0.19
+Correct answer: B) younger adult (under 40)
+
+Case 6:
+Measure 1: 63
+Measure 2: 158
+Measure 3: 88
+Measure 4: 374
+Measure 5: 382
+Measure 6: 71
+Measure 7: 70
+Measure 8: 65
+Measure 9: 0.12
+Measure 10: 112
+Measure 11: 0.19
+Measure 12: 1.62
+Measure 13: -2.03
+Measure 14: 0.62
+Measure 15: 0.21
+Measure 16: 0.48
+Measure 17: -0.01
+Measure 18: -0.06
+Correct answer: B) younger adult (under 40)
+
+PRACTICE CASES WITH FEEDBACK:
+
+Case 1:
+Measure 1: 80
+Measure 2: 186
+Measure 3: 98
+Measure 4: 370
+Measure 5: 426
+Measure 6: 70
+Measure 7: 4
+Measure 8: 73
+Measure 9: 0.18
+Measure 10: 126
+Measure 11: 0.45
+Measure 12: 1.33
+Measure 13: -1.28
+Measure 14: 0.32
+Measure 15: -0.03
+Measure 16: 0.27
+Measure 17: 0.00
+Measure 18: -0.00
+Correct answer: B) younger adult (under 40)
+
+Case 2:
+Measure 1: 67
+Measure 2: 204
+Measure 3: 146
+Measure 4: 416
+Measure 5: 439
+Measure 6: 14
+Measure 7: -55
+Measure 8: 63
+Measure 9: 0.04
+Measure 10: 128
+Measure 11: 1.13
+Measure 12: 0.05
+Measure 13: -0.00
+Measure 14: 0.10
+Measure 15: -0.13
+Measure 16: 0.06
+Measure 17: 0.02
+Measure 18: -0.00
+Correct answer: A) older adult (65 or over)
+
+Case 3:
+Measure 1: 48
+Measure 2: 166
+Measure 3: 98
+Measure 4: 434
+Measure 5: 387
+Measure 6: -11
+Measure 7: 76
+Measure 8: 51
+Measure 9: 0.00
+Measure 10: 0
+Measure 11: 0.08
+Measure 12: 2.20
+Measure 13: -1.19
+Measure 14: 0.63
+Measure 15: -0.34
+Measure 16: 0.74
+Measure 17: 0.01
+Measure 18: -0.13
+Correct answer: B) younger adult (under 40)
+
+Case 4:
+Measure 1: 85
+Measure 2: 160
+Measure 3: 86
+Measure 4: 370
+Measure 5: 440
+Measure 6: 71
+Measure 7: 14
+Measure 8: 70
+Measure 9: 0.17
+Measure 10: 114
+Measure 11: 0.50
+Measure 12: 0.52
+Measure 13: -1.28
+Measure 14: 0.33
+Measure 15: 0.20
+Measure 16: 0.88
+Measure 17: 0.06
+Measure 18: -0.02
+Correct answer: A) older adult (65 or over)
+
+Case 5:
+Measure 1: 69
+Measure 2: 190
+Measure 3: 102
+Measure 4: 390
+Measure 5: 417
+Measure 6: 62
+Measure 7: 74
+Measure 8: 62
+Measure 9: 0.21
+Measure 10: 128
+Measure 11: 0.10
+Measure 12: 1.73
+Measure 13: -0.63
+Measure 14: 0.26
+Measure 15: -0.08
+Measure 16: 0.31
+Measure 17: 0.00
+Measure 18: -0.12
+Correct answer: B) younger adult (under 40)
+
+Case 6:
+Measure 1: 74
+Measure 2: 156
+Measure 3: 102
+Measure 4: 424
+Measure 5: 470
+Measure 6: 76
+Measure 7: 72
+Measure 8: 82
+Measure 9: 0.12
+Measure 10: 102
+Measure 11: 0.09
+Measure 12: 1.13
+Measure 13: -1.80
+Measure 14: 0.40
+Measure 15: -0.12
+Measure 16: 0.26
+Measure 17: -0.01
+Measure 18: -0.16
+Correct answer: A) older adult (65 or over)
+
+Case 7:
+Measure 1: 87
+Measure 2: 208
+Measure 3: 94
+Measure 4: 364
+Measure 5: 438
+Measure 6: 47
+Measure 7: -1
+Measure 8: 53
+Measure 9: 0.13
+Measure 10: 162
+Measure 11: 0.67
+Measure 12: 1.22
+Measure 13: -1.14
+Measure 14: 0.27
+Measure 15: 0.07
+Measure 16: 0.23
+Measure 17: -0.01
+Measure 18: -0.47
+Correct answer: A) older adult (65 or over)
+
+Case 8:
+Measure 1: 116
+Measure 2: 162
+Measure 3: 80
+Measure 4: 326
+Measure 5: 453
+Measure 6: 51
+Measure 7: 56
+Measure 8: 53
+Measure 9: 0.00
+Measure 10: 0
+Measure 11: 0.44
+Measure 12: 1.70
+Measure 13: -0.00
+Measure 14: -0.07
+Measure 15: 0.08
+Measure 16: 0.30
+Measure 17: -0.14
+Measure 18: -0.00
+Correct answer: A) older adult (65 or over)
+
+Case 9:
+Measure 1: 67
+Measure 2: 152
+Measure 3: 76
+Measure 4: 394
+Measure 5: 416
+Measure 6: 66
+Measure 7: 50
+Measure 8: 44
+Measure 9: 0.11
+Measure 10: 112
+Measure 11: 0.14
+Measure 12: 1.34
+Measure 13: -1.21
+Measure 14: 0.46
+Measure 15: -0.16
+Measure 16: 0.44
+Measure 17: 0.03
+Measure 18: -0.05
+Correct answer: B) younger adult (under 40)
+
+Case 10:
+Measure 1: 54
+Measure 2: 184
+Measure 3: 138
+Measure 4: 420
+Measure 5: 398
+Measure 6: 46
+Measure 7: -82
+Measure 8: 62
+Measure 9: 0.12
+Measure 10: 116
+Measure 11: 0.80
+Measure 12: 0.31
+Measure 13: -0.14
+Measure 14: 0.37
+Measure 15: -0.30
+Measure 16: 0.26
+Measure 17: -0.03
+Measure 18: -0.00
+Correct answer: A) older adult (65 or over)
+
+Case 11:
+Measure 1: 82
+Measure 2: 132
+Measure 3: 90
+Measure 4: 342
+Measure 5: 399
+Measure 6: 42
+Measure 7: 73
+Measure 8: 24
+Measure 9: 0.10
+Measure 10: 92
+Measure 11: 0.09
+Measure 12: 1.85
+Measure 13: -1.17
+Measure 14: 0.28
+Measure 15: 0.11
+Measure 16: 0.52
+Measure 17: 0.03
+Measure 18: -0.15
+Correct answer: B) younger adult (under 40)
+
+Case 12:
+Measure 1: 65
+Measure 2: 148
+Measure 3: 88
+Measure 4: 404
+Measure 5: 420
+Measure 6: 27
+Measure 7: 50
+Measure 8: 42
+Measure 9: 0.08
+Measure 10: 118
+Measure 11: 0.31
+Measure 12: 2.15
+Measure 13: -1.28
+Measure 14: 0.27
+Measure 15: 0.03
+Measure 16: 0.37
+Measure 17: -0.03
+Measure 18: -0.00
+Correct answer: B) younger adult (under 40)
+
+Case 13:
+Measure 1: 55
+Measure 2: 136
+Measure 3: 102
+Measure 4: 432
+Measure 5: 413
+Measure 6: 55
+Measure 7: 54
+Measure 8: 40
+Measure 9: 0.13
+Measure 10: 106
+Measure 11: 0.18
+Measure 12: 2.25
+Measure 13: -1.11
+Measure 14: 0.46
+Measure 15: -0.20
+Measure 16: 0.80
+Measure 17: -0.01
+Measure 18: -0.00
+Correct answer: B) younger adult (under 40)
+
+Case 14:
+Measure 1: 70
+Measure 2: 130
+Measure 3: 92
+Measure 4: 394
+Measure 5: 425
+Measure 6: 0
+Measure 7: 11
+Measure 8: 40
+Measure 9: 0.07
+Measure 10: 96
+Measure 11: 0.84
+Measure 12: 0.91
+Measure 13: -1.64
+Measure 14: 0.20
+Measure 15: 0.25
+Measure 16: 0.18
+Measure 17: 0.01
+Measure 18: -0.00
+Correct answer: B) younger adult (under 40)
+
+Case 15:
+Measure 1: 67
+Measure 2: 168
+Measure 3: 96
+Measure 4: 396
+Measure 5: 418
+Measure 6: 55
+Measure 7: -3
+Measure 8: 57
+Measure 9: 0.14
+Measure 10: 100
+Measure 11: 0.54
+Measure 12: 2.36
+Measure 13: -0.00
+Measure 14: 0.06
+Measure 15: 0.16
+Measure 16: 0.09
+Measure 17: -0.11
+Measure 18: -0.00
+Correct answer: A) older adult (65 or over)
+
+Case 16:
+Measure 1: 76
+Measure 2: 174
+Measure 3: 136
+Measure 4: 404
+Measure 5: 454
+Measure 6: 58
+Measure 7: -58
+Measure 8: 47
+Measure 9: 0.12
+Measure 10: 110
+Measure 11: 1.27
+Measure 12: 0.49
+Measure 13: -0.31
+Measure 14: 0.21
+Measure 15: -0.22
+Measure 16: 0.27
+Measure 17: 0.01
+Measure 18: -0.00
+Correct answer: A) older adult (65 or over)
+
+Case 17:
+Measure 1: 65
+Measure 2: 116
+Measure 3: 110
+Measure 4: 410
+Measure 5: 426
+Measure 6: 48
+Measure 7: 63
+Measure 8: 47
+Measure 9: 0.09
+Measure 10: 90
+Measure 11: 0.06
+Measure 12: 1.62
+Measure 13: -0.27
+Measure 14: 0.25
+Measure 15: -0.09
+Measure 16: 0.30
+Measure 17: -0.04
+Measure 18: -0.08
+Correct answer: B) younger adult (under 40)
+
+Case 18:
+Measure 1: 65
+Measure 2: 152
+Measure 3: 98
+Measure 4: 416
+Measure 5: 432
+Measure 6: 81
+Measure 7: -32
+Measure 8: 88
+Measure 9: 0.08
+Measure 10: 66
+Measure 11: 1.01
+Measure 12: 1.66
+Measure 13: -1.00
+Measure 14: 0.10
+Measure 15: 0.12
+Measure 16: 0.25
+Measure 17: -0.05
+Measure 18: -0.00
+Correct answer: A) older adult (65 or over)
+
+Case 19:
+Measure 1: 118
+Measure 2: 148
+Measure 3: 90
+Measure 4: 322
+Measure 5: 451
+Measure 6: 32
+Measure 7: 64
+Measure 8: 34
+Measure 9: 0.13
+Measure 10: 130
+Measure 11: 0.14
+Measure 12: 1.43
+Measure 13: -1.19
+Measure 14: 0.17
+Measure 15: 0.04
+Measure 16: 0.18
+Measure 17: -0.04
+Measure 18: -0.22
+Correct answer: B) younger adult (under 40)
+
+Case 20:
+Measure 1: 53
+Measure 2: 146
+Measure 3: 90
+Measure 4: 432
+Measure 5: 405
+Measure 6: 72
+Measure 7: 43
+Measure 8: 38
+Measure 9: 0.15
+Measure 10: 110
+Measure 11: 0.04
+Measure 12: 1.96
+Measure 13: -0.62
+Measure 14: 0.18
+Measure 15: 0.15
+Measure 16: 0.33
+Measure 17: -0.04
+Measure 18: -0.02
+Correct answer: B) younger adult (under 40)
+
+Case 21:
+Measure 1: 64
+Measure 2: 120
+Measure 3: 94
+Measure 4: 406
+Measure 5: 418
+Measure 6: 56
+Measure 7: 46
+Measure 8: 40
+Measure 9: 0.06
+Measure 10: 106
+Measure 11: 0.40
+Measure 12: 1.13
+Measure 13: -1.37
+Measure 14: 0.20
+Measure 15: 0.09
+Measure 16: 0.29
+Measure 17: 0.01
+Measure 18: -0.00
+Correct answer: A) older adult (65 or over)
+
+Case 22:
+Measure 1: 94
+Measure 2: 156
+Measure 3: 82
+Measure 4: 348
+Measure 5: 435
+Measure 6: 29
+Measure 7: -30
+Measure 8: 30
+Measure 9: 0.04
+Measure 10: 88
+Measure 11: 0.97
+Measure 12: 0.37
+Measure 13: -1.09
+Measure 14: -0.02
+Measure 15: -0.09
+Measure 16: 0.01
+Measure 17: -0.03
+Measure 18: -0.93
+Correct answer: A) older adult (65 or over)
+
+Case 23:
+Measure 1: 99
+Measure 2: 190
+Measure 3: 106
+Measure 4: 368
+Measure 5: 472
+Measure 6: 60
+Measure 7: -12
+Measure 8: 60
+Measure 9: 0.13
+Measure 10: 122
+Measure 11: 0.88
+Measure 12: 4.23
+Measure 13: -1.99
+Measure 14: 0.30
+Measure 15: 0.13
+Measure 16: 0.65
+Measure 17: 0.10
+Measure 18: -0.00
+Correct answer: B) younger adult (under 40)
+
+Case 24:
+Measure 1: 91
+Measure 2: 148
+Measure 3: 92
+Measure 4: 340
+Measure 5: 418
+Measure 6: 62
+Measure 7: 4
+Measure 8: 32
+Measure 9: 0.19
+Measure 10: 110
+Measure 11: 0.87
+Measure 12: 1.23
+Measure 13: -1.80
+Measure 14: 0.28
+Measure 15: -0.04
+Measure 16: 0.25
+Measure 17: -0.01
+Measure 18: -0.00
+Correct answer: B) younger adult (under 40)
+
+A DIFFERENT TASK: decide whether it rained at a weather station that day. Feedback is given.
+Day 1: humidity 49%, pressure 1024 hPa, cloud cover 1/8. Answer: no rain.
+Day 2: humidity 65%, pressure 1037 hPa, cloud cover 7/8. Answer: rain.
+Day 3: humidity 23%, pressure 1016 hPa, cloud cover 8/8. Answer: rain.
+Day 4: humidity 64%, pressure 989 hPa, cloud cover 1/8. Answer: no rain.
+Day 5: humidity 67%, pressure 1035 hPa, cloud cover 3/8. Answer: no rain.
+Day 6: humidity 50%, pressure 1023 hPa, cloud cover 0/8. Answer: no rain.
+Day 7: humidity 20%, pressure 1012 hPa, cloud cover 2/8. Answer: no rain.
+Day 8: humidity 23%, pressure 986 hPa, cloud cover 6/8. Answer: no rain.
+Day 9: humidity 52%, pressure 1008 hPa, cloud cover 1/8. Answer: no rain.
+Day 10: humidity 93%, pressure 984 hPa, cloud cover 5/8. Answer: rain.
+Day 11: humidity 45%, pressure 1011 hPa, cloud cover 6/8. Answer: no rain.
+Day 12: humidity 66%, pressure 1035 hPa, cloud cover 5/8. Answer: no rain.
+Day 13: humidity 83%, pressure 996 hPa, cloud cover 1/8. Answer: rain.
+Day 14: humidity 51%, pressure 1012 hPa, cloud cover 0/8. Answer: no rain.
+Day 15: humidity 39%, pressure 990 hPa, cloud cover 0/8. Answer: no rain.
+Day 16: humidity 89%, pressure 989 hPa, cloud cover 0/8. Answer: rain.
+Day 17: humidity 26%, pressure 1015 hPa, cloud cover 1/8. Answer: no rain.
+Day 18: humidity 81%, pressure 1035 hPa, cloud cover 6/8. Answer: no rain.
+Day 19: humidity 41%, pressure 992 hPa, cloud cover 7/8. Answer: rain.
+Day 20: humidity 89%, pressure 1022 hPa, cloud cover 1/8. Answer: no rain.
+Day 21: humidity 78%, pressure 1024 hPa, cloud cover 3/8. Answer: no rain.
+Day 22: humidity 50%, pressure 1037 hPa, cloud cover 3/8. Answer: no rain.
+Day 23: humidity 78%, pressure 1003 hPa, cloud cover 6/8. Answer: rain.
+Day 24: humidity 79%, pressure 1017 hPa, cloud cover 8/8. Answer: rain.
+Day 25: humidity 70%, pressure 1035 hPa, cloud cover 8/8. Answer: rain.
+Day 26: humidity 82%, pressure 998 hPa, cloud cover 3/8. Answer: rain.
+Day 27: humidity 82%, pressure 990 hPa, cloud cover 0/8. Answer: rain.
+Day 28: humidity 45%, pressure 1017 hPa, cloud cover 7/8. Answer: rain.
+Day 29: humidity 39%, pressure 1014 hPa, cloud cover 2/8. Answer: no rain.
+Day 30: humidity 88%, pressure 982 hPa, cloud cover 7/8. Answer: rain.
+Day 31: humidity 93%, pressure 1000 hPa, cloud cover 4/8. Answer: rain.
+Day 32: humidity 51%, pressure 1014 hPa, cloud cover 4/8. Answer: no rain.
+Day 33: humidity 54%, pressure 1017 hPa, cloud cover 0/8. Answer: no rain.
+End of the different task. Now return to the ECG task.
+
+TEST CASE:
+Measure 1: 86
+Measure 2: 158
+Measure 3: 82
+Measure 4: 358
+Measure 5: 428
+Measure 6: 60
+Measure 7: 38
+Measure 8: 49
+Measure 9: 0.11
+Measure 10: 106
+Measure 11: 0.17
+Measure 12: 0.93
+Measure 13: -0.72
+Measure 14: 0.28
+Measure 15: -0.18
+Measure 16: 0.33
+Measure 17: -0.03
+Measure 18: -0.00
+
+Which adult does this ECG belong to?
+A) older adult (65 or over)
+B) younger adult (under 40)
+Answer with the single letter A or B.

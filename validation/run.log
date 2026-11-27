@@ -1,0 +1,9 @@
+2026-11-20T13:24:04 | INFO | ai2human 0.5.2 | synthetic validation 20261120T132404Z_validation | quick=False
+2026-11-20T13:33:52 | INFO | W1: 5/7 expectations met
+2026-11-20T13:40:23 | INFO | W1b: 2/4 expectations met
+2026-11-20T13:45:33 | INFO | W2: 5/5 expectations met
+2026-11-20T13:52:52 | INFO | W3: 4/5 expectations met
+2026-11-20T13:57:51 | INFO | W4: 6/6 expectations met
+2026-11-20T14:08:21 | INFO | W5: 4/4 expectations met
+2026-11-20T14:09:03 | INFO | sim: H1 false-positive rate 0.0000; power at +3 pts 0.487, +5 pts 1.000
+2026-11-20T14:13:12 | INFO | validation done in 2946.6 s -> /home/user/dev/ai2human_v03/runs/20261120T132404Z_validation

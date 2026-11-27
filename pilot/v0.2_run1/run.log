@@ -1,0 +1,67 @@
+2026-11-07T11:43:52 | INFO | ai2human 0.2.0 | run 20261107T114352Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-07T11:43:56 | INFO | already downloaded: data/ptbxl.zip
+2026-11-07T11:43:56 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-07T11:43:57 | INFO | PhysioNet checksums: already verified
+2026-11-07T11:43:57 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-07T11:43:59 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-07T11:43:59 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-07T11:43:59 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-07T11:43:59 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-07T11:43:59 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-07T11:43:59 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-07T11:43:59 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-07T11:43:59 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-07T11:43:59 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-07T11:43:59 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-07T11:43:59 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-07T11:43:59 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-07T11:43:59 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-07T11:43:59 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-07T11:43:59 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-07T11:43:59 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-07T11:43:59 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-07T11:43:59 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-07T11:43:59 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-07T11:43:59 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-07T11:44:40 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-07T11:44:40 | INFO | teacher device: cpu
+2026-11-07T11:44:57 | INFO | teacher epoch   1: loss 0.3570  val AUROC 0.9502
+2026-11-07T11:45:12 | INFO | teacher epoch   2: loss 0.2346  val AUROC 0.9501
+2026-11-07T11:45:27 | INFO | teacher epoch   3: loss 0.1881  val AUROC 0.9653
+2026-11-07T11:45:43 | INFO | teacher epoch   4: loss 0.1672  val AUROC 0.9744
+2026-11-07T11:45:58 | INFO | teacher epoch   5: loss 0.1592  val AUROC 0.9685
+2026-11-07T11:46:14 | INFO | teacher epoch   6: loss 0.1567  val AUROC 0.9734
+2026-11-07T11:46:30 | INFO | teacher epoch   7: loss 0.1455  val AUROC 0.9748
+2026-11-07T11:46:45 | INFO | teacher epoch   8: loss 0.1185  val AUROC 0.9690
+2026-11-07T11:47:00 | INFO | teacher epoch   9: loss 0.1348  val AUROC 0.9756
+2026-11-07T11:47:15 | INFO | teacher epoch  10: loss 0.1221  val AUROC 0.9762
+2026-11-07T11:47:30 | INFO | teacher epoch  11: loss 0.1231  val AUROC 0.9637
+2026-11-07T11:47:44 | INFO | teacher epoch  12: loss 0.1188  val AUROC 0.9730
+2026-11-07T11:47:59 | INFO | teacher epoch  13: loss 0.0919  val AUROC 0.9713
+2026-11-07T11:48:14 | INFO | teacher epoch  14: loss 0.0959  val AUROC 0.9744
+2026-11-07T11:48:29 | INFO | teacher epoch  15: loss 0.0892  val AUROC 0.9756
+2026-11-07T11:48:43 | INFO | teacher epoch  16: loss 0.0858  val AUROC 0.9773
+2026-11-07T11:48:56 | INFO | teacher epoch  17: loss 0.0823  val AUROC 0.9750
+2026-11-07T11:49:09 | INFO | teacher epoch  18: loss 0.0599  val AUROC 0.9797
+2026-11-07T11:49:37 | INFO | teacher epoch  19: loss 0.0973  val AUROC 0.9706
+2026-11-07T11:49:49 | INFO | teacher epoch  20: loss 0.0678  val AUROC 0.9761
+2026-11-07T11:50:03 | INFO | teacher epoch  21: loss 0.0586  val AUROC 0.9782
+2026-11-07T11:50:18 | INFO | teacher epoch  22: loss 0.0564  val AUROC 0.9731
+2026-11-07T11:50:32 | INFO | teacher epoch  23: loss 0.0500  val AUROC 0.9778
+2026-11-07T11:50:45 | INFO | teacher epoch  24: loss 0.0429  val AUROC 0.9786
+2026-11-07T11:50:45 | INFO | early stop at epoch 24 (best 18)
+2026-11-07T11:50:53 | INFO | teacher test: {'n': 610, 'teacher_auroc': 0.9874555416706718, 'teacher_accuracy': 0.9131147540983606, 'features_baseline_auroc': 0.9468062097471882, 'features_baseline_accuracy': 0.8836065573770492}
+2026-11-07T11:50:53 | INFO | cue stability C=0.005: 0 stable features
+2026-11-07T11:50:54 | INFO | cue stability C=0.01: 5 stable features
+2026-11-07T11:50:54 | INFO | cues: ['PR_Int_Global', 'T_Amp_II', 'R_Amp_aVL', 'T_Amp_V5', 'R_AxisFrontal_Global']; test fidelity {'scrambled_tally_accuracy_true': 0.5360655737704918, 'surrogate_fidelity_to_teacher': 0.8459016393442623, 'surrogate_accuracy_true': 0.8508196721311475, 'rule_tally_fidelity_to_teacher': 0.8032786885245902, 'rule_tally_accuracy_true': 0.8049180327868852}
+2026-11-07T11:51:20 | INFO | saliency: densest segment QRS, most cue weight ST-T
+2026-11-07T11:53:05 | INFO | nets no_training: 25/30 learners
+2026-11-07T11:53:28 | INFO | nets no_training: 30/30 learners
+2026-11-07T11:55:23 | INFO | nets feedback_only: 25/30 learners
+2026-11-07T11:55:46 | INFO | nets feedback_only: 30/30 learners
+2026-11-07T11:57:42 | INFO | nets cue_training: 25/30 learners
+2026-11-07T11:58:07 | INFO | nets cue_training: 30/30 learners
+2026-11-07T12:00:04 | INFO | nets scrambled_cues: 25/30 learners
+2026-11-07T12:00:27 | INFO | nets scrambled_cues: 30/30 learners
+2026-11-07T12:00:28 | INFO | reports written: REPORT.md / REPORT.html / REPORT.pdf
+2026-11-07T12:00:28 | INFO | done. writing manifest.json + SHA256SUMS.txt in /home/user/pilot/ai2human_v02/runs/20261107T114352Z_study_pilot

@@ -1,0 +1,149 @@
+{
+ "llm": {
+  "no_training": {
+   "pre": 56.8,
+   "post": 49.9,
+   "delayed": 48.0,
+   "transfer": 44.5
+  },
+  "feedback_only": {
+   "pre": 55.1,
+   "post": 69.2,
+   "delayed": 68.6,
+   "transfer": 60.6
+  },
+  "cue_training": {
+   "pre": 54.6,
+   "post": 65.3,
+   "delayed": 58.8,
+   "transfer": 62.0
+  },
+  "scrambled_cues": {
+   "pre": 53.2,
+   "post": 58.7,
+   "delayed": 55.5,
+   "transfer": 56.3
+  }
+ },
+ "llm_blinded": {
+  "no_training": {
+   "pre": 41.7,
+   "post": 44.7,
+   "delayed": 46.0,
+   "transfer": 46.5
+  },
+  "feedback_only": {
+   "pre": 42.5,
+   "post": 66.0,
+   "delayed": 64.7,
+   "transfer": 61.7
+  },
+  "cue_training": {
+   "pre": 37.9,
+   "post": 66.6,
+   "delayed": 66.9,
+   "transfer": 64.2
+  },
+  "scrambled_cues": {
+   "pre": 42.1,
+   "post": 63.0,
+   "delayed": 61.0,
+   "transfer": 59.9
+  }
+ },
+ "nets_sweep": {
+  "no_training": {
+   "4": 51.6,
+   "8": 48.2,
+   "16": 52.1,
+   "32": 49.3,
+   "64": 48.2,
+   "128": 47.6
+  },
+  "feedback_only": {
+   "4": 64.6,
+   "8": 68.6,
+   "16": 73.8,
+   "32": 76.6,
+   "64": 80.8,
+   "128": 82.8
+  },
+  "cue_training": {
+   "4": 60.0,
+   "8": 68.4,
+   "16": 73.1,
+   "32": 77.2,
+   "64": 80.8,
+   "128": 84.0
+  },
+  "scrambled_cues": {
+   "4": 63.8,
+   "8": 69.6,
+   "16": 72.0,
+   "32": 75.4,
+   "64": 80.5,
+   "128": 84.0
+  }
+ },
+ "benchmarks_accuracy": {
+  "AI teacher (1D ResNet, raw ECG)": 92.6,
+  "Logistic regression on the 18 measurements": 88.4,
+  "Surrogate model on the 6 cues": 86.2,
+  "6 AI cue rules as a simple tally": 82.0,
+  "Placebo rules as a tally": 46.6
+ },
+ "teacher_auroc": 0.985,
+ "baseline_auroc": 0.947,
+ "power_curve": [
+  {
+   "true_diff": 0.0,
+   "p_below_alpha": 0.05225,
+   "H1_rule": 0.0
+  },
+  {
+   "true_diff": 0.01,
+   "p_below_alpha": 0.976,
+   "H1_rule": 0.0
+  },
+  {
+   "true_diff": 0.02,
+   "p_below_alpha": 1.0,
+   "H1_rule": 0.0
+  },
+  {
+   "true_diff": 0.025,
+   "p_below_alpha": 1.0,
+   "H1_rule": 0.033
+  },
+  {
+   "true_diff": 0.03,
+   "p_below_alpha": 1.0,
+   "H1_rule": 0.4875
+  },
+  {
+   "true_diff": 0.035,
+   "p_below_alpha": 1.0,
+   "H1_rule": 0.96875
+  },
+  {
+   "true_diff": 0.04,
+   "p_below_alpha": 1.0,
+   "H1_rule": 0.9995
+  },
+  {
+   "true_diff": 0.05,
+   "p_below_alpha": 1.0,
+   "H1_rule": 1.0
+  },
+  {
+   "true_diff": 0.075,
+   "p_below_alpha": 1.0,
+   "H1_rule": 1.0
+  },
+  {
+   "true_diff": 0.1,
+   "p_below_alpha": 1.0,
+   "H1_rule": 1.0
+  }
+ ]
+}

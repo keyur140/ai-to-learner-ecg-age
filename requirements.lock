@@ -1,0 +1,18 @@
+# Exact versions used to build and validate v0.2.0 (Python 3.13, CPU, Linux x86_64).
+# Install with: pip install -r requirements.lock   (GPU users: install the torch build for your CUDA first)
+numpy==2.5.3
+pandas==3.0.5
+scipy==1.18.1
+scikit-learn==1.9.1
+statsmodels==0.15.0
+matplotlib==3.11.2
+PyYAML==6.0.3
+Markdown==3.11.2
+reportlab==5.0.1
+torch==2.14.1
+wfdb==4.3.1
+openai==3.43.0
+transformers==5.20.2
+accelerate==1.15.0
+huggingface_hub==2.3.0
+pytest==9.1.1

@@ -1,0 +1,1051 @@
+2026-11-07T16:48:10 | INFO | ai2human 0.3.0 | run 20261107T164810Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-07T16:48:15 | INFO | already downloaded: data/ptbxl.zip
+2026-11-07T16:48:15 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-07T16:48:16 | INFO | PhysioNet checksums: already verified
+2026-11-07T16:48:16 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-07T16:48:19 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-07T16:48:19 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-07T16:48:19 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-07T16:48:19 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-07T16:48:19 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-07T16:48:19 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-07T16:48:19 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-07T16:48:19 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-07T16:48:19 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-07T16:48:19 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-07T16:48:19 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-07T16:48:19 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-07T16:48:19 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-07T16:48:19 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-07T16:48:19 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-07T16:48:19 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-07T16:48:19 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-07T16:48:19 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-07T16:48:19 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-07T16:48:19 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-07T16:48:20 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-07T16:48:20 | INFO | teacher device: cpu; 5 teacher seed(s)
+2026-11-07T16:48:46 | INFO | teacher epoch   1: loss 0.3554  val AUROC 0.9456
+2026-11-07T16:49:01 | INFO | teacher epoch   2: loss 0.2300  val AUROC 0.9558
+2026-11-07T16:49:17 | INFO | teacher epoch   3: loss 0.1874  val AUROC 0.9668
+2026-11-07T16:49:32 | INFO | teacher epoch   4: loss 0.1689  val AUROC 0.9742
+2026-11-07T16:49:48 | INFO | teacher epoch   5: loss 0.1608  val AUROC 0.9700
+2026-11-07T16:50:02 | INFO | teacher epoch   6: loss 0.1553  val AUROC 0.9744
+2026-11-07T16:50:18 | INFO | teacher epoch   7: loss 0.1450  val AUROC 0.9743
+2026-11-07T16:50:33 | INFO | teacher epoch   8: loss 0.1219  val AUROC 0.9739
+2026-11-07T16:50:48 | INFO | teacher epoch   9: loss 0.1219  val AUROC 0.9758
+2026-11-07T16:51:04 | INFO | teacher epoch  10: loss 0.1190  val AUROC 0.9787
+2026-11-07T16:51:19 | INFO | teacher epoch  11: loss 0.1129  val AUROC 0.9698
+2026-11-07T16:51:35 | INFO | teacher epoch  12: loss 0.1187  val AUROC 0.9727
+2026-11-07T16:51:53 | INFO | teacher epoch  13: loss 0.0888  val AUROC 0.9740
+2026-11-07T19:38:56 | INFO | ai2human 0.3.0 | run 20261107T164810Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-07T19:40:04 | INFO | already downloaded: data/ptbxl.zip
+2026-11-07T19:40:04 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-07T19:40:05 | INFO | PhysioNet checksums: already verified
+2026-11-07T19:40:05 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-07T19:40:09 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-07T19:40:09 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-07T19:40:09 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-07T19:40:09 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-07T19:40:09 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-07T19:40:09 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-07T19:40:09 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-07T19:40:09 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-07T19:40:09 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-07T19:40:09 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-07T19:40:09 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-07T19:40:09 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-07T19:40:09 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-07T19:40:09 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-07T19:40:09 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-07T19:40:09 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-07T19:40:09 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-07T19:40:09 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-07T19:40:09 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-07T19:40:09 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-07T19:40:09 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-07T19:40:09 | INFO | teacher device: cpu; 5 teacher seed(s)
+2026-11-07T19:40:40 | INFO | teacher epoch   1: loss 0.3554  val AUROC 0.9456
+2026-11-07T19:40:55 | INFO | teacher epoch   2: loss 0.2300  val AUROC 0.9558
+2026-11-07T19:41:10 | INFO | teacher epoch   3: loss 0.1874  val AUROC 0.9668
+2026-11-07T19:41:26 | INFO | teacher epoch   4: loss 0.1689  val AUROC 0.9742
+2026-11-07T19:41:42 | INFO | teacher epoch   5: loss 0.1608  val AUROC 0.9700
+2026-11-07T19:41:58 | INFO | teacher epoch   6: loss 0.1553  val AUROC 0.9744
+2026-11-07T19:42:14 | INFO | teacher epoch   7: loss 0.1450  val AUROC 0.9743
+2026-11-07T19:42:31 | INFO | teacher epoch   8: loss 0.1219  val AUROC 0.9739
+2026-11-07T19:42:47 | INFO | teacher epoch   9: loss 0.1219  val AUROC 0.9758
+2026-11-07T19:43:02 | INFO | teacher epoch  10: loss 0.1190  val AUROC 0.9787
+2026-11-07T19:43:18 | INFO | teacher epoch  11: loss 0.1129  val AUROC 0.9698
+2026-11-07T19:43:33 | INFO | teacher epoch  12: loss 0.1187  val AUROC 0.9727
+2026-11-07T19:43:49 | INFO | teacher epoch  13: loss 0.0888  val AUROC 0.9740
+2026-11-07T19:44:04 | INFO | teacher epoch  14: loss 0.0942  val AUROC 0.9734
+2026-11-07T19:44:19 | INFO | teacher epoch  15: loss 0.0874  val AUROC 0.9755
+2026-11-07T19:44:35 | INFO | teacher epoch  16: loss 0.0845  val AUROC 0.9759
+2026-11-07T19:44:35 | INFO | early stop at epoch 16 (best 10)
+2026-11-07T19:44:58 | INFO | teacher seed1 epoch   1: loss 0.3422  val AUROC 0.9483
+2026-11-07T19:45:12 | INFO | teacher seed1 epoch   2: loss 0.2098  val AUROC 0.9706
+2026-11-07T19:45:27 | INFO | teacher seed1 epoch   3: loss 0.1828  val AUROC 0.9368
+2026-11-07T19:45:41 | INFO | teacher seed1 epoch   4: loss 0.1766  val AUROC 0.9670
+2026-11-07T19:45:56 | INFO | teacher seed1 epoch   5: loss 0.1759  val AUROC 0.9731
+2026-11-07T19:46:12 | INFO | teacher seed1 epoch   6: loss 0.1475  val AUROC 0.9731
+2026-11-07T19:46:27 | INFO | teacher seed1 epoch   7: loss 0.1449  val AUROC 0.9724
+2026-11-07T19:46:42 | INFO | teacher seed1 epoch   8: loss 0.1370  val AUROC 0.9702
+2026-11-07T19:46:59 | INFO | teacher seed1 epoch   9: loss 0.1513  val AUROC 0.9777
+2026-11-07T19:47:15 | INFO | teacher seed1 epoch  10: loss 0.1232  val AUROC 0.9722
+2026-11-07T19:47:31 | INFO | teacher seed1 epoch  11: loss 0.1130  val AUROC 0.9768
+2026-11-07T19:47:48 | INFO | teacher seed1 epoch  12: loss 0.1053  val AUROC 0.9747
+2026-11-07T19:48:04 | INFO | teacher seed1 epoch  13: loss 0.1215  val AUROC 0.9755
+2026-11-07T19:48:21 | INFO | teacher seed1 epoch  14: loss 0.0941  val AUROC 0.9769
+2026-11-07T19:48:37 | INFO | teacher seed1 epoch  15: loss 0.0909  val AUROC 0.9791
+2026-11-07T19:48:54 | INFO | teacher seed1 epoch  16: loss 0.0864  val AUROC 0.9785
+2026-11-07T19:49:13 | INFO | teacher seed1 epoch  17: loss 0.0901  val AUROC 0.9748
+2026-11-07T19:49:30 | INFO | teacher seed1 epoch  18: loss 0.1053  val AUROC 0.9772
+2026-11-07T19:49:47 | INFO | teacher seed1 epoch  19: loss 0.0700  val AUROC 0.9761
+2026-11-07T19:50:03 | INFO | teacher seed1 epoch  20: loss 0.0650  val AUROC 0.9726
+2026-11-07T19:50:20 | INFO | teacher seed1 epoch  21: loss 0.1099  val AUROC 0.9799
+2026-11-07T19:50:37 | INFO | teacher seed1 epoch  22: loss 0.0670  val AUROC 0.9736
+2026-11-07T19:50:53 | INFO | teacher seed1 epoch  23: loss 0.0934  val AUROC 0.9787
+2026-11-07T19:51:09 | INFO | teacher seed1 epoch  24: loss 0.0513  val AUROC 0.9766
+2026-11-07T19:51:26 | INFO | teacher seed1 epoch  25: loss 0.0526  val AUROC 0.9783
+2026-11-07T19:51:43 | INFO | teacher seed1 epoch  26: loss 0.0479  val AUROC 0.9786
+2026-11-07T19:52:00 | INFO | teacher seed1 epoch  27: loss 0.0298  val AUROC 0.9795
+2026-11-07T19:52:00 | INFO | early stop seed1 at epoch 27 (best 21)
+2026-11-07T19:52:08 | INFO | teacher seed1: test AUROC 0.983189945208113
+2026-11-07T19:52:25 | INFO | teacher seed2 epoch   1: loss 0.3386  val AUROC 0.9609
+2026-11-07T19:52:43 | INFO | teacher seed2 epoch   2: loss 0.2168  val AUROC 0.9429
+2026-11-07T19:52:59 | INFO | teacher seed2 epoch   3: loss 0.2075  val AUROC 0.9673
+2026-11-07T19:53:15 | INFO | teacher seed2 epoch   4: loss 0.1720  val AUROC 0.9679
+2026-11-07T19:53:31 | INFO | teacher seed2 epoch   5: loss 0.2029  val AUROC 0.9564
+2026-11-07T19:53:48 | INFO | teacher seed2 epoch   6: loss 0.1736  val AUROC 0.9723
+2026-11-07T19:54:03 | INFO | teacher seed2 epoch   7: loss 0.1595  val AUROC 0.9724
+2026-11-07T19:54:19 | INFO | teacher seed2 epoch   8: loss 0.1388  val AUROC 0.9673
+2026-11-07T19:54:36 | INFO | teacher seed2 epoch   9: loss 0.1400  val AUROC 0.9705
+2026-11-07T19:54:51 | INFO | teacher seed2 epoch  10: loss 0.1305  val AUROC 0.9752
+2026-11-07T19:55:06 | INFO | teacher seed2 epoch  11: loss 0.1307  val AUROC 0.9705
+2026-11-07T19:55:23 | INFO | teacher seed2 epoch  12: loss 0.1165  val AUROC 0.9671
+2026-11-07T19:55:38 | INFO | teacher seed2 epoch  13: loss 0.0990  val AUROC 0.9706
+2026-11-07T19:55:55 | INFO | teacher seed2 epoch  14: loss 0.1303  val AUROC 0.9704
+2026-11-07T19:56:10 | INFO | teacher seed2 epoch  15: loss 0.0959  val AUROC 0.9727
+2026-11-07T19:56:26 | INFO | teacher seed2 epoch  16: loss 0.0843  val AUROC 0.9696
+2026-11-07T19:56:26 | INFO | early stop seed2 at epoch 16 (best 10)
+2026-11-07T19:56:35 | INFO | teacher seed2: test AUROC 0.978780159569355
+2026-11-07T19:56:51 | INFO | teacher seed3 epoch   1: loss 0.3739  val AUROC 0.9576
+2026-11-07T19:57:07 | INFO | teacher seed3 epoch   2: loss 0.2185  val AUROC 0.9698
+2026-11-07T19:57:23 | INFO | teacher seed3 epoch   3: loss 0.2037  val AUROC 0.9694
+2026-11-07T19:57:39 | INFO | teacher seed3 epoch   4: loss 0.1631  val AUROC 0.9699
+2026-11-07T19:57:55 | INFO | teacher seed3 epoch   5: loss 0.1569  val AUROC 0.9690
+2026-11-07T19:58:11 | INFO | teacher seed3 epoch   6: loss 0.1455  val AUROC 0.9629
+2026-11-07T19:58:27 | INFO | teacher seed3 epoch   7: loss 0.1402  val AUROC 0.9776
+2026-11-07T19:58:41 | INFO | teacher seed3 epoch   8: loss 0.1434  val AUROC 0.9761
+2026-11-07T19:58:57 | INFO | teacher seed3 epoch   9: loss 0.1304  val AUROC 0.9667
+2026-11-07T19:59:12 | INFO | teacher seed3 epoch  10: loss 0.1251  val AUROC 0.9782
+2026-11-07T19:59:27 | INFO | teacher seed3 epoch  11: loss 0.1146  val AUROC 0.9790
+2026-11-07T19:59:43 | INFO | teacher seed3 epoch  12: loss 0.1117  val AUROC 0.9771
+2026-11-07T19:59:57 | INFO | teacher seed3 epoch  13: loss 0.1036  val AUROC 0.9767
+2026-11-07T20:00:11 | INFO | teacher seed3 epoch  14: loss 0.0958  val AUROC 0.9754
+2026-11-07T20:00:26 | INFO | teacher seed3 epoch  15: loss 0.0962  val AUROC 0.9738
+2026-11-07T20:00:40 | INFO | teacher seed3 epoch  16: loss 0.0942  val AUROC 0.9729
+2026-11-07T20:00:55 | INFO | teacher seed3 epoch  17: loss 0.1011  val AUROC 0.9765
+2026-11-07T20:00:55 | INFO | early stop seed3 at epoch 17 (best 11)
+2026-11-07T20:01:03 | INFO | teacher seed3: test AUROC 0.9831538979140633
+2026-11-07T20:01:17 | INFO | teacher seed4 epoch   1: loss 0.3442  val AUROC 0.9688
+2026-11-07T20:01:33 | INFO | teacher seed4 epoch   2: loss 0.2210  val AUROC 0.9550
+2026-11-07T20:01:47 | INFO | teacher seed4 epoch   3: loss 0.2113  val AUROC 0.9676
+2026-11-07T20:02:01 | INFO | teacher seed4 epoch   4: loss 0.1731  val AUROC 0.9680
+2026-11-07T20:02:15 | INFO | teacher seed4 epoch   5: loss 0.1488  val AUROC 0.9716
+2026-11-07T20:02:31 | INFO | teacher seed4 epoch   6: loss 0.1501  val AUROC 0.9760
+2026-11-07T20:02:46 | INFO | teacher seed4 epoch   7: loss 0.1762  val AUROC 0.9739
+2026-11-07T20:03:00 | INFO | teacher seed4 epoch   8: loss 0.1531  val AUROC 0.9650
+2026-11-07T20:03:15 | INFO | teacher seed4 epoch   9: loss 0.1377  val AUROC 0.9730
+2026-11-07T20:03:30 | INFO | teacher seed4 epoch  10: loss 0.1240  val AUROC 0.9768
+2026-11-07T20:03:45 | INFO | teacher seed4 epoch  11: loss 0.1111  val AUROC 0.9777
+2026-11-07T20:04:01 | INFO | teacher seed4 epoch  12: loss 0.1006  val AUROC 0.9799
+2026-11-07T20:04:16 | INFO | teacher seed4 epoch  13: loss 0.1045  val AUROC 0.9763
+2026-11-07T20:04:31 | INFO | teacher seed4 epoch  14: loss 0.0933  val AUROC 0.9776
+2026-11-07T20:04:46 | INFO | teacher seed4 epoch  15: loss 0.0847  val AUROC 0.9780
+2026-11-07T20:04:59 | INFO | teacher seed4 epoch  16: loss 0.0739  val AUROC 0.9786
+2026-11-07T20:05:15 | INFO | teacher seed4 epoch  17: loss 0.0791  val AUROC 0.9769
+2026-11-07T20:05:31 | INFO | teacher seed4 epoch  18: loss 0.0706  val AUROC 0.9774
+2026-11-07T20:05:31 | INFO | early stop seed4 at epoch 18 (best 12)
+2026-11-07T20:05:38 | INFO | teacher seed4: test AUROC 0.989233874843795
+2026-11-07T20:05:38 | INFO | teacher test: {'n': 610, 'teacher_auroc': 0.9850644044987023, 'teacher_accuracy': 0.9262295081967213, 'features_baseline_auroc': 0.9468062097471882, 'features_baseline_accuracy': 0.8836065573770492}
+2026-11-07T20:05:39 | INFO | cue stability C=0.005: 0 stable features
+2026-11-07T20:05:39 | INFO | cue stability C=0.01: 4 stable features
+2026-11-07T20:05:39 | INFO | cue stability C=0.02: 6 stable features
+2026-11-07T20:05:40 | INFO | [seed1] cue stability C=0.005: 0 stable features
+2026-11-07T20:05:40 | INFO | [seed1] cue stability C=0.01: 3 stable features
+2026-11-07T20:05:40 | INFO | [seed1] cue stability C=0.02: 4 stable features
+2026-11-07T20:05:41 | INFO | [seed1] cue stability C=0.05: 8 stable features
+2026-11-07T20:05:41 | INFO | [seed2] cue stability C=0.005: 0 stable features
+2026-11-07T20:05:41 | INFO | [seed2] cue stability C=0.01: 3 stable features
+2026-11-07T20:05:41 | INFO | [seed2] cue stability C=0.02: 7 stable features
+2026-11-07T20:05:42 | INFO | [seed3] cue stability C=0.005: 0 stable features
+2026-11-07T20:05:42 | INFO | [seed3] cue stability C=0.01: 5 stable features
+2026-11-07T20:05:42 | INFO | [seed4] cue stability C=0.005: 0 stable features
+2026-11-07T20:05:42 | INFO | [seed4] cue stability C=0.01: 4 stable features
+2026-11-07T20:05:43 | INFO | [seed4] cue stability C=0.02: 5 stable features
+2026-11-07T20:05:43 | INFO | cue consensus (5 teachers, need 3): votes {'T_Amp_II': 5, 'PR_Int_Global': 5, 'R_AxisFrontal_Global': 5, 'R_Amp_aVL': 5, 'QT_IntBazett_Global': 3, 'S_Amp_V1': 3, 'T_Amp_V1': 2, 'ST_Amp_V5': 1, 'T_AxisFront_Global': 1, 'T_Amp_V5': 1} -> ['T_Amp_II', 'PR_Int_Global', 'R_AxisFrontal_Global', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1']
+2026-11-07T20:05:43 | INFO | placebo: draw 5, cue-fold tally accuracy 0.462
+2026-11-07T20:05:43 | INFO | cues: ['PR_Int_Global', 'T_Amp_II', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1', 'R_AxisFrontal_Global']; test fidelity {'scrambled_tally_accuracy_true': 0.46557377049180326, 'surrogate_fidelity_to_teacher': 0.8377049180327869, 'surrogate_accuracy_true': 0.8622950819672132, 'rule_tally_fidelity_to_teacher': 0.8147540983606557, 'rule_tally_accuracy_true': 0.819672131147541}
+2026-11-07T20:06:12 | INFO | saliency: densest segment QRS, most cue weight QRS
+2026-11-07T20:08:08 | INFO | nets no_training: 25/30 learners
+2026-11-07T20:08:31 | INFO | nets no_training: 30/30 learners
+2026-11-07T20:10:26 | INFO | nets feedback_only: 25/30 learners
+2026-11-07T20:10:49 | INFO | nets feedback_only: 30/30 learners
+2026-11-07T20:12:41 | INFO | nets cue_training: 25/30 learners
+2026-11-07T20:13:03 | INFO | nets cue_training: 30/30 learners
+2026-11-07T20:14:58 | INFO | nets scrambled_cues: 25/30 learners
+2026-11-07T20:15:20 | INFO | nets scrambled_cues: 30/30 learners
+2026-11-07T20:15:21 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 120 learners (main run)
+2026-11-07T20:15:26 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-07T20:20:12 | INFO | prefix cache verified (max diff 0.0000)
+2026-11-07T20:20:52 | INFO | gate Qwen/Qwen2.5-3B-Instruct (main): accuracy 0.90 -> PASS
+2026-11-07T20:37:25 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 5/120 learners
+2026-11-07T20:53:39 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 10/120 learners
+2026-11-07T21:09:28 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 15/120 learners
+2026-11-07T21:24:59 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 20/120 learners
+2026-11-07T21:39:49 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 25/120 learners
+2026-11-07T21:55:39 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 30/120 learners
+2026-11-07T23:02:01 | INFO | ai2human 0.3.0 | run 20261107T164810Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-07T23:02:03 | INFO | ai2human 0.3.0 | run 20261107T164810Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-07T23:02:05 | INFO | already downloaded: data/ptbxl.zip
+2026-11-07T23:02:05 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-07T23:02:05 | INFO | PhysioNet checksums: already verified
+2026-11-07T23:02:05 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-07T23:02:06 | INFO | already downloaded: data/ptbxl.zip
+2026-11-07T23:02:06 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-07T23:02:07 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-07T23:02:07 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-07T23:02:07 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-07T23:02:07 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-07T23:02:07 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-07T23:02:07 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-07T23:02:07 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-07T23:02:07 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-07T23:02:07 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-07T23:02:07 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-07T23:02:07 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-07T23:02:07 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-07T23:02:07 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-07T23:02:07 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-07T23:02:07 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-07T23:02:07 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-07T23:02:07 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-07T23:02:07 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-07T23:02:07 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-07T23:02:07 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-07T23:02:07 | INFO | PhysioNet checksums: already verified
+2026-11-07T23:02:07 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-07T23:02:07 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-07T23:02:07 | INFO | teacher device: cpu; 5 teacher seed(s)
+2026-11-07T23:02:09 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-07T23:02:09 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-07T23:02:09 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-07T23:02:09 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-07T23:02:09 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-07T23:02:09 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-07T23:02:09 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-07T23:02:09 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-07T23:02:09 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-07T23:02:09 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-07T23:02:09 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-07T23:02:09 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-07T23:02:09 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-07T23:02:09 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-07T23:02:09 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-07T23:02:09 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-07T23:02:09 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-07T23:02:09 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-07T23:02:09 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-07T23:02:09 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-07T23:02:09 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-07T23:02:09 | INFO | teacher device: cpu; 5 teacher seed(s)
+2026-11-07T23:02:32 | INFO | teacher epoch   1: loss 0.3554  val AUROC 0.9456
+2026-11-07T23:02:50 | INFO | teacher epoch   2: loss 0.2300  val AUROC 0.9558
+2026-11-07T23:03:08 | INFO | teacher epoch   3: loss 0.1874  val AUROC 0.9668
+2026-11-07T23:03:26 | INFO | teacher epoch   4: loss 0.1689  val AUROC 0.9742
+2026-11-07T23:03:42 | INFO | teacher epoch   5: loss 0.1608  val AUROC 0.9700
+2026-11-07T23:03:59 | INFO | teacher epoch   6: loss 0.1553  val AUROC 0.9744
+2026-11-07T23:04:17 | INFO | teacher epoch   7: loss 0.1450  val AUROC 0.9743
+2026-11-07T23:04:35 | INFO | teacher epoch   8: loss 0.1219  val AUROC 0.9739
+2026-11-07T23:04:53 | INFO | teacher epoch   9: loss 0.1219  val AUROC 0.9758
+2026-11-07T23:05:10 | INFO | teacher epoch  10: loss 0.1190  val AUROC 0.9787
+2026-11-07T23:05:26 | INFO | teacher epoch  11: loss 0.1129  val AUROC 0.9698
+2026-11-07T23:05:42 | INFO | teacher epoch  12: loss 0.1187  val AUROC 0.9727
+2026-11-07T23:05:58 | INFO | teacher epoch  13: loss 0.0888  val AUROC 0.9740
+2026-11-07T23:06:15 | INFO | teacher epoch  14: loss 0.0942  val AUROC 0.9734
+2026-11-07T23:06:31 | INFO | teacher epoch  15: loss 0.0874  val AUROC 0.9755
+2026-11-07T23:06:47 | INFO | teacher epoch  16: loss 0.0845  val AUROC 0.9759
+2026-11-07T23:06:47 | INFO | early stop at epoch 16 (best 10)
+2026-11-07T23:07:12 | INFO | teacher seed1 epoch   1: loss 0.3422  val AUROC 0.9483
+2026-11-07T23:07:28 | INFO | teacher seed1 epoch   2: loss 0.2098  val AUROC 0.9706
+2026-11-07T23:07:45 | INFO | teacher seed1 epoch   3: loss 0.1828  val AUROC 0.9368
+2026-11-07T23:08:01 | INFO | teacher seed1 epoch   4: loss 0.1766  val AUROC 0.9670
+2026-11-07T23:08:18 | INFO | teacher seed1 epoch   5: loss 0.1759  val AUROC 0.9731
+2026-11-07T23:08:34 | INFO | teacher seed1 epoch   6: loss 0.1475  val AUROC 0.9731
+2026-11-07T23:08:50 | INFO | teacher seed1 epoch   7: loss 0.1449  val AUROC 0.9724
+2026-11-07T23:09:05 | INFO | teacher seed1 epoch   8: loss 0.1370  val AUROC 0.9702
+2026-11-07T23:09:21 | INFO | teacher seed1 epoch   9: loss 0.1513  val AUROC 0.9777
+2026-11-07T23:09:37 | INFO | teacher seed1 epoch  10: loss 0.1232  val AUROC 0.9722
+2026-11-07T23:09:54 | INFO | teacher seed1 epoch  11: loss 0.1130  val AUROC 0.9768
+2026-11-07T23:10:11 | INFO | teacher seed1 epoch  12: loss 0.1053  val AUROC 0.9747
+2026-11-07T23:10:28 | INFO | teacher seed1 epoch  13: loss 0.1215  val AUROC 0.9755
+2026-11-07T23:10:42 | INFO | teacher seed1 epoch  14: loss 0.0941  val AUROC 0.9769
+2026-11-07T23:10:57 | INFO | teacher seed1 epoch  15: loss 0.0909  val AUROC 0.9791
+2026-11-07T23:11:11 | INFO | teacher seed1 epoch  16: loss 0.0864  val AUROC 0.9785
+2026-11-07T23:11:26 | INFO | teacher seed1 epoch  17: loss 0.0901  val AUROC 0.9748
+2026-11-07T23:11:41 | INFO | teacher seed1 epoch  18: loss 0.1053  val AUROC 0.9772
+2026-11-07T23:11:57 | INFO | teacher seed1 epoch  19: loss 0.0700  val AUROC 0.9761
+2026-11-07T23:12:14 | INFO | teacher seed1 epoch  20: loss 0.0650  val AUROC 0.9726
+2026-11-07T23:12:27 | INFO | teacher seed1 epoch  21: loss 0.1099  val AUROC 0.9799
+2026-11-07T23:12:42 | INFO | teacher seed1 epoch  22: loss 0.0670  val AUROC 0.9736
+2026-11-07T23:12:56 | INFO | teacher seed1 epoch  23: loss 0.0934  val AUROC 0.9787
+2026-11-07T23:13:12 | INFO | teacher seed1 epoch  24: loss 0.0513  val AUROC 0.9766
+2026-11-07T23:13:28 | INFO | teacher seed1 epoch  25: loss 0.0526  val AUROC 0.9783
+2026-11-07T23:13:44 | INFO | teacher seed1 epoch  26: loss 0.0479  val AUROC 0.9786
+2026-11-07T23:14:00 | INFO | teacher seed1 epoch  27: loss 0.0298  val AUROC 0.9795
+2026-11-07T23:14:00 | INFO | early stop seed1 at epoch 27 (best 21)
+2026-11-07T23:14:08 | INFO | teacher seed1: test AUROC 0.983189945208113
+2026-11-07T23:14:22 | INFO | teacher seed2 epoch   1: loss 0.3386  val AUROC 0.9609
+2026-11-07T23:14:36 | INFO | teacher seed2 epoch   2: loss 0.2168  val AUROC 0.9429
+2026-11-07T23:14:51 | INFO | teacher seed2 epoch   3: loss 0.2075  val AUROC 0.9673
+2026-11-07T23:15:06 | INFO | teacher seed2 epoch   4: loss 0.1720  val AUROC 0.9679
+2026-11-07T23:15:22 | INFO | teacher seed2 epoch   5: loss 0.2029  val AUROC 0.9564
+2026-11-07T23:15:36 | INFO | teacher seed2 epoch   6: loss 0.1736  val AUROC 0.9723
+2026-11-07T23:15:51 | INFO | teacher seed2 epoch   7: loss 0.1595  val AUROC 0.9724
+2026-11-07T23:16:06 | INFO | teacher seed2 epoch   8: loss 0.1388  val AUROC 0.9673
+2026-11-07T23:16:21 | INFO | teacher seed2 epoch   9: loss 0.1400  val AUROC 0.9705
+2026-11-07T23:16:36 | INFO | teacher seed2 epoch  10: loss 0.1305  val AUROC 0.9752
+2026-11-07T23:16:51 | INFO | teacher seed2 epoch  11: loss 0.1307  val AUROC 0.9705
+2026-11-07T23:17:06 | INFO | teacher seed2 epoch  12: loss 0.1165  val AUROC 0.9671
+2026-11-07T23:17:23 | INFO | teacher seed2 epoch  13: loss 0.0990  val AUROC 0.9706
+2026-11-07T23:17:38 | INFO | teacher seed2 epoch  14: loss 0.1303  val AUROC 0.9704
+2026-11-07T23:17:52 | INFO | teacher seed2 epoch  15: loss 0.0959  val AUROC 0.9727
+2026-11-07T23:18:07 | INFO | teacher seed2 epoch  16: loss 0.0843  val AUROC 0.9696
+2026-11-07T23:18:07 | INFO | early stop seed2 at epoch 16 (best 10)
+2026-11-07T23:18:14 | INFO | teacher seed2: test AUROC 0.978780159569355
+2026-11-07T23:18:29 | INFO | teacher seed3 epoch   1: loss 0.3739  val AUROC 0.9576
+2026-11-07T23:18:43 | INFO | teacher seed3 epoch   2: loss 0.2185  val AUROC 0.9698
+2026-11-07T23:18:58 | INFO | teacher seed3 epoch   3: loss 0.2037  val AUROC 0.9694
+2026-11-07T23:19:13 | INFO | teacher seed3 epoch   4: loss 0.1631  val AUROC 0.9699
+2026-11-07T23:19:27 | INFO | teacher seed3 epoch   5: loss 0.1569  val AUROC 0.9690
+2026-11-07T23:19:42 | INFO | teacher seed3 epoch   6: loss 0.1455  val AUROC 0.9629
+2026-11-07T23:19:57 | INFO | teacher seed3 epoch   7: loss 0.1402  val AUROC 0.9776
+2026-11-07T23:20:12 | INFO | teacher seed3 epoch   8: loss 0.1434  val AUROC 0.9761
+2026-11-07T23:20:27 | INFO | teacher seed3 epoch   9: loss 0.1304  val AUROC 0.9667
+2026-11-07T23:20:43 | INFO | teacher seed3 epoch  10: loss 0.1251  val AUROC 0.9782
+2026-11-07T23:20:58 | INFO | teacher seed3 epoch  11: loss 0.1146  val AUROC 0.9790
+2026-11-07T23:21:14 | INFO | teacher seed3 epoch  12: loss 0.1117  val AUROC 0.9771
+2026-11-07T23:21:31 | INFO | teacher seed3 epoch  13: loss 0.1036  val AUROC 0.9767
+2026-11-07T23:21:47 | INFO | teacher seed3 epoch  14: loss 0.0958  val AUROC 0.9754
+2026-11-07T23:22:02 | INFO | teacher seed3 epoch  15: loss 0.0962  val AUROC 0.9738
+2026-11-07T23:22:16 | INFO | teacher seed3 epoch  16: loss 0.0942  val AUROC 0.9729
+2026-11-07T23:22:30 | INFO | teacher seed3 epoch  17: loss 0.1011  val AUROC 0.9765
+2026-11-07T23:22:30 | INFO | early stop seed3 at epoch 17 (best 11)
+2026-11-07T23:22:37 | INFO | teacher seed3: test AUROC 0.9831538979140633
+2026-11-07T23:22:51 | INFO | teacher seed4 epoch   1: loss 0.3442  val AUROC 0.9688
+2026-11-07T23:23:06 | INFO | teacher seed4 epoch   2: loss 0.2210  val AUROC 0.9550
+2026-11-07T23:23:21 | INFO | teacher seed4 epoch   3: loss 0.2113  val AUROC 0.9676
+2026-11-07T23:23:35 | INFO | teacher seed4 epoch   4: loss 0.1731  val AUROC 0.9680
+2026-11-07T23:23:49 | INFO | teacher seed4 epoch   5: loss 0.1488  val AUROC 0.9716
+2026-11-07T23:24:03 | INFO | teacher seed4 epoch   6: loss 0.1501  val AUROC 0.9760
+2026-11-07T23:24:17 | INFO | teacher seed4 epoch   7: loss 0.1762  val AUROC 0.9739
+2026-11-07T23:24:31 | INFO | teacher seed4 epoch   8: loss 0.1531  val AUROC 0.9650
+2026-11-07T23:24:45 | INFO | teacher seed4 epoch   9: loss 0.1377  val AUROC 0.9730
+2026-11-07T23:24:59 | INFO | teacher seed4 epoch  10: loss 0.1240  val AUROC 0.9768
+2026-11-07T23:25:13 | INFO | teacher seed4 epoch  11: loss 0.1111  val AUROC 0.9777
+2026-11-07T23:25:27 | INFO | teacher seed4 epoch  12: loss 0.1006  val AUROC 0.9799
+2026-11-07T23:25:41 | INFO | teacher seed4 epoch  13: loss 0.1045  val AUROC 0.9763
+2026-11-07T23:25:57 | INFO | teacher seed4 epoch  14: loss 0.0933  val AUROC 0.9776
+2026-11-07T23:26:12 | INFO | teacher seed4 epoch  15: loss 0.0847  val AUROC 0.9780
+2026-11-07T23:26:27 | INFO | teacher seed4 epoch  16: loss 0.0739  val AUROC 0.9786
+2026-11-07T23:26:41 | INFO | teacher seed4 epoch  17: loss 0.0791  val AUROC 0.9769
+2026-11-07T23:26:55 | INFO | teacher seed4 epoch  18: loss 0.0706  val AUROC 0.9774
+2026-11-07T23:26:55 | INFO | early stop seed4 at epoch 18 (best 12)
+2026-11-07T23:27:02 | INFO | teacher seed4: test AUROC 0.989233874843795
+2026-11-07T23:27:02 | INFO | teacher test: {'n': 610, 'teacher_auroc': 0.9850644044987023, 'teacher_accuracy': 0.9262295081967213, 'features_baseline_auroc': 0.9468062097471882, 'features_baseline_accuracy': 0.8836065573770492}
+2026-11-07T23:27:02 | INFO | cue stability C=0.005: 0 stable features
+2026-11-07T23:27:03 | INFO | cue stability C=0.01: 4 stable features
+2026-11-07T23:27:03 | INFO | cue stability C=0.02: 6 stable features
+2026-11-07T23:27:03 | INFO | [seed1] cue stability C=0.005: 0 stable features
+2026-11-07T23:27:03 | INFO | [seed1] cue stability C=0.01: 3 stable features
+2026-11-07T23:27:04 | INFO | [seed1] cue stability C=0.02: 4 stable features
+2026-11-07T23:27:04 | INFO | [seed1] cue stability C=0.05: 8 stable features
+2026-11-07T23:27:04 | INFO | [seed2] cue stability C=0.005: 0 stable features
+2026-11-07T23:27:05 | INFO | [seed2] cue stability C=0.01: 3 stable features
+2026-11-07T23:27:05 | INFO | [seed2] cue stability C=0.02: 7 stable features
+2026-11-07T23:27:05 | INFO | [seed3] cue stability C=0.005: 0 stable features
+2026-11-07T23:27:05 | INFO | [seed3] cue stability C=0.01: 5 stable features
+2026-11-07T23:27:06 | INFO | [seed4] cue stability C=0.005: 0 stable features
+2026-11-07T23:27:06 | INFO | [seed4] cue stability C=0.01: 4 stable features
+2026-11-07T23:27:06 | INFO | [seed4] cue stability C=0.02: 5 stable features
+2026-11-07T23:27:06 | INFO | cue consensus (5 teachers, need 3): votes {'T_Amp_II': 5, 'PR_Int_Global': 5, 'R_AxisFrontal_Global': 5, 'R_Amp_aVL': 5, 'QT_IntBazett_Global': 3, 'S_Amp_V1': 3, 'T_Amp_V1': 2, 'ST_Amp_V5': 1, 'T_AxisFront_Global': 1, 'T_Amp_V5': 1} -> ['T_Amp_II', 'PR_Int_Global', 'R_AxisFrontal_Global', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1']
+2026-11-07T23:27:06 | INFO | placebo: draw 5, cue-fold tally accuracy 0.462
+2026-11-07T23:27:06 | INFO | cues: ['PR_Int_Global', 'T_Amp_II', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1', 'R_AxisFrontal_Global']; test fidelity {'scrambled_tally_accuracy_true': 0.46557377049180326, 'surrogate_fidelity_to_teacher': 0.8377049180327869, 'surrogate_accuracy_true': 0.8622950819672132, 'rule_tally_fidelity_to_teacher': 0.8147540983606557, 'rule_tally_accuracy_true': 0.819672131147541}
+2026-11-07T23:27:32 | INFO | saliency: densest segment QRS, most cue weight QRS
+2026-11-07T23:27:32 | INFO | resuming nets experiment: 120 learners already done
+2026-11-07T23:27:32 | INFO | resuming LLM experiment: 33 learners already done
+2026-11-07T23:27:32 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 87 learners (main run)
+2026-11-07T23:27:34 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-07T23:28:19 | INFO | prefix cache verified (max diff 0.0024)
+2026-11-08T00:21:35 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 5/87 learners
+2026-11-08T01:18:10 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 10/87 learners
+2026-11-08T02:12:22 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 15/87 learners
+2026-11-08T03:07:20 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 20/87 learners
+2026-11-08T04:00:16 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 25/87 learners
+2026-11-08T04:54:30 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 30/87 learners
+2026-11-08T05:48:24 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 35/87 learners
+2026-11-08T06:44:35 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 40/87 learners
+2026-11-08T06:59:19 | INFO | ai2human 0.3.0 | run 20261107T164810Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-08T06:59:23 | INFO | already downloaded: data/ptbxl.zip
+2026-11-08T06:59:23 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-08T06:59:24 | INFO | PhysioNet checksums: already verified
+2026-11-08T06:59:24 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-08T06:59:26 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-08T06:59:26 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-08T06:59:26 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-08T06:59:26 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-08T06:59:26 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-08T06:59:26 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-08T06:59:26 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-08T06:59:26 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-08T06:59:26 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-08T06:59:26 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-08T06:59:26 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-08T06:59:26 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-08T06:59:26 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-08T06:59:26 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-08T06:59:26 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-08T06:59:26 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-08T06:59:26 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-08T06:59:26 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-08T06:59:26 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-08T06:59:26 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-08T06:59:26 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-08T06:59:26 | INFO | teacher device: cpu; 5 teacher seed(s)
+2026-11-08T06:59:44 | INFO | teacher epoch   1: loss 0.3554  val AUROC 0.9456
+2026-11-08T06:59:58 | INFO | teacher epoch   2: loss 0.2300  val AUROC 0.9558
+2026-11-08T07:00:12 | INFO | teacher epoch   3: loss 0.1874  val AUROC 0.9668
+2026-11-08T07:00:27 | INFO | teacher epoch   4: loss 0.1689  val AUROC 0.9742
+2026-11-08T07:00:42 | INFO | teacher epoch   5: loss 0.1608  val AUROC 0.9700
+2026-11-08T07:00:56 | INFO | teacher epoch   6: loss 0.1553  val AUROC 0.9744
+2026-11-08T07:01:10 | INFO | teacher epoch   7: loss 0.1450  val AUROC 0.9743
+2026-11-08T07:01:25 | INFO | teacher epoch   8: loss 0.1219  val AUROC 0.9739
+2026-11-08T07:01:40 | INFO | teacher epoch   9: loss 0.1219  val AUROC 0.9758
+2026-11-08T07:01:56 | INFO | teacher epoch  10: loss 0.1190  val AUROC 0.9787
+2026-11-08T07:02:11 | INFO | teacher epoch  11: loss 0.1129  val AUROC 0.9698
+2026-11-08T07:02:25 | INFO | teacher epoch  12: loss 0.1187  val AUROC 0.9727
+2026-11-08T07:02:38 | INFO | teacher epoch  13: loss 0.0888  val AUROC 0.9740
+2026-11-08T07:02:53 | INFO | teacher epoch  14: loss 0.0942  val AUROC 0.9734
+2026-11-08T07:03:08 | INFO | teacher epoch  15: loss 0.0874  val AUROC 0.9755
+2026-11-08T07:03:24 | INFO | teacher epoch  16: loss 0.0845  val AUROC 0.9759
+2026-11-08T07:03:24 | INFO | early stop at epoch 16 (best 10)
+2026-11-08T07:03:47 | INFO | teacher seed1 epoch   1: loss 0.3422  val AUROC 0.9483
+2026-11-08T07:04:04 | INFO | teacher seed1 epoch   2: loss 0.2098  val AUROC 0.9706
+2026-11-08T07:04:18 | INFO | teacher seed1 epoch   3: loss 0.1828  val AUROC 0.9368
+2026-11-08T07:04:32 | INFO | teacher seed1 epoch   4: loss 0.1766  val AUROC 0.9670
+2026-11-08T07:04:47 | INFO | teacher seed1 epoch   5: loss 0.1759  val AUROC 0.9731
+2026-11-08T07:05:02 | INFO | teacher seed1 epoch   6: loss 0.1475  val AUROC 0.9731
+2026-11-08T07:05:16 | INFO | teacher seed1 epoch   7: loss 0.1449  val AUROC 0.9724
+2026-11-08T07:05:31 | INFO | teacher seed1 epoch   8: loss 0.1370  val AUROC 0.9702
+2026-11-08T07:05:45 | INFO | teacher seed1 epoch   9: loss 0.1513  val AUROC 0.9777
+2026-11-08T07:06:00 | INFO | teacher seed1 epoch  10: loss 0.1232  val AUROC 0.9722
+2026-11-08T07:06:13 | INFO | teacher seed1 epoch  11: loss 0.1130  val AUROC 0.9768
+2026-11-08T07:06:29 | INFO | teacher seed1 epoch  12: loss 0.1053  val AUROC 0.9747
+2026-11-08T07:06:44 | INFO | teacher seed1 epoch  13: loss 0.1215  val AUROC 0.9755
+2026-11-08T07:07:00 | INFO | teacher seed1 epoch  14: loss 0.0941  val AUROC 0.9769
+2026-11-08T07:07:15 | INFO | teacher seed1 epoch  15: loss 0.0909  val AUROC 0.9791
+2026-11-08T07:07:29 | INFO | teacher seed1 epoch  16: loss 0.0864  val AUROC 0.9785
+2026-11-08T07:07:43 | INFO | teacher seed1 epoch  17: loss 0.0901  val AUROC 0.9748
+2026-11-08T07:07:59 | INFO | teacher seed1 epoch  18: loss 0.1053  val AUROC 0.9772
+2026-11-08T07:08:14 | INFO | teacher seed1 epoch  19: loss 0.0700  val AUROC 0.9761
+2026-11-08T07:08:28 | INFO | teacher seed1 epoch  20: loss 0.0650  val AUROC 0.9726
+2026-11-08T07:08:43 | INFO | teacher seed1 epoch  21: loss 0.1099  val AUROC 0.9799
+2026-11-08T07:08:59 | INFO | teacher seed1 epoch  22: loss 0.0670  val AUROC 0.9736
+2026-11-08T07:09:14 | INFO | teacher seed1 epoch  23: loss 0.0934  val AUROC 0.9787
+2026-11-08T07:09:29 | INFO | teacher seed1 epoch  24: loss 0.0513  val AUROC 0.9766
+2026-11-08T07:09:43 | INFO | teacher seed1 epoch  25: loss 0.0526  val AUROC 0.9783
+2026-11-08T07:09:59 | INFO | teacher seed1 epoch  26: loss 0.0479  val AUROC 0.9786
+2026-11-08T07:10:15 | INFO | teacher seed1 epoch  27: loss 0.0298  val AUROC 0.9795
+2026-11-08T07:10:15 | INFO | early stop seed1 at epoch 27 (best 21)
+2026-11-08T07:10:23 | INFO | teacher seed1: test AUROC 0.983189945208113
+2026-11-08T07:10:40 | INFO | teacher seed2 epoch   1: loss 0.3386  val AUROC 0.9609
+2026-11-08T07:10:56 | INFO | teacher seed2 epoch   2: loss 0.2168  val AUROC 0.9429
+2026-11-08T07:11:13 | INFO | teacher seed2 epoch   3: loss 0.2075  val AUROC 0.9673
+2026-11-08T07:11:29 | INFO | teacher seed2 epoch   4: loss 0.1720  val AUROC 0.9679
+2026-11-08T07:11:45 | INFO | teacher seed2 epoch   5: loss 0.2029  val AUROC 0.9564
+2026-11-08T07:12:01 | INFO | teacher seed2 epoch   6: loss 0.1736  val AUROC 0.9723
+2026-11-08T07:12:18 | INFO | teacher seed2 epoch   7: loss 0.1595  val AUROC 0.9724
+2026-11-08T07:12:34 | INFO | teacher seed2 epoch   8: loss 0.1388  val AUROC 0.9673
+2026-11-08T07:12:50 | INFO | teacher seed2 epoch   9: loss 0.1400  val AUROC 0.9705
+2026-11-08T07:13:07 | INFO | teacher seed2 epoch  10: loss 0.1305  val AUROC 0.9752
+2026-11-08T07:13:24 | INFO | teacher seed2 epoch  11: loss 0.1307  val AUROC 0.9705
+2026-11-08T07:13:41 | INFO | teacher seed2 epoch  12: loss 0.1165  val AUROC 0.9671
+2026-11-08T07:13:57 | INFO | teacher seed2 epoch  13: loss 0.0990  val AUROC 0.9706
+2026-11-08T07:14:13 | INFO | teacher seed2 epoch  14: loss 0.1303  val AUROC 0.9704
+2026-11-08T07:14:29 | INFO | teacher seed2 epoch  15: loss 0.0959  val AUROC 0.9727
+2026-11-08T07:14:45 | INFO | teacher seed2 epoch  16: loss 0.0843  val AUROC 0.9696
+2026-11-08T07:14:45 | INFO | early stop seed2 at epoch 16 (best 10)
+2026-11-08T07:14:54 | INFO | teacher seed2: test AUROC 0.978780159569355
+2026-11-08T07:15:11 | INFO | teacher seed3 epoch   1: loss 0.3739  val AUROC 0.9576
+2026-11-08T07:15:26 | INFO | teacher seed3 epoch   2: loss 0.2185  val AUROC 0.9698
+2026-11-08T07:15:41 | INFO | teacher seed3 epoch   3: loss 0.2037  val AUROC 0.9694
+2026-11-08T07:15:57 | INFO | teacher seed3 epoch   4: loss 0.1631  val AUROC 0.9699
+2026-11-08T07:16:13 | INFO | teacher seed3 epoch   5: loss 0.1569  val AUROC 0.9690
+2026-11-08T07:16:29 | INFO | teacher seed3 epoch   6: loss 0.1455  val AUROC 0.9629
+2026-11-08T07:16:45 | INFO | teacher seed3 epoch   7: loss 0.1402  val AUROC 0.9776
+2026-11-08T07:17:00 | INFO | teacher seed3 epoch   8: loss 0.1434  val AUROC 0.9761
+2026-11-08T07:17:14 | INFO | teacher seed3 epoch   9: loss 0.1304  val AUROC 0.9667
+2026-11-08T07:17:29 | INFO | teacher seed3 epoch  10: loss 0.1251  val AUROC 0.9782
+2026-11-08T07:17:45 | INFO | teacher seed3 epoch  11: loss 0.1146  val AUROC 0.9790
+2026-11-08T07:17:59 | INFO | teacher seed3 epoch  12: loss 0.1117  val AUROC 0.9771
+2026-11-08T07:18:15 | INFO | teacher seed3 epoch  13: loss 0.1036  val AUROC 0.9767
+2026-11-08T07:18:32 | INFO | teacher seed3 epoch  14: loss 0.0958  val AUROC 0.9754
+2026-11-08T07:18:47 | INFO | teacher seed3 epoch  15: loss 0.0962  val AUROC 0.9738
+2026-11-08T07:19:03 | INFO | teacher seed3 epoch  16: loss 0.0942  val AUROC 0.9729
+2026-11-08T07:19:19 | INFO | teacher seed3 epoch  17: loss 0.1011  val AUROC 0.9765
+2026-11-08T07:19:19 | INFO | early stop seed3 at epoch 17 (best 11)
+2026-11-08T07:19:27 | INFO | teacher seed3: test AUROC 0.9831538979140633
+2026-11-08T07:19:42 | INFO | teacher seed4 epoch   1: loss 0.3442  val AUROC 0.9688
+2026-11-08T07:19:58 | INFO | teacher seed4 epoch   2: loss 0.2210  val AUROC 0.9550
+2026-11-08T07:20:13 | INFO | teacher seed4 epoch   3: loss 0.2113  val AUROC 0.9676
+2026-11-08T07:20:29 | INFO | teacher seed4 epoch   4: loss 0.1731  val AUROC 0.9680
+2026-11-08T07:20:45 | INFO | teacher seed4 epoch   5: loss 0.1488  val AUROC 0.9716
+2026-11-08T07:21:00 | INFO | teacher seed4 epoch   6: loss 0.1501  val AUROC 0.9760
+2026-11-08T07:21:16 | INFO | teacher seed4 epoch   7: loss 0.1762  val AUROC 0.9739
+2026-11-08T07:21:32 | INFO | teacher seed4 epoch   8: loss 0.1531  val AUROC 0.9650
+2026-11-08T07:21:50 | INFO | teacher seed4 epoch   9: loss 0.1377  val AUROC 0.9730
+2026-11-08T07:22:06 | INFO | teacher seed4 epoch  10: loss 0.1240  val AUROC 0.9768
+2026-11-08T07:22:23 | INFO | teacher seed4 epoch  11: loss 0.1111  val AUROC 0.9777
+2026-11-08T07:22:44 | INFO | teacher seed4 epoch  12: loss 0.1006  val AUROC 0.9799
+2026-11-08T07:23:01 | INFO | teacher seed4 epoch  13: loss 0.1045  val AUROC 0.9763
+2026-11-08T07:23:21 | INFO | teacher seed4 epoch  14: loss 0.0933  val AUROC 0.9776
+2026-11-08T07:23:38 | INFO | teacher seed4 epoch  15: loss 0.0847  val AUROC 0.9780
+2026-11-08T07:23:54 | INFO | teacher seed4 epoch  16: loss 0.0739  val AUROC 0.9786
+2026-11-08T07:24:11 | INFO | teacher seed4 epoch  17: loss 0.0791  val AUROC 0.9769
+2026-11-08T07:24:28 | INFO | teacher seed4 epoch  18: loss 0.0706  val AUROC 0.9774
+2026-11-08T07:24:28 | INFO | early stop seed4 at epoch 18 (best 12)
+2026-11-08T07:24:37 | INFO | teacher seed4: test AUROC 0.989233874843795
+2026-11-08T07:24:37 | INFO | teacher test: {'n': 610, 'teacher_auroc': 0.9850644044987023, 'teacher_accuracy': 0.9262295081967213, 'features_baseline_auroc': 0.9468062097471882, 'features_baseline_accuracy': 0.8836065573770492}
+2026-11-08T07:24:37 | INFO | cue stability C=0.005: 0 stable features
+2026-11-08T07:24:37 | INFO | cue stability C=0.01: 4 stable features
+2026-11-08T07:24:37 | INFO | cue stability C=0.02: 6 stable features
+2026-11-08T07:24:38 | INFO | [seed1] cue stability C=0.005: 0 stable features
+2026-11-08T07:24:38 | INFO | [seed1] cue stability C=0.01: 3 stable features
+2026-11-08T07:24:38 | INFO | [seed1] cue stability C=0.02: 4 stable features
+2026-11-08T07:24:38 | INFO | [seed1] cue stability C=0.05: 8 stable features
+2026-11-08T07:24:39 | INFO | [seed2] cue stability C=0.005: 0 stable features
+2026-11-08T07:24:39 | INFO | [seed2] cue stability C=0.01: 3 stable features
+2026-11-08T07:24:39 | INFO | [seed2] cue stability C=0.02: 7 stable features
+2026-11-08T07:24:39 | INFO | [seed3] cue stability C=0.005: 0 stable features
+2026-11-08T07:24:40 | INFO | [seed3] cue stability C=0.01: 5 stable features
+2026-11-08T07:24:40 | INFO | [seed4] cue stability C=0.005: 0 stable features
+2026-11-08T07:24:40 | INFO | [seed4] cue stability C=0.01: 4 stable features
+2026-11-08T07:24:41 | INFO | [seed4] cue stability C=0.02: 5 stable features
+2026-11-08T07:24:41 | INFO | cue consensus (5 teachers, need 3): votes {'T_Amp_II': 5, 'PR_Int_Global': 5, 'R_AxisFrontal_Global': 5, 'R_Amp_aVL': 5, 'QT_IntBazett_Global': 3, 'S_Amp_V1': 3, 'T_Amp_V1': 2, 'ST_Amp_V5': 1, 'T_AxisFront_Global': 1, 'T_Amp_V5': 1} -> ['T_Amp_II', 'PR_Int_Global', 'R_AxisFrontal_Global', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1']
+2026-11-08T07:24:41 | INFO | placebo: draw 5, cue-fold tally accuracy 0.462
+2026-11-08T07:24:41 | INFO | cues: ['PR_Int_Global', 'T_Amp_II', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1', 'R_AxisFrontal_Global']; test fidelity {'scrambled_tally_accuracy_true': 0.46557377049180326, 'surrogate_fidelity_to_teacher': 0.8377049180327869, 'surrogate_accuracy_true': 0.8622950819672132, 'rule_tally_fidelity_to_teacher': 0.8147540983606557, 'rule_tally_accuracy_true': 0.819672131147541}
+2026-11-08T07:25:13 | INFO | saliency: densest segment QRS, most cue weight QRS
+2026-11-08T07:25:13 | INFO | resuming nets experiment: 120 learners already done
+2026-11-08T07:25:13 | INFO | resuming LLM experiment: 73 learners already done
+2026-11-08T07:25:13 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 47 learners (main run)
+2026-11-08T07:25:15 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-08T07:26:14 | INFO | prefix cache verified (max diff 0.0113)
+2026-11-08T08:09:45 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 5/47 learners
+2026-11-08T08:53:44 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 10/47 learners
+2026-11-08T09:36:18 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 15/47 learners
+2026-11-08T10:22:18 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 20/47 learners
+2026-11-08T11:08:54 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 25/47 learners
+2026-11-08T11:55:10 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 30/47 learners
+2026-11-08T12:41:54 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 35/47 learners
+2026-11-08T13:28:51 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 40/47 learners
+2026-11-08T14:16:49 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 45/47 learners
+2026-11-08T14:37:10 | INFO | LLM Qwen/Qwen2.5-3B-Instruct: 47/47 learners
+2026-11-08T14:37:12 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 120 learners (blinded run)
+2026-11-08T14:37:12 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-08T14:37:35 | INFO | prefix cache verified (max diff 0.0001)
+2026-11-08T14:37:53 | INFO | gate Qwen/Qwen2.5-3B-Instruct (blinded): accuracy 0.85 -> PASS
+2026-11-08T14:50:56 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 5/120 learners
+2026-11-08T15:04:10 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 10/120 learners
+2026-11-08T15:17:16 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 15/120 learners
+2026-11-08T15:30:43 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 20/120 learners
+2026-11-08T15:43:40 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 25/120 learners
+2026-11-08T15:57:20 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 30/120 learners
+2026-11-08T16:34:59 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 35/120 learners
+2026-11-08T17:11:57 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 40/120 learners
+2026-11-08T17:48:43 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 45/120 learners
+2026-11-08T18:23:16 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 50/120 learners
+2026-11-08T18:58:54 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 55/120 learners
+2026-11-08T19:23:30 | INFO | ai2human 0.3.0 | run 20261107T164810Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-08T19:24:48 | INFO | already downloaded: data/ptbxl.zip
+2026-11-08T19:24:48 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-08T19:24:54 | INFO | PhysioNet checksums: already verified
+2026-11-08T19:24:54 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-08T19:25:09 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-08T19:25:09 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-08T19:25:09 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-08T19:25:09 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-08T19:25:09 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-08T19:25:09 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-08T19:25:09 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-08T19:25:09 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-08T19:25:09 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-08T19:25:09 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-08T19:25:09 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-08T19:25:09 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-08T19:25:09 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-08T19:25:09 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-08T19:25:09 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-08T19:25:09 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-08T19:25:09 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-08T19:25:09 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-08T19:25:09 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-08T19:25:09 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-08T19:25:10 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-08T19:25:10 | INFO | teacher device: cpu; 5 teacher seed(s)
+2026-11-08T19:25:39 | INFO | teacher epoch   1: loss 0.3554  val AUROC 0.9456
+2026-11-08T19:25:55 | INFO | teacher epoch   2: loss 0.2300  val AUROC 0.9558
+2026-11-08T19:26:11 | INFO | teacher epoch   3: loss 0.1874  val AUROC 0.9668
+2026-11-08T19:26:27 | INFO | teacher epoch   4: loss 0.1689  val AUROC 0.9742
+2026-11-08T19:26:43 | INFO | teacher epoch   5: loss 0.1608  val AUROC 0.9700
+2026-11-08T19:27:02 | INFO | teacher epoch   6: loss 0.1553  val AUROC 0.9744
+2026-11-08T19:27:18 | INFO | teacher epoch   7: loss 0.1450  val AUROC 0.9743
+2026-11-08T19:27:35 | INFO | teacher epoch   8: loss 0.1219  val AUROC 0.9739
+2026-11-08T19:27:52 | INFO | teacher epoch   9: loss 0.1219  val AUROC 0.9758
+2026-11-08T19:28:09 | INFO | teacher epoch  10: loss 0.1190  val AUROC 0.9787
+2026-11-08T19:28:24 | INFO | teacher epoch  11: loss 0.1129  val AUROC 0.9698
+2026-11-08T19:28:40 | INFO | teacher epoch  12: loss 0.1187  val AUROC 0.9727
+2026-11-08T19:28:56 | INFO | teacher epoch  13: loss 0.0888  val AUROC 0.9740
+2026-11-08T19:29:13 | INFO | teacher epoch  14: loss 0.0942  val AUROC 0.9734
+2026-11-08T19:29:28 | INFO | teacher epoch  15: loss 0.0874  val AUROC 0.9755
+2026-11-08T19:29:45 | INFO | teacher epoch  16: loss 0.0845  val AUROC 0.9759
+2026-11-08T19:29:45 | INFO | early stop at epoch 16 (best 10)
+2026-11-08T19:30:11 | INFO | teacher seed1 epoch   1: loss 0.3422  val AUROC 0.9483
+2026-11-08T19:30:29 | INFO | teacher seed1 epoch   2: loss 0.2098  val AUROC 0.9706
+2026-11-08T19:30:44 | INFO | teacher seed1 epoch   3: loss 0.1828  val AUROC 0.9368
+2026-11-08T19:31:01 | INFO | teacher seed1 epoch   4: loss 0.1766  val AUROC 0.9670
+2026-11-08T19:31:19 | INFO | teacher seed1 epoch   5: loss 0.1759  val AUROC 0.9731
+2026-11-08T19:31:37 | INFO | teacher seed1 epoch   6: loss 0.1475  val AUROC 0.9731
+2026-11-08T19:31:55 | INFO | teacher seed1 epoch   7: loss 0.1449  val AUROC 0.9724
+2026-11-08T19:32:13 | INFO | teacher seed1 epoch   8: loss 0.1370  val AUROC 0.9702
+2026-11-08T19:32:31 | INFO | teacher seed1 epoch   9: loss 0.1513  val AUROC 0.9777
+2026-11-08T19:32:49 | INFO | teacher seed1 epoch  10: loss 0.1232  val AUROC 0.9722
+2026-11-08T19:33:06 | INFO | teacher seed1 epoch  11: loss 0.1130  val AUROC 0.9768
+2026-11-08T19:33:26 | INFO | teacher seed1 epoch  12: loss 0.1053  val AUROC 0.9747
+2026-11-08T19:33:44 | INFO | teacher seed1 epoch  13: loss 0.1215  val AUROC 0.9755
+2026-11-08T19:34:02 | INFO | teacher seed1 epoch  14: loss 0.0941  val AUROC 0.9769
+2026-11-08T19:34:21 | INFO | teacher seed1 epoch  15: loss 0.0909  val AUROC 0.9791
+2026-11-08T19:34:38 | INFO | teacher seed1 epoch  16: loss 0.0864  val AUROC 0.9785
+2026-11-08T19:34:56 | INFO | teacher seed1 epoch  17: loss 0.0901  val AUROC 0.9748
+2026-11-08T19:35:13 | INFO | teacher seed1 epoch  18: loss 0.1053  val AUROC 0.9772
+2026-11-08T19:35:32 | INFO | teacher seed1 epoch  19: loss 0.0700  val AUROC 0.9761
+2026-11-08T19:35:49 | INFO | teacher seed1 epoch  20: loss 0.0650  val AUROC 0.9726
+2026-11-08T19:36:05 | INFO | teacher seed1 epoch  21: loss 0.1099  val AUROC 0.9799
+2026-11-08T19:36:24 | INFO | teacher seed1 epoch  22: loss 0.0670  val AUROC 0.9736
+2026-11-08T19:36:41 | INFO | teacher seed1 epoch  23: loss 0.0934  val AUROC 0.9787
+2026-11-08T19:36:59 | INFO | teacher seed1 epoch  24: loss 0.0513  val AUROC 0.9766
+2026-11-08T19:37:14 | INFO | teacher seed1 epoch  25: loss 0.0526  val AUROC 0.9783
+2026-11-08T19:37:31 | INFO | teacher seed1 epoch  26: loss 0.0479  val AUROC 0.9786
+2026-11-08T19:37:47 | INFO | teacher seed1 epoch  27: loss 0.0298  val AUROC 0.9795
+2026-11-08T19:37:47 | INFO | early stop seed1 at epoch 27 (best 21)
+2026-11-08T19:37:56 | INFO | teacher seed1: test AUROC 0.983189945208113
+2026-11-08T19:38:13 | INFO | teacher seed2 epoch   1: loss 0.3386  val AUROC 0.9609
+2026-11-08T19:38:30 | INFO | teacher seed2 epoch   2: loss 0.2168  val AUROC 0.9429
+2026-11-08T19:38:46 | INFO | teacher seed2 epoch   3: loss 0.2075  val AUROC 0.9673
+2026-11-08T19:39:03 | INFO | teacher seed2 epoch   4: loss 0.1720  val AUROC 0.9679
+2026-11-08T19:39:21 | INFO | teacher seed2 epoch   5: loss 0.2029  val AUROC 0.9564
+2026-11-08T19:39:39 | INFO | teacher seed2 epoch   6: loss 0.1736  val AUROC 0.9723
+2026-11-08T19:39:58 | INFO | teacher seed2 epoch   7: loss 0.1595  val AUROC 0.9724
+2026-11-08T19:40:17 | INFO | teacher seed2 epoch   8: loss 0.1388  val AUROC 0.9673
+2026-11-08T19:40:35 | INFO | teacher seed2 epoch   9: loss 0.1400  val AUROC 0.9705
+2026-11-08T19:40:54 | INFO | teacher seed2 epoch  10: loss 0.1305  val AUROC 0.9752
+2026-11-08T19:41:13 | INFO | teacher seed2 epoch  11: loss 0.1307  val AUROC 0.9705
+2026-11-08T19:41:30 | INFO | teacher seed2 epoch  12: loss 0.1165  val AUROC 0.9671
+2026-11-08T19:41:49 | INFO | teacher seed2 epoch  13: loss 0.0990  val AUROC 0.9706
+2026-11-08T19:42:10 | INFO | teacher seed2 epoch  14: loss 0.1303  val AUROC 0.9704
+2026-11-08T19:42:28 | INFO | teacher seed2 epoch  15: loss 0.0959  val AUROC 0.9727
+2026-11-08T19:42:46 | INFO | teacher seed2 epoch  16: loss 0.0843  val AUROC 0.9696
+2026-11-08T19:42:46 | INFO | early stop seed2 at epoch 16 (best 10)
+2026-11-08T19:42:55 | INFO | teacher seed2: test AUROC 0.978780159569355
+2026-11-08T19:43:12 | INFO | teacher seed3 epoch   1: loss 0.3739  val AUROC 0.9576
+2026-11-08T19:43:29 | INFO | teacher seed3 epoch   2: loss 0.2185  val AUROC 0.9698
+2026-11-08T19:43:46 | INFO | teacher seed3 epoch   3: loss 0.2037  val AUROC 0.9694
+2026-11-08T19:44:02 | INFO | teacher seed3 epoch   4: loss 0.1631  val AUROC 0.9699
+2026-11-08T19:44:21 | INFO | teacher seed3 epoch   5: loss 0.1569  val AUROC 0.9690
+2026-11-08T19:44:39 | INFO | teacher seed3 epoch   6: loss 0.1455  val AUROC 0.9629
+2026-11-08T19:44:56 | INFO | teacher seed3 epoch   7: loss 0.1402  val AUROC 0.9776
+2026-11-08T19:45:12 | INFO | teacher seed3 epoch   8: loss 0.1434  val AUROC 0.9761
+2026-11-08T19:45:30 | INFO | teacher seed3 epoch   9: loss 0.1304  val AUROC 0.9667
+2026-11-08T19:45:46 | INFO | teacher seed3 epoch  10: loss 0.1251  val AUROC 0.9782
+2026-11-08T19:46:02 | INFO | teacher seed3 epoch  11: loss 0.1146  val AUROC 0.9790
+2026-11-08T19:46:18 | INFO | teacher seed3 epoch  12: loss 0.1117  val AUROC 0.9771
+2026-11-08T19:46:36 | INFO | teacher seed3 epoch  13: loss 0.1036  val AUROC 0.9767
+2026-11-08T19:46:51 | INFO | teacher seed3 epoch  14: loss 0.0958  val AUROC 0.9754
+2026-11-08T19:47:08 | INFO | teacher seed3 epoch  15: loss 0.0962  val AUROC 0.9738
+2026-11-08T19:47:25 | INFO | teacher seed3 epoch  16: loss 0.0942  val AUROC 0.9729
+2026-11-08T19:47:41 | INFO | teacher seed3 epoch  17: loss 0.1011  val AUROC 0.9765
+2026-11-08T19:47:41 | INFO | early stop seed3 at epoch 17 (best 11)
+2026-11-08T19:47:49 | INFO | teacher seed3: test AUROC 0.9831538979140633
+2026-11-08T19:48:05 | INFO | teacher seed4 epoch   1: loss 0.3442  val AUROC 0.9688
+2026-11-08T19:48:21 | INFO | teacher seed4 epoch   2: loss 0.2210  val AUROC 0.9550
+2026-11-08T19:48:39 | INFO | teacher seed4 epoch   3: loss 0.2113  val AUROC 0.9676
+2026-11-08T19:48:55 | INFO | teacher seed4 epoch   4: loss 0.1731  val AUROC 0.9680
+2026-11-08T19:49:13 | INFO | teacher seed4 epoch   5: loss 0.1488  val AUROC 0.9716
+2026-11-08T19:49:29 | INFO | teacher seed4 epoch   6: loss 0.1501  val AUROC 0.9760
+2026-11-08T19:49:45 | INFO | teacher seed4 epoch   7: loss 0.1762  val AUROC 0.9739
+2026-11-08T19:50:00 | INFO | teacher seed4 epoch   8: loss 0.1531  val AUROC 0.9650
+2026-11-08T19:50:19 | INFO | teacher seed4 epoch   9: loss 0.1377  val AUROC 0.9730
+2026-11-08T19:50:37 | INFO | teacher seed4 epoch  10: loss 0.1240  val AUROC 0.9768
+2026-11-08T19:50:55 | INFO | teacher seed4 epoch  11: loss 0.1111  val AUROC 0.9777
+2026-11-08T19:51:14 | INFO | teacher seed4 epoch  12: loss 0.1006  val AUROC 0.9799
+2026-11-08T19:51:30 | INFO | teacher seed4 epoch  13: loss 0.1045  val AUROC 0.9763
+2026-11-08T19:51:47 | INFO | teacher seed4 epoch  14: loss 0.0933  val AUROC 0.9776
+2026-11-08T19:52:05 | INFO | teacher seed4 epoch  15: loss 0.0847  val AUROC 0.9780
+2026-11-08T19:52:22 | INFO | teacher seed4 epoch  16: loss 0.0739  val AUROC 0.9786
+2026-11-08T19:52:39 | INFO | teacher seed4 epoch  17: loss 0.0791  val AUROC 0.9769
+2026-11-08T19:52:57 | INFO | teacher seed4 epoch  18: loss 0.0706  val AUROC 0.9774
+2026-11-08T19:52:57 | INFO | early stop seed4 at epoch 18 (best 12)
+2026-11-08T19:53:07 | INFO | teacher seed4: test AUROC 0.989233874843795
+2026-11-08T19:53:08 | INFO | teacher test: {'n': 610, 'teacher_auroc': 0.9850644044987023, 'teacher_accuracy': 0.9262295081967213, 'features_baseline_auroc': 0.9468062097471882, 'features_baseline_accuracy': 0.8836065573770492}
+2026-11-08T19:53:08 | INFO | cue stability C=0.005: 0 stable features
+2026-11-08T19:53:08 | INFO | cue stability C=0.01: 4 stable features
+2026-11-08T19:53:09 | INFO | cue stability C=0.02: 6 stable features
+2026-11-08T19:53:09 | INFO | [seed1] cue stability C=0.005: 0 stable features
+2026-11-08T19:53:09 | INFO | [seed1] cue stability C=0.01: 3 stable features
+2026-11-08T19:53:09 | INFO | [seed1] cue stability C=0.02: 4 stable features
+2026-11-08T19:53:10 | INFO | [seed1] cue stability C=0.05: 8 stable features
+2026-11-08T19:53:10 | INFO | [seed2] cue stability C=0.005: 0 stable features
+2026-11-08T19:53:10 | INFO | [seed2] cue stability C=0.01: 3 stable features
+2026-11-08T19:53:10 | INFO | [seed2] cue stability C=0.02: 7 stable features
+2026-11-08T19:53:10 | INFO | [seed3] cue stability C=0.005: 0 stable features
+2026-11-08T19:53:11 | INFO | [seed3] cue stability C=0.01: 5 stable features
+2026-11-08T19:53:11 | INFO | [seed4] cue stability C=0.005: 0 stable features
+2026-11-08T19:53:11 | INFO | [seed4] cue stability C=0.01: 4 stable features
+2026-11-08T19:53:12 | INFO | [seed4] cue stability C=0.02: 5 stable features
+2026-11-08T19:53:12 | INFO | cue consensus (5 teachers, need 3): votes {'T_Amp_II': 5, 'PR_Int_Global': 5, 'R_AxisFrontal_Global': 5, 'R_Amp_aVL': 5, 'QT_IntBazett_Global': 3, 'S_Amp_V1': 3, 'T_Amp_V1': 2, 'ST_Amp_V5': 1, 'T_AxisFront_Global': 1, 'T_Amp_V5': 1} -> ['T_Amp_II', 'PR_Int_Global', 'R_AxisFrontal_Global', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1']
+2026-11-08T19:53:12 | INFO | placebo: draw 5, cue-fold tally accuracy 0.462
+2026-11-08T19:53:12 | INFO | cues: ['PR_Int_Global', 'T_Amp_II', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1', 'R_AxisFrontal_Global']; test fidelity {'scrambled_tally_accuracy_true': 0.46557377049180326, 'surrogate_fidelity_to_teacher': 0.8377049180327869, 'surrogate_accuracy_true': 0.8622950819672132, 'rule_tally_fidelity_to_teacher': 0.8147540983606557, 'rule_tally_accuracy_true': 0.819672131147541}
+2026-11-08T19:53:45 | INFO | saliency: densest segment QRS, most cue weight QRS
+2026-11-08T19:53:45 | INFO | resuming nets experiment: 120 learners already done
+2026-11-08T19:53:46 | INFO | resuming LLM experiment: 120 learners already done
+2026-11-08T19:53:46 | INFO | resuming LLM_blinded experiment: 56 learners already done
+2026-11-08T19:53:46 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 64 learners (blinded run)
+2026-11-08T19:54:02 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-08T19:58:57 | INFO | prefix cache verified (max diff 0.0000)
+2026-11-08T20:34:55 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 5/64 learners
+2026-11-08T21:08:56 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 10/64 learners
+2026-11-08T21:43:20 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 15/64 learners
+2026-11-08T22:17:05 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 20/64 learners
+2026-11-08T22:50:50 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 25/64 learners
+2026-11-08T23:24:07 | INFO | LLM_blinded Qwen/Qwen2.5-3B-Instruct: 30/64 learners
+2026-11-11T21:51:52 | INFO | ai2human 0.3.0 | run 20261107T164810Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-11T21:53:05 | INFO | already downloaded: data/ptbxl.zip
+2026-11-11T21:53:05 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-11T21:53:11 | INFO | PhysioNet checksums: already verified
+2026-11-11T21:53:11 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-11T21:53:25 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-11T21:53:25 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-11T21:53:25 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-11T21:53:25 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-11T21:53:25 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-11T21:53:25 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-11T21:53:25 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-11T21:53:25 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-11T21:53:25 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-11T21:53:25 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-11T21:53:25 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-11T21:53:25 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-11T21:53:25 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-11T21:53:25 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-11T21:53:25 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-11T21:53:25 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-11T21:53:25 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-11T21:53:25 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-11T21:53:25 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-11T21:53:25 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-11T21:53:26 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-11T21:53:26 | INFO | teacher device: cpu; 5 teacher seed(s)
+2026-11-11T21:53:50 | INFO | teacher epoch   1: loss 0.3554  val AUROC 0.9456
+2026-11-11T21:54:02 | INFO | teacher epoch   2: loss 0.2300  val AUROC 0.9558
+2026-11-11T21:54:14 | INFO | teacher epoch   3: loss 0.1874  val AUROC 0.9668
+2026-11-11T21:54:26 | INFO | teacher epoch   4: loss 0.1689  val AUROC 0.9742
+2026-11-11T21:54:38 | INFO | teacher epoch   5: loss 0.1608  val AUROC 0.9700
+2026-11-11T21:54:51 | INFO | teacher epoch   6: loss 0.1553  val AUROC 0.9744
+2026-11-11T21:55:03 | INFO | teacher epoch   7: loss 0.1450  val AUROC 0.9743
+2026-11-11T21:55:16 | INFO | teacher epoch   8: loss 0.1219  val AUROC 0.9739
+2026-11-11T21:55:28 | INFO | teacher epoch   9: loss 0.1219  val AUROC 0.9758
+2026-11-11T21:55:40 | INFO | teacher epoch  10: loss 0.1190  val AUROC 0.9787
+2026-11-11T21:55:53 | INFO | teacher epoch  11: loss 0.1129  val AUROC 0.9698
+2026-11-11T21:56:06 | INFO | teacher epoch  12: loss 0.1187  val AUROC 0.9727
+2026-11-11T21:56:19 | INFO | teacher epoch  13: loss 0.0888  val AUROC 0.9740
+2026-11-11T21:56:30 | INFO | teacher epoch  14: loss 0.0942  val AUROC 0.9734
+2026-11-11T21:56:43 | INFO | teacher epoch  15: loss 0.0874  val AUROC 0.9755
+2026-11-11T21:56:55 | INFO | teacher epoch  16: loss 0.0845  val AUROC 0.9759
+2026-11-11T21:56:55 | INFO | early stop at epoch 16 (best 10)
+2026-11-11T21:57:13 | INFO | teacher seed1 epoch   1: loss 0.3422  val AUROC 0.9483
+2026-11-11T21:57:23 | INFO | teacher seed1 epoch   2: loss 0.2098  val AUROC 0.9706
+2026-11-11T21:57:37 | INFO | teacher seed1 epoch   3: loss 0.1828  val AUROC 0.9368
+2026-11-11T21:57:50 | INFO | teacher seed1 epoch   4: loss 0.1766  val AUROC 0.9670
+2026-11-11T21:58:01 | INFO | teacher seed1 epoch   5: loss 0.1759  val AUROC 0.9731
+2026-11-11T21:58:13 | INFO | teacher seed1 epoch   6: loss 0.1475  val AUROC 0.9731
+2026-11-11T21:58:26 | INFO | teacher seed1 epoch   7: loss 0.1449  val AUROC 0.9724
+2026-11-11T21:58:39 | INFO | teacher seed1 epoch   8: loss 0.1370  val AUROC 0.9702
+2026-11-11T21:58:51 | INFO | teacher seed1 epoch   9: loss 0.1513  val AUROC 0.9777
+2026-11-11T21:59:04 | INFO | teacher seed1 epoch  10: loss 0.1232  val AUROC 0.9722
+2026-11-11T21:59:15 | INFO | teacher seed1 epoch  11: loss 0.1130  val AUROC 0.9768
+2026-11-11T21:59:28 | INFO | teacher seed1 epoch  12: loss 0.1053  val AUROC 0.9747
+2026-11-11T21:59:40 | INFO | teacher seed1 epoch  13: loss 0.1215  val AUROC 0.9755
+2026-11-11T21:59:51 | INFO | teacher seed1 epoch  14: loss 0.0941  val AUROC 0.9769
+2026-11-11T22:00:02 | INFO | teacher seed1 epoch  15: loss 0.0909  val AUROC 0.9791
+2026-11-11T22:00:14 | INFO | teacher seed1 epoch  16: loss 0.0864  val AUROC 0.9785
+2026-11-11T22:00:25 | INFO | teacher seed1 epoch  17: loss 0.0901  val AUROC 0.9748
+2026-11-11T22:00:38 | INFO | teacher seed1 epoch  18: loss 0.1053  val AUROC 0.9772
+2026-11-11T22:00:51 | INFO | teacher seed1 epoch  19: loss 0.0700  val AUROC 0.9761
+2026-11-11T22:01:03 | INFO | teacher seed1 epoch  20: loss 0.0650  val AUROC 0.9726
+2026-11-11T22:01:14 | INFO | teacher seed1 epoch  21: loss 0.1099  val AUROC 0.9799
+2026-11-11T22:01:27 | INFO | teacher seed1 epoch  22: loss 0.0670  val AUROC 0.9736
+2026-11-11T22:01:40 | INFO | teacher seed1 epoch  23: loss 0.0934  val AUROC 0.9787
+2026-11-11T22:01:53 | INFO | teacher seed1 epoch  24: loss 0.0513  val AUROC 0.9766
+2026-11-11T22:02:06 | INFO | teacher seed1 epoch  25: loss 0.0526  val AUROC 0.9783
+2026-11-11T22:02:19 | INFO | teacher seed1 epoch  26: loss 0.0479  val AUROC 0.9786
+2026-11-11T22:02:30 | INFO | teacher seed1 epoch  27: loss 0.0298  val AUROC 0.9795
+2026-11-11T22:02:30 | INFO | early stop seed1 at epoch 27 (best 21)
+2026-11-11T22:02:36 | INFO | teacher seed1: test AUROC 0.983189945208113
+2026-11-11T22:02:49 | INFO | teacher seed2 epoch   1: loss 0.3386  val AUROC 0.9609
+2026-11-11T22:03:00 | INFO | teacher seed2 epoch   2: loss 0.2168  val AUROC 0.9429
+2026-11-11T22:03:12 | INFO | teacher seed2 epoch   3: loss 0.2075  val AUROC 0.9673
+2026-11-11T22:03:24 | INFO | teacher seed2 epoch   4: loss 0.1720  val AUROC 0.9679
+2026-11-11T22:03:36 | INFO | teacher seed2 epoch   5: loss 0.2029  val AUROC 0.9564
+2026-11-11T22:03:49 | INFO | teacher seed2 epoch   6: loss 0.1736  val AUROC 0.9723
+2026-11-11T22:04:01 | INFO | teacher seed2 epoch   7: loss 0.1595  val AUROC 0.9724
+2026-11-11T22:04:13 | INFO | teacher seed2 epoch   8: loss 0.1388  val AUROC 0.9673
+2026-11-11T22:04:25 | INFO | teacher seed2 epoch   9: loss 0.1400  val AUROC 0.9705
+2026-11-11T22:04:36 | INFO | teacher seed2 epoch  10: loss 0.1305  val AUROC 0.9752
+2026-11-11T22:04:47 | INFO | teacher seed2 epoch  11: loss 0.1307  val AUROC 0.9705
+2026-11-11T22:04:58 | INFO | teacher seed2 epoch  12: loss 0.1165  val AUROC 0.9671
+2026-11-11T22:05:09 | INFO | teacher seed2 epoch  13: loss 0.0990  val AUROC 0.9706
+2026-11-11T22:05:21 | INFO | teacher seed2 epoch  14: loss 0.1303  val AUROC 0.9704
+2026-11-11T22:05:33 | INFO | teacher seed2 epoch  15: loss 0.0959  val AUROC 0.9727
+2026-11-11T22:05:44 | INFO | teacher seed2 epoch  16: loss 0.0843  val AUROC 0.9696
+2026-11-11T22:05:44 | INFO | early stop seed2 at epoch 16 (best 10)
+2026-11-11T22:05:49 | INFO | teacher seed2: test AUROC 0.978780159569355
+2026-11-11T22:06:00 | INFO | teacher seed3 epoch   1: loss 0.3739  val AUROC 0.9576
+2026-11-11T22:06:11 | INFO | teacher seed3 epoch   2: loss 0.2185  val AUROC 0.9698
+2026-11-11T22:06:23 | INFO | teacher seed3 epoch   3: loss 0.2037  val AUROC 0.9694
+2026-11-11T22:06:35 | INFO | teacher seed3 epoch   4: loss 0.1631  val AUROC 0.9699
+2026-11-11T22:06:47 | INFO | teacher seed3 epoch   5: loss 0.1569  val AUROC 0.9690
+2026-11-11T22:07:00 | INFO | teacher seed3 epoch   6: loss 0.1455  val AUROC 0.9629
+2026-11-11T22:07:11 | INFO | teacher seed3 epoch   7: loss 0.1402  val AUROC 0.9776
+2026-11-11T22:07:23 | INFO | teacher seed3 epoch   8: loss 0.1434  val AUROC 0.9761
+2026-11-11T22:07:36 | INFO | teacher seed3 epoch   9: loss 0.1304  val AUROC 0.9667
+2026-11-11T22:07:47 | INFO | teacher seed3 epoch  10: loss 0.1251  val AUROC 0.9782
+2026-11-11T22:07:58 | INFO | teacher seed3 epoch  11: loss 0.1146  val AUROC 0.9790
+2026-11-11T22:08:11 | INFO | teacher seed3 epoch  12: loss 0.1117  val AUROC 0.9771
+2026-11-11T22:08:24 | INFO | teacher seed3 epoch  13: loss 0.1036  val AUROC 0.9767
+2026-11-11T22:08:37 | INFO | teacher seed3 epoch  14: loss 0.0958  val AUROC 0.9754
+2026-11-11T22:08:49 | INFO | teacher seed3 epoch  15: loss 0.0962  val AUROC 0.9738
+2026-11-11T22:09:01 | INFO | teacher seed3 epoch  16: loss 0.0942  val AUROC 0.9729
+2026-11-11T22:09:13 | INFO | teacher seed3 epoch  17: loss 0.1011  val AUROC 0.9765
+2026-11-11T22:09:13 | INFO | early stop seed3 at epoch 17 (best 11)
+2026-11-11T22:09:20 | INFO | teacher seed3: test AUROC 0.9831538979140633
+2026-11-11T22:09:32 | INFO | teacher seed4 epoch   1: loss 0.3442  val AUROC 0.9688
+2026-11-11T22:09:45 | INFO | teacher seed4 epoch   2: loss 0.2210  val AUROC 0.9550
+2026-11-11T22:09:57 | INFO | teacher seed4 epoch   3: loss 0.2113  val AUROC 0.9676
+2026-11-11T22:10:10 | INFO | teacher seed4 epoch   4: loss 0.1731  val AUROC 0.9680
+2026-11-11T22:10:22 | INFO | teacher seed4 epoch   5: loss 0.1488  val AUROC 0.9716
+2026-11-11T22:10:32 | INFO | teacher seed4 epoch   6: loss 0.1501  val AUROC 0.9760
+2026-11-11T22:10:43 | INFO | teacher seed4 epoch   7: loss 0.1762  val AUROC 0.9739
+2026-11-11T22:10:54 | INFO | teacher seed4 epoch   8: loss 0.1531  val AUROC 0.9650
+2026-11-11T22:11:04 | INFO | teacher seed4 epoch   9: loss 0.1377  val AUROC 0.9730
+2026-11-11T22:11:16 | INFO | teacher seed4 epoch  10: loss 0.1240  val AUROC 0.9768
+2026-11-11T22:11:28 | INFO | teacher seed4 epoch  11: loss 0.1111  val AUROC 0.9777
+2026-11-11T22:11:41 | INFO | teacher seed4 epoch  12: loss 0.1006  val AUROC 0.9799
+2026-11-11T22:11:51 | INFO | teacher seed4 epoch  13: loss 0.1045  val AUROC 0.9763
+2026-11-11T22:12:03 | INFO | teacher seed4 epoch  14: loss 0.0933  val AUROC 0.9776
+2026-11-11T22:12:15 | INFO | teacher seed4 epoch  15: loss 0.0847  val AUROC 0.9780
+2026-11-11T22:12:27 | INFO | teacher seed4 epoch  16: loss 0.0739  val AUROC 0.9786
+2026-11-11T22:12:39 | INFO | teacher seed4 epoch  17: loss 0.0791  val AUROC 0.9769
+2026-11-11T22:12:50 | INFO | teacher seed4 epoch  18: loss 0.0706  val AUROC 0.9774
+2026-11-11T22:12:50 | INFO | early stop seed4 at epoch 18 (best 12)
+2026-11-11T22:12:56 | INFO | teacher seed4: test AUROC 0.989233874843795
+2026-11-11T22:12:56 | INFO | teacher test: {'n': 610, 'teacher_auroc': 0.9850644044987023, 'teacher_accuracy': 0.9262295081967213, 'features_baseline_auroc': 0.9468062097471882, 'features_baseline_accuracy': 0.8836065573770492}
+2026-11-11T22:12:57 | INFO | cue stability C=0.005: 0 stable features
+2026-11-11T22:12:57 | INFO | cue stability C=0.01: 4 stable features
+2026-11-11T22:12:57 | INFO | cue stability C=0.02: 6 stable features
+2026-11-11T22:12:57 | INFO | [seed1] cue stability C=0.005: 0 stable features
+2026-11-11T22:12:58 | INFO | [seed1] cue stability C=0.01: 3 stable features
+2026-11-11T22:12:58 | INFO | [seed1] cue stability C=0.02: 4 stable features
+2026-11-11T22:12:58 | INFO | [seed1] cue stability C=0.05: 8 stable features
+2026-11-11T22:12:58 | INFO | [seed2] cue stability C=0.005: 0 stable features
+2026-11-11T22:12:59 | INFO | [seed2] cue stability C=0.01: 3 stable features
+2026-11-11T22:12:59 | INFO | [seed2] cue stability C=0.02: 7 stable features
+2026-11-11T22:12:59 | INFO | [seed3] cue stability C=0.005: 0 stable features
+2026-11-11T22:13:00 | INFO | [seed3] cue stability C=0.01: 5 stable features
+2026-11-11T22:13:00 | INFO | [seed4] cue stability C=0.005: 0 stable features
+2026-11-11T22:13:00 | INFO | [seed4] cue stability C=0.01: 4 stable features
+2026-11-11T22:13:00 | INFO | [seed4] cue stability C=0.02: 5 stable features
+2026-11-11T22:13:00 | INFO | cue consensus (5 teachers, need 3): votes {'T_Amp_II': 5, 'PR_Int_Global': 5, 'R_AxisFrontal_Global': 5, 'R_Amp_aVL': 5, 'QT_IntBazett_Global': 3, 'S_Amp_V1': 3, 'T_Amp_V1': 2, 'ST_Amp_V5': 1, 'T_AxisFront_Global': 1, 'T_Amp_V5': 1} -> ['T_Amp_II', 'PR_Int_Global', 'R_AxisFrontal_Global', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1']
+2026-11-11T22:13:00 | INFO | placebo: draw 5, cue-fold tally accuracy 0.462
+2026-11-11T22:13:00 | INFO | cues: ['PR_Int_Global', 'T_Amp_II', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1', 'R_AxisFrontal_Global']; test fidelity {'scrambled_tally_accuracy_true': 0.46557377049180326, 'surrogate_fidelity_to_teacher': 0.8377049180327869, 'surrogate_accuracy_true': 0.8622950819672132, 'rule_tally_fidelity_to_teacher': 0.8147540983606557, 'rule_tally_accuracy_true': 0.819672131147541}
+2026-11-11T22:13:22 | INFO | saliency: densest segment QRS, most cue weight QRS
+2026-11-11T22:13:22 | INFO | resuming nets experiment: 120 learners already done
+2026-11-11T22:13:23 | INFO | resuming LLM experiment: 120 learners already done
+2026-11-11T22:13:24 | INFO | resuming LLM_blinded experiment: 86 learners already done
+2026-11-11T22:13:24 | INFO | loading learner model Qwen/Qwen2.5-3B-Instruct for 34 learners (blinded run)
+2026-11-11T22:13:31 | INFO | loading Qwen/Qwen2.5-3B-Instruct at revision latest (NOT pinned)
+2026-11-11T22:18:06 | INFO | prefix cache disagrees with full pass by 0.122; disabling cache
+2026-11-12T22:41:42 | INFO | ai2human 0.3.0 | run 20261107T164810Z_study_pilot | EXPLORATORY PILOT (protected: confirmatory test fold and held-out device sealed) | prereg: NOT LOCKED: exploratory run, not confirmatory
+2026-11-12T22:42:54 | INFO | already downloaded: data/ptbxl.zip
+2026-11-12T22:42:54 | INFO | already downloaded: data/ptbxl_plus.zip
+2026-11-12T22:43:00 | INFO | PhysioNet checksums: already verified
+2026-11-12T22:43:00 | INFO | PTB-XL: 21799 records, 18869 patients (published: 21799, 18869)
+2026-11-12T22:43:14 | INFO |   panel HR_Ventr_Global        <- column HR_Ventr_Global
+2026-11-12T22:43:14 | INFO |   panel PR_Int_Global          <- column PR_Int_Global
+2026-11-12T22:43:14 | INFO |   panel QRS_Dur_Global         <- column QRS_Dur_Global
+2026-11-12T22:43:14 | INFO |   panel QT_Int_Global          <- column QT_Int_Global
+2026-11-12T22:43:14 | INFO |   panel QT_IntBazett_Global    <- column QT_IntBazett_Global
+2026-11-12T22:43:14 | INFO |   panel P_AxisFront_Global     <- column P_AxisFront_Global
+2026-11-12T22:43:14 | INFO |   panel R_AxisFrontal_Global   <- column R_AxisFrontal_Global
+2026-11-12T22:43:14 | INFO |   panel T_AxisFront_Global     <- column T_AxisFront_Global
+2026-11-12T22:43:14 | INFO |   panel P_Amp_II               <- column P_Amp_II
+2026-11-12T22:43:14 | INFO |   panel P_Dur_II               <- column P_Dur_II
+2026-11-12T22:43:14 | INFO |   panel R_Amp_aVL              <- column R_Amp_aVL
+2026-11-12T22:43:14 | INFO |   panel R_Amp_V5               <- column R_Amp_V5
+2026-11-12T22:43:14 | INFO |   panel S_Amp_V1               <- column S_Amp_V1
+2026-11-12T22:43:14 | INFO |   panel T_Amp_II               <- column T_Amp_II
+2026-11-12T22:43:14 | INFO |   panel T_Amp_V1               <- column T_Amp_V1
+2026-11-12T22:43:14 | INFO |   panel T_Amp_V5               <- column T_Amp_V5
+2026-11-12T22:43:14 | INFO |   panel ST_Amp_V5              <- column ST_Amp_V5
+2026-11-12T22:43:14 | INFO |   panel Q_Amp_III              <- column Q_Amp_III
+2026-11-12T22:43:14 | INFO | cohort: 21799 ECGs -> 12336 in age groups -> 12335 with panel features
+2026-11-12T22:43:14 | INFO | PROTECTED: sealed 3646 ECGs of 3347 patients (fold 10 + device 'AT-6 C 5.5'); exploratory transfer device 'CS-12'
+2026-11-12T22:43:14 | INFO | roles: {"teacher_train": {"n": 4624, "n_older": 3199}, "teacher_val": {"n": 527, "n_older": 352}, "cue": {"n": 740, "n_older": 518}, "test": {"n": 610, "n_older": 404}, "transfer": {"n": 2119, "n_older": 1921}, "unused": {"n": 69, "n_older": 67}}; transfer device = 'CS-12'
+2026-11-12T22:43:14 | INFO | teacher device: cpu; 5 teacher seed(s)
+2026-11-12T22:43:43 | INFO | teacher epoch   1: loss 0.3554  val AUROC 0.9456
+2026-11-12T22:43:58 | INFO | teacher epoch   2: loss 0.2300  val AUROC 0.9558
+2026-11-12T22:44:14 | INFO | teacher epoch   3: loss 0.1874  val AUROC 0.9668
+2026-11-12T22:44:29 | INFO | teacher epoch   4: loss 0.1689  val AUROC 0.9742
+2026-11-12T22:44:44 | INFO | teacher epoch   5: loss 0.1608  val AUROC 0.9700
+2026-11-12T22:45:00 | INFO | teacher epoch   6: loss 0.1553  val AUROC 0.9744
+2026-11-12T22:45:16 | INFO | teacher epoch   7: loss 0.1450  val AUROC 0.9743
+2026-11-12T22:45:31 | INFO | teacher epoch   8: loss 0.1219  val AUROC 0.9739
+2026-11-12T22:45:51 | INFO | teacher epoch   9: loss 0.1219  val AUROC 0.9758
+2026-11-12T22:46:11 | INFO | teacher epoch  10: loss 0.1190  val AUROC 0.9787
+2026-11-12T22:46:25 | INFO | teacher epoch  11: loss 0.1129  val AUROC 0.9698
+2026-11-12T22:46:38 | INFO | teacher epoch  12: loss 0.1187  val AUROC 0.9727
+2026-11-12T22:46:53 | INFO | teacher epoch  13: loss 0.0888  val AUROC 0.9740
+2026-11-12T22:47:08 | INFO | teacher epoch  14: loss 0.0942  val AUROC 0.9734
+2026-11-12T22:47:22 | INFO | teacher epoch  15: loss 0.0874  val AUROC 0.9755
+2026-11-12T22:47:40 | INFO | teacher epoch  16: loss 0.0845  val AUROC 0.9759
+2026-11-12T22:47:40 | INFO | early stop at epoch 16 (best 10)
+2026-11-12T22:48:05 | INFO | teacher seed1 epoch   1: loss 0.3422  val AUROC 0.9483
+2026-11-12T22:48:21 | INFO | teacher seed1 epoch   2: loss 0.2098  val AUROC 0.9706
+2026-11-12T22:48:36 | INFO | teacher seed1 epoch   3: loss 0.1828  val AUROC 0.9368
+2026-11-12T22:48:51 | INFO | teacher seed1 epoch   4: loss 0.1766  val AUROC 0.9670
+2026-11-12T22:49:07 | INFO | teacher seed1 epoch   5: loss 0.1759  val AUROC 0.9731
+2026-11-12T22:49:21 | INFO | teacher seed1 epoch   6: loss 0.1475  val AUROC 0.9731
+2026-11-12T22:49:37 | INFO | teacher seed1 epoch   7: loss 0.1449  val AUROC 0.9724
+2026-11-12T22:49:51 | INFO | teacher seed1 epoch   8: loss 0.1370  val AUROC 0.9702
+2026-11-12T22:50:06 | INFO | teacher seed1 epoch   9: loss 0.1513  val AUROC 0.9777
+2026-11-12T22:50:20 | INFO | teacher seed1 epoch  10: loss 0.1232  val AUROC 0.9722
+2026-11-12T22:50:33 | INFO | teacher seed1 epoch  11: loss 0.1130  val AUROC 0.9768
+2026-11-12T22:50:46 | INFO | teacher seed1 epoch  12: loss 0.1053  val AUROC 0.9747
+2026-11-12T22:50:59 | INFO | teacher seed1 epoch  13: loss 0.1215  val AUROC 0.9755
+2026-11-12T22:51:11 | INFO | teacher seed1 epoch  14: loss 0.0941  val AUROC 0.9769
+2026-11-12T22:51:25 | INFO | teacher seed1 epoch  15: loss 0.0909  val AUROC 0.9791
+2026-11-12T22:51:37 | INFO | teacher seed1 epoch  16: loss 0.0864  val AUROC 0.9785
+2026-11-12T22:51:51 | INFO | teacher seed1 epoch  17: loss 0.0901  val AUROC 0.9748
+2026-11-12T22:52:04 | INFO | teacher seed1 epoch  18: loss 0.1053  val AUROC 0.9772
+2026-11-12T22:52:18 | INFO | teacher seed1 epoch  19: loss 0.0700  val AUROC 0.9761
+2026-11-12T22:52:33 | INFO | teacher seed1 epoch  20: loss 0.0650  val AUROC 0.9726
+2026-11-12T22:52:49 | INFO | teacher seed1 epoch  21: loss 0.1099  val AUROC 0.9799
+2026-11-12T22:53:03 | INFO | teacher seed1 epoch  22: loss 0.0670  val AUROC 0.9736
+2026-11-12T22:53:17 | INFO | teacher seed1 epoch  23: loss 0.0934  val AUROC 0.9787
+2026-11-12T22:53:31 | INFO | teacher seed1 epoch  24: loss 0.0513  val AUROC 0.9766
+2026-11-12T22:53:46 | INFO | teacher seed1 epoch  25: loss 0.0526  val AUROC 0.9783
+2026-11-12T22:54:00 | INFO | teacher seed1 epoch  26: loss 0.0479  val AUROC 0.9786
+2026-11-12T22:54:12 | INFO | teacher seed1 epoch  27: loss 0.0298  val AUROC 0.9795
+2026-11-12T22:54:12 | INFO | early stop seed1 at epoch 27 (best 21)
+2026-11-12T22:54:20 | INFO | teacher seed1: test AUROC 0.983189945208113
+2026-11-12T22:54:35 | INFO | teacher seed2 epoch   1: loss 0.3386  val AUROC 0.9609
+2026-11-12T22:54:49 | INFO | teacher seed2 epoch   2: loss 0.2168  val AUROC 0.9429
+2026-11-12T22:55:02 | INFO | teacher seed2 epoch   3: loss 0.2075  val AUROC 0.9673
+2026-11-12T22:55:17 | INFO | teacher seed2 epoch   4: loss 0.1720  val AUROC 0.9679
+2026-11-12T22:55:32 | INFO | teacher seed2 epoch   5: loss 0.2029  val AUROC 0.9564
+2026-11-12T22:55:46 | INFO | teacher seed2 epoch   6: loss 0.1736  val AUROC 0.9723
+2026-11-12T22:55:59 | INFO | teacher seed2 epoch   7: loss 0.1595  val AUROC 0.9724
+2026-11-12T22:56:13 | INFO | teacher seed2 epoch   8: loss 0.1388  val AUROC 0.9673
+2026-11-12T22:56:27 | INFO | teacher seed2 epoch   9: loss 0.1400  val AUROC 0.9705
+2026-11-12T22:56:41 | INFO | teacher seed2 epoch  10: loss 0.1305  val AUROC 0.9752
+2026-11-12T22:56:54 | INFO | teacher seed2 epoch  11: loss 0.1307  val AUROC 0.9705
+2026-11-12T22:57:08 | INFO | teacher seed2 epoch  12: loss 0.1165  val AUROC 0.9671
+2026-11-12T22:57:23 | INFO | teacher seed2 epoch  13: loss 0.0990  val AUROC 0.9706
+2026-11-12T22:57:37 | INFO | teacher seed2 epoch  14: loss 0.1303  val AUROC 0.9704
+2026-11-12T22:57:51 | INFO | teacher seed2 epoch  15: loss 0.0959  val AUROC 0.9727
+2026-11-12T22:58:05 | INFO | teacher seed2 epoch  16: loss 0.0843  val AUROC 0.9696
+2026-11-12T22:58:05 | INFO | early stop seed2 at epoch 16 (best 10)
+2026-11-12T22:58:13 | INFO | teacher seed2: test AUROC 0.978780159569355
+2026-11-12T22:58:29 | INFO | teacher seed3 epoch   1: loss 0.3739  val AUROC 0.9576
+2026-11-12T22:58:43 | INFO | teacher seed3 epoch   2: loss 0.2185  val AUROC 0.9698
+2026-11-12T22:58:58 | INFO | teacher seed3 epoch   3: loss 0.2037  val AUROC 0.9694
+2026-11-12T22:59:12 | INFO | teacher seed3 epoch   4: loss 0.1631  val AUROC 0.9699
+2026-11-12T22:59:26 | INFO | teacher seed3 epoch   5: loss 0.1569  val AUROC 0.9690
+2026-11-12T22:59:39 | INFO | teacher seed3 epoch   6: loss 0.1455  val AUROC 0.9629
+2026-11-12T22:59:53 | INFO | teacher seed3 epoch   7: loss 0.1402  val AUROC 0.9776
+2026-11-12T23:00:05 | INFO | teacher seed3 epoch   8: loss 0.1434  val AUROC 0.9761
+2026-11-12T23:00:17 | INFO | teacher seed3 epoch   9: loss 0.1304  val AUROC 0.9667
+2026-11-12T23:00:30 | INFO | teacher seed3 epoch  10: loss 0.1251  val AUROC 0.9782
+2026-11-12T23:00:42 | INFO | teacher seed3 epoch  11: loss 0.1146  val AUROC 0.9790
+2026-11-12T23:00:54 | INFO | teacher seed3 epoch  12: loss 0.1117  val AUROC 0.9771
+2026-11-12T23:01:05 | INFO | teacher seed3 epoch  13: loss 0.1036  val AUROC 0.9767
+2026-11-12T23:01:17 | INFO | teacher seed3 epoch  14: loss 0.0958  val AUROC 0.9754
+2026-11-12T23:01:30 | INFO | teacher seed3 epoch  15: loss 0.0962  val AUROC 0.9738
+2026-11-12T23:01:43 | INFO | teacher seed3 epoch  16: loss 0.0942  val AUROC 0.9729
+2026-11-12T23:01:56 | INFO | teacher seed3 epoch  17: loss 0.1011  val AUROC 0.9765
+2026-11-12T23:01:56 | INFO | early stop seed3 at epoch 17 (best 11)
+2026-11-12T23:02:02 | INFO | teacher seed3: test AUROC 0.9831538979140633
+2026-11-12T23:02:14 | INFO | teacher seed4 epoch   1: loss 0.3442  val AUROC 0.9688
+2026-11-12T23:02:27 | INFO | teacher seed4 epoch   2: loss 0.2210  val AUROC 0.9550
+2026-11-12T23:02:41 | INFO | teacher seed4 epoch   3: loss 0.2113  val AUROC 0.9676
+2026-11-12T23:02:55 | INFO | teacher seed4 epoch   4: loss 0.1731  val AUROC 0.9680
+2026-11-12T23:03:07 | INFO | teacher seed4 epoch   5: loss 0.1488  val AUROC 0.9716
+2026-11-12T23:03:21 | INFO | teacher seed4 epoch   6: loss 0.1501  val AUROC 0.9760
+2026-11-12T23:03:34 | INFO | teacher seed4 epoch   7: loss 0.1762  val AUROC 0.9739
+2026-11-12T23:03:47 | INFO | teacher seed4 epoch   8: loss 0.1531  val AUROC 0.9650
+2026-11-12T23:04:01 | INFO | teacher seed4 epoch   9: loss 0.1377  val AUROC 0.9730
+2026-11-12T23:04:14 | INFO | teacher seed4 epoch  10: loss 0.1240  val AUROC 0.9768
+2026-11-12T23:04:28 | INFO | teacher seed4 epoch  11: loss 0.1111  val AUROC 0.9777
+2026-11-12T23:04:40 | INFO | teacher seed4 epoch  12: loss 0.1006  val AUROC 0.9799
+2026-11-12T23:04:52 | INFO | teacher seed4 epoch  13: loss 0.1045  val AUROC 0.9763
+2026-11-12T23:05:04 | INFO | teacher seed4 epoch  14: loss 0.0933  val AUROC 0.9776
+2026-11-12T23:05:16 | INFO | teacher seed4 epoch  15: loss 0.0847  val AUROC 0.9780
+2026-11-12T23:05:28 | INFO | teacher seed4 epoch  16: loss 0.0739  val AUROC 0.9786
+2026-11-12T23:05:40 | INFO | teacher seed4 epoch  17: loss 0.0791  val AUROC 0.9769
+2026-11-12T23:05:52 | INFO | teacher seed4 epoch  18: loss 0.0706  val AUROC 0.9774
+2026-11-12T23:05:52 | INFO | early stop seed4 at epoch 18 (best 12)
+2026-11-12T23:05:58 | INFO | teacher seed4: test AUROC 0.989233874843795
+2026-11-12T23:05:58 | INFO | teacher test: {'n': 610, 'teacher_auroc': 0.9850644044987023, 'teacher_accuracy': 0.9262295081967213, 'features_baseline_auroc': 0.9468062097471882, 'features_baseline_accuracy': 0.8836065573770492}
+2026-11-12T23:05:59 | INFO | cue stability C=0.005: 0 stable features
+2026-11-12T23:05:59 | INFO | cue stability C=0.01: 4 stable features
+2026-11-12T23:05:59 | INFO | cue stability C=0.02: 6 stable features
+2026-11-12T23:05:59 | INFO | [seed1] cue stability C=0.005: 0 stable features
+2026-11-12T23:06:00 | INFO | [seed1] cue stability C=0.01: 3 stable features
+2026-11-12T23:06:00 | INFO | [seed1] cue stability C=0.02: 4 stable features
+2026-11-12T23:06:00 | INFO | [seed1] cue stability C=0.05: 8 stable features
+2026-11-12T23:06:01 | INFO | [seed2] cue stability C=0.005: 0 stable features
+2026-11-12T23:06:01 | INFO | [seed2] cue stability C=0.01: 3 stable features
+2026-11-12T23:06:01 | INFO | [seed2] cue stability C=0.02: 7 stable features
+2026-11-12T23:06:01 | INFO | [seed3] cue stability C=0.005: 0 stable features
+2026-11-12T23:06:02 | INFO | [seed3] cue stability C=0.01: 5 stable features
+2026-11-12T23:06:02 | INFO | [seed4] cue stability C=0.005: 0 stable features
+2026-11-12T23:06:02 | INFO | [seed4] cue stability C=0.01: 4 stable features
+2026-11-12T23:06:02 | INFO | [seed4] cue stability C=0.02: 5 stable features
+2026-11-12T23:06:02 | INFO | cue consensus (5 teachers, need 3): votes {'T_Amp_II': 5, 'PR_Int_Global': 5, 'R_AxisFrontal_Global': 5, 'R_Amp_aVL': 5, 'QT_IntBazett_Global': 3, 'S_Amp_V1': 3, 'T_Amp_V1': 2, 'ST_Amp_V5': 1, 'T_AxisFront_Global': 1, 'T_Amp_V5': 1} -> ['T_Amp_II', 'PR_Int_Global', 'R_AxisFrontal_Global', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1']
+2026-11-12T23:06:02 | INFO | placebo: draw 5, cue-fold tally accuracy 0.462
+2026-11-12T23:06:03 | INFO | cues: ['PR_Int_Global', 'T_Amp_II', 'R_Amp_aVL', 'QT_IntBazett_Global', 'S_Amp_V1', 'R_AxisFrontal_Global']; test fidelity {'scrambled_tally_accuracy_true': 0.46557377049180326, 'surrogate_fidelity_to_teacher': 0.8377049180327869, 'surrogate_accuracy_true': 0.8622950819672132, 'rule_tally_fidelity_to_teacher': 0.8147540983606557, 'rule_tally_accuracy_true': 0.819672131147541}
+2026-11-12T23:06:24 | INFO | saliency: densest segment QRS, most cue weight QRS
+2026-11-12T23:06:24 | INFO | resuming nets experiment: 120 learners already done
+2026-11-12T23:06:25 | INFO | resuming LLM experiment: 120 learners already done
+2026-11-12T23:06:26 | INFO | resuming LLM_blinded experiment: 120 learners already done
+2026-11-12T23:06:28 | INFO | reports written: REPORT.md / REPORT.html / REPORT.pdf
+2026-11-12T23:06:28 | INFO | done. writing manifest.json + SHA256SUMS.txt in runs/20261107T164810Z_study_pilot
