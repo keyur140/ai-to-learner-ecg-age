@@ -3,4 +3,4 @@
 # MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK; Independent researcher
 # Conducted independently; not an official Brunel University London project. Licence: MIT
 """AI-to-learner knowledge transfer study (computational, preregistered)."""
-__version__ = "1.0.0"
+__version__ = "1.0.1"

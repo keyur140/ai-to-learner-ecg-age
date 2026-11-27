@@ -78,6 +78,8 @@ chk("Flat rule", f"tie share > {el['flat_tie_share']}, model > {el['flat_model_f
 chk("Collapse flag", el["collapse_share"], f"{pct(el['collapse_share'])} or more of its answers")
 chk("Collapse does not remove a model", el["collapse_excludes_model"], "does not remove a model")
 rows[-1]["match"] = rows[-1]["match"] and el["collapse_excludes_model"] is False
+chk("Data exclusion names the flat rule (P25)", "gate + flat rule", "except as defined by the gate and flat rules above")
+rows[-1]["match"] = rows[-1]["match"] and "gate and collapse rules" not in P
 chk("Primary score A", el["primary_score"], "primary score: bias-corrected accuracy", "half credit")
 rows[-1]["match"] = rows[-1]["match"] and el["primary_score"] == "bias_corrected"
 chk("Answer read-out", el["answer_precision"], "read in float32")

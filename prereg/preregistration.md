@@ -1,7 +1,7 @@
 # Preregistration: Can learners acquire a perceptual skill they never had from AI-derived cues?
 
 *A computational, fully open-source test of AI-to-learner knowledge transfer on ECG age.*
-Version 1.0.0, frozen on 2026-11-27, before any confirmatory data were seen. Format follows the OSF Preregistration template.
+Version 1.0.1, frozen on 2026-11-27, before any confirmatory data were seen. (Version 1.0.1 corrects one outdated phrase of 1.0.0 in section 5, "Data exclusion"; no rule changed. See CHANGELOG.md and ISSUES.md P25.) Format follows the OSF Preregistration template.
 
 **Author.** KEYUR SHAILESHKUMAR PATEL (ORCID: https://orcid.org/0009-0008-5261-043X).
 1) MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK;
@@ -129,7 +129,7 @@ Every taught group sees the same number of example cases, so differences come fr
 
 **Self-checks.** Every run recomputes key results a second, independent way (C1-C17: patient overlap, teacher and cue data roles, re-drawing learners from their seeds, test items, accuracies from item files, a hand-written Welch test, Holm via statsmodels, cue-rule accuracy from saved files, leak scan, letter balance, gate decisions, scrambled-feature overlap, teacher weights hash for all five teachers, no sealed ECG used (pilot mode only), cue consensus votes recounted, placebo score recomputed). A failed check is shown at the top of the report and must be explained in ISSUES.md before any result is quoted.
 
-**Data exclusion.** No learners are excluded, except as defined by the gate and collapse rules above (Experiment A, model level), and those are still reported.
+**Data exclusion.** No learners are excluded, except as defined by the gate and flat rules above (Experiment A, model level), and those are still reported.
 
 **Missing data.** None expected. A learner that fails to run is rerun with the same seed; if impossible, it is listed in the report.
 
