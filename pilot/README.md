@@ -8,7 +8,7 @@
 | --- | --- |
 | `EXPLORATORY_PILOT_REPORT.md`, `.pdf` | The report: what was run, what was seen, what was fixed, what is still open. Start here. |
 | `PILOT_FOLLOWUP.md`, `followup/` | Follow-up of 2026-11-14 (version 0.4.0): the pilot re-scored with the bias-corrected score, the finer answer read-out (P23), and a practice-size sweep for Experiment B. |
-| `PREREG_CHANGES_PROPOSED.md` | The wording changes the preregistration needed after the pilot, old text beside new. Approved by the author on 2026-11-15 and applied; frozen in version 1.0.0 on 2026-11-27. |
+| `PREREG_CHANGES_PROPOSED.md` | The wording changes the preregistration needed after the pilot, old text beside new. Approved by the author on 2026-11-15 and applied; frozen in version 1.0.1 on 2026-11-27. |
 | `v0.3_run/` | Full output of the version 0.3.0 pilot run (`python run_study.py run --pilot 30 --llm-models Qwen/Qwen2.5-3B-Instruct`): learner and item files for Experiment B, Experiment A main and blinded; cues; lessons; example prompts; five teachers; `checks.json` (17 of 17 pass); `REPORT.pdf`; `run.log`; `manifest.json`; `SHA256SUMS.txt`. |
 | `v0.2_run1/` | First version 0.2.0 pilot run: teacher, cues, Experiment B. |
 | `v0.2_run2/` | Second version 0.2.0 pilot run: teacher and cues only. Same seed as run 1, different result: this is the reproducibility bug P11. |

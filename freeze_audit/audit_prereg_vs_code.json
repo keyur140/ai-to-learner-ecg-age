@@ -438,6 +438,15 @@
   "missing": []
  },
  {
+  "item": "Data exclusion names the flat rule (P25)",
+  "code_value": "gate + flat rule",
+  "prereg_says": [
+   "except as defined by the gate and flat rules above"
+  ],
+  "match": true,
+  "missing": []
+ },
+ {
   "item": "Primary score A",
   "code_value": "bias_corrected",
   "prereg_says": [

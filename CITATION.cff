@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or its results, please cite it as below."
 title: "AI-to-learner knowledge transfer: a preregistered computational study on ECG age"
 type: software
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-11-27"
 license: MIT
 authors:

@@ -1,6 +1,6 @@
 # Protocol
 
-*AI-to-learner knowledge transfer study (ECG age), version 1.0.0 (preregistration frozen 2026-11-27). Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X). Conducted independently; not an official Brunel University London project.*
+*AI-to-learner knowledge transfer study (ECG age), version 1.0.1 (preregistration frozen 2026-11-27). Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X). Conducted independently; not an official Brunel University London project.*
 
 The exact order of work, from an empty folder to a reported result. Each step names the command, what it produces, and what must be true before going on. The preregistration (`prereg/preregistration.md`) says *what* is tested; this file says *how* the study is carried out.
 

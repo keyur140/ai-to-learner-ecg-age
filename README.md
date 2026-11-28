@@ -6,9 +6,10 @@
 
 A preregistered, fully computational study. No human participants.
 
-[![Preregistration](https://img.shields.io/badge/preregistration-frozen%20v1.0.0-0072B2?style=for-the-badge)](prereg/preregistration.md)
+[![Preregistration](https://img.shields.io/badge/preregistration-frozen%20v1.0.1-0072B2?style=for-the-badge)](prereg/preregistration.md)
 [![Status](https://img.shields.io/badge/confirmatory%20run-not%20yet%20done-E69F00?style=for-the-badge)](#-where-the-study-stands)
 [![Pilot](https://img.shields.io/badge/pilot-exploratory%20only-CC79A7?style=for-the-badge)](pilot/README.md)
+[![OSF DOI](https://img.shields.io/badge/OSF%20DOI-10.17605%2FOSF.IO%2FS8RDX-0072B2?style=for-the-badge)](https://doi.org/10.17605/OSF.IO/S8RDX)
 
 [![Code: MIT](https://img.shields.io/badge/code-MIT-009E73)](LICENSE)
 [![Text: CC BY 4.0](https://img.shields.io/badge/text%20%26%20figures-CC%20BY%204.0-009E73)](https://creativecommons.org/licenses/by/4.0/)
@@ -25,7 +26,7 @@ MSc Artificial Intelligence student, Department of Computer Science, Brunel Univ
 *Conducted independently; not an official Brunel University London project.*
 
 > [!IMPORTANT]
-> **What exists today, in plain words.** The plan for the study is written down and **frozen** (version 1.0.0, 27 November 2026), with SHA-256 fingerprints of the plan, the settings and the code in [`prereg/LOCK.json`](prereg/LOCK.json). The real test has **not been run yet**: it needs a GPU, and its test data (PTB-XL fold 10 and one recording device) are sealed and have never been opened. Everything with real data in this repository comes from an **exploratory pilot** on other folds and does not test any hypothesis.
+> **What exists today, in plain words.** The plan for the study is written down and **frozen** (version 1.0.1, 27 November 2026), with SHA-256 fingerprints of the plan, the settings and the code in [`prereg/LOCK.json`](prereg/LOCK.json). It is registered on OSF: [doi.org/10.17605/OSF.IO/S8RDX](https://doi.org/10.17605/OSF.IO/S8RDX). The real test has **not been run yet**: it needs a GPU, and its test data (PTB-XL fold 10 and one recording device) are sealed and have never been opened. Everything with real data in this repository comes from an **exploratory pilot** on other folds and does not test any hypothesis.
 
 ---
 
@@ -78,21 +79,21 @@ flowchart LR
 | Design, code, self-checks C1-C17 | ✅ done |
 | Synthetic validation (fake worlds with known answers) | ✅ done, 26 of 31 expectations met ([report](validation/VALIDATION_REPORT.pdf)) |
 | Exploratory pilot on real data, folds 1-9 | ✅ done ([report](pilot/EXPLORATORY_PILOT_REPORT.pdf), [follow-up](pilot/PILOT_FOLLOWUP.md)) |
-| Plan checked against the code, point by point | ✅ 70 of 70 agree ([audit](freeze_audit/audit_prereg_vs_code.json)) |
-| Preregistration frozen | ✅ version 1.0.0, 2026-11-27 ([plan](prereg/preregistration.md), [pilot disclosure](prereg/PILOT_DISCLOSURE.md), [lock](prereg/LOCK.json)) |
-| OSF registration | ⏳ in preparation |
+| Plan checked against the code, point by point | ✅ 71 of 71 agree ([audit](freeze_audit/audit_prereg_vs_code.json)) |
+| Preregistration frozen | ✅ version 1.0.1, 2026-11-27 ([plan](prereg/preregistration.md), [pilot disclosure](prereg/PILOT_DISCLOSURE.md), [lock](prereg/LOCK.json)) |
+| OSF registration | ✅ public, registered 2026-11-27 ([osf.io/s8rdx](https://osf.io/s8rdx/), DOI [10.17605/OSF.IO/S8RDX](https://doi.org/10.17605/OSF.IO/S8RDX); details in [`OSF_REGISTRATION.md`](OSF_REGISTRATION.md)) |
 | Confirmatory run (fold 10, held-out device, 3 models) | ⏳ not started; needs a GPU |
 
 ### 🔒 Lock fingerprints (SHA-256)
 
 | What | Fingerprint |
 | --- | --- |
-| Plan + pilot disclosure (`prereg/*.md`) | `7db89716e09fe4e9f5721cc32e7e1ba22a1e5ef056df1afc7faa9653bb72cee7` |
+| Plan + pilot disclosure (`prereg/*.md`) | `26081e90a8882ad5a29825a0902e95df927c9f2757568d711e135f2fb4668d3c` |
 | Settings (`configs/study.yaml`) | `4c548d8a459ab1772a6b916b6c6b49b0b89b3fa60711646c8d4558de94747e48` |
-| Code (`src/**/*.py`) | `38d582dd8b0e8f4e13006c5842fbff98a9d2f7dd45814956ba8b8598a88a0673` |
+| Code (`src/**/*.py`) | `7c4ea7200b3661dbb6751772372fad21e3307f8770487634bf90f3ed339dbfbe` |
 | Run script (`run_study.py`) | `e44176b4deb881402c5ee6d642a6b89385b0a24facd7219e6ab187324a2b3c72` |
 
-Locked at 2026-11-27T19:05:42Z. If any of these files change, `python run_study.py run` stops.
+Locked at 2026-11-27T19:17:38Z (version 1.0.1; the 1.0.0 lock it replaces is kept in [`freeze_audit/`](freeze_audit/)). If any of these files change, `python run_study.py run` stops.
 
 ---
 
@@ -158,7 +159,7 @@ The whole pipeline was also run on fake worlds where the right answer is known (
 
 The research questions, hypotheses and design choices are the author's; every judgment call is recorded in [`DECISIONS.md`](DECISIONS.md). The code and draft documents were written with help from an AI assistant (Claude, by Anthropic) under the author's direction and checked by the author. Separately, the study uses AI models as its objects of study.
 
-**Licence.** Code: [MIT](LICENSE). Text and figures: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Version 1.0.0** (2026-11-27).
+**Licence.** Code: [MIT](LICENSE). Text and figures: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). **Version 1.0.1** (2026-11-27).
 
 ---
 
@@ -208,7 +209,7 @@ cp .env.example .env
 
 ## 4. Preregister and freeze
 
-Steps 1 to 5 were done on 2026-11-27 (version 1.0.0). They are listed so that anyone can see what was done.
+Steps 1 to 5 were done on 2026-11-27 (version 1.0.1). They are listed so that anyone can see what was done.
 
 1. `prereg/preregistration.md` (the plan) and `prereg/PILOT_DISCLOSURE.md` (what the author saw in the exploratory pilot) were confirmed by the author and frozen. Both files are hashed by `freeze`.
 2. `configs/study.yaml` was reviewed. Every value there is part of the preregistration.
@@ -341,11 +342,11 @@ step-by-step protocol.
 ## 9. How to cite
 
 PATEL, K. S. (2026). *AI-to-learner knowledge transfer: a preregistered computational study on ECG age*
-(Version 1.0.0) [Software]. ORCID: https://orcid.org/0009-0008-5261-043X
+(Version 1.0.1) [Software]. ORCID: https://orcid.org/0009-0008-5261-043X
 
 Machine-readable metadata is in `CITATION.cff` (GitHub shows a "Cite this repository" button for it).
 Please also cite the data: Wagner et al. (2020), PTB-XL, *Scientific Data*; Strodthoff et al. (2023), PTB-XL+, *Scientific Data*.
-The OSF registration link and DOI will be added here once it is live.
+Preregistration: PATEL, K. S. (2026). *Can learners acquire a perceptual skill they never had from AI-derived cues?* OSF Registries. https://doi.org/10.17605/OSF.IO/S8RDX
 
 ## 10. Data and model credits
 

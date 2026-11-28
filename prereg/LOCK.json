@@ -1,14 +1,14 @@
 {
-  "version": "1.0.0",
-  "locked_utc": "2026-11-27T19:05:42Z",
+  "version": "1.0.1",
+  "locked_utc": "2026-11-27T19:17:38Z",
   "prereg_files": {
     "PILOT_DISCLOSURE.md": "d8afd251d8b5cabd2592b27e604dcc0e3b757d8b34c05fc10b775f959f9bf870",
-    "preregistration.md": "baa70cb1b1be3a18fad5759e481092338fad01daafb83764ed44f65fd9ce3b32"
+    "preregistration.md": "8ced161b7835ebd879d2a60eeac6805668e7f64f0225e7792e14ffe340e5a5be"
   },
-  "prereg_digest": "7db89716e09fe4e9f5721cc32e7e1ba22a1e5ef056df1afc7faa9653bb72cee7",
+  "prereg_digest": "26081e90a8882ad5a29825a0902e95df927c9f2757568d711e135f2fb4668d3c",
   "config_sha256": "4c548d8a459ab1772a6b916b6c6b49b0b89b3fa60711646c8d4558de94747e48",
   "code_files": {
-    "ai2human/__init__.py": "4e656e93201ef9e893c6fb82d06a185b019e45052fc29b9d1a9681388addff5a",
+    "ai2human/__init__.py": "fff430e53cb95487dd77ba55e1d563f5277a28082b1ab0bd940ebec9659ef766",
     "ai2human/analysis.py": "1180ad367db15f384e754221ff4d3d5622541ef13d65afc3ed87d66fbdde9911",
     "ai2human/checks.py": "704e3c15bd73bb6bf02a3e36baa279ce11d2bda08c9e7323e5841b3fa624311a",
     "ai2human/cohort.py": "e1776b7b33b35c359ac937b5378f60abe2fcd6513dae9c9a046ebd3e504ecc6f",
@@ -30,6 +30,6 @@
     "ai2human/validate.py": "537f950456430352e615db0942bcc6da64aa08b4706a341dbe14d959fc82b16b",
     "ai2human/validation_report.py": "d8c64e083cf56d5d992b38495ba6bb6ae6e7855b9ce5466f3e036ae37d69b0c9"
   },
-  "code_digest": "38d582dd8b0e8f4e13006c5842fbff98a9d2f7dd45814956ba8b8598a88a0673",
+  "code_digest": "7c4ea7200b3661dbb6751772372fad21e3307f8770487634bf90f3ed339dbfbe",
   "run_script_sha256": "e44176b4deb881402c5ee6d642a6b89385b0a24facd7219e6ab187324a2b3c72"
 }

@@ -8,7 +8,7 @@ V3 = SRC / "runs/20261107T164810Z_study_pilot"
 V2 = Path("/home/user/pilot/ai2human_v02/runs")
 STAGE = DEV / "stage"
 PKG = STAGE / "ai2human_v03"
-OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else DEV / "ai2human_v1.0.0.zip"
+OUT = Path(sys.argv[1]) if len(sys.argv) > 1 else DEV / "ai2human_v1.0.1.zip"
 IGN = shutil.ignore_patterns("__pycache__", ".pytest_cache", ".venv", "data", "runs", "PACKAGE_SHA256SUMS.txt", "*.pyc")
 
 
@@ -49,7 +49,7 @@ shutil.copytree(VAL / "figures", vd / "figures")
 shutil.copy2(DEV / "pilot_report/PILOT_DISCLOSURE.md", PKG / "prereg/PILOT_DISCLOSURE.md")
 fa = PKG / "freeze_audit"
 fa.mkdir()
-for f in ["audit_prereg_vs_code.py", "audit_prereg_vs_code.json", "smoke_v1.0.0.log"]:
+for f in ["audit_prereg_vs_code.py", "audit_prereg_vs_code.json", "smoke_v1.0.1.log", "LOCK_v1.0.0_superseded.json"]:
     shutil.copy2(DEV / "publish" / f, fa / f)
 
 files = sorted(p for p in PKG.rglob("*") if p.is_file())

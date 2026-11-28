@@ -2,7 +2,7 @@
 
 **Prepared by:** KEYUR SHAILESHKUMAR PATEL (ORCID: https://orcid.org/0009-0008-5261-043X),
 MSc Artificial Intelligence student, Department of Computer Science, Brunel University London, UK; Independent researcher.
-Conducted independently; not an official Brunel University London project. Version 1.0.0. Licence: CC BY 4.0.
+Conducted independently; not an official Brunel University London project. Version 1.0.1. Licence: CC BY 4.0.
 
 | Item | Detail |
 | --- | --- |

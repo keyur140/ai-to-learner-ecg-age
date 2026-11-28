@@ -2,6 +2,11 @@
 
 *AI-to-learner knowledge transfer study (ECG age). Author: KEYUR SHAILESHKUMAR PATEL (ORCID https://orcid.org/0009-0008-5261-043X).*
 
+## 1.0.1 (2026-11-27): one outdated phrase corrected, re-frozen
+
+- P25: section 5 of the preregistration, "Data exclusion", still said "the gate and collapse rules", although since D15 (version 0.4.1) the flat rule decides which models count, as sections 4 and 5 already say. Changed to "the gate and flat rules". No rule, number or code changed. Found while mapping the plan onto the OSF form, before OSF submission and before any confirmatory data were seen. The author chose to fix it and re-freeze (D20).
+- `prereg/LOCK.json` rewritten with `python run_study.py freeze --force`. The 1.0.0 lock is kept in `freeze_audit/LOCK_v1.0.0_superseded.json`.
+
 ## 1.0.0 (2026-11-27): preregistration frozen
 
 - The author confirmed `prereg/PILOT_DISCLOSURE.md` and froze the preregistration (decision card, 2026-11-27). The version line now reads "Version 1.0.0, frozen on 2026-11-27, before any confirmatory data were seen"; no other wording changed from the 0.5.2 draft.
