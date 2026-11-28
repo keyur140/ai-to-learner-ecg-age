@@ -9,6 +9,7 @@ A preregistered, fully computational study. No human participants.
 [![Preregistration](https://img.shields.io/badge/preregistration-frozen%20v1.0.1-0072B2?style=for-the-badge)](prereg/preregistration.md)
 [![Status](https://img.shields.io/badge/confirmatory%20run-not%20yet%20done-E69F00?style=for-the-badge)](#-where-the-study-stands)
 [![Pilot](https://img.shields.io/badge/pilot-exploratory%20only-CC79A7?style=for-the-badge)](pilot/README.md)
+[![OSF DOI](https://img.shields.io/badge/OSF%20DOI-10.17605%2FOSF.IO%2FS8RDX-0072B2?style=for-the-badge)](https://doi.org/10.17605/OSF.IO/S8RDX)
 
 [![Code: MIT](https://img.shields.io/badge/code-MIT-009E73)](LICENSE)
 [![Text: CC BY 4.0](https://img.shields.io/badge/text%20%26%20figures-CC%20BY%204.0-009E73)](https://creativecommons.org/licenses/by/4.0/)
@@ -25,7 +26,7 @@ MSc Artificial Intelligence student, Department of Computer Science, Brunel Univ
 *Conducted independently; not an official Brunel University London project.*
 
 > [!IMPORTANT]
-> **What exists today, in plain words.** The plan for the study is written down and **frozen** (version 1.0.1, 27 November 2026), with SHA-256 fingerprints of the plan, the settings and the code in [`prereg/LOCK.json`](prereg/LOCK.json). The real test has **not been run yet**: it needs a GPU, and its test data (PTB-XL fold 10 and one recording device) are sealed and have never been opened. Everything with real data in this repository comes from an **exploratory pilot** on other folds and does not test any hypothesis.
+> **What exists today, in plain words.** The plan for the study is written down and **frozen** (version 1.0.1, 27 November 2026), with SHA-256 fingerprints of the plan, the settings and the code in [`prereg/LOCK.json`](prereg/LOCK.json). It is registered on OSF: [doi.org/10.17605/OSF.IO/S8RDX](https://doi.org/10.17605/OSF.IO/S8RDX). The real test has **not been run yet**: it needs a GPU, and its test data (PTB-XL fold 10 and one recording device) are sealed and have never been opened. Everything with real data in this repository comes from an **exploratory pilot** on other folds and does not test any hypothesis.
 
 ---
 
@@ -80,7 +81,7 @@ flowchart LR
 | Exploratory pilot on real data, folds 1-9 | ✅ done ([report](pilot/EXPLORATORY_PILOT_REPORT.pdf), [follow-up](pilot/PILOT_FOLLOWUP.md)) |
 | Plan checked against the code, point by point | ✅ 71 of 71 agree ([audit](freeze_audit/audit_prereg_vs_code.json)) |
 | Preregistration frozen | ✅ version 1.0.1, 2026-11-27 ([plan](prereg/preregistration.md), [pilot disclosure](prereg/PILOT_DISCLOSURE.md), [lock](prereg/LOCK.json)) |
-| OSF registration | ⏳ in preparation |
+| OSF registration | ✅ public, registered 2026-11-27 ([osf.io/s8rdx](https://osf.io/s8rdx/), DOI [10.17605/OSF.IO/S8RDX](https://doi.org/10.17605/OSF.IO/S8RDX); details in [`OSF_REGISTRATION.md`](OSF_REGISTRATION.md)) |
 | Confirmatory run (fold 10, held-out device, 3 models) | ⏳ not started; needs a GPU |
 
 ### 🔒 Lock fingerprints (SHA-256)
@@ -345,7 +346,7 @@ PATEL, K. S. (2026). *AI-to-learner knowledge transfer: a preregistered computat
 
 Machine-readable metadata is in `CITATION.cff` (GitHub shows a "Cite this repository" button for it).
 Please also cite the data: Wagner et al. (2020), PTB-XL, *Scientific Data*; Strodthoff et al. (2023), PTB-XL+, *Scientific Data*.
-The OSF registration link and DOI will be added here once it is live.
+Preregistration: PATEL, K. S. (2026). *Can learners acquire a perceptual skill they never had from AI-derived cues?* OSF Registries. https://doi.org/10.17605/OSF.IO/S8RDX
 
 ## 10. Data and model credits
 
